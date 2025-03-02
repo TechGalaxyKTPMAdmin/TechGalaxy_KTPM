@@ -1,0 +1,92 @@
+spring:
+  application:
+    name: APIGateway
+  data:
+    redis:
+      port: 6379
+      host: localhost
+  cloud:
+    gateway:
+      routes:
+        - id: UserService
+          uri: lb://UserService
+          predicates:
+            - Path=/api/v1/user/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 5   # 5 requests/giây
+                redis-rate-limiter.burstCapacity: 10  # Tối đa 10 requests
+                redis-rate-limiter.requestedTokens: 1
+
+        - id: ProductService
+          uri: lb://ProductService
+          predicates:
+            - Path=/api/v1/product/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 7
+                redis-rate-limiter.burstCapacity: 14
+                redis-rate-limiter.requestedTokens: 1
+
+        - id: OrderService
+          uri: lb://OrderService
+          predicates:
+            - Path=/api/v1/order/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 3
+                redis-rate-limiter.burstCapacity: 6
+                redis-rate-limiter.requestedTokens: 1
+
+        - id: PaymentService
+          uri: lb://PaymentService
+          predicates:
+            - Path=/api/v1/payment/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 5
+                redis-rate-limiter.burstCapacity: 10
+                redis-rate-limiter.requestedTokens: 1
+
+        - id: InventoryService
+          uri: lb://InventoryService
+          predicates:
+            - Path=/api/v1/inventory/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 4
+                redis-rate-limiter.burstCapacity: 8
+                redis-rate-limiter.requestedTokens: 1
+
+        - id: NotificationService
+          uri: lb://NotificationService
+          predicates:
+            - Path=/api/v1/notification/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 6
+                redis-rate-limiter.burstCapacity: 12
+                redis-rate-limiter.requestedTokens: 1
+
+      default-filters:
+        - name: RequestRateLimiter
+          args:
+            redis-rate-limiter.replenishRate: 5
+            redis-rate-limiter.burstCapacity: 10
+            redis-rate-limiter.requestedTokens: 1
+server:
+  port: 8081
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
