@@ -4,8 +4,6 @@ import iuh.fit.se.orderservice.entity.enumeration.DetailStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.time.LocalDateTime;
-
 @Setter
 @Getter
 @NoArgsConstructor
@@ -18,5 +16,4 @@ public class OrderDetailResponse {
     ProductVariantDetailResponse productVariantDetail;
     int quantity;
     double price;
-    LocalDateTime createdAt;
 }

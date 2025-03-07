@@ -12,20 +12,20 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class OrderRequestV2 {
+public class OrderCreateRequest {
     String customerId;
     String systemUserId;
     String address;
     PaymentStatus paymentStatus = PaymentStatus.PENDING;
     OrderStatus orderStatus = OrderStatus.NEW;
-    List<ProductDetailOrder> productDetailOrders;
+    List<ProductDetailRequest> productDetailOrders;
 
     @Getter
     @Setter
     @NoArgsConstructor
     @AllArgsConstructor
     @FieldDefaults(level = AccessLevel.PRIVATE)
-     public static class ProductDetailOrder {
+     public static class ProductDetailRequest {
         String productVariantDetailId;
         int quantity;
     }

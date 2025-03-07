@@ -1,7 +1,7 @@
 package iuh.fit.se.orderservice.service;
 
 import iuh.fit.se.orderservice.dto.request.OrderRequest;
-import iuh.fit.se.orderservice.dto.request.OrderRequestV2;
+import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import org.springframework.hateoas.PagedModel;
 
@@ -21,5 +21,5 @@ public interface OrderService {
     List<OrderResponse> findOrdersByCustomerId(String id);
 
     //    MK
-    OrderResponse createOrders(OrderRequestV2 orderRequestV2);
+    OrderResponse createOrders(OrderCreateRequest orderCreateRequest);
 }

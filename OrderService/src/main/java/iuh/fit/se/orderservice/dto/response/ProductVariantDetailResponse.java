@@ -20,6 +20,7 @@ public class ProductVariantDetailResponse {
     LocalDateTime createdAt;
     LocalDateTime updatedAt;
     Map<String, ColorQuantity[]> memories;
+
     @Getter
     @Setter
     @NoArgsConstructor

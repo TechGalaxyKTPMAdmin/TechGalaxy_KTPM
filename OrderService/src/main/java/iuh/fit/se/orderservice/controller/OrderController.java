@@ -1,7 +1,7 @@
 package iuh.fit.se.orderservice.controller;
 
 import iuh.fit.se.orderservice.dto.request.OrderRequest;
-import iuh.fit.se.orderservice.dto.request.OrderRequestV2;
+import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
 import iuh.fit.se.orderservice.dto.response.DataResponse;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.service.OrderService;
@@ -30,7 +30,7 @@ public class OrderController {
     }
 
     @PostMapping("/v2")
-    public ResponseEntity<DataResponse<OrderResponse>> createOrderAndOrderDetails(@RequestBody OrderRequestV2 request) {
+    public ResponseEntity<DataResponse<OrderResponse>> createOrderAndOrderDetails(@RequestBody OrderCreateRequest request) {
         List<OrderResponse> orderResponses = List.of(orderService.createOrders(request));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .data(orderResponses)
