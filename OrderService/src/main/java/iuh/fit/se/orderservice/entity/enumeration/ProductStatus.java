@@ -1,4 +1,4 @@
-package iuh.fit.se.orderservice.entities.enumeration;
+package iuh.fit.se.orderservice.entity.enumeration;
 
 public enum ProductStatus {
     AVAILABLE,

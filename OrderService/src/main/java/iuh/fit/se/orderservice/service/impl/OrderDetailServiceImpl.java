@@ -2,9 +2,9 @@ package iuh.fit.se.orderservice.service.impl;
 
 import iuh.fit.se.orderservice.dto.request.OrderDetailRequest;
 import iuh.fit.se.orderservice.dto.response.OrderDetailResponse;
-import iuh.fit.se.orderservice.entities.OrderDetail;
-import iuh.fit.se.orderservice.entities.ProductVariantDetail;
-import iuh.fit.se.orderservice.entities.enumeration.OrderStatus;
+import iuh.fit.se.orderservice.entity.OrderDetail;
+import iuh.fit.se.orderservice.entity.ProductVariantDetail;
+import iuh.fit.se.orderservice.entity.enumeration.OrderStatus;
 import iuh.fit.se.orderservice.exception.AppException;
 import iuh.fit.se.orderservice.exception.ErrorCode;
 import iuh.fit.se.orderservice.mapper.OrderDetailMapper;

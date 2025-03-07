@@ -1,7 +1,7 @@
 package iuh.fit.se.orderservice.dto.request;
 
-import iuh.fit.se.orderservice.entities.enumeration.OrderStatus;
-import iuh.fit.se.orderservice.entities.enumeration.PaymentStatus;
+import iuh.fit.se.orderservice.entity.enumeration.OrderStatus;
+import iuh.fit.se.orderservice.entity.enumeration.PaymentStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 

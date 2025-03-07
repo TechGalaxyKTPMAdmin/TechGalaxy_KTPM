@@ -2,7 +2,7 @@ package iuh.fit.se.orderservice.mapper;
 
 import iuh.fit.se.orderservice.dto.request.OrderRequest;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
-import iuh.fit.se.orderservice.entities.Order;
+import iuh.fit.se.orderservice.entity.Order;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

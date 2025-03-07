@@ -1,6 +1,6 @@
-package iuh.fit.se.orderservice.entities;
+package iuh.fit.se.orderservice.entity;
 
-import iuh.fit.se.orderservice.entities.enumeration.DetailStatus;
+import iuh.fit.se.orderservice.entity.enumeration.DetailStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;

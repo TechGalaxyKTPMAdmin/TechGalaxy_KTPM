@@ -1,7 +1,7 @@
 package iuh.fit.se.orderservice.dto.response;
 
-import iuh.fit.se.orderservice.entities.enumeration.CustomerStatus;
-import iuh.fit.se.orderservice.entities.enumeration.Gender;
+import iuh.fit.se.orderservice.entity.enumeration.CustomerStatus;
+import iuh.fit.se.orderservice.entity.enumeration.Gender;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 

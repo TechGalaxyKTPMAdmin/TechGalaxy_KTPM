@@ -1,6 +1,6 @@
 package iuh.fit.se.orderservice.dto.response;
 
-import iuh.fit.se.orderservice.entities.enumeration.ProductStatus;
+import iuh.fit.se.orderservice.entity.enumeration.ProductStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 

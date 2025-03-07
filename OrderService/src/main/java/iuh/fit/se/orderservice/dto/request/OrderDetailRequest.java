@@ -2,7 +2,7 @@ package iuh.fit.se.orderservice.dto.request;
 
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.dto.response.ProductVariantDetailResponse;
-import iuh.fit.se.orderservice.entities.enumeration.DetailStatus;
+import iuh.fit.se.orderservice.entity.enumeration.DetailStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 

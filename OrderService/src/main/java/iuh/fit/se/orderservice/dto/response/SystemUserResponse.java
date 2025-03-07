@@ -1,6 +1,6 @@
 package iuh.fit.se.orderservice.dto.response;
 
-import iuh.fit.se.orderservice.entities.enumeration.Gender;
+import iuh.fit.se.orderservice.entity.enumeration.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

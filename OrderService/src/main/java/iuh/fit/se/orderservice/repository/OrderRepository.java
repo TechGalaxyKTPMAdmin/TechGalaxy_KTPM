@@ -1,6 +1,6 @@
 package iuh.fit.se.orderservice.repository;
 
-import iuh.fit.se.orderservice.entities.Order;
+import iuh.fit.se.orderservice.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
