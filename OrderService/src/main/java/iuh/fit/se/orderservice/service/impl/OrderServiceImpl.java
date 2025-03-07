@@ -11,15 +11,18 @@ import iuh.fit.se.orderservice.exception.ErrorCode;
 import iuh.fit.se.orderservice.mapper.OrderMapper;
 import iuh.fit.se.orderservice.repository.*;
 import iuh.fit.se.orderservice.service.OrderService;
+import iuh.fit.se.orderservice.service.RabbitMQSenderService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,11 +34,18 @@ import java.util.stream.Collectors;
 @Slf4j
 public class OrderServiceImpl implements OrderService {
 
-    OrderRepository orderRepository;
-    CustomerRepository customerRepository;
-    OrderDetailRepository orderDetailRepository;
-    ProductVariantDetailRepository productVariantDetailRepository;
-    SystemUserRepository systemUserRepository;
+    private final OrderRepository orderRepository;
+    private final OrderDetailRepository orderDetailRepository;
+    private final RestTemplate restTemplate;
+    private final RabbitMQSenderService rabbitMQSenderService;
+
+    @Autowired
+    public OrderServiceImpl(OrderDetailRepository orderDetailRepository, OrderRepository orderRepository, RabbitMQSenderService rabbitMQSenderService, RestTemplate restTemplate) {
+        this.orderDetailRepository = orderDetailRepository;
+        this.orderRepository = orderRepository;
+        this.rabbitMQSenderService = rabbitMQSenderService;
+        this.restTemplate = restTemplate;
+    }
 
     /**
      * Save order
