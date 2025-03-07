@@ -4,7 +4,6 @@ import iuh.fit.se.orderservice.dto.request.OrderDetailRequest;
 import iuh.fit.se.orderservice.dto.response.DataResponse;
 import iuh.fit.se.orderservice.dto.response.OrderDetailResponse;
 import iuh.fit.se.orderservice.service.OrderDetailService;
-import iuh.fit.se.orderservice.service.ProductVariantDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,17 +14,14 @@ import java.util.List;
 @RequestMapping("/order-details")
 public class OrderDetailController {
     private final OrderDetailService orderDetailService;
-    private final ProductVariantDetailService productVariantDetailService;
 
     @Autowired
-    public OrderDetailController(OrderDetailService orderDetailService, ProductVariantDetailService productVariantDetailService) {
+    public OrderDetailController(OrderDetailService orderDetailService) {
         this.orderDetailService = orderDetailService;
-        this.productVariantDetailService = productVariantDetailService;
     }
 
     @PostMapping
     public ResponseEntity<DataResponse<OrderDetailResponse>> createOrderDetail(@RequestBody OrderDetailRequest orderDetailRequest) {
-        productVariantDetailService.updateQuantity(orderDetailRequest.getProductVariantDetail().getId(), orderDetailRequest.getQuantity());
         List<OrderDetailResponse> orderDetailResponses = List.of(orderDetailService.save(orderDetailRequest));
         return ResponseEntity.ok(DataResponse.<OrderDetailResponse>builder()
                 .message("Create order detail success")
