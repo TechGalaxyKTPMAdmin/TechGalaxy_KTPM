@@ -18,7 +18,33 @@ spring:
                 redis-rate-limiter.replenishRate: 5   # 5 requests/giây
                 redis-rate-limiter.burstCapacity: 10  # Tối đa 10 requests
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
+        - id: UserService_Auth
+          uri: lb://UserService
+          predicates:
+            - Path=/api/accounts/auth/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 5
+                redis-rate-limiter.burstCapacity: 10
+                redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
         - id: ProductService
           uri: lb://ProductService
           predicates:
@@ -29,6 +55,14 @@ spring:
                 redis-rate-limiter.replenishRate: 7
                 redis-rate-limiter.burstCapacity: 14
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
         - id: OrderService
           uri: lb://OrderService
@@ -40,6 +74,14 @@ spring:
                 redis-rate-limiter.replenishRate: 3
                 redis-rate-limiter.burstCapacity: 6
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
         - id: PaymentService
           uri: lb://PaymentService
@@ -51,6 +93,14 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
         - id: InventoryService
           uri: lb://InventoryService
@@ -62,6 +112,14 @@ spring:
                 redis-rate-limiter.replenishRate: 4
                 redis-rate-limiter.burstCapacity: 8
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
         - id: NotificationService
           uri: lb://NotificationService
@@ -73,6 +131,14 @@ spring:
                 redis-rate-limiter.replenishRate: 6
                 redis-rate-limiter.burstCapacity: 12
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
       default-filters:
         - name: RequestRateLimiter
@@ -89,4 +155,52 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,gateway,circuitbreakers
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
 
+resilience4j:
+  circuitbreaker:
+    instances:
+      userServiceCB:
+        slidingWindowSize: 10  # Số lượng request gần nhất mà Circuit Breaker sẽ theo dõi để xác định tỷ lệ lỗi
+        failureRateThreshold: 50  # Nếu tỷ lệ lỗi vượt quá 50%, Circuit Breaker sẽ mở (Open)
+        slowCallRateThreshold: 50  # Nếu tỷ lệ request chậm vượt quá 50%, Circuit Breaker cũng sẽ mở
+        slowCallDurationThreshold: 2s  # Request nào mất hơn 2 giây sẽ bị coi là "request chậm"
+        permittedNumberOfCallsInHalfOpenState: 2  # Khi ở trạng thái "Half-Open", chỉ cho phép thử nghiệm 2 request
+        maxWaitDurationInHalfOpenState: 5s  # Circuit Breaker sẽ ở trạng thái Half-Open tối đa 5s
+        waitDurationInOpenState: 10s  # Circuit Breaker sẽ ở trạng thái Open trong 10s trước khi thử lại
+        automaticTransitionFromOpenToHalfOpenEnabled: true  # Tự động chuyển từ Open sang Half-Open để thử lại
+
+      productServiceCB:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s  # Giữ trạng thái Open trong 10s trước khi thử lại
+
+      orderServiceCB:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+
+      paymentServiceCB:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+
+      inventoryServiceCB:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+
+      notificationServiceCB:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
