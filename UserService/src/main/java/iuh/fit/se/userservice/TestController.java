@@ -12,4 +12,9 @@ public class TestController {
     public String test() {
         return "Hello World from User Service!";
     }
+
+    @GetMapping("/auth/test2")
+    public String test2() {
+        return "Hello World from User Service with Auth!";
+    }
 }
