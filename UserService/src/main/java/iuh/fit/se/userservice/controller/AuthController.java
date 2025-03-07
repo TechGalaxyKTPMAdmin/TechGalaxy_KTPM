@@ -16,7 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/v1/user")
+@RequestMapping("/api/accounts")
 public class AuthController {
     private final AccountServiceImpl accountService;
     private final AuthenticationServiceImpl authService;
@@ -41,6 +41,7 @@ public class AuthController {
 
     @PostMapping("/auth/login")
     public ResponseEntity<DataResponse<LoginResponse>> login(@Valid @RequestBody LoginRequest loginDto) {
+        System.out.println("Login request: " + loginDto);
         return authService.login(loginDto);
     }
 
