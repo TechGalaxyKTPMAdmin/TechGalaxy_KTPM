@@ -18,6 +18,14 @@ spring:
                 redis-rate-limiter.replenishRate: 5   # 5 requests/giây
                 redis-rate-limiter.burstCapacity: 10  # Tối đa 10 requests
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
         - id: ProductService
           uri: lb://ProductService
@@ -29,6 +37,14 @@ spring:
                 redis-rate-limiter.replenishRate: 7
                 redis-rate-limiter.burstCapacity: 14
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
         - id: OrderService
           uri: lb://OrderService
@@ -40,6 +56,14 @@ spring:
                 redis-rate-limiter.replenishRate: 3
                 redis-rate-limiter.burstCapacity: 6
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
         - id: PaymentService
           uri: lb://PaymentService
@@ -51,6 +75,14 @@ spring:
                 redis-rate-limiter.replenishRate: 5
                 redis-rate-limiter.burstCapacity: 10
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
         - id: InventoryService
           uri: lb://InventoryService
@@ -62,6 +94,14 @@ spring:
                 redis-rate-limiter.replenishRate: 4
                 redis-rate-limiter.burstCapacity: 8
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
         - id: NotificationService
           uri: lb://NotificationService
@@ -73,6 +113,14 @@ spring:
                 redis-rate-limiter.replenishRate: 6
                 redis-rate-limiter.burstCapacity: 12
                 redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
 
       default-filters:
         - name: RequestRateLimiter
@@ -89,4 +137,15 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,gateway,circuitbreakers
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
 
