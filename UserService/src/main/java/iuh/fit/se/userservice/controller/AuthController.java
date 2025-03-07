@@ -16,7 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/accounts")
+@RequestMapping("/api/accounts/auth")
 public class AuthController {
     private final AccountServiceImpl accountService;
     private final AuthenticationServiceImpl authService;
@@ -39,50 +39,50 @@ public class AuthController {
         this.accountMapper = accountMapper;
     }
 
-    @PostMapping("/auth/login")
+    @PostMapping("/login")
     public ResponseEntity<DataResponse<LoginResponse>> login(@Valid @RequestBody LoginRequest loginDto) {
         System.out.println("Login request: " + loginDto);
         return authService.login(loginDto);
     }
 
-    @GetMapping("/auth/account")
+    @GetMapping("/account")
     public ResponseEntity<DataResponse<LoginResponse.AccountGetAccount>> getAccount() {
         return authService.getAccount();
     }
 
-    @PostMapping("/auth/register")
+    @PostMapping("/register")
     public ResponseEntity<DataResponse<CustommerCreateResponse>> register(@Valid @RequestBody UserRegisterRequest user) {
         return registrationService.registerCustomer(user);
     }
 
-    @PostMapping("/auth/create-customer-account")
+    @PostMapping("/create-customer-account")
     public ResponseEntity<DataResponse<UserRegisterResponse>> createCustomerAccount(@Valid @RequestBody UserRegisterRequest user) {
         return registrationService.createCustomerAccount(user);
     }
 
-    @PostMapping("/auth/create-system-user-account")
+    @PostMapping("/create-system-user-account")
     public ResponseEntity<DataResponse<UserRegisterResponse>> createSystemUserAccount(@Valid @RequestBody UserRegisterRequest user) {
         return registrationService.createSystemUserAccount(user);
     }
 
-    @PostMapping("/auth/create-system-user")
+    @PostMapping("/create-system-user")
     public ResponseEntity<DataResponse<SystemUserResponseDTO>> register(@Valid @RequestBody SystemUserRequestDTO user) {
         return registrationService.createSystemUser(user);
     }
 
-    @PostMapping("/auth/logout")
+    @PostMapping("/logout")
     public ResponseEntity<DataResponse<String>> logout(HttpServletRequest request) {
         return authService.logout();
     }
 
-    @PostMapping("/auth/refresh-token")
+    @PostMapping("/refresh-token")
     public ResponseEntity<DataResponse<LoginResponse>> refreshToken(
             @CookieValue(name = "refresh_token", defaultValue = "abc") String refresh_token) {
         return authService.refreshToken(refresh_token);
     }
 
 
-    @PostMapping("/auth/validate-token")
+    @PostMapping("/validate-token")
     public ResponseEntity<DataResponse<ValidateTokenResponse>> validateToken(
             @RequestHeader("Authorization") String authHeader) {
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
