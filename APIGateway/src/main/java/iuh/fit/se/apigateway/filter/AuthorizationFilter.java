@@ -110,7 +110,8 @@ class RouteValidator {
         return path.startsWith("/api/v1/user/auth")
                 || path.startsWith("/swagger")
                 || path.startsWith("/v3/api-docs")
-                || path.startsWith("/fallback");
+                || path.startsWith("/fallback")
+                ||path.startsWith("/api/accounts/auth");
     }
 
     public boolean isPermitAllEndpoint(ServerHttpRequest request) {
