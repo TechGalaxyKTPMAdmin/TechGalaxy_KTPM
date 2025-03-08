@@ -7,6 +7,7 @@ import iuh.fit.se.productservice.entities.Attribute;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
 
+
 @Mapper(componentModel = "spring")
 public interface AttributeMapper {
     AttributeResponse toAttributeResponse(Attribute attribute);

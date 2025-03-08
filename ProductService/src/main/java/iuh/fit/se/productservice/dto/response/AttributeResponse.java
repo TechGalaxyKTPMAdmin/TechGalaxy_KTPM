@@ -12,5 +12,4 @@ public class AttributeResponse {
     String id;
     String name;
     String type;
-
 }

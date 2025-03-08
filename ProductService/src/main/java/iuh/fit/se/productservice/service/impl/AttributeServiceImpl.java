@@ -3,11 +3,13 @@ package iuh.fit.se.productservice.service.impl;
 import iuh.fit.se.productservice.dto.request.AttributeRequest;
 import iuh.fit.se.productservice.dto.response.AttributeResponse;
 import iuh.fit.se.productservice.entities.Attribute;
+
 import iuh.fit.se.productservice.mapper.AttributeMapper;
 import iuh.fit.se.productservice.repository.AttributeRepository;
 import iuh.fit.se.productservice.service.AttributeService;
 import jakarta.transaction.Transactional;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
