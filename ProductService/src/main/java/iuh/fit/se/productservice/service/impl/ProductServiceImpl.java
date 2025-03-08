@@ -63,11 +63,11 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void deleteProduct(String id) {
-        long usageCount = productRepository.countOrderDetailsByProductId(id);
-
-        if (usageCount > 0) {
-            throw new IllegalStateException("Cannot delete product as it is referenced in orders.");
-        }
+//        long usageCount = productRepository.countOrderDetailsByProductId(id);
+//
+//        if (usageCount > 0) {
+//            throw new IllegalStateException("Cannot delete product as it is referenced in orders.");
+//        }
         Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
         productRepository.delete(product);
     }

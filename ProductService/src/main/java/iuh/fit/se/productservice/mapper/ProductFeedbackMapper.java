@@ -19,13 +19,14 @@ public interface ProductFeedbackMapper {
     ProductFeedbackResponse toResponsedto(ProductFeedback productFeedback);
 
     ProductFeedback toEntity(ProductFeedbackRequest feedbackRequest);
+
     ProductFeedback toEntityV2(ProductFeedbackRequestV2 feedbackRequest);
+
     @Mapping(source = "productFeedback.id", target = "id")
     @Mapping(source = "productFeedback.feedbackText", target = "feedbackText")
-    @Mapping(source = "productFeedback.customer.name", target = "customerName")
-    @Mapping(source = "productFeedback.customer.avatar", target = "customerAvatar")
     @Mapping(source = "productFeedback.createdAt", target = "createdAt")
     @Mapping(source = "productFeedback.updatedAt", target = "updatedAt")
+    @Mapping(source = "productFeedback.customerId", target = "customerId")
     @Mapping(target = "imgFeedbacks", expression = "java(mapImagePaths(productFeedback.getImgProductFeedbacks()))")
     ProductFeedbackResponseV2 toProductFeedbackResponseV2(ProductFeedback productFeedback);
 
@@ -39,4 +40,4 @@ public interface ProductFeedbackMapper {
                 .collect(Collectors.toList());
     }
 
-} 
+}

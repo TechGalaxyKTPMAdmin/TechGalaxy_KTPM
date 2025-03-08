@@ -1,19 +1,16 @@
 package iuh.fit.se.productservice.service.impl;
 
 
-import iuh.fit.se.productservice.SecurityUtil;
 import iuh.fit.se.productservice.dto.request.ProductFeedbackRequest;
 import iuh.fit.se.productservice.dto.request.ProductFeedbackRequestV2;
 import iuh.fit.se.productservice.dto.response.ProductFeedbackResponse;
 import iuh.fit.se.productservice.dto.response.ProductFeedbackResponseV2;
-import iuh.fit.se.productservice.entities.Customer;
 import iuh.fit.se.productservice.entities.ImgProductFeedback;
 import iuh.fit.se.productservice.entities.ProductFeedback;
 import iuh.fit.se.productservice.entities.ProductVariant;
 import iuh.fit.se.productservice.exception.AppException;
 import iuh.fit.se.productservice.exception.ErrorCode;
 import iuh.fit.se.productservice.mapper.ProductFeedbackMapper;
-import iuh.fit.se.productservice.repository.CustomerRepository;
 import iuh.fit.se.productservice.repository.ProductFeedbackRepository;
 import iuh.fit.se.productservice.repository.ProductVariantRepository;
 import iuh.fit.se.productservice.service.ProductFeedbackService;
@@ -33,7 +30,6 @@ import java.util.stream.Collectors;
 @Slf4j
 public class ProductFeedbackServiceImpl implements ProductFeedbackService {
     ProductFeedbackRepository productFeedbackRepository;
-    CustomerRepository customerRepository;
     ProductVariantRepository productVariantRepository;
     ProductFeedbackMapper productFeedbackMapper;
 
@@ -112,13 +108,13 @@ public class ProductFeedbackServiceImpl implements ProductFeedbackService {
     public ProductFeedbackResponseV2 createFeedbackV2(ProductFeedbackRequestV2 productFeedbackRequestV2) {
         ProductFeedback productFeedback = productFeedbackMapper.toEntityV2(productFeedbackRequestV2);
 
-        Customer customer = customerRepository.findById(productFeedbackRequestV2.getCustomerId())
-                .orElseThrow(() -> new AppException(ErrorCode.CUSTOMER_NOTFOUND));
-
-        String emailLogin = SecurityUtil.getCurrentUserLogin().orElse(null);
-        if (emailLogin == null || !customer.getAccount().getEmail().equals(emailLogin)) {
-            throw new AppException(ErrorCode.CUSTOMER_NOTMATCH_LOGIN);
-        }
+//        Customer customer = customerRepository.findById(productFeedbackRequestV2.getCustomerId())
+//                .orElseThrow(() -> new AppException(ErrorCode.CUSTOMER_NOTFOUND));
+//
+//        String emailLogin = SecurityUtil.getCurrentUserLogin().orElse(null);
+//        if (emailLogin == null || !customer.getAccount().getEmail().equals(emailLogin)) {
+//            throw new AppException(ErrorCode.CUSTOMER_NOTMATCH_LOGIN);
+//        }
 
         ProductVariant productVariant = productVariantRepository.findById(productFeedbackRequestV2.getProductVariantId())
                 .orElseThrow(() -> new AppException(ErrorCode.PRODUCT_NOTFOUND));
@@ -138,7 +134,7 @@ public class ProductFeedbackServiceImpl implements ProductFeedbackService {
             productFeedback.setImgProductFeedbacks(imgProductFeedbacks);
         }
 //        kha
-        productFeedback.setCustomer_id(customer.getId());
+        productFeedback.setCustomerId(productFeedbackRequestV2.getCustomerId());
         productFeedback.setProductVariant(productVariant);
         log.info("Product feedback to create: {}", productFeedback);
         ProductFeedback productFeedbackCreate = productFeedbackRepository.save(productFeedback);

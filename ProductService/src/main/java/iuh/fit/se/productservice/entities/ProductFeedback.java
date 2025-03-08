@@ -31,7 +31,7 @@ public class ProductFeedback {
     @Column(columnDefinition = "TEXT")
     private String feedbackText;
 
-    private String customer_id;
+    private String customerId;
 
     @ManyToOne
     @JoinColumn(name = "product_variant_id")

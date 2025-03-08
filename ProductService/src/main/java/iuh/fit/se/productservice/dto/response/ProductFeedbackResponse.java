@@ -1,6 +1,5 @@
 package iuh.fit.se.productservice.dto.response;
 
-import iuh.fit.se.productservice.entities.Customer;
 import iuh.fit.se.productservice.entities.ProductVariant;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -19,7 +18,7 @@ public class ProductFeedbackResponse {
 
     private String feedbackText;
 
-    private Customer customer;
+    private String customer_id;
 
     private ProductVariant productVariant;
 

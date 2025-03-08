@@ -76,10 +76,10 @@ public class ProductVariantServiceImpl implements ProductVariantService {
     public void deleteVariant(String id) {
         ProductVariant productVariant = productVariantRepository.findById(id).orElseThrow(() ->
                 new RuntimeException("Product variant not found"));
-        long usageCount = productVariantRepository.countOrderDetailsByProductVariantId(id);
-        if (usageCount > 0) {
-            throw new IllegalStateException("Cannot delete product variant as it is referenced in orders.");
-        }
+//        long usageCount = productVariantRepository.countOrderDetailsByProductVariantId(id);
+//        if (usageCount > 0) {
+//            throw new IllegalStateException("Cannot delete product variant as it is referenced in orders.");
+//        }
         productVariantRepository.delete(productVariant);
     }
 

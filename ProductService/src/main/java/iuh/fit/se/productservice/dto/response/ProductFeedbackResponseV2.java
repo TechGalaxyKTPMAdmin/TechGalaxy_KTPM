@@ -15,8 +15,9 @@ public class ProductFeedbackResponseV2 {
      String id;
      String feedbackText;
      List<String> imgFeedbacks;
-     String customerAvatar;
-     String customerName;
+     // String customerAvatar;
+     // String customerName;
+     String customerId;
      LocalDateTime createdAt;
      LocalDateTime updatedAt;
 }

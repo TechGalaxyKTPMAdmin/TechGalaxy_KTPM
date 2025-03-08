@@ -110,10 +110,10 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     @Override
     public void deleteProductVariantDetail(String productDetailId) {
         try {
-            long usageCount = productVariantDetailRepository.countOrderDetailsByProductVariantDetailId(productDetailId);
-            if (usageCount > 0) {
-                throw new AppException(ErrorCode.PRODUCT_DELETE_FAILED);
-            }
+//            long usageCount = productVariantDetailRepository.countOrderDetailsByProductVariantDetailId(productDetailId);
+//            if (usageCount > 0) {
+//                throw new AppException(ErrorCode.PRODUCT_DELETE_FAILED);
+//            }
             productVariantDetailRepository.deleteById(productDetailId);
         } catch (Exception e) {
             throw new AppException(ErrorCode.PRODUCT_DELETE_FAILED);

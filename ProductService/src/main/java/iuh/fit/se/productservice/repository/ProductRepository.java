@@ -8,6 +8,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "products", path = "products", exported = false)
 public interface ProductRepository extends JpaRepository<Product, String> {
-    @Query("SELECT COUNT(od) FROM OrderDetail od WHERE od.productVariantDetail.productVariant.product.id = :productId")
-    long countOrderDetailsByProductId(@Param("productId") String productId);
+//    @Query("SELECT COUNT(od) FROM OrderDetail od WHERE od.productVariantDetail.productVariant.product.id = :productId")
+//    long countOrderDetailsByProductId(@Param("productId") String productId);
 }
