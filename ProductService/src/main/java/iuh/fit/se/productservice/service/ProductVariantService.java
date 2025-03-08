@@ -1,7 +1,7 @@
 package iuh.fit.se.productservice.service;
 
-import iuh.fit.se.techgalaxy.dto.request.ProductVariantRequest;
-import iuh.fit.se.techgalaxy.dto.response.ProductVariantResponse;
+import iuh.fit.se.productservice.dto.request.ProductVariantRequest;
+import iuh.fit.se.productservice.dto.response.ProductVariantResponse;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

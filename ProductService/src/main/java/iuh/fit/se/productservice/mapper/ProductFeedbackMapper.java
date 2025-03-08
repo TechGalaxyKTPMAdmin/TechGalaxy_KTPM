@@ -5,6 +5,7 @@ import iuh.fit.se.productservice.dto.request.ProductFeedbackRequestV2;
 import iuh.fit.se.productservice.dto.response.ProductFeedbackResponse;
 import iuh.fit.se.productservice.dto.response.ProductFeedbackResponseV2;
 import iuh.fit.se.productservice.entities.ImgProductFeedback;
+import iuh.fit.se.productservice.entities.ProductFeedback;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

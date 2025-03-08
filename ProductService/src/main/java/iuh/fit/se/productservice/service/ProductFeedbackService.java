@@ -1,11 +1,13 @@
 package iuh.fit.se.productservice.service;
 
-import iuh.fit.se.techgalaxy.dto.request.ProductFeedbackRequest;
-import iuh.fit.se.techgalaxy.dto.request.ProductFeedbackRequestV2;
-import iuh.fit.se.techgalaxy.dto.response.ProductFeedbackResponse;
-import iuh.fit.se.techgalaxy.dto.response.ProductFeedbackResponseV2;
+import iuh.fit.se.productservice.dto.request.ProductFeedbackRequest;
+import iuh.fit.se.productservice.dto.request.ProductFeedbackRequestV2;
+import iuh.fit.se.productservice.dto.response.ProductFeedbackResponse;
+import iuh.fit.se.productservice.dto.response.ProductFeedbackResponseV2;
 
 import java.util.List;
+
+
 
 public interface ProductFeedbackService {
     ProductFeedbackResponse createFeedback(ProductFeedbackRequest productFeedbackRequest);//save

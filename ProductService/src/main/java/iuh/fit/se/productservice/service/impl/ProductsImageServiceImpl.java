@@ -1,15 +1,15 @@
 package iuh.fit.se.productservice.service.impl;
 
-import iuh.fit.se.techgalaxy.dto.request.ProductsImageRequest;
-import iuh.fit.se.techgalaxy.dto.response.ProductsImageResponse;
-import iuh.fit.se.techgalaxy.entities.ProductVariantDetail;
-import iuh.fit.se.techgalaxy.entities.ProductsImage;
-import iuh.fit.se.techgalaxy.exception.AppException;
-import iuh.fit.se.techgalaxy.exception.ErrorCode;
-import iuh.fit.se.techgalaxy.mapper.ProductsImageMapper;
-import iuh.fit.se.techgalaxy.repository.ProductVariantDetailRepository;
-import iuh.fit.se.techgalaxy.repository.ProductsImageRepository;
-import iuh.fit.se.techgalaxy.service.ProductsImageService;
+import iuh.fit.se.productservice.dto.request.ProductsImageRequest;
+import iuh.fit.se.productservice.dto.response.ProductsImageResponse;
+import iuh.fit.se.productservice.entities.ProductVariantDetail;
+import iuh.fit.se.productservice.entities.ProductsImage;
+import iuh.fit.se.productservice.exception.AppException;
+import iuh.fit.se.productservice.exception.ErrorCode;
+import iuh.fit.se.productservice.mapper.ProductsImageMapper;
+import iuh.fit.se.productservice.repository.ProductVariantDetailRepository;
+import iuh.fit.se.productservice.repository.ProductsImageRepository;
+import iuh.fit.se.productservice.service.ProductsImageService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;

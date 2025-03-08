@@ -1,7 +1,8 @@
 package iuh.fit.se.productservice.service;
 
-import iuh.fit.se.techgalaxy.dto.request.ProductsImageRequest;
-import iuh.fit.se.techgalaxy.dto.response.ProductsImageResponse;
+
+import iuh.fit.se.productservice.dto.request.ProductsImageRequest;
+import iuh.fit.se.productservice.dto.response.ProductsImageResponse;
 
 import java.util.List;
 

@@ -1,21 +1,22 @@
 package iuh.fit.se.productservice.service.impl;
 
-import iuh.fit.se.techgalaxy.dto.request.ProductFeedbackRequest;
-import iuh.fit.se.techgalaxy.dto.request.ProductFeedbackRequestV2;
-import iuh.fit.se.techgalaxy.dto.response.ProductFeedbackResponse;
-import iuh.fit.se.techgalaxy.dto.response.ProductFeedbackResponseV2;
-import iuh.fit.se.techgalaxy.entities.Customer;
-import iuh.fit.se.techgalaxy.entities.ImgProductFeedback;
-import iuh.fit.se.techgalaxy.entities.ProductFeedback;
-import iuh.fit.se.techgalaxy.entities.ProductVariant;
-import iuh.fit.se.techgalaxy.exception.AppException;
-import iuh.fit.se.techgalaxy.exception.ErrorCode;
-import iuh.fit.se.techgalaxy.mapper.ProductFeedbackMapper;
-import iuh.fit.se.techgalaxy.repository.CustomerRepository;
-import iuh.fit.se.techgalaxy.repository.ProductFeedbackRepository;
-import iuh.fit.se.techgalaxy.repository.ProductVariantRepository;
-import iuh.fit.se.techgalaxy.service.ProductFeedbackService;
-import iuh.fit.se.techgalaxy.util.SecurityUtil;
+
+import iuh.fit.se.productservice.SecurityUtil;
+import iuh.fit.se.productservice.dto.request.ProductFeedbackRequest;
+import iuh.fit.se.productservice.dto.request.ProductFeedbackRequestV2;
+import iuh.fit.se.productservice.dto.response.ProductFeedbackResponse;
+import iuh.fit.se.productservice.dto.response.ProductFeedbackResponseV2;
+import iuh.fit.se.productservice.entities.Customer;
+import iuh.fit.se.productservice.entities.ImgProductFeedback;
+import iuh.fit.se.productservice.entities.ProductFeedback;
+import iuh.fit.se.productservice.entities.ProductVariant;
+import iuh.fit.se.productservice.exception.AppException;
+import iuh.fit.se.productservice.exception.ErrorCode;
+import iuh.fit.se.productservice.mapper.ProductFeedbackMapper;
+import iuh.fit.se.productservice.repository.CustomerRepository;
+import iuh.fit.se.productservice.repository.ProductFeedbackRepository;
+import iuh.fit.se.productservice.repository.ProductVariantRepository;
+import iuh.fit.se.productservice.service.ProductFeedbackService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -41,7 +42,7 @@ public class ProductFeedbackServiceImpl implements ProductFeedbackService {
         // TODO Auto-generated method stub
         //.... xu ly doi
 
-        ProductFeedback productFeedback = productFeedbackMapper.toEntity(productFeedbackRequest);
+      ProductFeedback productFeedback = productFeedbackMapper.toEntity(productFeedbackRequest);
         //
 
         ProductFeedback productFeedbackCreate = productFeedbackRepository.save(productFeedback);
@@ -56,7 +57,7 @@ public class ProductFeedbackServiceImpl implements ProductFeedbackService {
     @Override
     public boolean deleteFeedback(String id) {
 
-        ProductFeedback productFeedack = productFeedbackRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.FEEDBACK_NOTFOUND));
+        iuh.fit.se.productservice.entities.ProductFeedback productFeedack = productFeedbackRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.FEEDBACK_NOTFOUND));
         if (productFeedack != null) {
             productFeedbackRepository.deleteById(id);
             return true;
@@ -66,7 +67,7 @@ public class ProductFeedbackServiceImpl implements ProductFeedbackService {
 
     @Override
     public ProductFeedbackResponse updateFeedback(String id, Integer newFeedbackRating, String newFeedbackText) {
-        ProductFeedback productFeedack = productFeedbackRepository.findById(id)
+        iuh.fit.se.productservice.entities.ProductFeedback productFeedack = productFeedbackRepository.findById(id)
                 .orElseThrow(() -> new AppException(ErrorCode.FEEDBACK_NOTFOUND));
         if (productFeedack != null) {
             productFeedack.setFeedbackRating(null);
@@ -136,8 +137,8 @@ public class ProductFeedbackServiceImpl implements ProductFeedbackService {
 
             productFeedback.setImgProductFeedbacks(imgProductFeedbacks);
         }
-
-        productFeedback.setCustomer(customer);
+//        kha
+        productFeedback.setCustomer_id(customer.getId());
         productFeedback.setProductVariant(productVariant);
         log.info("Product feedback to create: {}", productFeedback);
         ProductFeedback productFeedbackCreate = productFeedbackRepository.save(productFeedback);

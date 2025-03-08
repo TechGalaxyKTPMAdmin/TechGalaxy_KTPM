@@ -1,7 +1,8 @@
 package iuh.fit.se.productservice.service;
 
-import iuh.fit.se.techgalaxy.dto.request.ProductRequest;
-import iuh.fit.se.techgalaxy.dto.response.ProductResponse;
+
+import iuh.fit.se.productservice.dto.request.ProductRequest;
+import iuh.fit.se.productservice.dto.response.ProductResponse;
 
 import java.util.Set;
 

@@ -1,10 +1,11 @@
 package iuh.fit.se.productservice.service;
 
-import iuh.fit.se.techgalaxy.dto.request.ProductDetailUpdateRequest;
-import iuh.fit.se.techgalaxy.dto.request.ProductVariantDetailRequest;
-import iuh.fit.se.techgalaxy.dto.response.ProductDetailResponse;
-import iuh.fit.se.techgalaxy.dto.response.ProductPageResponse;
-import iuh.fit.se.techgalaxy.dto.response.ProductVariantDetailResponse;
+
+import iuh.fit.se.productservice.dto.request.ProductDetailUpdateRequest;
+import iuh.fit.se.productservice.dto.request.ProductVariantDetailRequest;
+import iuh.fit.se.productservice.dto.response.ProductDetailResponse;
+import iuh.fit.se.productservice.dto.response.ProductPageResponse;
+import iuh.fit.se.productservice.dto.response.ProductVariantDetailResponse;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

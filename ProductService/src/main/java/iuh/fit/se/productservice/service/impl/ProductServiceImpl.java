@@ -1,15 +1,16 @@
 package iuh.fit.se.productservice.service.impl;
 
-import iuh.fit.se.techgalaxy.dto.request.ProductRequest;
-import iuh.fit.se.techgalaxy.dto.response.ProductResponse;
-import iuh.fit.se.techgalaxy.entities.Product;
-import iuh.fit.se.techgalaxy.entities.Trademark;
-import iuh.fit.se.techgalaxy.exception.AppException;
-import iuh.fit.se.techgalaxy.exception.ErrorCode;
-import iuh.fit.se.techgalaxy.mapper.ProductMapper;
-import iuh.fit.se.techgalaxy.repository.ProductRepository;
-import iuh.fit.se.techgalaxy.repository.TrademarkRepository;
-import iuh.fit.se.techgalaxy.service.ProductService;
+
+import iuh.fit.se.productservice.dto.request.ProductRequest;
+import iuh.fit.se.productservice.dto.response.ProductResponse;
+import iuh.fit.se.productservice.entities.Product;
+import iuh.fit.se.productservice.entities.Trademark;
+import iuh.fit.se.productservice.exception.AppException;
+import iuh.fit.se.productservice.exception.ErrorCode;
+import iuh.fit.se.productservice.mapper.ProductMapper;
+import iuh.fit.se.productservice.repository.ProductRepository;
+import iuh.fit.se.productservice.repository.TrademarkRepository;
+import iuh.fit.se.productservice.service.ProductService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
