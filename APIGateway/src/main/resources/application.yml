@@ -67,7 +67,7 @@ spring:
         - id: OrderService
           uri: lb://OrderService
           predicates:
-            - Path=/api/v1/order/**
+            - Path=/orders/**
           filters:
             - name: RequestRateLimiter
               args:
