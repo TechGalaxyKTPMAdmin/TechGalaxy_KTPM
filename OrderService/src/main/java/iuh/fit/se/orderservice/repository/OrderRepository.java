@@ -10,4 +10,6 @@ import java.util.List;
 public interface OrderRepository extends JpaRepository<Order, String> {
     // get list of orders by customer id
     List<Order> getOrdersByCustomerId(String customerId);
+
+    boolean findOrderById(String id);
 }

@@ -42,6 +42,10 @@ public class OrderController {
 
     @PutMapping("/{id}")
     public ResponseEntity<DataResponse<OrderResponse>> updateOrder(@PathVariable String id, @RequestBody OrderRequest request) {
+        System.out.println(request.getOrderStatus());
+        System.out.println(request.getPaymentStatus());
+        System.out.println(request.getAddress());
+
         List<OrderResponse> orderResponses = List.of(orderService.update(id, request));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Update order success")

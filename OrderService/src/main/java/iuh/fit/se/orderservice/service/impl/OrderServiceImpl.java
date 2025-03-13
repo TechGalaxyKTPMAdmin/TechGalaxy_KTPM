@@ -40,41 +40,31 @@ public class OrderServiceImpl implements OrderService {
     private final OrderDetailRepository orderDetailRepository;
     private final RestTemplate restTemplate;
     private final RabbitMQSenderService rabbitMQSenderService;
-    private final OrderMapper orderMapper;
     private final OrderDetailService orderDetailService;
 
     @Autowired
-    public OrderServiceImpl(OrderDetailRepository orderDetailRepository, OrderRepository orderRepository, RabbitMQSenderService rabbitMQSenderService, RestTemplate restTemplate, OrderMapper orderMapper, OrderDetailService orderDetailService) {
+    public OrderServiceImpl(OrderDetailRepository orderDetailRepository, OrderRepository orderRepository, RabbitMQSenderService rabbitMQSenderService, RestTemplate restTemplate, OrderDetailService orderDetailService) {
         this.orderDetailRepository = orderDetailRepository;
         this.orderRepository = orderRepository;
         this.rabbitMQSenderService = rabbitMQSenderService;
         this.restTemplate = restTemplate;
-        this.orderMapper = orderMapper;
         this.orderDetailService = orderDetailService;
     }
 
-//    @Override
-//    @Transactional
-//    public OrderResponse save(OrderRequest orderRequest) {
-//        Order order = orderRepository.save(OrderMapper.INSTANCE.toOrderFromRequest(orderRequest));
-
-//        rabbitMQSenderService.sendOrderCreatedEvent(...);
-//        return OrderMapper.INSTANCE.toOrderResponse(order);
-//    }
-
     @Override
     public OrderResponse findById(String id) {
-        Order order = orderRepository.findById(id).orElse(null);
+        Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
         return OrderMapper.INSTANCE.toOrderResponse(order);
     }
 
     @Override
     @Transactional
     public OrderResponse update(String id, OrderRequest orderRequest) {
-        if (!orderRepository.existsById(id))
-            return null;
-        Order order = orderRepository.save(OrderMapper.INSTANCE.toOrderFromRequest(orderRequest));
-        return OrderMapper.INSTANCE.toOrderResponse(order);
+        Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
+        order.setAddress(orderRequest.getAddress());
+        order.setOrderStatus(orderRequest.getOrderStatus());
+        order.setPaymentStatus(orderRequest.getPaymentStatus());
+        return OrderMapper.INSTANCE.toOrderResponse(orderRepository.save(order));
     }
 
     @Override
@@ -113,8 +103,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
 
-    @Transactional
     @Override
+    @Transactional
     public OrderResponse createOrders(OrderCreateRequest orderCreateRequest) {
 //        CustomerResponse customer = restTemplate.getForObject(localhost.., CustomerResponse.class, orderCreateRequest.getId())
         CustomerResponse customer = new CustomerResponse();
@@ -152,6 +142,7 @@ public class OrderServiceImpl implements OrderService {
             orderDetail.setProductVariantDetailId(productDetail.getProductVariantDetailId());
             orderDetails.add(orderDetail);
         }
+
         orderDetailRepository.saveAll(orderDetails);
         OrderResponse orderResponse = OrderMapper.INSTANCE.toOrderResponse(savedOrder);
         rabbitMQSenderService.sendOrderCreatedEvent(orderResponse);
