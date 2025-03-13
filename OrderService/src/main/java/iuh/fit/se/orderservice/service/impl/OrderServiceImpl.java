@@ -133,6 +133,7 @@ public class OrderServiceImpl implements OrderService {
         List<OrderDetail> orderDetails = new ArrayList<>();
         for (OrderCreateRequest.ProductDetailRequest productDetail : orderCreateRequest.getProductDetailOrders()) {
 //            restTemplate.getForObject(localhost.., ProductDetailRequest.class, productDetail.getProductVariantDetailId()..
+            // check so luong ton kho product
             OrderDetail orderDetail = new OrderDetail();
             orderDetail.setCreatedAt(LocalDateTime.now());
             orderDetail.setOrder(savedOrder);

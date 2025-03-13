@@ -1,5 +1,6 @@
 package iuh.fit.se.userservice.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import iuh.fit.se.userservice.entities.enumeration.CustomerStatus;
 import iuh.fit.se.userservice.entities.enumeration.Gender;

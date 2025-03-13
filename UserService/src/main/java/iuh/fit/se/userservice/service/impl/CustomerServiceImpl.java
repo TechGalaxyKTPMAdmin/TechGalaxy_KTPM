@@ -16,6 +16,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -89,6 +90,7 @@ public class CustomerServiceImpl implements CustomerService {
      * author: PhamVanThanh
      */
     @Override
+    @Transactional
     public CustomerResponse save(CustomerRequest customerRequest) {
         Account account = accountRepository.findById(customerRequest.getAccount().getId()).orElseThrow(() -> new AppException(ErrorCode.ACCOUNT_NOTFOUND));
         customerRequest.setAccount(account);
@@ -105,10 +107,22 @@ public class CustomerServiceImpl implements CustomerService {
      * author: PhamVanThanh
      */
     @Override
+    @Transactional
     public CustomerResponse update(String id, CustomerRequest customerRequest) {
         if (!customerRepository.existsById(id))
-            return null;
-        Customer customer = customerRepository.save(CustomerMapper.INSTANCE.toCustomerFromRequest(customerRequest));
+            throw new AppException(ErrorCode.CUSTOMER_NOTFOUND);
+
+        Customer customerSaved = customerRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.CUSTOMER_NOTFOUND));
+        customerSaved.setName(customerRequest.getName());
+        customerSaved.setGender(customerRequest.getGender());
+        customerSaved.setDateOfBirth(customerRequest.getDateOfBirth());
+        customerSaved.setPhone(customerRequest.getPhone());
+        customerSaved.setAvatar(customerRequest.getAvatar());
+        customerSaved.setUserStatus(customerRequest.getUserStatus());
+        //        Account account = accountRepository.findById(customerRequest.getAccount().getId()).orElseThrow(() -> new AppException(ErrorCode.ACCOUNT_NOTFOUND));
+//        Customer request = CustomerMapper.INSTANCE.toCustomerFromRequest(customerRequest);
+//        request.setAccount(account);
+        Customer customer = customerRepository.save(customerSaved);
         return CustomerMapper.INSTANCE.toCustomerResponse(customer);
     }
 
@@ -120,6 +134,7 @@ public class CustomerServiceImpl implements CustomerService {
      * author: PhamVanThanh
      */
     @Override
+    @Transactional
     public boolean delete(String id) {
         if (!customerRepository.existsById(id))
             return false;
