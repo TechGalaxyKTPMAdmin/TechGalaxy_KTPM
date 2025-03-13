@@ -97,7 +97,7 @@ public class AuthorizationFilter implements GatewayFilter {
 }
 
 /**
- * RouteValidator kiểm tra các endpoint mở (không cần xác thực).
+ * RouteValidator kiểm tra các endpoint mở (không cần xác   thực).
  * Ở đây, tất cả các request có đường dẫn bắt đầu với "/api/v1/user/auth" (như
  * login, register, …)
  * cũng như các endpoint swagger và API docs sẽ được bỏ qua.

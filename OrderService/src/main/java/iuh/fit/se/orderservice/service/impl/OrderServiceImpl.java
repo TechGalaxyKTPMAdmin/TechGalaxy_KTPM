@@ -6,6 +6,8 @@ import iuh.fit.se.orderservice.dto.response.CustomerResponse;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.dto.response.SystemUserResponse;
 import iuh.fit.se.orderservice.entity.Order;
+import iuh.fit.se.orderservice.entity.OrderDetail;
+import iuh.fit.se.orderservice.entity.enumeration.DetailStatus;
 import iuh.fit.se.orderservice.entity.enumeration.OrderStatus;
 import iuh.fit.se.orderservice.entity.enumeration.PaymentStatus;
 import iuh.fit.se.orderservice.exception.AppException;
@@ -26,6 +28,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -129,21 +132,31 @@ public class OrderServiceImpl implements OrderService {
         }
 
         Order order = new Order();
+        order.setPaymentStatus(PaymentStatus.PENDING);
         order.setOrderStatus(OrderStatus.NEW);
         order.setCustomerId(customer.getId());
         order.setSystemUserId(systemUser.getId());
         order.setCreatedAt(LocalDateTime.now());
         order.setAddress(orderCreateRequest.getAddress());
-        order.setPaymentStatus(PaymentStatus.PENDING);
 
         Order savedOrder = orderRepository.save(order);
-        List<OrderCreateRequest.ProductDetailRequest> productDetails = orderCreateRequest.getProductDetailOrders();
-        if (!orderDetailService.save(productDetails, order))
-            return null;
-//        rabbitMQSenderService.sendOrderCreatedEvent(mapToOrderResponse);
+        List<OrderDetail> orderDetails = new ArrayList<>();
+        for (OrderCreateRequest.ProductDetailRequest productDetail : orderCreateRequest.getProductDetailOrders()) {
+//            restTemplate.getForObject(localhost.., ProductDetailRequest.class, productDetail.getProductVariantDetailId()..
+            OrderDetail orderDetail = new OrderDetail();
+            orderDetail.setCreatedAt(LocalDateTime.now());
+            orderDetail.setOrder(savedOrder);
+            orderDetail.setPrice(productDetail.getPrice() * productDetail.getQuantity());
+            orderDetail.setQuantity(productDetail.getQuantity());
+            orderDetail.setDetailStatus(DetailStatus.PENDING);
+            orderDetail.setProductVariantDetailId(productDetail.getProductVariantDetailId());
+            orderDetails.add(orderDetail);
+        }
+        orderDetailRepository.saveAll(orderDetails);
+        OrderResponse orderResponse = OrderMapper.INSTANCE.toOrderResponse(savedOrder);
+        rabbitMQSenderService.sendOrderCreatedEvent(orderResponse);
 
-        return orderMapper.toOrderResponse(order);
+        return orderResponse;
     }
-
 
 }
