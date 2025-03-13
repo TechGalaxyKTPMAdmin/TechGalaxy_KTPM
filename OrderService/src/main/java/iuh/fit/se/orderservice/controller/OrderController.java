@@ -32,7 +32,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public ResponseEntity<DataResponse<OrderResponse>> createOrderAndOrderDetails(@RequestBody OrderCreateRequest request) {
+    public ResponseEntity<DataResponse<OrderResponse>> createOrder(@RequestBody OrderCreateRequest request) {
         List<OrderResponse> orderResponses = List.of(orderService.createOrders(request));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Create order success")
@@ -42,6 +42,10 @@ public class OrderController {
 
     @PutMapping("/{id}")
     public ResponseEntity<DataResponse<OrderResponse>> updateOrder(@PathVariable String id, @RequestBody OrderRequest request) {
+        System.out.println(request.getOrderStatus());
+        System.out.println(request.getPaymentStatus());
+        System.out.println(request.getAddress());
+
         List<OrderResponse> orderResponses = List.of(orderService.update(id, request));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Update order success")
