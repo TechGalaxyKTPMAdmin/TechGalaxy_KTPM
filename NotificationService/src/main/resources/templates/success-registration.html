@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thành công</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .email-header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .email-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .email-body {
+            padding: 20px;
+        }
+        .email-body h2 {
+            color: #4CAF50;
+            font-size: 22px;
+        }
+        .email-body p {
+            margin: 10px 0;
+        }
+        .email-body ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+        .email-body ul li {
+            background: #f9f9f9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .email-footer {
+            text-align: center;
+            background: #f4f4f9;
+            padding: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+        .email-footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <div class="email-header">
+        <h1>Đăng ký thành công</h1>
+    </div>
+    <div class="email-body">
+        <h2>Xin chào, <span th:text="${name}">Người dùng</span>!</h2>
+        <p>Cảm ơn bạn đã đăng ký tài khoản với chúng tôi.</p>
+        <p>Thông tin của bạn:</p>
+        <ul>
+            <li><strong>Email:</strong> <span th:text="${email}"></span></li>
+            <li><strong>Ngày đăng ký:</strong> <span th:text="${registrationDate}"></span></li>
+        </ul>
+        <p>Hãy truy cập website của chúng tôi để bắt đầu trải nghiệm!</p>
+        <p>Trân trọng,</p>
+        <p><strong>Đội ngũ hỗ trợ</strong></p>
+    </div>
+    <div class="email-footer">
+        <p>Bạn cần trợ giúp? <a href="mailto:support@techgalaxy.com">Liên hệ chúng tôi</a>.</p>
+    </div>
+</div>
+</body>
+</html>

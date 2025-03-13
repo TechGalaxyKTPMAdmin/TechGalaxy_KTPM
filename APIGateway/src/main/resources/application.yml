@@ -232,7 +232,25 @@ spring:
                 methods: GET,POST
                 backoff:
                   firstBackoff: 100ms
-                  maxBackoff: 500ms     
+                  maxBackoff: 500ms  
+        - id: NotificationService_Email
+          uri: lb://NotificationService
+          predicates:
+            - Path=/email/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 6
+                redis-rate-limiter.burstCapacity: 12
+                redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms    
 
       default-filters:
         - name: RequestRateLimiter
