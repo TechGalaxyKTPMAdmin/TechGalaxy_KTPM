@@ -142,7 +142,7 @@ spring:
         - id: PaymentService
           uri: lb://PaymentService
           predicates:
-            - Path=/api/v1/payment/**
+            - Path=/payment/**
           filters:
             - name: RequestRateLimiter
               args:

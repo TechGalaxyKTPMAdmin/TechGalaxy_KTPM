@@ -1,0 +1,17 @@
+payment:
+    vnPay:
+        url: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
+        tmnCode: 2M388J6X
+        secretKey: RX1VWT4TWU6MVWCZFHL0OX0AHA96R7PL
+        returnUrl: http://localhost:8080/payment
+        version: 2.1.0
+        command: pay
+        orderType: other
+
+spring:
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+
