@@ -45,6 +45,43 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
+        - id: UserService_System-User
+          uri: lb://UserService
+          predicates:
+            - Path=/system-users/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 5
+                redis-rate-limiter.burstCapacity: 10
+                redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
+        - id: UserService_Customer
+          uri: lb://UserService
+          predicates:
+            - Path=/customer-users/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 5
+                redis-rate-limiter.burstCapacity: 10
+                redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
+        
         - id: ProductService
           uri: lb://ProductService
           predicates:
@@ -68,6 +105,25 @@ spring:
           uri: lb://OrderService
           predicates:
             - Path=/orders/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 3
+                redis-rate-limiter.burstCapacity: 6
+                redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
+
+        - id: OrderService_Orders_Detail
+          uri: lb://OrderService
+          predicates:
+            - Path=/order-details/**
           filters:
             - name: RequestRateLimiter
               args:
@@ -139,6 +195,44 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
+
+        - id: NotificationService_File
+          uri: lb://NotificationService
+          predicates:
+            - Path=/file/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 6
+                redis-rate-limiter.burstCapacity: 12
+                redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms            
+
+        - id: NotificationService_MultiFile
+          uri: lb://NotificationService
+          predicates:
+            - Path=/files/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 6
+                redis-rate-limiter.burstCapacity: 12
+                redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms     
 
       default-filters:
         - name: RequestRateLimiter

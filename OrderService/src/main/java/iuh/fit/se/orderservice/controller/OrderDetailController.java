@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/orders/order-details")
+@RequestMapping("/order-details")
 public class OrderDetailController {
     private final OrderDetailService orderDetailService;
 
@@ -31,7 +31,8 @@ public class OrderDetailController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<DataResponse<OrderDetailResponse>> updateOrderDetail(@PathVariable String id, @RequestBody OrderDetailRequest orderDetailRequest) {
+    public ResponseEntity<DataResponse<OrderDetailResponse>> updateOrderDetail(@PathVariable String id,
+            @RequestBody OrderDetailRequest orderDetailRequest) {
         List<OrderDetailResponse> orderDetailResponses = List.of(orderDetailService.update(id, orderDetailRequest));
         return ResponseEntity.ok(DataResponse.<OrderDetailResponse>builder()
                 .message("Update order detail success")
@@ -48,10 +49,12 @@ public class OrderDetailController {
     }
 
     @GetMapping("/order/{orderId}/product-variant-detail/{productVariantDetailId}")
-    public ResponseEntity<DataResponse<OrderDetailResponse>> getOrderDetailByOrderIdAndProductVariantDetailId(@PathVariable String orderId, @PathVariable String productVariantDetailId) {
+    public ResponseEntity<DataResponse<OrderDetailResponse>> getOrderDetailByOrderIdAndProductVariantDetailId(
+            @PathVariable String orderId, @PathVariable String productVariantDetailId) {
         return ResponseEntity.ok(DataResponse.<OrderDetailResponse>builder()
                 .message("Get order detail by order id and product variant detail id success")
-                .data(List.of(orderDetailService.getOrderDetailByOrderIdAndProductVariantDetailId(orderId, productVariantDetailId)))
+                .data(List.of(orderDetailService.getOrderDetailByOrderIdAndProductVariantDetailId(orderId,
+                        productVariantDetailId)))
                 .build());
     }
 }
