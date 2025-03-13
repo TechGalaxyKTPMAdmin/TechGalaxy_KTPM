@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Tech Galaxy - Thanh toán thành công</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333333;
+        }
+
+        .email-container {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 0;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header img {
+            max-height: 60px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        h3 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 15px;
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+
+        th {
+            background-color: #f8f8f8;
+            font-weight: 600;
+        }
+
+        .highlight {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .success-box {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 13px;
+            text-align: center;
+            background-color: #f8f8f8;
+            color: #666666;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        
+        .button:hover {
+            background-color: #388E3C;
+        }
+
+        .payment-success-icon {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 48px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+<div class="email-container">
+    <div class="header">
+        <img src="https://lh3.googleusercontent.com/d/1yCaYCoN1e-DB1fVPkmSE07SVn53Ww4pd" alt="Tech Galaxy Logo" />
+        <h2>Tech Galaxy</h2>
+    </div>
+
+    <div class="content">
+        <h3>Kính chào quý khách <span th:text="${customerName}">Khách hàng</span>,</h3>
+        
+        <div class="payment-success-icon">✓</div>
+        
+        <div class="success-box">
+            <p>Thanh toán cho đơn hàng <span class="highlight" th:text="${orderCode}">SP...</span> đã được xác nhận thành công.</p>
+        </div>
+        
+        <p>Tech Galaxy xin thông báo rằng chúng tôi đã nhận được khoản thanh toán của quý khách cho đơn hàng <span class="highlight" th:text="${orderCode}">SP...</span>. Đơn hàng của quý khách hiện đang được xử lý.</p>
+
+        <h4 class="highlight">Chi tiết thanh toán</h4>
+        <table>
+            <tr>
+                <th>Thông tin</th>
+                <th>Chi tiết</th>
+            </tr>
+            <tr>
+                <td>Mã đơn hàng:</td>
+                <td th:text="${orderCode}">...</td>
+            </tr>
+            <tr>
+                <td>Phương thức thanh toán:</td>
+                <td th:text="${paymentInfo}">...</td>
+            </tr>
+            <tr>
+                <td>Địa chỉ giao hàng:</td>
+                <td th:text="${shippingAddress}">...</td>
+            </tr>
+            <tr>
+                <td>Số đơn hàng:</td>
+                <td th:text="${orderNumber}">...</td>
+            </tr>
+        </table>
+
+        <h4>Thông tin hóa đơn</h4>
+        <table>
+            <tr>
+                <td>Ký hiệu:</td>
+                <td th:text="${symbol}">...</td>
+            </tr>
+            <tr>
+                <td>Ngày hóa đơn:</td>
+                <td th:text="${invoiceDate}">...</td>
+            </tr>
+            <tr>
+                <td>Số hóa đơn:</td>
+                <td th:text="${invoiceNumber}">...</td>
+            </tr>
+            <tr>
+                <td>Mã số thuế:</td>
+                <td th:text="${taxCode}">...</td>
+            </tr>
+        </table>
+
+        <p>Mã tra cứu hóa đơn: <span class="highlight" th:text="${searchCode}">...</span></p>
+        
+        <p>Quý khách có thể theo dõi trạng thái đơn hàng bằng cách nhấn vào nút bên dưới:</p>
+        
+        <div style="text-align: center;">
+            <a href="#" class="button" style="color: white">Theo dõi đơn hàng</a>
+        </div>
+
+        <p>Cảm ơn quý khách đã tin tưởng và lựa chọn Tech Galaxy. Chúng tôi sẽ thông báo cho quý khách khi đơn hàng được giao.</p>
+
+        <div class="footer">
+            <p><strong>Tech Galaxy</strong> - Hệ thống bán lẻ thiết bị công nghệ toàn quốc</p>
+            <p>Tổng đài hỗ trợ: <strong>1800 2097</strong> (Miễn phí)</p>
+            <p>Email: support@techgalaxy.com | Website: www.techgalaxy.com</p>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -36,13 +36,19 @@ public class EmailServiceImpl implements EmailService {
     }
 
     @Override
-    public void sendSimpleEmail() {
-        SimpleMailMessage msg = new SimpleMailMessage();
-        msg.setTo("congtyviethan1234@gmail.com");
-        msg.setSubject("Testing from Spring Boot");
-        msg.setText("Hello World from Spring Boot Email");
-        this.mailSender.send(msg);
+    public void sendSimpleEmail(String to, String subject, String content, boolean isMultipart, boolean isHtml) {
+        MimeMessage mimeMessage = this.javaMailSender.createMimeMessage();
+        try {
+            MimeMessageHelper message = new MimeMessageHelper(mimeMessage, isMultipart, StandardCharsets.UTF_8.name());
+            message.setTo(to);
+            message.setSubject(subject);
+            message.setText(content, isHtml);
+            this.javaMailSender.send(mimeMessage);
+        } catch (MailException | MessagingException e) {
+            throw new AppException(ErrorCode.FAILED_SEND_EMAIL);
+        }
     }
+
 
     @Override
     public void sendEmailSync(String to, String subject, String content, boolean isMultipart, boolean isHtml) {

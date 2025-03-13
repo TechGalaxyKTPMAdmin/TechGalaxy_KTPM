@@ -41,6 +41,7 @@ public enum ErrorCode {
     SYSTEM_USER_NOT_FOUND(1016, "System user not found", HttpStatus.NOT_FOUND),
     PRODUCT_NOT_ENOUGH(1017, "Product not enough", HttpStatus.BAD_REQUEST),
     NOT_UPDATE_ORDER(1018, "Not update order", HttpStatus.BAD_REQUEST),
+    ORDER_NOT_FOUND(1019, "Order not found", HttpStatus.NOT_FOUND),
 
     // 2000 - 2999: Validation error in request body
     PRODUCT_DISCOUNT_INVALID(2000, "Product discount min value is {min} and max value is {max}", HttpStatus.BAD_REQUEST),
@@ -70,7 +71,10 @@ public enum ErrorCode {
     FILE_NOT_FOUND(4002, "File not found", HttpStatus.NOT_FOUND),
     FILE_SIZE_EXCEEDED(4003, "File size exceeded", HttpStatus.PAYLOAD_TOO_LARGE),
     MISSING_FILE(4004, "Missing file", HttpStatus.BAD_REQUEST),
-    CREATE_DIRECTORY_FAILED(4005, "Create directory failed", HttpStatus.INTERNAL_SERVER_ERROR);
+    OUT_OF_STOCK(4006, "Out of stock", HttpStatus.BAD_REQUEST),
+    CREATE_DIRECTORY_FAILED(4005, "Create directory failed", HttpStatus.INTERNAL_SERVER_ERROR),
+
+    TIME_OUT(5000, "Time out", HttpStatus.REQUEST_TIMEOUT);
     int code;
     String message;
     HttpStatus httpStatus;

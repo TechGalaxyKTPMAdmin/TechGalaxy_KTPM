@@ -161,7 +161,7 @@ spring:
         - id: InventoryService
           uri: lb://InventoryService
           predicates:
-            - Path=/api/v1/inventory/**
+            - Path=/inventory/**
           filters:
             - name: RequestRateLimiter
               args:
