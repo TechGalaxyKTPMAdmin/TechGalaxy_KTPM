@@ -28,5 +28,6 @@ public class OrderCreateRequest {
      public static class ProductDetailRequest {
         String productVariantDetailId;
         int quantity;
+        Double price;
     }
 }

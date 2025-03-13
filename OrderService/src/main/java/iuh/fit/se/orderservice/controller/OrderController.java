@@ -38,8 +38,8 @@ public class OrderController {
     }
 
     @PostMapping
-    public ResponseEntity<DataResponse<OrderResponse>> createOrder(@RequestBody OrderRequest request) {
-        List<OrderResponse> orderResponses = List.of(orderService.save(request));
+    public ResponseEntity<DataResponse<OrderResponse>> createOrder(@RequestBody OrderCreateRequest request) {
+        List<OrderResponse> orderResponses = List.of(orderService.createOrders(request));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Create order success")
                 .data(orderResponses)

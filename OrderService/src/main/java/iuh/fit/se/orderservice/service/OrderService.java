@@ -8,7 +8,7 @@ import org.springframework.hateoas.PagedModel;
 import java.util.List;
 
 public interface OrderService {
-    OrderResponse save(OrderRequest orderRequest);
+//    OrderResponse save(OrderRequest orderRequest);
 
     OrderResponse findById(String id);
 
@@ -20,6 +20,5 @@ public interface OrderService {
 
     List<OrderResponse> findOrdersByCustomerId(String id);
 
-    //    MK
     OrderResponse createOrders(OrderCreateRequest orderCreateRequest);
 }

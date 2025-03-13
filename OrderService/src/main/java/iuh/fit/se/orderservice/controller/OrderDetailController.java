@@ -1,5 +1,6 @@
 package iuh.fit.se.orderservice.controller;
 
+import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
 import iuh.fit.se.orderservice.dto.request.OrderDetailRequest;
 import iuh.fit.se.orderservice.dto.response.DataResponse;
 import iuh.fit.se.orderservice.dto.response.OrderDetailResponse;
@@ -18,15 +19,6 @@ public class OrderDetailController {
     @Autowired
     public OrderDetailController(OrderDetailService orderDetailService) {
         this.orderDetailService = orderDetailService;
-    }
-
-    @PostMapping
-    public ResponseEntity<DataResponse<OrderDetailResponse>> createOrderDetail(@RequestBody OrderDetailRequest orderDetailRequest) {
-        List<OrderDetailResponse> orderDetailResponses = List.of(orderDetailService.save(orderDetailRequest));
-        return ResponseEntity.ok(DataResponse.<OrderDetailResponse>builder()
-                .message("Create order detail success")
-                .data(orderDetailResponses)
-                .build());
     }
 
     @GetMapping("/{id}")
