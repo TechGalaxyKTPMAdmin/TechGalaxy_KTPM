@@ -66,7 +66,7 @@ spring:
         - id: UserService_Customer
           uri: lb://UserService
           predicates:
-            - Path=/customer-users/**
+            - Path=/customers/**
           filters:
             - name: RequestRateLimiter
               args:
