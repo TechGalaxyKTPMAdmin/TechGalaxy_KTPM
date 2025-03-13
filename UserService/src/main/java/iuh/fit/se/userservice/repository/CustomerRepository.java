@@ -18,5 +18,4 @@ public interface CustomerRepository extends JpaRepository<Customer, String> {
     @Query("SELECT c FROM Customer c")
     PagedModel<Customer> findAllCustomers(int page, int size);
 
-
 }
