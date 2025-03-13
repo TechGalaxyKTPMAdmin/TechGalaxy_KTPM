@@ -4,6 +4,8 @@ import iuh.fit.se.orderservice.dto.request.OrderRequest;
 import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
 import iuh.fit.se.orderservice.dto.response.DataResponse;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
+import iuh.fit.se.orderservice.exception.AppException;
+import iuh.fit.se.orderservice.exception.ErrorCode;
 import iuh.fit.se.orderservice.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,16 +31,8 @@ public class OrderController {
                 .build());
     }
 
-    @PostMapping("/v2")
-    public ResponseEntity<DataResponse<OrderResponse>> createOrderAndOrderDetails(@RequestBody OrderCreateRequest request) {
-        List<OrderResponse> orderResponses = List.of(orderService.createOrders(request));
-        return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
-                .data(orderResponses)
-                .build());
-    }
-
     @PostMapping
-    public ResponseEntity<DataResponse<OrderResponse>> createOrder(@RequestBody OrderCreateRequest request) {
+    public ResponseEntity<DataResponse<OrderResponse>> createOrderAndOrderDetails(@RequestBody OrderCreateRequest request) {
         List<OrderResponse> orderResponses = List.of(orderService.createOrders(request));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Create order success")
@@ -57,6 +51,8 @@ public class OrderController {
 
     @GetMapping("/{id}")
     public ResponseEntity<DataResponse<OrderResponse>> getOrderById(@PathVariable String id) {
+        if (orderService.findById(id) == null)
+            throw new AppException(ErrorCode.ORDER_NOTFOUND);
         List<OrderResponse> orderResponses = List.of(orderService.findById(id));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Get order by id success")
