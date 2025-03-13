@@ -1,6 +1,9 @@
-package iuh.fit.se.orderservice.config;
+package iuh.fit.se.notificationservice.config;
 
-import org.springframework.amqp.core.*;
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
@@ -15,20 +18,8 @@ public class RabbitMQConfig {
     @Value("${rabbitmq.exchange.order}")
     private String orderExchange;
 
-    @Value("${rabbitmq.queue.order-status-updated}")
-    private String orderStatusUpdatedQueue;
-
-    @Value("${rabbitmq.queue.inventory-failed}")
-    private String inventoryFailedQueue;
-
     @Value("${rabbitmq.queue.notification}")
     private String notificationQueue;
-
-    @Value("${rabbitmq.routing-key.order-status-updated}")
-    private String orderStatusUpdatedRoutingKey;
-
-    @Value("${rabbitmq.routing-key.inventory-failed}")
-    private String inventoryFailedRoutingKey;
 
     @Value("${rabbitmq.routing-key.notification}")
     private String notificationRoutingKey;
@@ -39,28 +30,8 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public Queue orderStatusUpdatedQueue() {
-        return new Queue(orderStatusUpdatedQueue, true);
-    }
-
-    @Bean
-    public Queue inventoryFailedQueue() {
-        return new Queue(inventoryFailedQueue, true);
-    }
-
-    @Bean
     public Queue notificationQueue() {
         return new Queue(notificationQueue, true);
-    }
-
-    @Bean
-    public Binding orderStatusUpdatedBinding() {
-        return BindingBuilder.bind(orderStatusUpdatedQueue()).to(orderExchange()).with(orderStatusUpdatedRoutingKey);
-    }
-
-    @Bean
-    public Binding inventoryFailedBinding() {
-        return BindingBuilder.bind(inventoryFailedQueue()).to(orderExchange()).with(inventoryFailedRoutingKey);
     }
 
     @Bean
