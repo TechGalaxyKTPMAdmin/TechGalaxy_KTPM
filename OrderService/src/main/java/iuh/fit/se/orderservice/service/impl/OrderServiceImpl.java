@@ -16,6 +16,7 @@ import iuh.fit.se.orderservice.entity.OrderDetail;
 import iuh.fit.se.orderservice.entity.enumeration.DetailStatus;
 import iuh.fit.se.orderservice.entity.enumeration.OrderStatus;
 import iuh.fit.se.orderservice.entity.enumeration.PaymentStatus;
+import iuh.fit.se.orderservice.event.InventoryUpdateMessage;
 import iuh.fit.se.orderservice.event.OrderEvent;
 import iuh.fit.se.orderservice.exception.AppException;
 import iuh.fit.se.orderservice.exception.ErrorCode;
@@ -59,6 +60,8 @@ public class OrderServiceImpl implements OrderService {
 
     private final String orderExchange = "order.exchange";
     private final String orderCreatedRoutingKey = "order.created";
+    private final String inventoryUpdateRoutingKey = "inventory.update";
+    private final String inventoryRollbackRoutingKey = "inventory.rollback";
 
     @Override
     public OrderResponse findById(String id) {
@@ -191,7 +194,8 @@ public class OrderServiceImpl implements OrderService {
             orderResponseCache.remove(savedOrder.getId()); // Dọn cache nếu timeout
             throw new AppException(ErrorCode.TIME_OUT, "Timeout waiting for payment link");
         }
-        Collection<CustomerResponseV2>  customerResponses = customerClient.getCustomerById(order.getCustomerId()).getData();
+        Collection<CustomerResponseV2> customerResponses = customerClient.getCustomerById(order.getCustomerId())
+                .getData();
         CustomerResponseV2 customerResponse = customerResponses.stream().findFirst().orElse(null);
         System.out.println("customerResponse: " + customerResponse);
 
@@ -232,49 +236,49 @@ public class OrderServiceImpl implements OrderService {
 
     @RabbitListener(queues = "payment.completed.queue")
     public void handlePaymentCompleted(PaymentStatusResponse response) {
-        log.info("Received payment status: {}", response);
-
-        // Cập nhật đơn hàng sang thanh toán thành công/thất bại
         Order order = orderRepository.findById(response.getOrderId())
                 .orElseThrow(() -> new AppException(ErrorCode.ORDER_NOT_FOUND));
 
-        if (PaymentStatus.PAID.equals(response.getStatus())) {
-            order.setPaymentStatus(PaymentStatus.PAID);
-            order.setOrderStatus(OrderStatus.PROCESSING);
-        } else {
-            order.setPaymentStatus(PaymentStatus.FAILED);
-            order.setOrderStatus(OrderStatus.CANCELLED);
-        }
-        Collection<CustomerResponseV2>  customerResponses = customerClient.getCustomerById(order.getCustomerId()).getData();
-        CustomerResponseV2 customerResponse = customerResponses.stream().findFirst().orElse(null);
-        System.out.println("customerResponse: " + customerResponse);
-        orderRepository.save(order);
-        EmailRequest emailRequest = EmailRequest.builder()
-                .paymentInfo("123")
-                .orderCode(order.getId())
-                .paymentInfo("Thanh toán đơn hàng " + order.getId())
-                .shippingAddress(order.getAddress())
-                .orderNumber(order.getId())
-                .symbol("VND")
-                .invoiceDate(LocalDateTime.now().toString())
-                .invoiceNumber(order.getId())
-                .customerName(order.getCustomerId())
-                .taxCode("123456789")
-                .searchCode("123456789")
+        List<OrderDetail> orderDetails = orderDetailRepository.findOrderDetailsByOrderId(order.getId());
+        List<InventoryUpdateMessage.ProductVariantDetail> productDetails = orderDetails.stream()
+                .map(detail -> InventoryUpdateMessage.ProductVariantDetail.builder()
+                        .productVariantDetailId(detail.getProductVariantDetailId())
+                        .quantity(detail.getQuantity())
+                        .build())
+                .toList();
+
+        InventoryUpdateMessage inventoryUpdateMessage = InventoryUpdateMessage.builder()
+                .orderId(order.getId())
+                .productVariantDetails(productDetails)
                 .build();
 
+        if (PaymentStatus.PAID.equals(response.getStatus())) {
+            order.setPaymentStatus(PaymentStatus.PAID);
+            order.setOrderStatus(OrderStatus.CONFIRMED);
+            orderRepository.save(order);
+
+            rabbitTemplate.convertAndSend(orderExchange, inventoryUpdateRoutingKey, inventoryUpdateMessage);
+
+        } else {
+            // Hủy đơn
+            order.setPaymentStatus(PaymentStatus.FAILED);
+            order.setOrderStatus(OrderStatus.CANCELLED);
+            orderRepository.save(order);
+
+            // Gửi rollback kho
+            rabbitTemplate.convertAndSend(orderExchange, inventoryRollbackRoutingKey, inventoryUpdateMessage);
+        }
+
+        // Gửi Notification
         NotificationDto notificationDto = NotificationDto.builder()
                 .orderId(order.getId())
                 .customerId(order.getCustomerId())
-                .subject("Thanh toán đơn hàng " + order.getId())
+                .subject("Kết quả thanh toán đơn hàng " + order.getId())
                 .message(PaymentStatus.PAID.equals(response.getStatus())
-                        ? "Đơn hàng của bạn đã thanh toán thành công!"
-                        : "Thanh toán thất bại, vui lòng thử lại.")
-                .type(PaymentStatus.PAID.equals(response.getStatus()) ? "PAYMENT_PAID" : "PAYMENT_FAILED")
-                .emailRequest(emailRequest)
-                .email(customerResponse.getAccount().getEmail())
+                        ? "Đơn hàng của bạn đã được thanh toán thành công."
+                        : "Thanh toán đơn hàng thất bại. Đơn hàng đã bị hủy.")
+                .type("PAYMENT_PAID")
                 .build();
-
         rabbitTemplate.convertAndSend(orderExchange, "notification", notificationDto);
     }
 
