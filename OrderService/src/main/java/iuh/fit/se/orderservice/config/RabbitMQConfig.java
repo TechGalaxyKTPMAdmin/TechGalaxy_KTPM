@@ -24,6 +24,15 @@ public class RabbitMQConfig {
     @Value("${rabbitmq.queue.notification}")
     private String notificationQueue;
 
+    @Value("${rabbitmq.queue.order-reply}")
+    private String orderReplyQueue;
+
+    @Value("${rabbitmq.queue.payment-completed}")
+    private String paymentCompletedQueue;
+
+    @Value("${rabbitmq.queue.payment-failed}")
+    private String paymentFailedQueue;
+
     @Value("${rabbitmq.routing-key.order-status-updated}")
     private String orderStatusUpdatedRoutingKey;
 
@@ -32,6 +41,9 @@ public class RabbitMQConfig {
 
     @Value("${rabbitmq.routing-key.notification}")
     private String notificationRoutingKey;
+
+    @Value("${rabbitmq.routing-key.payment-completed}")
+    private String paymentCompletedRoutingKey;
 
     @Bean
     public TopicExchange orderExchange() {
@@ -54,6 +66,21 @@ public class RabbitMQConfig {
     }
 
     @Bean
+    public Queue orderReplyQueue() {
+        return new Queue(orderReplyQueue, true);
+    }
+
+    @Bean
+    public Queue paymentCompletedQueue() {
+        return new Queue(paymentCompletedQueue, true);
+    }
+
+    @Bean
+    public Queue paymentFailedQueue() {
+        return new Queue(paymentFailedQueue, true);
+    }
+
+    @Bean
     public Binding orderStatusUpdatedBinding() {
         return BindingBuilder.bind(orderStatusUpdatedQueue()).to(orderExchange()).with(orderStatusUpdatedRoutingKey);
     }
@@ -71,6 +98,13 @@ public class RabbitMQConfig {
     @Bean
     public MessageConverter jsonMessageConverter() {
         return new Jackson2JsonMessageConverter();
+    }
+
+    @Bean
+    public Binding paymentCompletedBinding() {
+        return BindingBuilder.bind(paymentCompletedQueue())
+                .to(orderExchange())
+                .with(paymentCompletedRoutingKey);
     }
 
     @Bean

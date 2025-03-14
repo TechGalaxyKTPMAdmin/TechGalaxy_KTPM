@@ -7,6 +7,7 @@ import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.exception.AppException;
 import iuh.fit.se.orderservice.exception.ErrorCode;
 import iuh.fit.se.orderservice.service.OrderService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,8 +33,8 @@ public class OrderController {
     }
 
     @PostMapping
-    public ResponseEntity<DataResponse<OrderResponse>> createOrder(@RequestBody OrderCreateRequest request) {
-        List<OrderResponse> orderResponses = List.of(orderService.createOrders(request));
+    public ResponseEntity<DataResponse<OrderResponse>> createOrder(@RequestBody OrderCreateRequest request, HttpServletRequest httpRequest) {
+        List<OrderResponse> orderResponses = List.of(orderService.createOrders(request,httpRequest));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Create order success")
                 .data(orderResponses)

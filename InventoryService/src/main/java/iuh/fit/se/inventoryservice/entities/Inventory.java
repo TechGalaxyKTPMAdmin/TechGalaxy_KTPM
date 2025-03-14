@@ -28,6 +28,9 @@ public class Inventory {
     @Column(name = "stock_quantity", nullable = false)
     private int stockQuantity;
 
+    @Column(name = "reserved_quantity", nullable = false)
+    private Integer reservedQuantity;
+
     @OneToMany(mappedBy = "inventory", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<InventoryLog> inventoryLogs = new ArrayList<>();
 

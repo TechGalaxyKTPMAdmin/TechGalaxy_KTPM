@@ -16,6 +16,7 @@ public class OrderCreateRequest {
     String customerId;
     String systemUserId;
     String address;
+    PaymentMethod paymentMethod;
     PaymentStatus paymentStatus = PaymentStatus.PENDING;
     OrderStatus orderStatus = OrderStatus.NEW;
     List<ProductDetailRequest> productDetailOrders;
@@ -25,7 +26,7 @@ public class OrderCreateRequest {
     @NoArgsConstructor
     @AllArgsConstructor
     @FieldDefaults(level = AccessLevel.PRIVATE)
-     public static class ProductDetailRequest {
+    public static class ProductDetailRequest {
         String productVariantDetailId;
         int quantity;
         Double price;

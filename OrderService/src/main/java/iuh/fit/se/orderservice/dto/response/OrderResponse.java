@@ -12,6 +12,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class OrderResponse {
     String id;
@@ -22,4 +23,5 @@ public class OrderResponse {
     OrderStatus orderStatus;
     List<OrderDetailResponse> orderDetails;
     LocalDateTime createdAt;
+    String paymentLink;
 }
