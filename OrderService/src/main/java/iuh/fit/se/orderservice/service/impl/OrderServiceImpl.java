@@ -1,11 +1,13 @@
 package iuh.fit.se.orderservice.service.impl;
 
+import iuh.fit.se.orderservice.client.CustomerClient;
 import iuh.fit.se.orderservice.client.InventoryClient;
 import iuh.fit.se.orderservice.dto.request.EmailRequest;
 import iuh.fit.se.orderservice.dto.request.NotificationDto;
 import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
 import iuh.fit.se.orderservice.dto.request.OrderRequest;
 import iuh.fit.se.orderservice.dto.request.PaymentMethod;
+import iuh.fit.se.orderservice.dto.response.CustomerResponseV2;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.dto.response.OrderResponseCache;
 import iuh.fit.se.orderservice.dto.response.PaymentStatusResponse;
@@ -35,6 +37,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
@@ -49,6 +52,7 @@ public class OrderServiceImpl implements OrderService {
     private final OrderDetailRepository orderDetailRepository;
     private final RabbitMQSenderService rabbitMQSenderService;
     private final InventoryClient inventoryClient;
+    private final CustomerClient customerClient;
     private final OrderDetailService orderDetailService;
     private final OrderResponseCache orderResponseCache;
     private final RabbitTemplate rabbitTemplate;
@@ -187,11 +191,17 @@ public class OrderServiceImpl implements OrderService {
             orderResponseCache.remove(savedOrder.getId()); // Dọn cache nếu timeout
             throw new AppException(ErrorCode.TIME_OUT, "Timeout waiting for payment link");
         }
+        Collection<CustomerResponseV2>  customerResponses = customerClient.getCustomerById(order.getCustomerId()).getData();
+        CustomerResponseV2 customerResponse = customerResponses.stream().findFirst().orElse(null);
+        System.out.println("customerResponse: " + customerResponse);
 
         // 11. Trả kết quả cho FE
         return OrderResponse.builder()
                 .id(savedOrder.getId())
-                .paymentLink(response.getPaymentUrl()) // Nếu VNPay mới có link
+                .customer(customerResponse)
+                .address(savedOrder.getAddress())
+                .orderStatus(savedOrder.getOrderStatus())
+                .paymentLink(response.getPaymentUrl())
                 .paymentStatus(response.getStatus())
                 .build();
     }
@@ -215,8 +225,8 @@ public class OrderServiceImpl implements OrderService {
 
         CompletableFuture<PaymentStatusResponse> future = orderResponseCache.get(response.getOrderId());
         if (future != null) {
-            future.complete(response); // Trả kết quả về cho người đang chờ
-            orderResponseCache.remove(response.getOrderId()); // Xoá khỏi cache
+            future.complete(response);
+            orderResponseCache.remove(response.getOrderId());
         }
     }
 
@@ -235,9 +245,11 @@ public class OrderServiceImpl implements OrderService {
             order.setPaymentStatus(PaymentStatus.FAILED);
             order.setOrderStatus(OrderStatus.CANCELLED);
         }
-
+        Collection<CustomerResponseV2>  customerResponses = customerClient.getCustomerById(order.getCustomerId()).getData();
+        CustomerResponseV2 customerResponse = customerResponses.stream().findFirst().orElse(null);
+        System.out.println("customerResponse: " + customerResponse);
         orderRepository.save(order);
-        EmailRequest emailRequest = EmailRequest.builder().orderCode(order.getId())
+        EmailRequest emailRequest = EmailRequest.builder()
                 .paymentInfo("123")
                 .orderCode(order.getId())
                 .paymentInfo("Thanh toán đơn hàng " + order.getId())
@@ -260,6 +272,7 @@ public class OrderServiceImpl implements OrderService {
                         : "Thanh toán thất bại, vui lòng thử lại.")
                 .type(PaymentStatus.PAID.equals(response.getStatus()) ? "PAYMENT_PAID" : "PAYMENT_FAILED")
                 .emailRequest(emailRequest)
+                .email(customerResponse.getAccount().getEmail())
                 .build();
 
         rabbitTemplate.convertAndSend(orderExchange, "notification", notificationDto);

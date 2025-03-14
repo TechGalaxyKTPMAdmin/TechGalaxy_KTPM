@@ -2,6 +2,7 @@ package iuh.fit.se.userservice.controller;
 
 import iuh.fit.se.userservice.dto.request.CustomerRequest;
 import iuh.fit.se.userservice.dto.response.CustomerResponse;
+import iuh.fit.se.userservice.dto.response.CustomerResponseV2;
 import iuh.fit.se.userservice.dto.response.DataResponse;
 import iuh.fit.se.userservice.service.CustomerService;
 import iuh.fit.se.userservice.service.impl.AccountServiceImpl;
@@ -42,11 +43,19 @@ public class CustomerController {
                 .data(customerResponses).build());
     }
 
+//    @GetMapping("/{id}")
+//    public ResponseEntity<DataResponse<CustomerResponse>> getCustomerById(@PathVariable String id) {
+//        List<CustomerResponse> customerResponses = new ArrayList<>();
+//        customerResponses.add(customerService.findById(id));
+//        return ResponseEntity.ok(DataResponse.<CustomerResponse>builder().message("Get customer by id success")
+//                .data(customerResponses).build());
+//    }
+
     @GetMapping("/{id}")
-    public ResponseEntity<DataResponse<CustomerResponse>> getCustomerById(@PathVariable String id) {
-        List<CustomerResponse> customerResponses = new ArrayList<>();
-        customerResponses.add(customerService.findById(id));
-        return ResponseEntity.ok(DataResponse.<CustomerResponse>builder().message("Get customer by id success")
+    public ResponseEntity<DataResponse<CustomerResponseV2>> getCustomerById(@PathVariable String id) {
+        List<CustomerResponseV2> customerResponses = new ArrayList<>();
+        customerResponses.add(customerService.findById2(id));
+        return ResponseEntity.ok(DataResponse.<CustomerResponseV2>builder().message("Get customer by id success")
                 .data(customerResponses).build());
     }
 

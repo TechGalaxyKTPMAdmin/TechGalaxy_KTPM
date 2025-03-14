@@ -13,5 +13,6 @@ public class NotificationDto {
     private String type;
     private String subject;
     private String message;
+    private String email;
     private EmailRequest emailRequest;
 }

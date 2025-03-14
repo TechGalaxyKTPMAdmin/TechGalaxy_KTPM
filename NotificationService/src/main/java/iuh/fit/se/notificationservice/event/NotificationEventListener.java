@@ -19,7 +19,7 @@ public class NotificationEventListener {
     public void handleNotification(NotificationDto notificationDto) {
         log.info("Received notification event: {}", notificationDto);
 
-        String to = notificationDto.getCustomerId();
+        String to = notificationDto.getEmail();
         String subject = notificationDto.getSubject();
         String type = notificationDto.getType();
         EmailRequest emailRequest = notificationDto.getEmailRequest();
@@ -35,6 +35,7 @@ public class NotificationEventListener {
                     log.info("Sent ORDER_CREATED notification to {}", to);
                 }
                 case "PAYMENT_PAID" -> {
+
                     emailService.sendEmailFromTemplateSync(
                             to,
                             subject,

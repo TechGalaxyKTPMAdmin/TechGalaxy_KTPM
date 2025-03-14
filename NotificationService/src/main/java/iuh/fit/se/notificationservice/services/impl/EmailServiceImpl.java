@@ -5,8 +5,10 @@ import iuh.fit.se.notificationservice.exception.AppException;
 import iuh.fit.se.notificationservice.exception.ErrorCode;
 
 import iuh.fit.se.notificationservice.services.EmailService;
+import iuh.fit.se.notificationservice.util.SecurityUtil;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailSender;
@@ -21,6 +23,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
 @Service
+@Slf4j
 public class EmailServiceImpl implements EmailService {
     private final MailSender mailSender;
     private final JavaMailSender javaMailSender;
@@ -60,7 +63,8 @@ public class EmailServiceImpl implements EmailService {
             message.setText(content, isHtml);
             this.javaMailSender.send(mimeMessage);
         } catch (MailException | MessagingException e) {
-            new AppException(ErrorCode.FAILED_SEND_EMAIL);
+            log.error("Failed to send email", e);
+            throw new AppException(ErrorCode.FAILED_SEND_EMAIL);
         }
     }
 
@@ -70,6 +74,7 @@ public class EmailServiceImpl implements EmailService {
             String templateName,
             EmailRequest emailRequest) {
         Context context = new Context();
+        System.out.println("EmailRequest: " + emailRequest.toString());
         context.setVariable("orderCode", emailRequest.getOrderCode());
         context.setVariable("paymentInfo", emailRequest.getPaymentInfo());
         context.setVariable("shippingAddress", emailRequest.getShippingAddress());

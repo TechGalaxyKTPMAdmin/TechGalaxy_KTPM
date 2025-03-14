@@ -3,6 +3,7 @@ package iuh.fit.se.userservice.service.impl;
 
 import iuh.fit.se.userservice.dto.request.CustomerRequest;
 import iuh.fit.se.userservice.dto.response.CustomerResponse;
+import iuh.fit.se.userservice.dto.response.CustomerResponseV2;
 import iuh.fit.se.userservice.entities.Account;
 import iuh.fit.se.userservice.entities.Customer;
 import iuh.fit.se.userservice.exception.AppException;
@@ -80,6 +81,22 @@ public class CustomerServiceImpl implements CustomerService {
     public CustomerResponse findById(String id) {
         return customerRepository.findById(id)
                 .map(CustomerMapper.INSTANCE::toCustomerResponse).orElseThrow(() -> new AppException(ErrorCode.CUSTOMER_NOTFOUND));
+    }
+
+    @Override
+    public CustomerResponseV2 findById2(String id) {
+        Customer customer = customerRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.CUSTOMER_NOTFOUND));
+        System.out.println("customer: " + customer);
+        if (customer == null)
+            return null;
+        CustomerResponseV2 customerResponseV2 = CustomerMapper.INSTANCE.toCustomerResponseV2(customer);
+        System.out.println("customerResponseV2: " + customerResponseV2);
+//        if (customerResponseV2 != null)
+//        {
+//            CustomerResponseV2.AccountResponse accountResponse = customerResponseV2.getAccount();
+//            customerResponseV2.setAccount(accountResponse);
+//        }
+        return customerResponseV2;
     }
 
     /**
