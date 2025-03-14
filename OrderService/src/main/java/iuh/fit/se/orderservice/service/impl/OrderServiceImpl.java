@@ -197,7 +197,6 @@ public class OrderServiceImpl implements OrderService {
         Collection<CustomerResponseV2> customerResponses = customerClient.getCustomerById(order.getCustomerId())
                 .getData();
         CustomerResponseV2 customerResponse = customerResponses.stream().findFirst().orElse(null);
-        System.out.println("customerResponse: " + customerResponse);
 
         // 11. Trả kết quả cho FE
         return OrderResponse.builder()
@@ -236,9 +235,13 @@ public class OrderServiceImpl implements OrderService {
 
     @RabbitListener(queues = "payment.completed.queue")
     public void handlePaymentCompleted(PaymentStatusResponse response) {
+        log.info("Received payment status for order: {}", response.getOrderId());
+
+        // 1. Lấy thông tin đơn hàng
         Order order = orderRepository.findById(response.getOrderId())
                 .orElseThrow(() -> new AppException(ErrorCode.ORDER_NOT_FOUND));
 
+        // 2. Lấy chi tiết đơn hàng
         List<OrderDetail> orderDetails = orderDetailRepository.findOrderDetailsByOrderId(order.getId());
         List<InventoryUpdateMessage.ProductVariantDetail> productDetails = orderDetails.stream()
                 .map(detail -> InventoryUpdateMessage.ProductVariantDetail.builder()
@@ -247,39 +250,71 @@ public class OrderServiceImpl implements OrderService {
                         .build())
                 .toList();
 
+        // 3. Chuẩn bị message cập nhật tồn kho
         InventoryUpdateMessage inventoryUpdateMessage = InventoryUpdateMessage.builder()
                 .orderId(order.getId())
                 .productVariantDetails(productDetails)
                 .build();
 
+        // 4. Lấy thông tin khách hàng từ CustomerService
+        Collection<CustomerResponseV2> customerResponses = customerClient.getCustomerById(order.getCustomerId()).getData();
+        CustomerResponseV2 customerResponse = customerResponses.stream().findFirst()
+                .orElseThrow(() -> new AppException(ErrorCode.CUSTOMER_NOT_FOUND));
+
+        // 5. Chuẩn bị dữ liệu cho Email
+        EmailRequest emailRequest = EmailRequest.builder()
+                .paymentInfo("Thanh toán đơn hàng " + order.getId())
+                .orderCode(order.getId())
+                .shippingAddress(order.getAddress())
+                .orderNumber(order.getId())
+                .symbol("VND")
+                .invoiceDate(LocalDateTime.now().toString())
+                .invoiceNumber(order.getId())
+                .customerName(customerResponse.getName()) // Sử dụng tên khách hàng thực tế
+                .taxCode("123456789") // Cập nhật theo đúng thông tin doanh nghiệp nếu có
+                .searchCode("123456789")
+                .build();
+
+        // 6. Xử lý theo trạng thái thanh toán
         if (PaymentStatus.PAID.equals(response.getStatus())) {
+            log.info("Payment completed for order: {}", order.getId());
+
+            // Cập nhật đơn hàng
             order.setPaymentStatus(PaymentStatus.PAID);
             order.setOrderStatus(OrderStatus.CONFIRMED);
             orderRepository.save(order);
 
+            // Gửi inventory.update để trừ tồn kho giữ
             rabbitTemplate.convertAndSend(orderExchange, inventoryUpdateRoutingKey, inventoryUpdateMessage);
 
         } else {
-            // Hủy đơn
+            log.warn("Payment failed for order: {}", order.getId());
+
+            // Hủy đơn hàng
             order.setPaymentStatus(PaymentStatus.FAILED);
             order.setOrderStatus(OrderStatus.CANCELLED);
             orderRepository.save(order);
 
-            // Gửi rollback kho
+            // Gửi rollback tồn kho
             rabbitTemplate.convertAndSend(orderExchange, inventoryRollbackRoutingKey, inventoryUpdateMessage);
         }
 
-        // Gửi Notification
+        // 7. Gửi Notification (email)
         NotificationDto notificationDto = NotificationDto.builder()
                 .orderId(order.getId())
                 .customerId(order.getCustomerId())
-                .subject("Kết quả thanh toán đơn hàng " + order.getId())
+                .subject("Kết quả thanh toán đơn hàng #" + order.getId())
                 .message(PaymentStatus.PAID.equals(response.getStatus())
-                        ? "Đơn hàng của bạn đã được thanh toán thành công."
-                        : "Thanh toán đơn hàng thất bại. Đơn hàng đã bị hủy.")
-                .type("PAYMENT_PAID")
+                        ? "Đơn hàng của bạn đã thanh toán thành công!"
+                        : "Thanh toán thất bại. Đơn hàng của bạn đã bị hủy.")
+                .type(PaymentStatus.PAID.equals(response.getStatus()) ? "PAYMENT_PAID" : "PAYMENT_FAILED")
+                .emailRequest(emailRequest)
+                .email(customerResponse.getAccount().getEmail()) 
                 .build();
+
         rabbitTemplate.convertAndSend(orderExchange, "notification", notificationDto);
+        log.info("Notification sent to {}", customerResponse.getAccount().getEmail());
     }
+
 
 }
