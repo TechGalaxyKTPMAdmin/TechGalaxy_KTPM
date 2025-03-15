@@ -31,6 +31,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.hateoas.PagedModel;
@@ -64,12 +66,14 @@ public class OrderServiceImpl implements OrderService {
     private final String inventoryRollbackRoutingKey = "inventory.rollback";
 
     @Override
+    @Cacheable(value = "OrderResponses", key = "#id")
     public OrderResponse findById(String id) {
         Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
         return OrderMapper.INSTANCE.toOrderResponse(order);
     }
 
     @Override
+    @CacheEvict(value = "OrderResponses", key = "#id")
     public OrderResponse update(String id, OrderRequest orderRequest) {
         Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
         order.setAddress(orderRequest.getAddress());
@@ -96,6 +100,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    @Cacheable(value = "Orders", unless = "#result.isEmpty()")
     public List<OrderResponse> findAll() {
         return orderRepository.findAll()
                 .stream()
@@ -104,6 +109,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    @Cacheable(value = "OrdersByCustomerId", key = "#id")
     public List<OrderResponse> findOrdersByCustomerId(String id) {
         return orderRepository.getOrdersByCustomerId(id)
                 .stream()
