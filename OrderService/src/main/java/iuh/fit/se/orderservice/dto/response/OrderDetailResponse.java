@@ -1,5 +1,7 @@
 package iuh.fit.se.orderservice.dto.response;
 
+import java.io.Serializable;
+
 import iuh.fit.se.orderservice.entity.enumeration.DetailStatus;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
