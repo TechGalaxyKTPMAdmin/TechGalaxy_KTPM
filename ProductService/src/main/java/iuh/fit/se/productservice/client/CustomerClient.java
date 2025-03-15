@@ -12,4 +12,7 @@ import iuh.fit.se.productservice.dto.response.DataResponse;
 public interface CustomerClient {
     @GetMapping("/{id}")
     DataResponse<CustomerResponseV2> getCustomerById(@PathVariable("id") String id);
+    
+    
+    
 }

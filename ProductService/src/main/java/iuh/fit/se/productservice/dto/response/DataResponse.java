@@ -1,10 +1,13 @@
 package iuh.fit.se.productservice.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+
+import iuh.fit.se.productservice.entities.ImgProductFeedback;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.Collection;
+import java.util.List;
 
 @Getter
 @Setter
