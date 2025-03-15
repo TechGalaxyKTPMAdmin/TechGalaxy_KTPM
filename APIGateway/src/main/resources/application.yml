@@ -118,6 +118,24 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
+        - id: ProductService_Trademark
+          uri: lb://ProductService
+          predicates:
+            - Path=/trademarks/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 7
+                redis-rate-limiter.burstCapacity: 14
+                redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
         - id: OrderService
           uri: lb://OrderService
           predicates:
