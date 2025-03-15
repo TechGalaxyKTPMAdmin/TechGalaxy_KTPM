@@ -114,7 +114,7 @@ spring:
             - name: Retry
               args:
                 retries: 3
-                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE,INTERNAL_SERVER_ERROR
                 methods: GET,POST
                 backoff:
                   firstBackoff: 100ms
@@ -209,7 +209,7 @@ spring:
             - name: Retry
               args:
                 retries: 3
-                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE,INTERNAL_SERVER_ERROR
                 methods: GET,POST
                 backoff:
                   firstBackoff: 100ms

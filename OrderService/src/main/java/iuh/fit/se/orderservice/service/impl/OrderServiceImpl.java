@@ -1,5 +1,6 @@
 package iuh.fit.se.orderservice.service.impl;
 
+import com.rabbitmq.client.Channel;
 import iuh.fit.se.orderservice.client.CustomerClient;
 import iuh.fit.se.orderservice.client.InventoryClient;
 import iuh.fit.se.orderservice.dto.request.EmailRequest;
@@ -27,16 +28,22 @@ import iuh.fit.se.orderservice.service.OrderDetailService;
 import iuh.fit.se.orderservice.service.OrderService;
 import iuh.fit.se.orderservice.service.RabbitMQSenderService;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
@@ -44,7 +51,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-@RequiredArgsConstructor
 @Service
 @Slf4j
 public class OrderServiceImpl implements OrderService {
@@ -58,6 +64,20 @@ public class OrderServiceImpl implements OrderService {
     private final OrderResponseCache orderResponseCache;
     private final RabbitTemplate rabbitTemplate;
 
+    @Autowired
+    public OrderServiceImpl(OrderRepository orderRepository, OrderDetailRepository orderDetailRepository,
+                            RabbitMQSenderService rabbitMQSenderService, InventoryClient inventoryClient,
+                            CustomerClient customerClient, OrderDetailService orderDetailService,
+                            OrderResponseCache orderResponseCache, RabbitTemplate rabbitTemplate) {
+        this.orderRepository = orderRepository;
+        this.orderDetailRepository = orderDetailRepository;
+        this.rabbitMQSenderService = rabbitMQSenderService;
+        this.inventoryClient = inventoryClient;
+        this.customerClient = customerClient;
+        this.orderDetailService = orderDetailService;
+        this.orderResponseCache = orderResponseCache;
+        this.rabbitTemplate = rabbitTemplate;
+    }
     private final String orderExchange = "order.exchange";
     private final String orderCreatedRoutingKey = "order.created";
     private final String inventoryUpdateRoutingKey = "inventory.update";
@@ -189,7 +209,7 @@ public class OrderServiceImpl implements OrderService {
         // 10. Chờ phản hồi (timeout 30s)
         PaymentStatusResponse response;
         try {
-            response = future.get(30, TimeUnit.SECONDS); // Có thể custom timeout theo config
+            response = future.get(60, TimeUnit.SECONDS); // Có thể custom timeout theo config
         } catch (Exception e) {
             orderResponseCache.remove(savedOrder.getId()); // Dọn cache nếu timeout
             throw new AppException(ErrorCode.TIME_OUT, "Timeout waiting for payment link");
@@ -233,10 +253,10 @@ public class OrderServiceImpl implements OrderService {
         }
     }
 
-    @RabbitListener(queues = "payment.completed.queue")
-    public void handlePaymentCompleted(PaymentStatusResponse response) {
+    @RabbitListener(queues = "${rabbitmq.queue.payment-completed}")
+    public void handlePaymentCompleted(PaymentStatusResponse response, Message message, Channel channel) throws IOException {
         log.info("Received payment status for order: {}", response.getOrderId());
-
+        try {
         // 1. Lấy thông tin đơn hàng
         Order order = orderRepository.findById(response.getOrderId())
                 .orElseThrow(() -> new AppException(ErrorCode.ORDER_NOT_FOUND));
@@ -281,7 +301,7 @@ public class OrderServiceImpl implements OrderService {
 
             // Cập nhật đơn hàng
             order.setPaymentStatus(PaymentStatus.PAID);
-            order.setOrderStatus(OrderStatus.CONFIRMED);
+            order.setOrderStatus(OrderStatus.PROCESSING);
             orderRepository.save(order);
 
             // Gửi inventory.update để trừ tồn kho giữ
@@ -314,7 +334,19 @@ public class OrderServiceImpl implements OrderService {
 
         rabbitTemplate.convertAndSend(orderExchange, "notification", notificationDto);
         log.info("Notification sent to {}", customerResponse.getAccount().getEmail());
+        } catch (DataIntegrityViolationException | ConstraintViolationException  e) {
+            log.error("Constraint violation or Data integrity error for order {}: {}", response.getOrderId(), e.getMessage());
+
+            // Reject message và đẩy qua DLQ (không retry tiếp)
+            channel.basicReject(message.getMessageProperties().getDeliveryTag(), false); // false => không requeue
+        } catch (Exception e) {
+            log.error("Unexpected error when processing payment completed for order {}: {}", response.getOrderId(), e.getMessage());
+
+            // Nếu lỗi khác (tạm thời), có thể requeue để retry
+            channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, true); // true => requeue để retry
+        }
     }
+
 
 
 }
