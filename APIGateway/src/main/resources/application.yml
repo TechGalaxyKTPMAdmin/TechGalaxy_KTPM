@@ -233,6 +233,7 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms  
+                  
         - id: NotificationService_Email
           uri: lb://NotificationService
           predicates:

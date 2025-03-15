@@ -1,5 +1,9 @@
 package iuh.fit.se.inventoryservice.event;
 
+import iuh.fit.se.inventoryservice.entities.InventoryLog;
+import iuh.fit.se.inventoryservice.entities.enumeration.ChangeType;
+import iuh.fit.se.inventoryservice.repository.InventoryLogRepository;
+import iuh.fit.se.inventoryservice.repository.InventoryRepository;
 import iuh.fit.se.inventoryservice.service.InventoryService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -12,6 +16,8 @@ import org.springframework.stereotype.Service;
 public class InventoryEventListener {
 
     private final InventoryService inventoryService;
+    private final InventoryRepository inventoryRepository;
+    private final InventoryLogRepository inventoryLogRepository;
 
     /**
      * ✅ Lắng nghe order.created để giữ hàng (nhiều sản phẩm cùng lúc)
@@ -24,17 +30,49 @@ public class InventoryEventListener {
         inventoryService.handleOrderCreatedEvent(orderEvent);
     }
 
-    /**
-     * ✅ Lắng nghe inventory.rollback để hoàn kho (nhiều sản phẩm)
-     */
     @RabbitListener(queues = "inventory.rollback.queue")
-    public void handleInventoryRollback(OrderEvent orderEvent) {
-        log.info("Received inventory.rollback event for order: {}", orderEvent.getOrderId());
+    public void handleInventoryRollback(InventoryUpdateMessage message) {
+        for (InventoryUpdateMessage.ProductVariantDetail detail : message.getProductVariantDetails()) {
+            inventoryRepository.findByProductVariantDetailId(detail.getProductVariantDetailId())
+                    .ifPresent(inventory -> {
+                        inventory.setStockQuantity(inventory.getStockQuantity() + detail.getQuantity());
+                        inventory.setReservedQuantity(
+                                Math.max(0, inventory.getReservedQuantity() - detail.getQuantity()));
+                        inventoryRepository.save(inventory);
 
-        // Sử dụng service rollback đã cập nhật
-        inventoryService.rollbackStock(orderEvent);
+                        // Ghi log rollback
+                        inventoryLogRepository.save(InventoryLog.builder()
+                                .productVariantDetailId(detail.getProductVariantDetailId())
+                                .changeQuantity(detail.getQuantity())
+                                .changeType(ChangeType.ROLLBACK)
+                                .orderId(message.getOrderId())
+                                .inventory(inventory)
+                                .changeReason("Hoàn kho do thanh toán thất bại")
+                                .build());
+                    });
+        }
+    }
 
-        log.info("Inventory rolled back successfully for order: {}", orderEvent.getOrderId());
+    @RabbitListener(queues = "inventory.update.queue")
+    public void handleInventoryUpdate(InventoryUpdateMessage message) {
+        for (InventoryUpdateMessage.ProductVariantDetail detail : message.getProductVariantDetails()) {
+            inventoryRepository.findByProductVariantDetailId(detail.getProductVariantDetailId())
+                    .ifPresent(inventory -> {
+                        inventory.setReservedQuantity(
+                                Math.max(0, inventory.getReservedQuantity() - detail.getQuantity()));
+                        inventoryRepository.save(inventory);
+
+                        // Ghi log
+                        inventoryLogRepository.save(InventoryLog.builder()
+                                .productVariantDetailId(detail.getProductVariantDetailId())
+                                .changeQuantity(-detail.getQuantity())
+                                .changeType(ChangeType.SOLD)
+                                .orderId(message.getOrderId())
+                                .inventory(inventory)
+                                .changeReason("Thanh toán thành công")
+                                .build());
+                    });
+        }
     }
 
 }

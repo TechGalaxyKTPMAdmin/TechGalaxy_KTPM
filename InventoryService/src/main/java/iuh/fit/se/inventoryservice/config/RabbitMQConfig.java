@@ -24,11 +24,27 @@ public class RabbitMQConfig {
     @Value("${rabbitmq.queue.inventory-rollback}")
     private String inventoryRollbackQueue;
 
+    @Value("${rabbitmq.queue.inventory-update}")
+    private String inventoryUpdateQueue;
+
     @Value("${rabbitmq.routing-key.order-created}")
     private String orderCreatedRoutingKey;
 
     @Value("${rabbitmq.routing-key.inventory-rollback}")
     private String inventoryRollbackRoutingKey;
+
+    @Value("${rabbitmq.routing-key.inventory-update}")
+    private String inventoryUpdateRoutingKey;
+
+    @Bean
+    public Queue inventoryUpdateQueue() {
+        return new Queue(inventoryUpdateQueue, true);
+    }
+
+    @Bean
+    public Binding inventoryUpdateBinding() {
+        return BindingBuilder.bind(inventoryUpdateQueue()).to(orderExchange()).with(inventoryUpdateRoutingKey);
+    }
 
     @Bean
     public TopicExchange orderExchange() {
@@ -67,4 +83,3 @@ public class RabbitMQConfig {
         return rabbitTemplate;
     }
 }
-
