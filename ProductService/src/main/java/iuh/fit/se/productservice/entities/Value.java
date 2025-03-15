@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @Entity
 @ToString
 @Table(name = "Attribute_Values")
-public class Value {
+public class Value  {
 
     @Id
     @UuidGenerator
