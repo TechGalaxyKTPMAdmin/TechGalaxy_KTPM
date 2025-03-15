@@ -66,14 +66,14 @@ public class OrderServiceImpl implements OrderService {
     private final String inventoryRollbackRoutingKey = "inventory.rollback";
 
     @Override
-    @Cacheable(value = "OrderResponses", key = "#id")
+//    @Cacheable(value = "OrderResponses", key = "#id")
     public OrderResponse findById(String id) {
         Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
         return OrderMapper.INSTANCE.toOrderResponse(order);
     }
 
     @Override
-    @CacheEvict(value = "OrderResponses", key = "#id")
+//    @CacheEvict(value = "OrderResponses", key = "#id")
     public OrderResponse update(String id, OrderRequest orderRequest) {
         Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
         order.setAddress(orderRequest.getAddress());
@@ -100,7 +100,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    @Cacheable(value = "Orders", unless = "#result.isEmpty()")
+//    @Cacheable(value = "Orders", unless = "#result.isEmpty()")
     public List<OrderResponse> findAll() {
         return orderRepository.findAll()
                 .stream()
@@ -109,7 +109,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    @Cacheable(value = "OrdersByCustomerId", key = "#id")
+//    @Cacheable(value = "OrdersByCustomerId", key = "#id")
     public List<OrderResponse> findOrdersByCustomerId(String id) {
         return orderRepository.getOrdersByCustomerId(id)
                 .stream()
