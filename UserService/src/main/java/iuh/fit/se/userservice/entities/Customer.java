@@ -1,6 +1,5 @@
 package iuh.fit.se.userservice.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import iuh.fit.se.userservice.entities.enumeration.CustomerStatus;
 import iuh.fit.se.userservice.entities.enumeration.Gender;
@@ -15,7 +14,6 @@ import org.hibernate.annotations.UuidGenerator;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
 
 
 @Getter

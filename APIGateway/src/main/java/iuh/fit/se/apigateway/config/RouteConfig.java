@@ -26,6 +26,7 @@ public class RouteConfig {
                                 // .setFallbackUri("forward:/fallback")))
                                 // .uri("lb://UserService"))
 
+
                                 // // Product Service with fallback configuration
                                 // .route("ProductService", r -> r
                                 // .path("/api/v1/product/**")
@@ -35,6 +36,7 @@ public class RouteConfig {
                                 // .setName("productServiceCB")
                                 // .setFallbackUri("forward:/fallback")))
                                 // .uri("lb://ProductService"))
+                
 
                                 // // Order Service with fallback configuration
                                 // .route("OrderService", r -> r
