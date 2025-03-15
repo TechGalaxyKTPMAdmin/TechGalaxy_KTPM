@@ -8,6 +8,7 @@ import iuh.fit.se.notificationservice.services.EmailService;
 import iuh.fit.se.notificationservice.util.SecurityUtil;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;
@@ -15,6 +16,7 @@ import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring6.SpringTemplateEngine;
@@ -24,19 +26,11 @@ import java.util.Map;
 
 @Service
 @Slf4j
+@AllArgsConstructor
 public class EmailServiceImpl implements EmailService {
-    private final MailSender mailSender;
     private final JavaMailSender javaMailSender;
     private final SpringTemplateEngine templateEngine;
 
-    @Autowired
-    public EmailServiceImpl(MailSender mailSender,
-            JavaMailSender javaMailSender,
-            SpringTemplateEngine templateEngine) {
-        this.mailSender = mailSender;
-        this.javaMailSender = javaMailSender;
-        this.templateEngine = templateEngine;
-    }
 
     @Override
     public void sendSimpleEmail(String to, String subject, String content, boolean isMultipart, boolean isHtml) {
