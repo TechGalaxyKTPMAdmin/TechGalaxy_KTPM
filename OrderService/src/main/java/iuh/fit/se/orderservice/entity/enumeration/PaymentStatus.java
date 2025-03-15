@@ -4,5 +4,8 @@ package iuh.fit.se.orderservice.entity.enumeration;
 public enum PaymentStatus {
     PENDING,
     PAID,
-    FAILED
+    FAILED,
+    REFUNDED,
+    CANCELLED,
+    WAITING
 }

@@ -1,6 +1,6 @@
 package iuh.fit.se.orderservice.dto.request;
 
-import iuh.fit.se.orderservice.dto.response.CustomerResponse;
+import iuh.fit.se.orderservice.dto.response.CustomerResponseV2;
 import iuh.fit.se.orderservice.dto.response.SystemUserResponse;
 import iuh.fit.se.orderservice.entity.enumeration.OrderStatus;
 import iuh.fit.se.orderservice.entity.enumeration.PaymentStatus;
@@ -14,7 +14,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class OrderRequest {
     String id;
-    CustomerResponse customer;
+    CustomerResponseV2 customer;
     SystemUserResponse systemUser;
     String address;
     PaymentStatus paymentStatus;

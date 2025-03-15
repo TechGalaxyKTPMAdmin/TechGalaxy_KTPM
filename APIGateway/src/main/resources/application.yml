@@ -149,7 +149,7 @@ spring:
             - name: Retry
               args:
                 retries: 3
-                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE,INTERNAL_SERVER_ERROR
                 methods: GET,POST
                 backoff:
                   firstBackoff: 100ms
@@ -196,7 +196,7 @@ spring:
         - id: InventoryService
           uri: lb://InventoryService
           predicates:
-            - Path=/api/v1/inventory/**
+            - Path=/inventory/**
           filters:
             - name: RequestRateLimiter
               args:
@@ -244,7 +244,7 @@ spring:
             - name: Retry
               args:
                 retries: 3
-                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE,INTERNAL_SERVER_ERROR
                 methods: GET,POST
                 backoff:
                   firstBackoff: 100ms
@@ -268,6 +268,7 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms  
+                  
         - id: NotificationService_Email
           uri: lb://NotificationService
           predicates:

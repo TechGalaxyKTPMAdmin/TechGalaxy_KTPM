@@ -14,8 +14,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "inventory_logs")
-@Getter
-@Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class InventoryLog {
@@ -33,6 +32,9 @@ public class InventoryLog {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ChangeType changeType;
+
+    @Column(name = "order_id")
+    private String orderId;
 
     @Column(name = "change_reason")
     private String changeReason;

@@ -2,6 +2,7 @@ package iuh.fit.se.userservice.mapper;
 
 import iuh.fit.se.userservice.dto.request.CustomerRequest;
 import iuh.fit.se.userservice.dto.response.CustomerResponse;
+import iuh.fit.se.userservice.dto.response.CustomerResponseV2;
 import iuh.fit.se.userservice.entities.Customer;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -17,6 +18,8 @@ public interface CustomerMapper {
     CustomerRequest toCustomerRequest(Customer customer);
 
     Customer toCustomerFromResponse(CustomerResponse customerResponse);
+
+    CustomerResponseV2 toCustomerResponseV2(Customer customer);
 
     Customer toCustomerFromRequest(CustomerRequest customerRequest);
 }

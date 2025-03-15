@@ -1,6 +1,7 @@
 package iuh.fit.se.orderservice.service;
 
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
+import iuh.fit.se.orderservice.event.OrderEvent;
 import org.springframework.stereotype.Service;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +31,8 @@ public class RabbitMQSenderService {
         this.rabbitTemplate = rabbitTemplate;
     }
 
-    public void sendOrderCreatedEvent(OrderResponse orderResponse) {
-        rabbitTemplate.convertAndSend(orderExchange, orderCreatedRoutingKey, orderResponse);
+    public void sendOrderCreatedEvent(OrderEvent orderEvent) {
+        rabbitTemplate.convertAndSend(orderExchange, orderCreatedRoutingKey, orderEvent);
     }
 
 //    public void sendOrderStatusUpdatedEvent(Long orderId, String orderNumber, String status) {

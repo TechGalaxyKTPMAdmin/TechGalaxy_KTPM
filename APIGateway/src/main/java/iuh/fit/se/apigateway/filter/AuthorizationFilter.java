@@ -103,15 +103,16 @@ public class AuthorizationFilter implements GatewayFilter {
  * cũng như các endpoint swagger và API docs sẽ được bỏ qua.
  */
 @Component
+@Slf4j
 class RouteValidator {
     public boolean isOpenEndpoint(ServerHttpRequest request) {
         String path = request.getURI().getPath();
-        // log.info("Checking open endpoint for path: {}", path);
+        log.info("Checking open endpoint for path: {}", path);
         return path.startsWith("/api/v1/user/auth")
                 || path.startsWith("/swagger")
                 || path.startsWith("/v3/api-docs")
                 || path.startsWith("/fallback")
-                ||path.startsWith("/api/accounts/auth");
+                || path.startsWith("/api/accounts/auth");
     }
 
     public boolean isPermitAllEndpoint(ServerHttpRequest request) {
