@@ -2,11 +2,7 @@ package iuh.fit.se.orderservice.service.impl;
 
 import iuh.fit.se.orderservice.client.CustomerClient;
 import iuh.fit.se.orderservice.client.InventoryClient;
-import iuh.fit.se.orderservice.dto.request.EmailRequest;
-import iuh.fit.se.orderservice.dto.request.NotificationDto;
-import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
-import iuh.fit.se.orderservice.dto.request.OrderRequest;
-import iuh.fit.se.orderservice.dto.request.PaymentMethod;
+import iuh.fit.se.orderservice.dto.request.*;
 import iuh.fit.se.orderservice.dto.response.CustomerResponseV2;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.dto.response.OrderResponseCache;
@@ -23,15 +19,14 @@ import iuh.fit.se.orderservice.exception.ErrorCode;
 import iuh.fit.se.orderservice.mapper.OrderMapper;
 import iuh.fit.se.orderservice.repository.OrderDetailRepository;
 import iuh.fit.se.orderservice.repository.OrderRepository;
-import iuh.fit.se.orderservice.service.OrderDetailService;
 import iuh.fit.se.orderservice.service.OrderService;
-import iuh.fit.se.orderservice.service.RabbitMQSenderService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -53,10 +48,8 @@ public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;
     private final OrderDetailRepository orderDetailRepository;
-    private final RabbitMQSenderService rabbitMQSenderService;
     private final InventoryClient inventoryClient;
     private final CustomerClient customerClient;
-    private final OrderDetailService orderDetailService;
     private final OrderResponseCache orderResponseCache;
     private final RabbitTemplate rabbitTemplate;
 
@@ -79,7 +72,18 @@ public class OrderServiceImpl implements OrderService {
         order.setAddress(orderRequest.getAddress());
         order.setOrderStatus(orderRequest.getOrderStatus());
         order.setPaymentStatus(orderRequest.getPaymentStatus());
-        return OrderMapper.INSTANCE.toOrderResponse(orderRepository.save(order));
+        Order orderSaved = orderRepository.save(order);
+
+        updateFindAllCache();
+        return OrderMapper.INSTANCE.toOrderResponse(orderSaved);
+    }
+
+    @CachePut(value = "OrderResponses", key = "'findAll'")
+    public List<OrderResponse> updateFindAllCache() {
+        List<Order> orders = orderRepository.findAll();
+        return orders.stream()
+                .map(OrderMapper.INSTANCE::toOrderResponse)
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -100,7 +104,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    @Cacheable(value = "Orders", unless = "#result.isEmpty()")
+    @Cacheable(value = "OrderResponses", key = "'findAll'", unless = "#result.isEmpty()")
     public List<OrderResponse> findAll() {
         return orderRepository.findAll()
                 .stream()
@@ -109,7 +113,6 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    @Cacheable(value = "OrdersByCustomerId", key = "#id")
     public List<OrderResponse> findOrdersByCustomerId(String id) {
         return orderRepository.getOrdersByCustomerId(id)
                 .stream()
@@ -122,6 +125,7 @@ public class OrderServiceImpl implements OrderService {
     public OrderResponse createOrders(OrderCreateRequest orderCreateRequest, HttpServletRequest request) {
 
         // 1. Kiểm tra tồn kho cho tất cả sản phẩm (sync check)
+        // Chỉ cần 1 sản phẩm không đủ số lượng => thông báo lỗi
         for (OrderCreateRequest.ProductDetailRequest productDetail : orderCreateRequest.getProductDetailOrders()) {
             boolean isAvailable = inventoryClient.checkStock(productDetail.getProductVariantDetailId(),
                     productDetail.getQuantity());
@@ -139,7 +143,6 @@ public class OrderServiceImpl implements OrderService {
                 .address(orderCreateRequest.getAddress())
                 .paymentMethod(PaymentMethod.valueOf(orderCreateRequest.getPaymentMethod().name()).name())
                 .build();
-
         Order savedOrder = orderRepository.save(order);
 
         // 3. Tạo chi tiết đơn hàng
@@ -153,7 +156,6 @@ public class OrderServiceImpl implements OrderService {
                     .productVariantDetailId(productDetail.getProductVariantDetailId())
                     .build();
         }).collect(Collectors.toList());
-
         orderDetailRepository.saveAll(orderDetails);
 
         // 4. Tính tổng tiền đơn hàng
@@ -161,7 +163,7 @@ public class OrderServiceImpl implements OrderService {
                 .mapToLong(orderDetail -> orderDetail.getPrice().longValue())
                 .sum();
 
-        // 5. Chuẩn hóa danh sách ProductVariantDetail cho OrderEvent
+        // 5. Chuẩn hóa danh sách ProductVariantDetails cho OrderEvent
         List<OrderEvent.ProductVariantDetail> productVariantDetails = orderDetails.stream()
                 .map(detail -> OrderEvent.ProductVariantDetail.builder()
                         .productVariantDetailId(detail.getProductVariantDetailId())
@@ -321,6 +323,9 @@ public class OrderServiceImpl implements OrderService {
         rabbitTemplate.convertAndSend(orderExchange, "notification", notificationDto);
         log.info("Notification sent to {}", customerResponse.getAccount().getEmail());
     }
+
+    @CacheEvict(value = "Products", allEntries = true)
+    public void clearCache() {}
 
 
 }

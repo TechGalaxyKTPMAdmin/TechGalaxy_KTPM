@@ -28,7 +28,7 @@ public class RedisConfig {
 
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule()); // Đăng ký hỗ trợ LocalDateTime
-        objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS); // Format ISO 8601 đẹp
+        objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS); // Format ISO 8601
 
         GenericJackson2JsonRedisSerializer serializer = new GenericJackson2JsonRedisSerializer(objectMapper);
 
@@ -46,7 +46,7 @@ public class RedisConfig {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(new JavaTimeModule()); // Đăng ký hỗ trợ LocalDateTime
         objectMapper.disable(SerializationFeature
-                .WRITE_DATES_AS_TIMESTAMPS); // Format ISO 8601 đẹp
+                .WRITE_DATES_AS_TIMESTAMPS); // Format ISO 8601
 
         GenericJackson2JsonRedisSerializer serializer = new GenericJackson2JsonRedisSerializer(objectMapper);
 

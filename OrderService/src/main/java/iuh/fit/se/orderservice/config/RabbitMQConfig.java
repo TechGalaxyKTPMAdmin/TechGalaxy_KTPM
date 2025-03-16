@@ -11,6 +11,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitMQConfig {
+    @Bean
+    public TopicExchange orderExchange() {
+        return new TopicExchange(orderExchange);
+    }
 
     @Value("${rabbitmq.exchange.order}")
     private String orderExchange;
@@ -60,7 +64,6 @@ public class RabbitMQConfig {
     @Value("${rabbitmq.routing-key.payment-failed}")
     private String paymentFailedRoutingKey;
 
-
     @Value("${rabbitmq.queue.notification-retry}")
     private String notificationRetryQueue;
 
@@ -72,10 +75,6 @@ public class RabbitMQConfig {
 
     @Value("${rabbitmq.routing-key.notification-dlq}")
     private String notificationDlqRoutingKey;
-    @Bean
-    public TopicExchange orderExchange() {
-        return new TopicExchange(orderExchange);
-    }
 
     // === QUEUES ===
 
@@ -89,11 +88,11 @@ public class RabbitMQConfig {
         return new Queue(inventoryFailedQueue, true);
     }
 
-
     @Bean
     public Queue orderReplyQueue() {
         return new Queue(orderReplyQueue, true);
     }
+
     @Bean
     public Queue notificationQueue() {
         return QueueBuilder.durable(notificationQueue)
@@ -194,6 +193,7 @@ public class RabbitMQConfig {
     }
 
     // === RabbitTemplate + MessageConverter ===
+
     @Bean
     public MessageConverter jsonMessageConverter() {
         return new Jackson2JsonMessageConverter();

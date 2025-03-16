@@ -58,6 +58,7 @@ public class OrderController {
     public ResponseEntity<DataResponse<OrderResponse>> getOrderById(@PathVariable String id) {
         if (orderService.findById(id) == null)
             throw new AppException(ErrorCode.ORDER_NOTFOUND);
+
         List<OrderResponse> orderResponses = List.of(orderService.findById(id));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Get order by id success")
