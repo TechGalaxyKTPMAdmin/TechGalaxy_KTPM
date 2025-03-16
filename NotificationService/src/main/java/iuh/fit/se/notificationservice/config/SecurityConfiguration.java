@@ -36,20 +36,25 @@ public class SecurityConfiguration {
     @Value("${jwt.base64-secret}")
     private String jwtKey;
 
+    // ---------------------- PUBLIC API ----------------------
     @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+    public SecurityFilterChain publicApiFilterChain(HttpSecurity http) throws Exception {
+        http
+                .securityMatcher("/api/auth/**", "/swagger-ui/**", "/v3/api-docs/**", "/storage/**") // Áp dụng riêng cho các route này
+                .csrf(c -> c.disable())
+                .cors(Customizer.withDefaults())
+                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+
+        return http.build();
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securedApiFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(c -> c.disable())
                 .cors(Customizer.withDefaults())
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/auth/**", "/swagger-ui/**", "/v3/api-docs/**").permitAll()
-                        .anyRequest().authenticated()
-                )
+                .authorizeHttpRequests(auth -> auth.anyRequest().authenticated()) // Các API khác yêu cầu xác thực
                 .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter())))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .exceptionHandling(ex -> ex
@@ -85,5 +90,10 @@ public class SecurityConfiguration {
     private SecretKey getSecretKey() {
         byte[] keyBytes = Base64.from(jwtKey).decode();
         return new SecretKeySpec(keyBytes, 0, keyBytes.length, SecurityUtil.JWT_ALGORITHM.getName());
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }

@@ -27,8 +27,8 @@ public class RedisConfig {
         template.setConnectionFactory(connectionFactory);
 
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.registerModule(new JavaTimeModule()); // Đăng ký hỗ trợ LocalDateTime
-        objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS); // Format ISO 8601
+        objectMapper.registerModule(new JavaTimeModule());
+        objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
 
         GenericJackson2JsonRedisSerializer serializer = new GenericJackson2JsonRedisSerializer(objectMapper);
 
@@ -44,14 +44,14 @@ public class RedisConfig {
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory connectionFactory) {
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.registerModule(new JavaTimeModule()); // Đăng ký hỗ trợ LocalDateTime
+        objectMapper.registerModule(new JavaTimeModule());
         objectMapper.disable(SerializationFeature
-                .WRITE_DATES_AS_TIMESTAMPS); // Format ISO 8601
+                .WRITE_DATES_AS_TIMESTAMPS);
 
         GenericJackson2JsonRedisSerializer serializer = new GenericJackson2JsonRedisSerializer(objectMapper);
 
         RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig()
-                .entryTtl(Duration.ofMinutes(10)) // TTL
+                .entryTtl(Duration.ofMinutes(10))
                 .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer()))
                 .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(serializer))
                 .disableCachingNullValues();
