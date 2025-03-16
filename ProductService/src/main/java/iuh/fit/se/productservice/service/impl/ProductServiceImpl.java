@@ -15,8 +15,12 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -30,6 +34,7 @@ public class ProductServiceImpl implements ProductService {
     ProductMapper productMapper;
 
     @Override
+    @Cacheable(value = "Products", unless = "#result.empty()")
     public Set<ProductResponse> getAllProducts() {
         return productRepository.findAll().stream()
                 .map(productMapper::toProductResponse)
@@ -48,6 +53,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @Cacheable(value = "Products", key = "#id")
     public ProductResponse getProductById(String id) {
         return productRepository.findById(id)
                 .map(productMapper::toProductResponse)
@@ -55,10 +61,21 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    @CacheEvict(value = "Products", key = "#id")
     public ProductResponse updateProduct(String id, ProductRequest productRequest) {
         Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
         productMapper.updateProductFromRequest(product, productRequest);
+
+        updateFindAllCache();
         return productMapper.toProductResponse(productRepository.save(product));
+    }
+
+    @CachePut(value = "Products", key = "'findAll'")
+    public List<ProductResponse> updateFindAllCache() {
+        List<Product> products = productRepository.findAll();
+        return products.stream()
+                .map(productMapper::toProductResponse)
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -71,4 +88,7 @@ public class ProductServiceImpl implements ProductService {
         Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
         productRepository.delete(product);
     }
+
+    @CacheEvict(value = "Products", allEntries = true)
+    public void clearCache() {}
 }
