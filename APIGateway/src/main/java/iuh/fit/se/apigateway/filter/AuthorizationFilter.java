@@ -3,11 +3,7 @@ package iuh.fit.se.apigateway.filter;
 import iuh.fit.se.apigateway.dto.response.PermissionAuthResponse;
 import iuh.fit.se.apigateway.exception.AppException;
 import iuh.fit.se.apigateway.exception.ErrorCode;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
@@ -16,6 +12,8 @@ import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.util.pattern.PathPattern;
+import org.springframework.web.util.pattern.PathPatternParser;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
@@ -51,7 +49,7 @@ public class AuthorizationFilter implements GatewayFilter {
         }
 
         String token = authHeader.substring(7);
-
+        System.out.println("Token: " + token);
         return validateToken(token)
                 .flatMap(response -> {
                     if (!response.isValid()) {
@@ -61,7 +59,6 @@ public class AuthorizationFilter implements GatewayFilter {
                     if (!routeValidator.isPermitAllEndpoint(request)) {
                         String path = request.getPath().value();
                         String method = request.getMethod().name();
-                        // Kiểm tra xem có permission nào khớp với đường dẫn và method hay không.
                         boolean isAllow = response.getPermissions().stream()
                                 .anyMatch(item -> item.getApiPath().equals(path)
                                         && item.getMethod().equals(method));
@@ -105,23 +102,41 @@ public class AuthorizationFilter implements GatewayFilter {
 @Component
 @Slf4j
 class RouteValidator {
+
+    private final PathPatternParser pathPatternParser = new PathPatternParser();
+
+    private final List<String> whiteList = List.of(
+            "/", "/api/accounts/auth/register", "/api/accounts/auth/login",
+            "/storage/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html",
+            "/payment/**", "/file", "/files"
+    );
+
+    private final List<String> whiteListGetOnly = List.of(
+            "/products/**", "/colors/**", "/trademarks/**", "/memories/**",
+            "/usageCategories/**", "/attributes/**", "/product-feedbacks/**"
+    );
+
     public boolean isOpenEndpoint(ServerHttpRequest request) {
         String path = request.getURI().getPath();
-        log.info("Checking open endpoint for path: {}", path);
-        return path.startsWith("/api/v1/user/auth")
-                || path.startsWith("/swagger")
-                || path.startsWith("/v3/api-docs")
-                || path.startsWith("/fallback")
-                || path.startsWith("/api/accounts/auth");
+        String method = request.getMethod().name();
+        log.info("Checking path: {}", path);
+
+        for (String pattern : whiteList) {
+            PathPattern pathPattern = pathPatternParser.parse(pattern);
+            log.info("Matching pattern: {} against path: {}", pattern, path);
+            if (pathPattern.matches(request.getPath().pathWithinApplication())) {
+                log.info("Path {} matches pattern {}", path, pattern);
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean isPermitAllEndpoint(ServerHttpRequest request) {
-        // Nếu cần cho phép một số endpoint không cần kiểm tra permission chi tiết, điều
-        // chỉnh ở đây.
+        // Có thể mở rộng nếu cần phân loại thêm
         return false;
     }
 }
-
 /**
  * ValidateTokenResponse là DTO trả về từ Auth Service sau khi validate token.
  */
@@ -129,6 +144,7 @@ class RouteValidator {
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 class ValidateTokenResponse {
     private boolean valid;
     private String userId;

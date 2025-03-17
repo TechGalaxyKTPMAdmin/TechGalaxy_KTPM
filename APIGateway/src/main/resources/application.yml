@@ -15,9 +15,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 5   # 5 requests/giây
-                redis-rate-limiter.burstCapacity: 10  # Tối đa 10 requests
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -34,9 +34,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 5
-                redis-rate-limiter.burstCapacity: 10
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -45,6 +45,7 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
+
         - id: UserService_System-User
           uri: lb://UserService
           predicates:
@@ -52,9 +53,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 5
-                redis-rate-limiter.burstCapacity: 10
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -63,6 +64,7 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
+
         - id: UserService_Customer
           uri: lb://UserService
           predicates:
@@ -70,9 +72,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 5
-                redis-rate-limiter.burstCapacity: 10
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -81,7 +83,7 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
-        
+
         - id: ProductService
           uri: lb://ProductService
           predicates:
@@ -89,9 +91,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 7
-                redis-rate-limiter.burstCapacity: 14
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.burstCapacity: 1400
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -100,6 +102,7 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
+
         - id: ProductService_Atrribute
           uri: lb://ProductService
           predicates:
@@ -107,9 +110,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 7
-                redis-rate-limiter.burstCapacity: 14
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.burstCapacity: 1400
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -118,6 +121,7 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
+
         - id: ProductService_Trademark
           uri: lb://ProductService
           predicates:
@@ -125,9 +129,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 7
-                redis-rate-limiter.burstCapacity: 14
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.burstCapacity: 1400
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -136,6 +140,7 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
+
         - id: OrderService
           uri: lb://OrderService
           predicates:
@@ -143,9 +148,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 3
-                redis-rate-limiter.burstCapacity: 6
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 300
+                redis-rate-limiter.burstCapacity: 600
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -162,9 +167,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 3
-                redis-rate-limiter.burstCapacity: 6
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 300
+                redis-rate-limiter.burstCapacity: 600
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -181,9 +186,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 5
-                redis-rate-limiter.burstCapacity: 10
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.burstCapacity: 1000
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -200,9 +205,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 4
-                redis-rate-limiter.burstCapacity: 8
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 400
+                redis-rate-limiter.burstCapacity: 800
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -219,9 +224,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 6
-                redis-rate-limiter.burstCapacity: 12
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 600
+                redis-rate-limiter.burstCapacity: 1200
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -238,9 +243,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 6
-                redis-rate-limiter.burstCapacity: 12
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 600
+                redis-rate-limiter.burstCapacity: 1200
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -248,7 +253,7 @@ spring:
                 methods: GET,POST
                 backoff:
                   firstBackoff: 100ms
-                  maxBackoff: 500ms            
+                  maxBackoff: 500ms
 
         - id: NotificationService_MultiFile
           uri: lb://NotificationService
@@ -257,9 +262,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 6
-                redis-rate-limiter.burstCapacity: 12
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 600
+                redis-rate-limiter.burstCapacity: 1200
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -267,17 +272,18 @@ spring:
                 methods: GET,POST
                 backoff:
                   firstBackoff: 100ms
-                  maxBackoff: 500ms  
-        - id: NotificationService_MultiFile
+                  maxBackoff: 500ms
+
+        - id: NotificationService_Image
           uri: lb://NotificationService
           predicates:
             - Path=/storage/**
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 6
-                redis-rate-limiter.burstCapacity: 12
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 600
+                redis-rate-limiter.burstCapacity: 1200
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -285,8 +291,8 @@ spring:
                 methods: GET,POST
                 backoff:
                   firstBackoff: 100ms
-                  maxBackoff: 500ms  
-                  
+                  maxBackoff: 500ms
+
         - id: NotificationService_Email
           uri: lb://NotificationService
           predicates:
@@ -294,9 +300,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 6
-                redis-rate-limiter.burstCapacity: 12
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 600
+                redis-rate-limiter.burstCapacity: 1200
+                redis-rate-limiter.requestedTokens: 100
             - name: Retry
               args:
                 retries: 3
@@ -304,17 +310,21 @@ spring:
                 methods: GET,POST
                 backoff:
                   firstBackoff: 100ms
-                  maxBackoff: 500ms    
+                  maxBackoff: 500ms
 
       default-filters:
+        - name: Authorization
         - name: RequestRateLimiter
           args:
-            redis-rate-limiter.replenishRate: 5
-            redis-rate-limiter.burstCapacity: 10
-            redis-rate-limiter.requestedTokens: 1
+            redis-rate-limiter.replenishRate: 500
+            redis-rate-limiter.burstCapacity: 1000
+            redis-rate-limiter.requestedTokens: 100
 server:
   port: 8081
-
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty: DEBUG
 eureka:
   client:
     register-with-eureka: true
@@ -337,36 +347,31 @@ resilience4j:
   circuitbreaker:
     instances:
       userServiceCB:
-        slidingWindowSize: 10  # Số lượng request gần nhất mà Circuit Breaker sẽ theo dõi để xác định tỷ lệ lỗi
-        failureRateThreshold: 50  # Nếu tỷ lệ lỗi vượt quá 50%, Circuit Breaker sẽ mở (Open)
-        slowCallRateThreshold: 50  # Nếu tỷ lệ request chậm vượt quá 50%, Circuit Breaker cũng sẽ mở
-        slowCallDurationThreshold: 2s  # Request nào mất hơn 2 giây sẽ bị coi là "request chậm"
-        permittedNumberOfCallsInHalfOpenState: 2  # Khi ở trạng thái "Half-Open", chỉ cho phép thử nghiệm 2 request
-        maxWaitDurationInHalfOpenState: 5s  # Circuit Breaker sẽ ở trạng thái Half-Open tối đa 5s
-        waitDurationInOpenState: 10s  # Circuit Breaker sẽ ở trạng thái Open trong 10s trước khi thử lại
-        automaticTransitionFromOpenToHalfOpenEnabled: true  # Tự động chuyển từ Open sang Half-Open để thử lại
-
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        slowCallRateThreshold: 50
+        slowCallDurationThreshold: 2s
+        permittedNumberOfCallsInHalfOpenState: 2
+        maxWaitDurationInHalfOpenState: 5s
+        waitDurationInOpenState: 10s
+        automaticTransitionFromOpenToHalfOpenEnabled: true
       productServiceCB:
         slidingWindowSize: 10
         failureRateThreshold: 50
-        waitDurationInOpenState: 10s  # Giữ trạng thái Open trong 10s trước khi thử lại
-
+        waitDurationInOpenState: 10s
       orderServiceCB:
         slidingWindowSize: 10
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
-
       paymentServiceCB:
         slidingWindowSize: 10
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
-
       inventoryServiceCB:
         slidingWindowSize: 10
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
-
       notificationServiceCB:
-        slidingWindowSize: 10
+        slidingWindowSize: 100
         failureRateThreshold: 50
         waitDurationInOpenState: 10s

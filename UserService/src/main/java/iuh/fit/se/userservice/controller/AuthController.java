@@ -11,12 +11,14 @@ import iuh.fit.se.userservice.service.impl.AuthenticationServiceImpl;
 import iuh.fit.se.userservice.service.impl.RegistrationServiceImpl;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@Slf4j
 @RequestMapping("/api/accounts/auth")
 public class AuthController {
     private final AuthenticationService authService;
@@ -80,11 +82,31 @@ public class AuthController {
 
     @PostMapping("/validate-token")
     public ResponseEntity<DataResponse<ValidateTokenResponse>> validateToken(
-            @RequestHeader("Authorization") String authHeader) {
+            @RequestHeader("Authorization") String authHeader,
+            @RequestHeader(value = "X-Request-ID", required = false) String requestId) {
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+            log.warn("Invalid Authorization header [{}]", requestId);
             return ResponseEntity.badRequest().build();
         }
         String token = authHeader.substring(7);
-        return authService.validateToken(token);
+        log.info("Received token [{}]: {}", requestId, token);
+        ResponseEntity<DataResponse<ValidateTokenResponse>> response = authService.validateToken(token);
+        log.info("Returning response [{}]: {}", requestId, response.getBody());
+        return response;
     }
+//    @PostMapping("/validate-token")
+//    public ResponseEntity<ValidateTokenResponse> validateToken(
+//            @RequestHeader("Authorization") String authHeader,
+//            @RequestHeader(value = "X-Request-ID", required = false) String requestId) {
+//        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+//            log.warn("Invalid Authorization header [{}]", requestId);
+//            return ResponseEntity.badRequest().build();
+//        }
+//        String token = authHeader.substring(7);
+//        log.info("Received token [{}]: {}", requestId, token);
+//        ResponseEntity<ValidateTokenResponse> response = authService.validateTokenRaw(token);
+//        log.info("Returning response [{}]: {}", requestId, response.getBody());
+//        return response;
+//    }
+
 }

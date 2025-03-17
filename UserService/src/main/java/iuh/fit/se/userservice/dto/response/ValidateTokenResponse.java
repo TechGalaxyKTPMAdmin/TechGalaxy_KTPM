@@ -1,10 +1,7 @@
 package iuh.fit.se.userservice.dto.response;
 
 import iuh.fit.se.userservice.entities.Role;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
@@ -12,9 +9,10 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class ValidateTokenResponse {
     private boolean valid;
     private String userId;
     private String email;
-    private List<PermissionAuthResponse> roles;
+    private List<PermissionAuthResponse> permissions;
 }
