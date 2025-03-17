@@ -1,5 +1,7 @@
 package iuh.fit.se.orderservice.service.impl;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import iuh.fit.se.orderservice.client.CustomerClient;
 import iuh.fit.se.orderservice.client.InventoryClient;
 import iuh.fit.se.orderservice.dto.request.*;
@@ -30,6 +32,7 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,6 +55,8 @@ public class OrderServiceImpl implements OrderService {
     private final CustomerClient customerClient;
     private final OrderResponseCache orderResponseCache;
     private final RabbitTemplate rabbitTemplate;
+    private final OrderMapper orderMapper;
+    private final ObjectMapper objectMapper;
 
     private final String orderExchange = "order.exchange";
     private final String orderCreatedRoutingKey = "order.created";
@@ -59,10 +64,10 @@ public class OrderServiceImpl implements OrderService {
     private final String inventoryRollbackRoutingKey = "inventory.rollback";
 
     @Override
-    @Cacheable(value = "OrderResponses", key = "#id")
+    @Cacheable(value = "OrderResponses", key = "#id", unless = "#result == null")
     public OrderResponse findById(String id) {
         Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
-        return OrderMapper.INSTANCE.toOrderResponse(order);
+        return objectMapper.convertValue(orderMapper.toOrderResponse(order), OrderResponse.class);
     }
 
     @Override
@@ -75,14 +80,14 @@ public class OrderServiceImpl implements OrderService {
         Order orderSaved = orderRepository.save(order);
 
         updateFindAllCache();
-        return OrderMapper.INSTANCE.toOrderResponse(orderSaved);
+        return orderMapper.toOrderResponse(orderSaved);
     }
 
     @CachePut(value = "OrderResponses", key = "'findAll'")
     public List<OrderResponse> updateFindAllCache() {
         List<Order> orders = orderRepository.findAll();
         return orders.stream()
-                .map(OrderMapper.INSTANCE::toOrderResponse)
+                .map(orderMapper::toOrderResponse)
                 .collect(Collectors.toList());
     }
 
@@ -93,7 +98,7 @@ public class OrderServiceImpl implements OrderService {
 
         List<OrderResponse> orderResponses = orderPage.getContent()
                 .stream()
-                .map(OrderMapper.INSTANCE::toOrderResponse)
+                .map(orderMapper::toOrderResponse)
                 .collect(Collectors.toList());
         return PagedModel.of(
                 orderResponses,
@@ -108,7 +113,7 @@ public class OrderServiceImpl implements OrderService {
     public List<OrderResponse> findAll() {
         return orderRepository.findAll()
                 .stream()
-                .map(OrderMapper.INSTANCE::toOrderResponse)
+                .map(orderMapper::toOrderResponse)
                 .collect(Collectors.toList());
     }
 
@@ -116,7 +121,7 @@ public class OrderServiceImpl implements OrderService {
     public List<OrderResponse> findOrdersByCustomerId(String id) {
         return orderRepository.getOrdersByCustomerId(id)
                 .stream()
-                .map(OrderMapper.INSTANCE::toOrderResponse)
+                .map(orderMapper::toOrderResponse)
                 .collect(Collectors.toList());
     }
 

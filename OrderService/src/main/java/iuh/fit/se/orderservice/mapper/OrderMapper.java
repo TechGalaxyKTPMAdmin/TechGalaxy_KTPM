@@ -4,6 +4,7 @@ import iuh.fit.se.orderservice.dto.request.OrderRequest;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.entity.Order;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 @Mapper(componentModel = "spring")
@@ -14,6 +15,8 @@ public interface OrderMapper {
 
     Order toOrderFromRequest(OrderRequest orderRequest);
 
+    @Mapping(source = "customerId", target = "customer.id")
+    @Mapping(source = "systemUserId", target = "systemUser.id")
     OrderResponse toOrderResponse(Order order);
 
     OrderRequest toOrderRequest(Order order);

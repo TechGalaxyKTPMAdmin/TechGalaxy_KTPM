@@ -6,22 +6,28 @@ import iuh.fit.se.orderservice.dto.response.DataResponse;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.exception.AppException;
 import iuh.fit.se.orderservice.exception.ErrorCode;
+import iuh.fit.se.orderservice.mapper.OrderMapper;
 import iuh.fit.se.orderservice.service.OrderService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
     private final OrderService orderService;
+    private final OrderMapper orderMapper;
 
     @Autowired
-    public OrderController(OrderService orderService) {
+    public OrderController(OrderService orderService, OrderMapper orderMapper) {
         this.orderService = orderService;
+        this.orderMapper = orderMapper;
     }
 
     @GetMapping
@@ -56,13 +62,13 @@ public class OrderController {
 
     @GetMapping("/{id}")
     public ResponseEntity<DataResponse<OrderResponse>> getOrderById(@PathVariable String id) {
-        if (orderService.findById(id) == null)
+        OrderResponse orderResponse = orderService.findById(id);
+        if (orderResponse == null)
             throw new AppException(ErrorCode.ORDER_NOTFOUND);
 
-        List<OrderResponse> orderResponses = List.of(orderService.findById(id));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Get order by id success")
-                .data(orderResponses)
+                .data(List.of(orderResponse))
                 .build());
     }
 
