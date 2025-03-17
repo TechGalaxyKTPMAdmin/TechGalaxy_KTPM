@@ -71,22 +71,36 @@ public class InventoryService {
     }
 
     /**
-     * ✅ Hàm giữ kho (riêng cho từng sản phẩm)
+     * ✅ Hàm giữ kho Idempotent (chống giữ lặp) cho từng đơn hàng và sản phẩm
      */
     @Transactional
     public boolean reserveStock(String orderId, String productVariantDetailId, int quantity) {
+        // 1. Kiểm tra đã giữ kho cho đơn này chưa
+        boolean isReserved = inventoryLogRepository.existsByOrderIdAndProductVariantDetailIdAndChangeType(
+                orderId,
+                productVariantDetailId,
+                ChangeType.RESERVED
+        );
+
+        if (isReserved) {
+            log.warn("Order {} already reserved product {}. Skip!", orderId, productVariantDetailId);
+            return true;
+        }
+
+        // 2. Lấy thông tin tồn kho
         Optional<Inventory> optInventory = inventoryRepository.findByProductVariantDetailId(productVariantDetailId);
 
         if (optInventory.isPresent()) {
             Inventory inventory = optInventory.get();
 
+            // 3. Kiểm tra đủ hàng để giữ
             if (inventory.getStockQuantity() >= quantity) {
-                // 1. Cập nhật tồn kho
+                // 4. Cập nhật tồn kho
                 inventory.setStockQuantity(inventory.getStockQuantity() - quantity);
                 inventory.setReservedQuantity(inventory.getReservedQuantity() + quantity);
                 inventoryRepository.save(inventory);
 
-                // 2. Ghi log giữ kho
+                // 5. Ghi log giữ kho
                 InventoryLog inventoryLog = InventoryLog.builder()
                         .productVariantDetailId(productVariantDetailId)
                         .changeQuantity(-quantity)
@@ -97,11 +111,19 @@ public class InventoryService {
                         .build();
                 inventoryLogRepository.save(inventoryLog);
 
+                log.info("Reserved {} of product {} for order {}", quantity, productVariantDetailId, orderId);
                 return true;
+            } else {
+                log.warn("Not enough stock for product {}. Requested: {}, Available: {}",
+                        productVariantDetailId, quantity, inventory.getStockQuantity());
             }
+        } else {
+            log.error("Product {} not found in inventory", productVariantDetailId);
         }
+
         return false;
     }
+
 
     /**
      * ✅ Rollback khi đơn hàng bị hủy hoặc thanh toán thất bại (nhiều sản phẩm)

@@ -30,7 +30,7 @@ public class CloudinaryController {
     }
 
 
-    @PostMapping("/file")
+    @PostMapping("/file/cloudinary")
     @ResponseBody
     public ResponseEntity<DataResponse<UploadFileResponse>> upload(@RequestParam MultipartFile file) throws IOException {
         // skip validate
@@ -64,7 +64,7 @@ public class CloudinaryController {
     }
 
     // Upload multiple files
-    @PostMapping("/files")
+    @PostMapping("/files/cloudinary")
     public ResponseEntity<DataResponse<List<UploadFileResponse>>> uploadMultiple(
             @RequestParam(name = "files", required = false) MultipartFile[] files
     ) throws URISyntaxException, IOException {

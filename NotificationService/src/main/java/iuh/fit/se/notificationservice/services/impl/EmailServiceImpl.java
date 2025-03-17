@@ -5,18 +5,15 @@ import iuh.fit.se.notificationservice.exception.AppException;
 import iuh.fit.se.notificationservice.exception.ErrorCode;
 
 import iuh.fit.se.notificationservice.services.EmailService;
-import iuh.fit.se.notificationservice.util.SecurityUtil;
 import jakarta.mail.MessagingException;
+import jakarta.mail.SendFailedException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.eclipse.angus.mail.smtp.SMTPAddressFailedException;
 import org.springframework.mail.MailException;
-import org.springframework.mail.MailSender;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring6.SpringTemplateEngine;
@@ -48,7 +45,7 @@ public class EmailServiceImpl implements EmailService {
 
 
     @Override
-    public void sendEmailSync(String to, String subject, String content, boolean isMultipart, boolean isHtml) {
+    public void sendEmailSync(String to, String subject, String content, boolean isMultipart, boolean isHtml) throws AppException{
         MimeMessage mimeMessage = this.javaMailSender.createMimeMessage();
         try {
             MimeMessageHelper message = new MimeMessageHelper(mimeMessage, isMultipart, StandardCharsets.UTF_8.name());
@@ -59,6 +56,8 @@ public class EmailServiceImpl implements EmailService {
         } catch (MailException | MessagingException e) {
             log.error("Failed to send email", e);
             throw new AppException(ErrorCode.FAILED_SEND_EMAIL);
+        } catch (Exception ex) {
+            log.error("Invalid address: " + ex.getMessage());
         }
     }
 
@@ -66,7 +65,7 @@ public class EmailServiceImpl implements EmailService {
             String to,
             String subject,
             String templateName,
-            EmailRequest emailRequest) {
+            EmailRequest emailRequest) throws AppException{
         Context context = new Context();
         System.out.println("EmailRequest: " + emailRequest.toString());
         context.setVariable("orderCode", emailRequest.getOrderCode());
@@ -84,7 +83,7 @@ public class EmailServiceImpl implements EmailService {
         this.sendEmailSync(to, subject, content, false, true);
     }
 
-    public void sendEmailFromTemplateSync(String to, String subject, String templateName) {
+    public void sendEmailFromTemplateSync(String to, String subject, String templateName) throws AppException{
         Context context = new Context();
         String content = templateEngine.process(templateName, context);
         this.sendEmailSync(to, subject, content, false, true);

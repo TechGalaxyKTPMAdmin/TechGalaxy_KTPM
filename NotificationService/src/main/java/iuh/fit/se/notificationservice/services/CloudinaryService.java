@@ -31,10 +31,6 @@ public class CloudinaryService {
 
     @PostConstruct
     public void init() {
-        System.out.println("CLOUD_NAME: " + cloud_name);
-        System.out.println("API_KEY: " + api_key);
-        System.out.println("API_SECRET: " + api_secret);
-
         Map<String, String> valuesMap = new HashMap<>();
         valuesMap.put("cloud_name", cloud_name);
         valuesMap.put("api_key", api_key);

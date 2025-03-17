@@ -268,6 +268,24 @@ spring:
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms  
+        - id: NotificationService_MultiFile
+          uri: lb://NotificationService
+          predicates:
+            - Path=/storage/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 6
+                redis-rate-limiter.burstCapacity: 12
+                redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms  
                   
         - id: NotificationService_Email
           uri: lb://NotificationService
