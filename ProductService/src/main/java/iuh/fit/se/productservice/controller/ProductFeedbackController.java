@@ -1,10 +1,8 @@
 package iuh.fit.se.productservice.controller;
 
 
-import iuh.fit.se.productservice.client.CustomerClient;
 import iuh.fit.se.productservice.dto.request.ProductFeedbackRequest;
 import iuh.fit.se.productservice.dto.request.ProductFeedbackRequestV2;
-import iuh.fit.se.productservice.dto.response.CustomerResponseV2;
 import iuh.fit.se.productservice.dto.response.DataResponse;
 import iuh.fit.se.productservice.dto.response.ProductFeedbackResponse;
 import iuh.fit.se.productservice.dto.response.ProductFeedbackResponseV2;

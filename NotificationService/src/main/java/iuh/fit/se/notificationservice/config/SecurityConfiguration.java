@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -23,6 +24,7 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtGra
 import org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationEntryPoint;
 import org.springframework.security.oauth2.server.resource.web.access.BearerTokenAccessDeniedHandler;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.core.annotation.Order;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
@@ -36,11 +38,12 @@ public class SecurityConfiguration {
     @Value("${jwt.base64-secret}")
     private String jwtKey;
 
-    // ---------------------- PUBLIC API ----------------------
     @Bean
+    @Order(1)
     public SecurityFilterChain publicApiFilterChain(HttpSecurity http) throws Exception {
         http
-                .securityMatcher("/api/auth/**", "/swagger-ui/**", "/v3/api-docs/**", "/storage/**") // Áp dụng riêng cho các route này
+                .securityMatcher("/api/auth/**", "/swagger-ui/**", "/v3/api-docs/**",
+                        "/storage/**")
                 .csrf(c -> c.disable())
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
@@ -50,17 +53,18 @@ public class SecurityConfiguration {
     }
 
     @Bean
+    @Order(2)
     public SecurityFilterChain securedApiFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(c -> c.disable())
                 .cors(Customizer.withDefaults())
-                .authorizeHttpRequests(auth -> auth.anyRequest().authenticated()) // Các API khác yêu cầu xác thực
-                .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter())))
+                .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
+                .oauth2ResourceServer(
+                        oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter())))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .exceptionHandling(ex -> ex
                         .authenticationEntryPoint(new BearerTokenAuthenticationEntryPoint())
-                        .accessDeniedHandler(new BearerTokenAccessDeniedHandler())
-                );
+                        .accessDeniedHandler(new BearerTokenAccessDeniedHandler()));
 
         return http.build();
     }

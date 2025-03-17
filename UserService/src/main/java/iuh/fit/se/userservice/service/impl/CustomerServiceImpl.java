@@ -4,6 +4,7 @@ package iuh.fit.se.userservice.service.impl;
 import iuh.fit.se.userservice.dto.request.CustomerRequest;
 import iuh.fit.se.userservice.dto.response.CustomerResponse;
 import iuh.fit.se.userservice.dto.response.CustomerResponseV2;
+import iuh.fit.se.userservice.dto.response.OrderResponse;
 import iuh.fit.se.userservice.entities.Account;
 import iuh.fit.se.userservice.entities.Customer;
 import iuh.fit.se.userservice.exception.AppException;
@@ -12,6 +13,7 @@ import iuh.fit.se.userservice.mapper.CustomerMapper;
 import iuh.fit.se.userservice.repository.AccountRepository;
 import iuh.fit.se.userservice.repository.CustomerRepository;
 import iuh.fit.se.userservice.service.CustomerService;
+import iuh.fit.se.userservice.service.wrapper.OrderServiceWrapper;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -19,6 +21,7 @@ import org.springframework.hateoas.PagedModel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,7 +30,7 @@ import java.util.stream.Collectors;
 public class CustomerServiceImpl implements CustomerService {
     private final CustomerRepository customerRepository;
     private final AccountRepository accountRepository;
-
+    private final OrderServiceWrapper orderServiceWrapper;
 
     /**
      * Find all customers with pagination
@@ -159,6 +162,10 @@ public class CustomerServiceImpl implements CustomerService {
 //        if (orderCount > 0) {
 //            throw new IllegalStateException("Cannot delete account as the user has placed orders.");
 //        }
+        Collection<OrderResponse> orders = orderServiceWrapper.getOrdersByCustomerId(id);
+        if (orders.size() > 0) {
+            throw new AppException(ErrorCode.CUSTOMER_NO_DELETE);
+        }
         customerRepository.deleteById(id);
         return true;
     }

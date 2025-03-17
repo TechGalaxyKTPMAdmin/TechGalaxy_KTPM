@@ -59,7 +59,8 @@ public enum ErrorCode {
     GENDER_NOT_EMPTY(2014, "Gender is not empty", HttpStatus.BAD_REQUEST),
     ROLE_NOT_EMPTY(2015, "Role is not empty", HttpStatus.BAD_REQUEST),
     INVALID_PRODUCT_QUANTITY(2016, "Invalid product quantity", HttpStatus.BAD_REQUEST),
-
+    ORDER_SERVICE_UNAVAILABLE(2017, "Order Service is temporarily unavailable. Please try again later.", HttpStatus.SERVICE_UNAVAILABLE),
+    CUSTOMER_NO_DELETE(2018, "Cannot delete account as the user has placed orders.", HttpStatus.BAD_REQUEST),
     //Mail
     FAILED_SEND_EMAIL(3000, "Failed to send email", HttpStatus.INTERNAL_SERVER_ERROR),
 

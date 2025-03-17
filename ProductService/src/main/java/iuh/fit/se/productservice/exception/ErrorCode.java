@@ -41,6 +41,8 @@ public enum ErrorCode {
     SYSTEM_USER_NOT_FOUND(1016, "System user not found", HttpStatus.NOT_FOUND),
     PRODUCT_NOT_ENOUGH(1017, "Product not enough", HttpStatus.BAD_REQUEST),
     NOT_UPDATE_ORDER(1018, "Not update order", HttpStatus.BAD_REQUEST),
+    CUSTOMER_NOT_FOUND(1020, "Customer not found", HttpStatus.NOT_FOUND),
+
 
     // 2000 - 2999: Validation error in request body
     PRODUCT_DISCOUNT_INVALID(2000, "Product discount min value is {min} and max value is {max}", HttpStatus.BAD_REQUEST),

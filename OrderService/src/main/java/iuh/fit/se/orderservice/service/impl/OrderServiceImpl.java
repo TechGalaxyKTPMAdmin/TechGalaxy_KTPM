@@ -22,6 +22,8 @@ import iuh.fit.se.orderservice.mapper.OrderMapper;
 import iuh.fit.se.orderservice.repository.OrderDetailRepository;
 import iuh.fit.se.orderservice.repository.OrderRepository;
 import iuh.fit.se.orderservice.service.OrderService;
+import iuh.fit.se.orderservice.service.wrapper.CustomerServiceWrapper;
+import iuh.fit.se.orderservice.service.wrapper.InventoryServiceWrapper;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -51,8 +53,8 @@ public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;
     private final OrderDetailRepository orderDetailRepository;
-    private final InventoryClient inventoryClient;
-    private final CustomerClient customerClient;
+    private final InventoryServiceWrapper inventoryServiceWrapper;
+    private final CustomerServiceWrapper customerServiceWrapper;
     private final OrderResponseCache orderResponseCache;
     private final RabbitTemplate rabbitTemplate;
     private final OrderMapper orderMapper;
@@ -132,10 +134,10 @@ public class OrderServiceImpl implements OrderService {
         // 1. Kiểm tra tồn kho cho tất cả sản phẩm (sync check)
         // Chỉ cần 1 sản phẩm không đủ số lượng => thông báo lỗi
         for (OrderCreateRequest.ProductDetailRequest productDetail : orderCreateRequest.getProductDetailOrders()) {
-            boolean isAvailable = inventoryClient.checkStock(productDetail.getProductVariantDetailId(),
-                    productDetail.getQuantity());
-            if (!isAvailable)
-                throw new AppException(ErrorCode.OUT_OF_STOCK);
+            boolean isAvailable = inventoryServiceWrapper.checkStock(productDetail.getProductVariantDetailId(), productDetail.getQuantity());
+            if (!isAvailable) {
+                throw new AppException(ErrorCode.OUT_OF_STOCK, "Sản phẩm đã hết hàng: " + productDetail.getProductVariantDetailId());
+            }
         }
 
         // 2. Tạo đơn hàng
@@ -207,8 +209,7 @@ public class OrderServiceImpl implements OrderService {
             orderResponseCache.remove(savedOrder.getId()); // Dọn cache nếu timeout
             throw new AppException(ErrorCode.TIME_OUT, "Timeout waiting for payment link");
         }
-        Collection<CustomerResponseV2> customerResponses = customerClient.getCustomerById(order.getCustomerId())
-                .getData();
+        Collection<CustomerResponseV2> customerResponses = customerServiceWrapper.getCustomerById(savedOrder.getCustomerId());
         CustomerResponseV2 customerResponse = customerResponses.stream().findFirst().orElse(null);
 
         // 11. Trả kết quả cho FE
@@ -270,7 +271,7 @@ public class OrderServiceImpl implements OrderService {
                 .build();
 
         // 4. Lấy thông tin khách hàng từ CustomerService
-        Collection<CustomerResponseV2> customerResponses = customerClient.getCustomerById(order.getCustomerId()).getData();
+        Collection<CustomerResponseV2> customerResponses = customerServiceWrapper.getCustomerById(order.getCustomerId());
         CustomerResponseV2 customerResponse = customerResponses.stream().findFirst()
                 .orElseThrow(() -> new AppException(ErrorCode.CUSTOMER_NOT_FOUND));
 
@@ -294,7 +295,7 @@ public class OrderServiceImpl implements OrderService {
 
             // Cập nhật đơn hàng
             order.setPaymentStatus(PaymentStatus.PAID);
-            order.setOrderStatus(OrderStatus.CONFIRMED);
+            order.setOrderStatus(OrderStatus.PROCESSING);
             orderRepository.save(order);
 
             // Gửi inventory.update để trừ tồn kho giữ
