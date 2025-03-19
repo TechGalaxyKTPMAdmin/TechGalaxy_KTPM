@@ -20,6 +20,7 @@ import java.util.List;
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class OrderResponse implements Serializable {
+    private static final long serialVersionUID = 1L;
     String id;
     CustomerResponseV2 customer;
     SystemUserResponse systemUser;

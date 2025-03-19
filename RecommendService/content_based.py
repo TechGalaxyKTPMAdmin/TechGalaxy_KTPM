@@ -4,16 +4,17 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+from config import Config
 def get_sql_connection():
-    conn = pyodbc.connect('DRIVER={SQL Server};SERVER=your_server;DATABASE=TechGalaxy;UID=your_user;PWD=your_password')
+    conn = pyodbc.connect(Config.get_connection_string())
     return conn
 
 def get_product_details(product_id):
     url = f"http://localhost:8081/{product_id}"
     try:
         response = requests.get(url)
-        response.raise_for_status()  # Kiểm tra nếu có lỗi HTTP
-        product = response.json()  # Chuyển đổi dữ liệu JSON sang dict
+        response.raise_for_status() 
+        product = response.json()  
         return product if product else None
     except requests.exceptions.RequestException as e:
         print(f"Lỗi khi gọi API: {e}")

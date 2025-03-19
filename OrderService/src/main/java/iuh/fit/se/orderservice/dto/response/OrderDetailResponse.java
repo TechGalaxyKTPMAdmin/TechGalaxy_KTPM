@@ -11,7 +11,8 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class OrderDetailResponse {
+public class OrderDetailResponse implements Serializable{
+    private static final long serialVersionUID = 1L;
     String id;
     DetailStatus detailStatus;
     OrderResponse order;

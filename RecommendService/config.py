@@ -1,5 +1,4 @@
 class Config:
-    # SQL Server settings
     DB_DRIVER = '{ODBC Driver 17 for SQL Server}' 
     DB_SERVER = 'GGDUCK\\SQLEXPRESS' 
     DB_NAME = 'TechGalaxy'

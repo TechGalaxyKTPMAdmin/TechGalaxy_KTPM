@@ -29,6 +29,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
@@ -58,6 +59,7 @@ public class OrderServiceImpl implements OrderService {
     private final OrderResponseCache orderResponseCache;
     private final RabbitTemplate rabbitTemplate;
     private final OrderMapper orderMapper;
+    @Qualifier("redisObjectMapper")
     private final ObjectMapper objectMapper;
 
     private final String orderExchange = "order.exchange";
