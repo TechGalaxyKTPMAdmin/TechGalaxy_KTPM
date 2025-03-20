@@ -48,8 +48,12 @@ public class MemoryServiceImpl implements MemoryService {
     }
 
     @Override
-    public void deleteMemory(String id) {
+    public MemoryResponse deleteMemory(String id) {
         Memory memory = memoryRepository.findById(id).orElseThrow(() -> new RuntimeException("Memory not found"));
+
+        MemoryResponse memoryResponse = new MemoryResponse(memory.getId(), memory.getName(), memory.getCreatedAt(),memory.getUpdatedAt());
+
         memoryRepository.delete(memory);
+        return memoryResponse;
     }
 }

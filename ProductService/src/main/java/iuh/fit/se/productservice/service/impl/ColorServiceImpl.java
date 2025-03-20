@@ -14,7 +14,6 @@ import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -22,7 +21,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class ColorServiecImpl implements ColorService {
+public class ColorServiceImpl implements ColorService {
 
     ColorRepository colorRepository;
     ColorMapper colorMapper;
@@ -52,9 +51,13 @@ public class ColorServiecImpl implements ColorService {
     }
 
     @Override
-    public void deleteColor(String colorId) {
-        Color color = colorRepository.findById(colorId).orElseThrow(() -> new RuntimeException("Color not found"));
+    public ColorResponse deleteColor(String colorId) {
+        // Tìm Color theo colorId
+        Color color = colorRepository.findById(colorId)
+                .orElseThrow(() -> new RuntimeException("Color not found"));
+        ColorResponse colorResponse = new ColorResponse(color.getId(), color.getName(),color.getCreatedAt(),color.getUpdatedAt()); // Điều chỉnh theo thuộc tính của Color
         colorRepository.delete(color);
+        return colorResponse;
     }
 
     @Override
