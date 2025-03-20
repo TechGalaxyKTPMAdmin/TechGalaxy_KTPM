@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @RequiredArgsConstructor
@@ -49,5 +50,15 @@ public class MemoryController {
         Set<MemoryResponse> memoryResponses = new HashSet<>();
         memoryResponses.add(memoryServiceImpl.deleteMemory(id));
         return ResponseEntity.ok(DataResponse.<MemoryResponse>builder().data(memoryResponses).build());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<DataResponse<MemoryResponse>> getMemoryById(String id) {
+        return ResponseEntity.ok(DataResponse.<MemoryResponse>builder().data(List.of( memoryServiceImpl.getMemoryById(id))).build());
+    }
+
+    @GetMapping("/ids")
+    public ResponseEntity<DataResponse<MemoryResponse>> getMemoriesByIDs(@RequestParam List<String> ids) {
+        return ResponseEntity.ok(DataResponse.<MemoryResponse>builder().data(memoryServiceImpl.getMemoriesByIDs(ids)).build());
     }
 }

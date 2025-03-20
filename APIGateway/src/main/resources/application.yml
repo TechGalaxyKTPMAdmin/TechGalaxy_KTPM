@@ -141,6 +141,82 @@ spring:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
 
+        - id: ProductService_Product-Feedback
+          uri: lb://ProductService
+          predicates:
+            - Path=//product-feedbacks/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.burstCapacity: 1400
+                redis-rate-limiter.requestedTokens: 100
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms        
+
+        - id: ProductService_UsageCategory
+          uri: lb://ProductService
+          predicates:
+            - Path=//usageCategories/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.burstCapacity: 1400
+                redis-rate-limiter.requestedTokens: 100
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms     
+
+        - id: ProductService_Color
+          uri: lb://ProductService
+          predicates:
+            - Path=//colors/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.burstCapacity: 1400
+                redis-rate-limiter.requestedTokens: 100
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms     
+
+        - id: ProductService_Memory
+          uri: lb://ProductService
+          predicates:
+            - Path=//memories/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.burstCapacity: 1400
+                redis-rate-limiter.requestedTokens: 100
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms  
+
         - id: OrderService
           uri: lb://OrderService
           predicates:

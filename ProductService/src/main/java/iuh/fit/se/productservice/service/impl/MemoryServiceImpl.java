@@ -56,4 +56,10 @@ public class MemoryServiceImpl implements MemoryService {
         memoryRepository.delete(memory);
         return memoryResponse;
     }
+
+
+    @Override
+    public List<MemoryResponse> getMemoriesByIDs(List<String> ids) {
+        return memoryRepository.findMemoriesByIdIsIn(ids).stream().map(memoryMapper::memoryToMemoryResponse).toList();
+    }
 }

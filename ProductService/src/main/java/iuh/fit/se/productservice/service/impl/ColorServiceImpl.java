@@ -61,4 +61,8 @@ public class ColorServiceImpl implements ColorService {
     }
 
 
+    public List<ColorResponse> getColorsByIDs(List<String> ids) {
+        List<Color> colors = colorRepository.findColorsByIdIsIn(ids);
+        return colors.stream().map(colorMapper::toColorResponse).collect(Collectors.toList());
+    }
 }

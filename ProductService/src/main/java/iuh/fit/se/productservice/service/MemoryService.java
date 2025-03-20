@@ -11,4 +11,5 @@ public interface MemoryService {
     MemoryResponse addMemory(MemoryRequest memoryRequest);
     MemoryResponse updateMemory(String id, MemoryRequest memoryRequest);
     MemoryResponse deleteMemory(String id);
+    List<MemoryResponse> getMemoriesByIDs(List<String> ids);
 }

@@ -48,8 +48,55 @@ public class PaymentController {
     // .build());
     // }
 
+//    @GetMapping("/vn-pay-callback")
+//    public ResponseEntity<DataResponse<PaymentResponse.VNPayResponse>> payCallbackHandler(HttpServletRequest request) {
+//        String amount = request.getParameter("vnp_Amount");
+//        String bankCode = request.getParameter("vnp_BankCode");
+//        String bankTranNo = request.getParameter("vnp_BankTranNo");
+//        String cardType = request.getParameter("vnp_CardType");
+//        String orderInfo = request.getParameter("vnp_OrderInfo");
+//        String payDate = request.getParameter("vnp_PayDate");
+//        String responseCode = request.getParameter("vnp_ResponseCode");
+//        String transactionNo = request.getParameter("vnp_TransactionNo");
+//        String transactionStatus = request.getParameter("vnp_TransactionStatus");
+//        String txnRef = request.getParameter("vnp_TxnRef");
+//        String secureHash = request.getParameter("vnp_SecureHash");
+//
+//        // Tạo đối tượng VNPayResponse
+//        PaymentResponse.VNPayResponse vnPayResponse = PaymentResponse.VNPayResponse.builder()
+//                .txnRef(txnRef)
+//                .amount(amount)
+//                .orderInfo(orderInfo)
+//                .responseCode(responseCode)
+//                .transactionNo(transactionNo)
+//                .bankCode(bankCode)
+//                .bankTranNo(bankTranNo)
+//                .cardType(cardType)
+//                .payDate(payDate)
+//                .transactionStatus(transactionStatus)
+//                .secureHash(secureHash)
+//                .signValue("")
+//                .build();
+//
+//        String status = "00".equals(responseCode) ? "PAID" : "FAILED";
+//        PaymentStatus paymentStatus = status.equals("PAID") ? PaymentStatus.PAID : PaymentStatus.FAILED;
+//        String paymentStatusStr = status.equals("PAID") ? paymentCompletedRoutingKey : paymentFailedRoutingKey;
+//        rabbitTemplate.convertAndSend(orderExchange,
+//                paymentStatusStr,
+//                new PaymentStatusResponse(
+//                        txnRef,
+//                        paymentStatus,
+//                        null));
+//
+//        return ResponseEntity.ok(
+//                DataResponse.<PaymentResponse.VNPayResponse>builder()
+//                        .data(List.of(vnPayResponse))
+//                        .build());
+//    }
+
     @GetMapping("/vn-pay-callback")
-    public ResponseEntity<DataResponse<PaymentResponse.VNPayResponse>> payCallbackHandler(HttpServletRequest request) {
+    public void payCallbackHandler(HttpServletRequest request,
+                                   HttpServletResponse response) throws IOException {
         String amount = request.getParameter("vnp_Amount");
         String bankCode = request.getParameter("vnp_BankCode");
         String bankTranNo = request.getParameter("vnp_BankTranNo");
@@ -63,84 +110,49 @@ public class PaymentController {
         String secureHash = request.getParameter("vnp_SecureHash");
 
         // Tạo đối tượng VNPayResponse
-        PaymentResponse.VNPayResponse vnPayResponse = PaymentResponse.VNPayResponse.builder()
-                .txnRef(txnRef)
-                .amount(amount)
-                .orderInfo(orderInfo)
-                .responseCode(responseCode)
-                .transactionNo(transactionNo)
-                .bankCode(bankCode)
-                .bankTranNo(bankTranNo)
-                .cardType(cardType)
-                .payDate(payDate)
-                .transactionStatus(transactionStatus)
-                .secureHash(secureHash)
-                .signValue("")
-                .build();
+        PaymentResponse.VNPayResponse vnPayResponse =
+                PaymentResponse.VNPayResponse.builder()
+                        .txnRef(txnRef)
+                        .amount(amount)
+                        .orderInfo(orderInfo)
+                        .responseCode(responseCode)
+                        .transactionNo(transactionNo)
+                        .bankCode(bankCode)
+                        .bankTranNo(bankTranNo)
+                        .cardType(cardType)
+                        .payDate(payDate)
+                        .transactionStatus(transactionStatus)
+                        .secureHash(secureHash)
+                        .signValue("")
+                        .build();
 
         String status = "00".equals(responseCode) ? "PAID" : "FAILED";
-        PaymentStatus paymentStatus = status.equals("PAID") ? PaymentStatus.PAID : PaymentStatus.FAILED;
-        String paymentStatusStr = status.equals("PAID") ? paymentCompletedRoutingKey : paymentFailedRoutingKey;
+        PaymentStatus paymentStatus = status.equals("PAID") ? PaymentStatus.PAID :
+                PaymentStatus.FAILED;
+        String paymentStatusStr = status.equals("PAID") ? paymentCompletedRoutingKey
+                : paymentFailedRoutingKey;
         rabbitTemplate.convertAndSend(orderExchange,
                 paymentStatusStr,
                 new PaymentStatusResponse(
                         txnRef,
                         paymentStatus,
-                        null));
+                        null
+                ));
 
-        return ResponseEntity.ok(
-                DataResponse.<PaymentResponse.VNPayResponse>builder()
-                        .data(List.of(vnPayResponse))
-                        .build());
+        String redirectUrl = "http://localhost:8080/payment/"
+                + "vnp_TxnRef=" + txnRef
+                + "&vnp_Amount=" + amount
+                + "&vnp_OrderInfo=" + orderInfo
+                + "&vnp_ResponseCode=" + responseCode
+                + "&vnp_TransactionNo=" + transactionNo
+                + "&vnp_BankCode=" + bankCode
+                + "&vnp_PayDate=" + payDate
+                + "&vnp_TransactionStatus=" + transactionStatus
+                + "&vnp_BankTranNo=" + bankTranNo
+                + "&vnp_CardType=" + cardType
+                + "&vnp_SecureHash=" + secureHash;
+
+        response.sendRedirect(redirectUrl);
+        response.sendRedirect(redirectUrl);
     }
-
-    // @GetMapping("/vn-pay-callback")
-    // public void payCallbackHandler(HttpServletRequest request,
-    // HttpServletResponse response) throws IOException {
-    // String amount = request.getParameter("vnp_Amount");
-    // String bankCode = request.getParameter("vnp_BankCode");
-    // String bankTranNo = request.getParameter("vnp_BankTranNo");
-    // String cardType = request.getParameter("vnp_CardType");
-    // String orderInfo = request.getParameter("vnp_OrderInfo");
-    // String payDate = request.getParameter("vnp_PayDate");
-    // String responseCode = request.getParameter("vnp_ResponseCode");
-    // String transactionNo = request.getParameter("vnp_TransactionNo");
-    // String transactionStatus = request.getParameter("vnp_TransactionStatus");
-    // String txnRef = request.getParameter("vnp_TxnRef");
-    // String secureHash = request.getParameter("vnp_SecureHash");
-    //
-    // // Tạo đối tượng VNPayResponse
-    // PaymentResponse.VNPayResponse vnPayResponse =
-    // PaymentResponse.VNPayResponse.builder()
-    // .txnRef(txnRef)
-    // .amount(amount)
-    // .orderInfo(orderInfo)
-    // .responseCode(responseCode)
-    // .transactionNo(transactionNo)
-    // .bankCode(bankCode)
-    // .bankTranNo(bankTranNo)
-    // .cardType(cardType)
-    // .payDate(payDate)
-    // .transactionStatus(transactionStatus)
-    // .secureHash(secureHash)
-    // .signValue("")
-    // .build();
-    //
-    // String status = "00".equals(responseCode) ? "PAID" : "FAILED";
-    // PaymentStatus paymentStatus = status.equals("PAID") ? PaymentStatus.PAID :
-    // PaymentStatus.FAILED;
-    // String paymentStatusStr = status.equals("PAID") ? paymentCompletedRoutingKey
-    // : paymentFailedRoutingKey;
-    // rabbitTemplate.convertAndSend(orderExchange,
-    // paymentStatusStr,
-    // new PaymentStatusResponse(
-    // txnRef,
-    // paymentStatus,
-    // null
-    // ));
-    //
-    // String redirectUrl = "https://locahót:8081/payment-result?orderId=" + txnRef
-    // + "&status=" + status;
-    // response.sendRedirect(redirectUrl);
-    // }
 }
