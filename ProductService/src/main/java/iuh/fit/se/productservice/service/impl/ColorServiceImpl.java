@@ -60,12 +60,5 @@ public class ColorServiceImpl implements ColorService {
         return colorResponse;
     }
 
-    @Override
-    public List<ColorResponse> getColorsByProducVariantId(String producVarianttId) {
-        ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(producVarianttId).orElseThrow(() -> new RuntimeException("ProductVariantDetail not found"));
-        List<Color> colors = colorRepository.findColorsByProductVariantDetail(productVariantDetail);
-        return colors.stream()
-                .map(colorMapper::toColorResponse)
-                .collect(Collectors.toList());
-    }
+
 }

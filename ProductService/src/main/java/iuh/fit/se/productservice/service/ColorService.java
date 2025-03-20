@@ -16,5 +16,4 @@ public interface ColorService {
 
     ColorResponse deleteColor(String colorId);
 
-    List<ColorResponse> getColorsByProducVariantId(String producVarianttId);
 }
