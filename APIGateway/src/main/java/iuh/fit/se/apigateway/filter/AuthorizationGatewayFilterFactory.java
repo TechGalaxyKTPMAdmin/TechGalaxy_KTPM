@@ -4,6 +4,7 @@ import iuh.fit.se.apigateway.dto.response.DataResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
 import org.springframework.core.ParameterizedTypeReference;
@@ -23,7 +24,7 @@ public class AuthorizationGatewayFilterFactory extends AbstractGatewayFilterFact
     private final RouteValidator routeValidator;
     private final WebClient.Builder webClientBuilder;
     private final AntPathMatcher pathMatcher = new AntPathMatcher();
-    @Value("lb://UserService")
+    @Value("${services.auth.url:lb://UserService}")
     private String authServiceUrl;
 
     @Override
@@ -91,7 +92,6 @@ public class AuthorizationGatewayFilterFactory extends AbstractGatewayFilterFact
                     });
         };
 
-
     }
 
     private Mono<ValidateTokenResponse> validateToken(String token, String requestId) {
@@ -102,11 +102,13 @@ public class AuthorizationGatewayFilterFactory extends AbstractGatewayFilterFact
                 .header("Authorization", "Bearer " + token)
                 .header("X-Request-ID", requestId)
                 .retrieve()
-                .bodyToMono(new ParameterizedTypeReference<DataResponse<ValidateTokenResponse>>() {})
+                .bodyToMono(new ParameterizedTypeReference<DataResponse<ValidateTokenResponse>>() {
+                })
                 .map(dataResponse -> {
                     System.out.println(dataResponse.getData());
                     if (dataResponse.getData() != null && !dataResponse.getData().isEmpty()) {
-                        return dataResponse.getData().stream().findFirst().orElse(new ValidateTokenResponse(false, null, null, null));
+                        return dataResponse.getData().stream().findFirst()
+                                .orElse(new ValidateTokenResponse(false, null, null, null));
                     } else {
                         return new ValidateTokenResponse(false, null, null, null);
                     }
@@ -114,6 +116,5 @@ public class AuthorizationGatewayFilterFactory extends AbstractGatewayFilterFact
                 .doOnNext(response -> log.info("ValidateTokenResponse [{}]: {}", requestId, response))
                 .doOnError(error -> log.error("Error validating token [{}]: {}", requestId, error.getMessage()));
     }
-
 
 }

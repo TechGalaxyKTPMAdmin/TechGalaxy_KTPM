@@ -9,7 +9,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class WebClientConfig {
 
     @Bean
-    @LoadBalanced // Quan trọng để hiểu lb://
+    @LoadBalanced
     public WebClient.Builder webClientBuilder() {
         return WebClient.builder();
     }

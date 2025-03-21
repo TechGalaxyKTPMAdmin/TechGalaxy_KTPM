@@ -28,7 +28,8 @@ public class RoleServiceImpl implements RoleService {
     private final RoleMapper roleMapper;
 
     @Autowired
-    public RoleServiceImpl(RoleRepository roleRepository, PermissionRepository permissionRepository, RoleMapper roleMapper) {
+    public RoleServiceImpl(RoleRepository roleRepository, PermissionRepository permissionRepository,
+            RoleMapper roleMapper) {
         this.roleRepository = roleRepository;
         this.permissionRepository = permissionRepository;
         this.roleMapper = roleMapper;
@@ -113,7 +114,6 @@ public class RoleServiceImpl implements RoleService {
         return result;
     }
 
-
     @Override
     public List<Role> findByNameIn(List<String> names) {
         List<Role> roles = roleRepository.findByNameIn(names);
@@ -129,6 +129,7 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public List<RoleResponse> fechByEmail(String email) {
+        System.out.println("Email: " + email);
         return roleRepository.findRolesByAccountEmail(email).stream()
                 .map(roleMapper::toResponse)
                 .collect(Collectors.toList());
