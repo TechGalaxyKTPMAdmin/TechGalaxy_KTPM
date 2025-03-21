@@ -1,6 +1,7 @@
 package iuh.fit.se.productservice.service.impl;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import iuh.fit.se.productservice.dto.request.ProductDetailUpdateRequest;
 import iuh.fit.se.productservice.dto.request.ProductVariantDetailRequest;
 import iuh.fit.se.productservice.dto.response.ProductDetailResponse;
@@ -22,6 +23,10 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -41,6 +46,8 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     ProductVariantDetailMapper productVariantDetailMapper;
     ColorRepository colorRepository;
     MemoryRepository memoryRepository;
+    @Qualifier("redisObjectMapper")
+    ObjectMapper objectMapper;
 
     @Override
     public ProductVariantDetailResponse getProductVariantDetail(String variantId) {
@@ -52,19 +59,63 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     }
 
     @Override
+    @Cacheable(value = "ProductDetailResponses", key = "#productDetailId", unless = "#result == null")
     public ProductDetailResponse getProductDetail(String productDetailId) {
         ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productDetailId)
                 .orElseThrow(() -> new AppException(ErrorCode.PRODUCT_NOTFOUND));
-        return productVariantDetailMapper.toResponse(productVariantDetail);
+        return objectMapper.convertValue(productVariantDetailMapper.toResponse(productVariantDetail), ProductDetailResponse.class);
     }
 
     @Override
+    @Cacheable(value = "ProductDetailResponses", key = "'getProductDetailsByIds'", unless = "#result.isEmpty()")
     public List<ProductDetailResponse> getProductDetailsByIds(List<String> productDetailIds) {
         List<ProductVariantDetail> productVariantDetails = productVariantDetailRepository.findAllByIdIsIn(productDetailIds);
         if (!productVariantDetails.isEmpty()) {
             return productVariantDetails.stream().map(productVariantDetailMapper::toResponse).toList();
         }
         return null;
+    }
+
+    @Override
+    @CacheEvict(value = "ProductDetailResponses", key = "#productDetailId")
+    public ProductDetailResponse updateProductVariantDetail(String productDetailId, ProductDetailUpdateRequest productDetailUpdateRequest) {
+        ProductDetailResponse productDetailResponse;
+        ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productDetailId).orElseThrow(() ->
+                new AppException(ErrorCode.PRODUCT_NOTFOUND));
+        productVariantDetailMapper.toUpdate(productVariantDetail, productDetailUpdateRequest);
+        try {
+            productDetailResponse = productVariantDetailMapper.toResponse(productVariantDetailRepository.save(productVariantDetail));
+        } catch (Exception e) {
+            throw new AppException(ErrorCode.PRODUCT_UPDATE_FAILED);
+        }
+        updateFindAllCache();
+        return productDetailResponse;
+    }
+
+    @Override
+    @CacheEvict(value = "ProductDetailResponses", key = "#productVariantDetailId")
+    public ProductDetailResponse updateQuantity(String productVariantDetailId, int quantity) {
+        ProductDetailResponse productDetailResponse;
+        ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productVariantDetailId).orElseThrow(() ->
+                new AppException(ErrorCode.PRODUCT_NOTFOUND));
+        if (productVariantDetail.getQuantity() >= quantity) {
+            productVariantDetail.setQuantity(productVariantDetail.getQuantity() - quantity);
+        } else {
+            throw new AppException(ErrorCode.PRODUCT_NOT_ENOUGH);
+        }
+        try {
+            productDetailResponse = productVariantDetailMapper.toResponse(productVariantDetailRepository.save(productVariantDetail));
+        } catch (Exception e) {
+            throw new AppException(ErrorCode.PRODUCT_UPDATE_FAILED);
+        }
+        updateFindAllCache();
+        return productDetailResponse;
+    }
+
+    @CachePut(value = "ProductDetailResponses", key = "'getProductDetailsByIds'")
+    public List<ProductDetailResponse> updateFindAllCache() {
+        List<ProductVariantDetail> productVariantDetails = productVariantDetailRepository.findAll();
+        return productVariantDetails.stream().map(productVariantDetailMapper::toResponse).toList();
     }
 
     @Override
@@ -91,20 +142,6 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
             return detailIds;
         }
         return detailIds;
-    }
-
-    @Override
-    public Boolean updateProductVariantDetail(String productDetailId, ProductDetailUpdateRequest productDetailUpdateRequest) {
-        boolean state = true;
-        ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productDetailId).orElseThrow(() ->
-                new AppException(ErrorCode.PRODUCT_NOTFOUND));
-        productVariantDetailMapper.toUpdate(productVariantDetail, productDetailUpdateRequest);
-        try {
-            productVariantDetailRepository.save(productVariantDetail);
-        } catch (Exception e) {
-            throw new AppException(ErrorCode.PRODUCT_UPDATE_FAILED);
-        }
-        return state;
     }
 
     @Override
@@ -139,19 +176,4 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
         return productVariantDetailMapper.toResponse(productVariantDetail);
     }
 
-    @Override
-    public void updateQuantity(String productVariantDetailId, int quantity) {
-        ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productVariantDetailId).orElseThrow(() ->
-                new AppException(ErrorCode.PRODUCT_NOTFOUND));
-        if (productVariantDetail.getQuantity() >= quantity) {
-            productVariantDetail.setQuantity(productVariantDetail.getQuantity() - quantity);
-        } else {
-            throw new AppException(ErrorCode.PRODUCT_NOT_ENOUGH);
-        }
-        try {
-            productVariantDetailRepository.save(productVariantDetail);
-        } catch (Exception e) {
-            throw new AppException(ErrorCode.PRODUCT_UPDATE_FAILED);
-        }
-    }
 }

@@ -26,7 +26,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @RestController
-@RequestMapping({"/products/variants/{variantId}/details", "/products/variants/details"})
+    @RequestMapping({"/products/variants/{variantId}/details", "/products/variants/details"})
 @Slf4j
 public class ProductVariantDetailController {
     static String successMessage = "success";

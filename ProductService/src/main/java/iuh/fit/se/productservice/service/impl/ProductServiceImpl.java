@@ -1,5 +1,6 @@
 package iuh.fit.se.productservice.service.impl;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import iuh.fit.se.productservice.dto.request.ProductRequest;
 import iuh.fit.se.productservice.dto.response.ProductResponse;
 import iuh.fit.se.productservice.entities.Product;
@@ -14,6 +15,7 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
@@ -31,8 +33,11 @@ public class ProductServiceImpl implements ProductService {
     ProductRepository productRepository;
     TrademarkRepository trademarkRepository;
     ProductMapper productMapper;
+    @Qualifier("redisObjectMapper")
+    ObjectMapper objectMapper;
 
     @Override
+    @Cacheable(value = "ProductResponses", key = "'getAllProducts'", unless = "#result.isEmpty()")
     public Set<ProductResponse> getAllProducts() {
         return productRepository.findAll().stream()
                 .map(productMapper::toProductResponse)
@@ -50,15 +55,15 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    @Cacheable(value = "Products", key = "#id")
+    @Cacheable(value = "ProductResponses", key = "#id")
     public ProductResponse getProductById(String id) {
-        return productRepository.findById(id)
+        return objectMapper.convertValue(productRepository.findById(id)
                 .map(productMapper::toProductResponse)
-                .orElseThrow(() -> new AppException(ErrorCode.PRODUCT_NOTFOUND));
+                .orElseThrow(() -> new AppException(ErrorCode.PRODUCT_NOTFOUND)), ProductResponse.class);
     }
 
     @Override
-    @CacheEvict(value = "Products", key = "#id")
+    @CacheEvict(value = "ProductResponses", key = "#id")
     public ProductResponse updateProduct(String id, ProductRequest productRequest) {
         Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
         productMapper.updateProductFromRequest(product, productRequest);
@@ -67,7 +72,7 @@ public class ProductServiceImpl implements ProductService {
         return productMapper.toProductResponse(productRepository.save(product));
     }
 
-    @CachePut(value = "Products", key = "'findAll'")
+    @CachePut(value = "ProductResponses", key = "'getAllProducts'")
     public List<ProductResponse> updateFindAllCache() {
         List<Product> products = productRepository.findAll();
         return products.stream()
@@ -87,7 +92,6 @@ public class ProductServiceImpl implements ProductService {
         productRepository.delete(product);
     }
 
-    @CacheEvict(value = "Products", allEntries = true)
-    public void clearCache() {
-    }
+    @CacheEvict(value = "ProductResponses", allEntries = true)
+    public void clearCache() {}
 }

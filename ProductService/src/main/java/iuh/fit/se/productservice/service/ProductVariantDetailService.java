@@ -20,7 +20,7 @@ public interface ProductVariantDetailService {
 
     List<String> createProductVariantDetail(String variantId, List<ProductVariantDetailRequest> productVariantDetailRequest);
 
-    Boolean updateProductVariantDetail(String productDetailId, ProductDetailUpdateRequest productDetailUpdateRequest);
+    ProductDetailResponse updateProductVariantDetail(String productDetailId, ProductDetailUpdateRequest productDetailUpdateRequest);
 
     void deleteProductVariantDetail(String productDetailId);
 
@@ -35,5 +35,5 @@ public interface ProductVariantDetailService {
 
     ProductDetailResponse findProductVariantDetailByProductVariantAndColorAndMemory(String productVariantId, String color, String memory);
 
-    void updateQuantity(String productVariantDetailId, int quantity);
+    ProductDetailResponse updateQuantity(String productVariantDetailId, int quantity);
 }

@@ -1,6 +1,7 @@
 package iuh.fit.se.productservice.service.impl;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import iuh.fit.se.productservice.dto.request.ProductVariantRequest;
 import iuh.fit.se.productservice.dto.response.ProductVariantResponse;
 import iuh.fit.se.productservice.entities.Product;
@@ -16,6 +17,9 @@ import iuh.fit.se.productservice.service.ProductVariantService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,6 +34,8 @@ public class ProductVariantServiceImpl implements ProductVariantService {
     ProductRepository productRepository;
     UsageCategoryRepository usageCategoryRepository;
     ProductVariantMapper productVariantMapper;
+    @Qualifier("redisObjectMapper")
+    ObjectMapper objectMapper;
 
     @Override
     public Set<ProductVariantResponse> getAllProductVariantsByProductId(String productId) {
@@ -53,13 +59,15 @@ public class ProductVariantServiceImpl implements ProductVariantService {
     }
 
     @Override
+    @Cacheable(value = "ProductVariantResponses", key = "#id", unless = "#result == null")
     public ProductVariantResponse findVariantById(String id) {
-        return productVariantRepository.findById(id)
+        return objectMapper.convertValue(productVariantRepository.findById(id)
                 .map(productVariantMapper::toProductVariantResponse)
-                .orElseThrow(() -> new RuntimeException("Product variant not found"));
+                .orElseThrow(() -> new RuntimeException("Product variant not found")), ProductVariantResponse.class);
     }
 
     @Override
+    @CacheEvict(value = "ProductVariantResponses", key = "#id")
     public ProductVariantResponse updateVariant(String id, ProductVariantRequest request) {
         ProductVariant productVariant = productVariantRepository.findById(id).orElseThrow(() ->
                 new AppException(ErrorCode.PRODUCT_NOTFOUND));
