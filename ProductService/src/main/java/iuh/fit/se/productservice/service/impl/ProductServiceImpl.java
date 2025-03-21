@@ -1,6 +1,5 @@
 package iuh.fit.se.productservice.service.impl;
 
-
 import iuh.fit.se.productservice.dto.request.ProductRequest;
 import iuh.fit.se.productservice.dto.response.ProductResponse;
 import iuh.fit.se.productservice.entities.Product;
@@ -34,7 +33,6 @@ public class ProductServiceImpl implements ProductService {
     ProductMapper productMapper;
 
     @Override
-    @Cacheable(value = "Products", unless = "#result.empty()")
     public Set<ProductResponse> getAllProducts() {
         return productRepository.findAll().stream()
                 .map(productMapper::toProductResponse)
@@ -44,8 +42,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductResponse createProduct(ProductRequest productRequest) {
         Trademark trademark = trademarkRepository.findById(productRequest.getTrademarkId()).orElseThrow(
-                () -> new RuntimeException("Trademark not found")
-        );
+                () -> new RuntimeException("Trademark not found"));
         Product product = Product.builder().name(productRequest.getName())
                 .trademark(trademark)
                 .build();
@@ -80,15 +77,17 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void deleteProduct(String id) {
-//        long usageCount = productRepository.countOrderDetailsByProductId(id);
-//
-//        if (usageCount > 0) {
-//            throw new IllegalStateException("Cannot delete product as it is referenced in orders.");
-//        }
+        // long usageCount = productRepository.countOrderDetailsByProductId(id);
+        //
+        // if (usageCount > 0) {
+        // throw new IllegalStateException("Cannot delete product as it is referenced in
+        // orders.");
+        // }
         Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
         productRepository.delete(product);
     }
 
     @CacheEvict(value = "Products", allEntries = true)
-    public void clearCache() {}
+    public void clearCache() {
+    }
 }
