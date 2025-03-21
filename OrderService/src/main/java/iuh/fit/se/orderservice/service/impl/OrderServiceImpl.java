@@ -96,6 +96,15 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    @Cacheable(value = "OrderResponses", key = "'findAll'", unless = "#result.isEmpty()")
+    public List<OrderResponse> findAll() {
+        return orderRepository.findAll()
+                .stream()
+                .map(orderMapper::toOrderResponse)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public PagedModel<OrderResponse> findAllOrders(int page, int size) {
         PageRequest pageRequest = PageRequest.of(page, size);
         Page<Order> orderPage = orderRepository.findAll(pageRequest);
@@ -110,15 +119,6 @@ public class OrderServiceImpl implements OrderService {
                         orderPage.getSize(),
                         orderPage.getNumber(),
                         orderPage.getTotalElements()));
-    }
-
-    @Override
-    @Cacheable(value = "OrderResponses", key = "'findAll'", unless = "#result.isEmpty()")
-    public List<OrderResponse> findAll() {
-        return orderRepository.findAll()
-                .stream()
-                .map(orderMapper::toOrderResponse)
-                .collect(Collectors.toList());
     }
 
     @Override

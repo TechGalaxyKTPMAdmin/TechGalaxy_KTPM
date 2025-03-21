@@ -1,33 +1,27 @@
 package iuh.fit.se.orderservice.controller;
 
-import iuh.fit.se.orderservice.dto.request.OrderRequest;
 import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
+import iuh.fit.se.orderservice.dto.request.OrderRequest;
 import iuh.fit.se.orderservice.dto.response.DataResponse;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.exception.AppException;
 import iuh.fit.se.orderservice.exception.ErrorCode;
-import iuh.fit.se.orderservice.mapper.OrderMapper;
 import iuh.fit.se.orderservice.service.OrderService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
     private final OrderService orderService;
-    private final OrderMapper orderMapper;
 
     @Autowired
-    public OrderController(OrderService orderService, OrderMapper orderMapper) {
+    public OrderController(OrderService orderService) {
         this.orderService = orderService;
-        this.orderMapper = orderMapper;
     }
 
     @GetMapping
@@ -49,10 +43,6 @@ public class OrderController {
 
     @PutMapping("/{id}")
     public ResponseEntity<DataResponse<OrderResponse>> updateOrder(@PathVariable String id, @RequestBody OrderRequest request) {
-        System.out.println(request.getOrderStatus());
-        System.out.println(request.getPaymentStatus());
-        System.out.println(request.getAddress());
-
         List<OrderResponse> orderResponses = List.of(orderService.update(id, request));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Update order success")

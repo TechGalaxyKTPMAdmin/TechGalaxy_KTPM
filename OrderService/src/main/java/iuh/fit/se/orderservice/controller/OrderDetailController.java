@@ -1,6 +1,5 @@
 package iuh.fit.se.orderservice.controller;
 
-import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
 import iuh.fit.se.orderservice.dto.request.OrderDetailRequest;
 import iuh.fit.se.orderservice.dto.response.DataResponse;
 import iuh.fit.se.orderservice.dto.response.OrderDetailResponse;

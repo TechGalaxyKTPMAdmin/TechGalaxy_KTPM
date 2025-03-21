@@ -3,11 +3,9 @@ package iuh.fit.se.orderservice.service.impl;
 import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
 import iuh.fit.se.orderservice.dto.request.OrderDetailRequest;
 import iuh.fit.se.orderservice.dto.response.OrderDetailResponse;
-import iuh.fit.se.orderservice.dto.response.ProductDetailResponse;
 import iuh.fit.se.orderservice.entity.Order;
 import iuh.fit.se.orderservice.entity.OrderDetail;
 import iuh.fit.se.orderservice.entity.enumeration.DetailStatus;
-import iuh.fit.se.orderservice.entity.enumeration.OrderStatus;
 import iuh.fit.se.orderservice.exception.AppException;
 import iuh.fit.se.orderservice.exception.ErrorCode;
 import iuh.fit.se.orderservice.mapper.OrderDetailMapper;
@@ -25,12 +23,10 @@ import java.util.stream.Collectors;
 public class OrderDetailServiceImpl implements OrderDetailService {
 
     private final OrderDetailRepository orderDetailRepository;
-    private final RestTemplate restTemplate;
 
     @Autowired
-    public OrderDetailServiceImpl(OrderDetailRepository orderDetailRepository, RestTemplate restTemplate) {
+    public OrderDetailServiceImpl(OrderDetailRepository orderDetailRepository) {
         this.orderDetailRepository = orderDetailRepository;
-        this.restTemplate = restTemplate;
     }
 
     @Override
