@@ -15,9 +15,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.replenishRate: 1000
                 redis-rate-limiter.burstCapacity: 1000
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -34,9 +34,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.replenishRate: 1000
                 redis-rate-limiter.burstCapacity: 1000
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -53,9 +53,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.replenishRate: 1000
                 redis-rate-limiter.burstCapacity: 1000
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -72,9 +72,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.replenishRate: 1000
                 redis-rate-limiter.burstCapacity: 1000
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -91,9 +91,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.replenishRate: 1000
                 redis-rate-limiter.burstCapacity: 1000
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -110,9 +110,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.replenishRate: 1000
                 redis-rate-limiter.burstCapacity: 1000
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -129,9 +129,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.replenishRate: 1400
                 redis-rate-limiter.burstCapacity: 1400
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -148,9 +148,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.replenishRate: 1400
                 redis-rate-limiter.burstCapacity: 1400
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -167,9 +167,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.replenishRate: 1400
                 redis-rate-limiter.burstCapacity: 1400
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -182,13 +182,13 @@ spring:
         - id: ProductService_Product-Feedback
           uri: lb://ProductService
           predicates:
-            - Path=//product-feedbacks/**
+            - Path=/product-feedbacks/**
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.replenishRate: 1400
                 redis-rate-limiter.burstCapacity: 1400
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -201,13 +201,13 @@ spring:
         - id: ProductService_UsageCategory
           uri: lb://ProductService
           predicates:
-            - Path=//usageCategories/**
+            - Path=/usageCategories/**
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.replenishRate: 1400
                 redis-rate-limiter.burstCapacity: 1400
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -220,13 +220,13 @@ spring:
         - id: ProductService_Color
           uri: lb://ProductService
           predicates:
-            - Path=//colors/**
+            - Path=/colors/**
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.replenishRate: 1400
                 redis-rate-limiter.burstCapacity: 1400
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -239,13 +239,13 @@ spring:
         - id: ProductService_Memory
           uri: lb://ProductService
           predicates:
-            - Path=//memories/**
+            - Path=/memories/**
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 700
+                redis-rate-limiter.replenishRate: 1400
                 redis-rate-limiter.burstCapacity: 1400
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -262,9 +262,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 300
+                redis-rate-limiter.replenishRate: 600
                 redis-rate-limiter.burstCapacity: 600
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -281,9 +281,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 300
+                redis-rate-limiter.replenishRate: 600
                 redis-rate-limiter.burstCapacity: 600
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -300,9 +300,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 500
+                redis-rate-limiter.replenishRate: 1000
                 redis-rate-limiter.burstCapacity: 1000
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -319,9 +319,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 400
+                redis-rate-limiter.replenishRate: 800
                 redis-rate-limiter.burstCapacity: 800
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -338,9 +338,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 600
+                redis-rate-limiter.replenishRate: 1200
                 redis-rate-limiter.burstCapacity: 1200
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -357,9 +357,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 600
+                redis-rate-limiter.replenishRate: 1200
                 redis-rate-limiter.burstCapacity: 1200
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -376,9 +376,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 600
+                redis-rate-limiter.replenishRate: 1200
                 redis-rate-limiter.burstCapacity: 1200
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -395,9 +395,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 600
+                redis-rate-limiter.replenishRate: 1200
                 redis-rate-limiter.burstCapacity: 1200
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -414,9 +414,9 @@ spring:
           filters:
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 600
+                redis-rate-limiter.replenishRate: 1200
                 redis-rate-limiter.burstCapacity: 1200
-                redis-rate-limiter.requestedTokens: 100
+                redis-rate-limiter.requestedTokens: 1
             - name: Retry
               args:
                 retries: 3
@@ -430,9 +430,9 @@ spring:
         - name: Authorization
         - name: RequestRateLimiter
           args:
-            redis-rate-limiter.replenishRate: 500
+            redis-rate-limiter.replenishRate: 1000
             redis-rate-limiter.burstCapacity: 1000
-            redis-rate-limiter.requestedTokens: 100
+            redis-rate-limiter.requestedTokens: 1
 server:
   port: 8081
 logging:
