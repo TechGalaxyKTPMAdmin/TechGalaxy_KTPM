@@ -108,13 +108,11 @@ class RouteValidator {
     private final List<String> whiteList = List.of(
             "/", "/api/accounts/auth/register", "/api/accounts/auth/login",
             "/storage/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html",
-            "/payment/**", "/file", "/files"
-    );
+            "/payment/**", "/file", "/files");
 
     private final List<String> whiteListGetOnly = List.of(
             "/products/**", "/colors/**", "/trademarks/**", "/memories/**",
-            "/usageCategories/**", "/attributes/**", "/product-feedbacks/**"
-    );
+            "/usageCategories/**", "/attributes/**", "/product-feedbacks/**", "/colors", "/trademarks");
 
     public boolean isOpenEndpoint(ServerHttpRequest request) {
         String path = request.getURI().getPath();
@@ -129,6 +127,18 @@ class RouteValidator {
                 return true;
             }
         }
+
+        if ("GET".equalsIgnoreCase(method)) {
+            for (String pattern : whiteListGetOnly) {
+                PathPattern pathPattern = pathPatternParser.parse(pattern);
+                log.info("Matching GET-only pattern: {} against path: {}", pattern, path);
+                if (pathPattern.matches(request.getPath().pathWithinApplication())) {
+                    log.info("GET Path {} matches GET-only pattern {}", path, pattern);
+                    return true;
+                }
+            }
+        }
+
         return false;
     }
 
@@ -137,6 +147,7 @@ class RouteValidator {
         return false;
     }
 }
+
 /**
  * ValidateTokenResponse là DTO trả về từ Auth Service sau khi validate token.
  */
