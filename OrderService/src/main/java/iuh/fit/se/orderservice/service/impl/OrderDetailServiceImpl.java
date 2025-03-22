@@ -13,7 +13,6 @@ import iuh.fit.se.orderservice.repository.OrderDetailRepository;
 import iuh.fit.se.orderservice.service.OrderDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
 import java.util.List;

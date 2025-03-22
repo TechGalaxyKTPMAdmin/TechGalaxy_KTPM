@@ -53,6 +53,12 @@ public class OrderController {
     @GetMapping("/{id}")
     public ResponseEntity<DataResponse<OrderResponse>> getOrderById(@PathVariable String id) {
         OrderResponse orderResponse = orderService.findById(id);
+
+//        System.out.println("57");
+//        orderResponse.getOrderDetails().forEach(orderDetail -> {
+//            System.out.println(orderDetail.getId());
+//        });
+
         if (orderResponse == null)
             throw new AppException(ErrorCode.ORDER_NOTFOUND);
 

@@ -1,9 +1,6 @@
 package iuh.fit.se.orderservice.service.impl;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import iuh.fit.se.orderservice.client.CustomerClient;
-import iuh.fit.se.orderservice.client.InventoryClient;
 import iuh.fit.se.orderservice.dto.request.*;
 import iuh.fit.se.orderservice.dto.response.CustomerResponseV2;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
@@ -35,7 +32,6 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -68,10 +64,17 @@ public class OrderServiceImpl implements OrderService {
     private final String inventoryRollbackRoutingKey = "inventory.rollback";
 
     @Override
-    @Cacheable(value = "OrderResponses", key = "#id", unless = "#result == null")
+//    @Cacheable(value = "OrderResponses", key = "#id", unless = "#result == null")
     public OrderResponse findById(String id) {
         Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
-        return objectMapper.convertValue(orderMapper.toOrderResponse(order), OrderResponse.class);
+        List<OrderDetail> orderDetails = orderDetailRepository.findOrderDetailsByOrderId(order.getId());
+        order.setOrderDetails(orderDetails);
+        orderDetails.forEach(orderDetail -> {
+            System.out.println("test");
+            System.out.println(orderDetail.getId());
+        });
+//        return objectMapper.convertValue(orderMapper.toOrderResponse(order), OrderResponse.class);
+        return orderMapper.toOrderResponse(order);
     }
 
     @Override

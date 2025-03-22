@@ -17,6 +17,7 @@ public interface OrderMapper {
 
     @Mapping(source = "customerId", target = "customer.id")
     @Mapping(source = "systemUserId", target = "systemUser.id")
+    @Mapping(source = "orderDetails", target = "orderDetails")
     OrderResponse toOrderResponse(Order order);
 
     OrderRequest toOrderRequest(Order order);
