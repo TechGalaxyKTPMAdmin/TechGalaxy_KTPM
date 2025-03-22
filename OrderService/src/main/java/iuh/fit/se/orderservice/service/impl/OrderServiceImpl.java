@@ -2,10 +2,7 @@ package iuh.fit.se.orderservice.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import iuh.fit.se.orderservice.dto.request.*;
-import iuh.fit.se.orderservice.dto.response.CustomerResponseV2;
-import iuh.fit.se.orderservice.dto.response.OrderResponse;
-import iuh.fit.se.orderservice.dto.response.OrderResponseCache;
-import iuh.fit.se.orderservice.dto.response.PaymentStatusResponse;
+import iuh.fit.se.orderservice.dto.response.*;
 import iuh.fit.se.orderservice.entity.Order;
 import iuh.fit.se.orderservice.entity.OrderDetail;
 import iuh.fit.se.orderservice.entity.enumeration.DetailStatus;
@@ -110,6 +107,11 @@ public class OrderServiceImpl implements OrderService {
                     CustomerResponseV2 customerResponse = customerResponses.stream().findFirst().orElse(null);
                     assert customerResponse != null;
                     orderResponse.getCustomer().setName(customerResponse.getName());
+
+                    Collection<SystemUserResponse> systemUserResponses = customerServiceWrapper.getSystemUserById(orderResponse.getSystemUser().getId());
+                    SystemUserResponse systemUserResponse = systemUserResponses.stream().findFirst().orElse(null);
+                    assert systemUserResponse != null;
+                    orderResponse.getSystemUser().setName(systemUserResponse.getName());
                     return orderResponse;
                 })
                 .collect(Collectors.toList());
