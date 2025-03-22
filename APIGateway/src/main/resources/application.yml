@@ -5,6 +5,8 @@ spring:
     redis:
       port: 6379
       host: localhost
+      # host: redis-ktpm
+
   cloud:
     gateway:
       routes:
