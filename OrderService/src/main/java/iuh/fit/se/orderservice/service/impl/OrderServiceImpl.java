@@ -64,7 +64,7 @@ public class OrderServiceImpl implements OrderService {
     private final String inventoryRollbackRoutingKey = "inventory.rollback";
 
     @Override
-//    @Cacheable(value = "OrderResponses", key = "#id", unless = "#result == null")
+    @Cacheable(value = "OrderResponses", key = "#id", unless = "#result == null")
     public OrderResponse findById(String id) {
         Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
         List<OrderDetail> orderDetails = orderDetailRepository.findOrderDetailsByOrderId(order.getId());
@@ -73,8 +73,7 @@ public class OrderServiceImpl implements OrderService {
             System.out.println("test");
             System.out.println(orderDetail.getId());
         });
-//        return objectMapper.convertValue(orderMapper.toOrderResponse(order), OrderResponse.class);
-        return orderMapper.toOrderResponse(order);
+        return objectMapper.convertValue(orderMapper.toOrderResponse(order), OrderResponse.class);
     }
 
     @Override
