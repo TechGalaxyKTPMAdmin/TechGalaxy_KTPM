@@ -21,6 +21,7 @@ import iuh.fit.se.orderservice.repository.OrderRepository;
 import iuh.fit.se.orderservice.service.OrderService;
 import iuh.fit.se.orderservice.service.wrapper.CustomerServiceWrapper;
 import iuh.fit.se.orderservice.service.wrapper.InventoryServiceWrapper;
+//import iuh.fit.se.orderservice.service.wrapper.SystemUserServiceWrapper;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -52,6 +53,7 @@ public class OrderServiceImpl implements OrderService {
     private final OrderDetailRepository orderDetailRepository;
     private final InventoryServiceWrapper inventoryServiceWrapper;
     private final CustomerServiceWrapper customerServiceWrapper;
+//    private final SystemUserServiceWrapper systemUserServiceWrapper;
     private final OrderResponseCache orderResponseCache;
     private final RabbitTemplate rabbitTemplate;
     private final OrderMapper orderMapper;
@@ -103,6 +105,13 @@ public class OrderServiceImpl implements OrderService {
         return orderRepository.findAll()
                 .stream()
                 .map(orderMapper::toOrderResponse)
+                .map(orderResponse -> {
+                    Collection<CustomerResponseV2> customerResponses = customerServiceWrapper.getCustomerById(orderResponse.getCustomer().getId());
+                    CustomerResponseV2 customerResponse = customerResponses.stream().findFirst().orElse(null);
+                    assert customerResponse != null;
+                    orderResponse.getCustomer().setName(customerResponse.getName());
+                    return orderResponse;
+                })
                 .collect(Collectors.toList());
     }
 

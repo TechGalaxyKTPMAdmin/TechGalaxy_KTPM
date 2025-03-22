@@ -1,5 +1,6 @@
 package iuh.fit.se.orderservice.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import iuh.fit.se.orderservice.entity.enumeration.DetailStatus;
 import jakarta.persistence.*;
 import lombok.*;
@@ -29,6 +30,7 @@ public class OrderDetail {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
+    @JsonIgnore
     private Order order;
 
 
