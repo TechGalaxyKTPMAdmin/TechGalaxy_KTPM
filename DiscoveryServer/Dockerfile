@@ -6,6 +6,6 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/DiscoveryServer/target/DiscoveryServer-0.0.1-SNAPSHOT.jar DiscoveryServer.jar
+COPY --from=build /app/DiscoveryServer/target/*.jar DiscoveryServer.jar
 EXPOSE 8761
 ENTRYPOINT ["java","-jar","DiscoveryServer.jar"]

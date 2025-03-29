@@ -1,4 +1,22 @@
 services:
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - spring-net
+
   zipkin:
     image: openzipkin/zipkin
     container_name: zipkin
@@ -78,7 +96,6 @@ services:
     networks:
       - spring-net
 
-  
   userservice:
     build:
       context: .
@@ -104,7 +121,170 @@ services:
       timeout: 10s
       retries: 3
     networks:
-      - spring-net 
+      - spring-net
+
+  productservice:
+    build:
+      context: .
+      dockerfile: ProductService/Dockerfile
+    container_name: productservice
+    ports:
+      - "9002:9002"
+    depends_on:
+      configserver:
+        condition: service_healthy
+      discoveryserver:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=ProductDB;encrypt=false
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9002/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - spring-net
+
+  inventoryservice:
+    build:
+      context: .
+      dockerfile: InventoryService/Dockerfile
+    container_name: inventoryservice
+    ports:
+      - "9006:9006"
+    depends_on:
+      configserver:
+        condition: service_healthy
+      discoveryserver:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=InventoryDB;encrypt=false
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: guest
+      SPRING_RABBITMQ_PASSWORD: guest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9003/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - spring-net
+
+  orderservice:
+    build:
+      context: .
+      dockerfile: OrderService/Dockerfile
+    container_name: orderservice
+    ports:
+      - "9003:9003"
+    depends_on:
+      configserver:
+        condition: service_healthy
+      discoveryserver:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      redis-ktpm:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=OrderDB;encrypt=false
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: guest
+      SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_DATA_REDIS_HOST: redis-ktpm
+      SPRING_DATA_REDIS_PORT: 6379
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9004/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - spring-net
+
+  paymentservice:
+    build:
+      context: .
+      dockerfile: PaymentService/Dockerfile
+    container_name: paymentservice
+    ports:
+      - "9005:9005"
+    depends_on:
+      configserver:
+        condition: service_healthy
+      discoveryserver:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=PaymentDB;encrypt=false
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: guest
+      SPRING_RABBITMQ_PASSWORD: guest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9005/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - spring-net
+
+  notificationservice:
+    build:
+      context: .
+      dockerfile: NotificationService/Dockerfile
+    container_name: notificationservice
+    ports:
+      - "9004:9004"
+    depends_on:
+      configserver:
+        condition: service_healthy
+      discoveryserver:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=NotificationDB;encrypt=false
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+      SPRING_RABBITMQ_HOST: rabbitmq
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: guest
+      SPRING_RABBITMQ_PASSWORD: guest
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9006/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - spring-net
 
   redis-ktpm:
     image: redis:7.2
