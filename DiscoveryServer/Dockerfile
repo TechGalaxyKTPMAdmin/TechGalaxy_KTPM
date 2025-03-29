@@ -1,6 +1,6 @@
 FROM maven:3.8.5-openjdk-17-slim AS build
 WORKDIR /app
-COPY ./DiscoveryServer ./DiscoveryServer
+COPY . ./DiscoveryServer
 WORKDIR /app/DiscoveryServer
 RUN mvn clean package -DskipTests
 
