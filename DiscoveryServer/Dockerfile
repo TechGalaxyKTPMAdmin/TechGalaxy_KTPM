@@ -1,9 +1,7 @@
 # === Build Stage ===
 FROM maven:3.8.5-openjdk-17-slim AS build
+
 WORKDIR /app
-<<<<<<< Updated upstream
-COPY ./DiscoveryServer ./DiscoveryServer
-=======
 
 # 1. Copy pom.xml trước để cache dependencies
 COPY ./DiscoveryServer/pom.xml ./DiscoveryServer/pom.xml
@@ -13,7 +11,6 @@ RUN mvn -f ./DiscoveryServer/pom.xml dependency:go-offline
 COPY ./DiscoveryServer ./DiscoveryServer
 
 # 3. Build project
->>>>>>> Stashed changes
 WORKDIR /app/DiscoveryServer
 RUN mvn clean package -DskipTests
 
