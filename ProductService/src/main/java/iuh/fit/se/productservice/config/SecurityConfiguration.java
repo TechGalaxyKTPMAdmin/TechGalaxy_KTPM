@@ -63,8 +63,8 @@ public class SecurityConfiguration {
                 .csrf(c -> c.disable())
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth
-                        // .requestMatchers(whiteList).permitAll()
-                        .anyRequest().permitAll())
+                        .requestMatchers(whiteList).permitAll()
+                        .anyRequest().authenticated())
                 .oauth2ResourceServer(
                         oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter())))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

@@ -13,6 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -21,17 +22,16 @@ public class CustomerServiceWrapper {
 
     private final CustomerClient customerClient;
 
-    @CircuitBreaker(name = "customerService", fallbackMethod = "getCustomerFallback")
-    @Retry(name = "customerService")
+    @CircuitBreaker(name = "userService", fallbackMethod = "getCustomerFallback")
+    @Retry(name = "userService")
     public Collection<CustomerResponseV2> getCustomerById(String customerId) {
         log.info("🔍 Calling CustomerService for customerId: {}", customerId);
         DataResponse<CustomerResponseV2> response = customerClient.getCustomerById(customerId);
         return response.getData();
     }
 
-
-    @CircuitBreaker(name = "systemUserService", fallbackMethod = "getSystemUserFallback")
-    @Retry(name = "systemUserService")
+    @CircuitBreaker(name = "userService", fallbackMethod = "getSystemUserFallback")
+    @Retry(name = "userService")
     public Collection<SystemUserResponse> getSystemUserById(String systemUserId) {
         log.info("🔍 Calling System User Service for systemUserId: {}", systemUserId);
         DataResponse<SystemUserResponse> response = customerClient.getSystemUserById(systemUserId);
@@ -45,7 +45,8 @@ public class CustomerServiceWrapper {
     }
 
     public Collection<CustomerResponseV2> getSystemUserFallback(String systemUserId, Throwable throwable) {
-        log.error("❌ System User Service failed for systemUserId: {}. Reason: {}", systemUserId, throwable.getMessage());
+        log.error("❌ System User Service failed for systemUserId: {}. Reason: {}", systemUserId,
+                throwable.getMessage());
         throw new AppException(ErrorCode.CUSTOMER_NOT_FOUND, "System User Service is unavailable. Please try later.");
     }
 }

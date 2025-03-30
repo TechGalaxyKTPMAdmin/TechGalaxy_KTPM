@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
-//@RequiredArgsConstructor
+// @RequiredArgsConstructor
 @Slf4j
 public class InventoryEventListener {
 
@@ -22,13 +22,13 @@ public class InventoryEventListener {
     private final InventoryLogRepository inventoryLogRepository;
     private final RabbitTemplate rabbitTemplate;
 
-    public InventoryEventListener(InventoryService inventoryService, InventoryRepository inventoryRepository, InventoryLogRepository inventoryLogRepository, RabbitTemplate rabbitTemplate) {
+    public InventoryEventListener(InventoryService inventoryService, InventoryRepository inventoryRepository,
+            InventoryLogRepository inventoryLogRepository, RabbitTemplate rabbitTemplate) {
         this.inventoryService = inventoryService;
         this.inventoryRepository = inventoryRepository;
         this.inventoryLogRepository = inventoryLogRepository;
         this.rabbitTemplate = rabbitTemplate;
     }
-
 
     @Value("${rabbitmq.exchange.order}")
     private String orderExchange;

@@ -52,7 +52,8 @@ public class InventoryService {
         boolean allReserved = true; // Đánh dấu kiểm tra xem có giữ được toàn bộ không
 
         for (OrderEvent.ProductVariantDetail detail : orderEvent.getProductVariantDetails()) {
-            boolean reserved = reserveStock(orderEvent.getOrderId(), detail.getProductVariantDetailId(), detail.getQuantity());
+            boolean reserved = reserveStock(orderEvent.getOrderId(), detail.getProductVariantDetailId(),
+                    detail.getQuantity());
             if (!reserved) {
                 allReserved = false;
                 break;
@@ -79,8 +80,7 @@ public class InventoryService {
         boolean isReserved = inventoryLogRepository.existsByOrderIdAndProductVariantDetailIdAndChangeType(
                 orderId,
                 productVariantDetailId,
-                ChangeType.RESERVED
-        );
+                ChangeType.RESERVED);
 
         if (isReserved) {
             log.warn("Order {} already reserved product {}. Skip!", orderId, productVariantDetailId);
@@ -123,7 +123,6 @@ public class InventoryService {
 
         return false;
     }
-
 
     /**
      * ✅ Rollback khi đơn hàng bị hủy hoặc thanh toán thất bại (nhiều sản phẩm)

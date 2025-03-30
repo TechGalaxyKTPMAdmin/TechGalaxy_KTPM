@@ -50,7 +50,7 @@ public class OrderServiceImpl implements OrderService {
     private final OrderDetailRepository orderDetailRepository;
     private final InventoryServiceWrapper inventoryServiceWrapper;
     private final CustomerServiceWrapper customerServiceWrapper;
-//    private final SystemUserServiceWrapper systemUserServiceWrapper;
+    // private final SystemUserServiceWrapper systemUserServiceWrapper;
     private final OrderResponseCache orderResponseCache;
     private final RabbitTemplate rabbitTemplate;
     private final OrderMapper orderMapper;
@@ -103,12 +103,14 @@ public class OrderServiceImpl implements OrderService {
                 .stream()
                 .map(orderMapper::toOrderResponse)
                 .map(orderResponse -> {
-                    Collection<CustomerResponseV2> customerResponses = customerServiceWrapper.getCustomerById(orderResponse.getCustomer().getId());
+                    Collection<CustomerResponseV2> customerResponses = customerServiceWrapper
+                            .getCustomerById(orderResponse.getCustomer().getId());
                     CustomerResponseV2 customerResponse = customerResponses.stream().findFirst().orElse(null);
                     assert customerResponse != null;
                     orderResponse.getCustomer().setName(customerResponse.getName());
 
-                    Collection<SystemUserResponse> systemUserResponses = customerServiceWrapper.getSystemUserById(orderResponse.getSystemUser().getId());
+                    Collection<SystemUserResponse> systemUserResponses = customerServiceWrapper
+                            .getSystemUserById(orderResponse.getSystemUser().getId());
                     SystemUserResponse systemUserResponse = systemUserResponses.stream().findFirst().orElse(null);
                     assert systemUserResponse != null;
                     orderResponse.getSystemUser().setName(systemUserResponse.getName());
@@ -149,9 +151,11 @@ public class OrderServiceImpl implements OrderService {
         // 1. Kiểm tra tồn kho cho tất cả sản phẩm (sync check)
         // Chỉ cần 1 sản phẩm không đủ số lượng => thông báo lỗi
         for (OrderCreateRequest.ProductDetailRequest productDetail : orderCreateRequest.getProductDetailOrders()) {
-            boolean isAvailable = inventoryServiceWrapper.checkStock(productDetail.getProductVariantDetailId(), productDetail.getQuantity());
+            boolean isAvailable = inventoryServiceWrapper.checkStock(productDetail.getProductVariantDetailId(),
+                    productDetail.getQuantity());
             if (!isAvailable) {
-                throw new AppException(ErrorCode.OUT_OF_STOCK, "Sản phẩm đã hết hàng: " + productDetail.getProductVariantDetailId());
+                throw new AppException(ErrorCode.OUT_OF_STOCK,
+                        "Sản phẩm đã hết hàng: " + productDetail.getProductVariantDetailId());
             }
         }
 
@@ -224,7 +228,9 @@ public class OrderServiceImpl implements OrderService {
             orderResponseCache.remove(savedOrder.getId()); // Dọn cache nếu timeout
             throw new AppException(ErrorCode.TIME_OUT, "Timeout waiting for payment link");
         }
-        Collection<CustomerResponseV2> customerResponses = customerServiceWrapper.getCustomerById(savedOrder.getCustomerId());
+        System.out.println(savedOrder.getCustomerId());
+        Collection<CustomerResponseV2> customerResponses = customerServiceWrapper
+                .getCustomerById(savedOrder.getCustomerId());
         CustomerResponseV2 customerResponse = customerResponses.stream().findFirst().orElse(null);
 
         // 11. Trả kết quả cho FE
@@ -286,7 +292,8 @@ public class OrderServiceImpl implements OrderService {
                 .build();
 
         // 4. Lấy thông tin khách hàng từ CustomerService
-        Collection<CustomerResponseV2> customerResponses = customerServiceWrapper.getCustomerById(order.getCustomerId());
+        Collection<CustomerResponseV2> customerResponses = customerServiceWrapper
+                .getCustomerById(order.getCustomerId());
         CustomerResponseV2 customerResponse = customerResponses.stream().findFirst()
                 .orElseThrow(() -> new AppException(ErrorCode.CUSTOMER_NOT_FOUND));
 
@@ -338,7 +345,7 @@ public class OrderServiceImpl implements OrderService {
                         : "Thanh toán thất bại. Đơn hàng của bạn đã bị hủy.")
                 .type(PaymentStatus.PAID.equals(response.getStatus()) ? "PAYMENT_PAID" : "PAYMENT_FAILED")
                 .emailRequest(emailRequest)
-                .email(customerResponse.getAccount().getEmail()) 
+                .email(customerResponse.getAccount().getEmail())
                 .build();
 
         rabbitTemplate.convertAndSend(orderExchange, "notification", notificationDto);
@@ -346,7 +353,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @CacheEvict(value = "Products", allEntries = true)
-    public void clearCache() {}
-
+    public void clearCache() {
+    }
 
 }

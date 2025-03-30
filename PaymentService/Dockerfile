@@ -17,8 +17,16 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17-jdk-slim
 WORKDIR /app
 
-# Cài đặt wget
-RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Ho_Chi_Minh
+
+RUN apt-get update && \
+    apt-get install -y tzdata wget && \
+    ln -sf /usr/share/zoneinfo/$TZ /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata && \
+    echo $TZ > /etc/timezone && \
+    rm -rf /var/lib/apt/lists/*
+
 
 # 4. Copy jar file từ stage build
 COPY --from=build /app/PaymentService/target/*.jar PaymentService.jar
