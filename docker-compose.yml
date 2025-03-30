@@ -1,19 +1,16 @@
 services:
   rabbitmq:
-    image: rabbitmq:3.12-management
+    image: rabbitmq:3-management
     container_name: rabbitmq
     ports:
       - "5672:5672"
       - "15672:15672"
-    environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
-    restart: unless-stopped
     healthcheck:
-      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
       interval: 30s
       timeout: 10s
-      retries: 3
+      retries: 5
+      start_period: 90s
     networks:
       - spring-net
 
@@ -26,10 +23,11 @@ services:
       STORAGE_TYPE: mem
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9411/api/v2/health"]
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9411/health"]
       interval: 30s
       timeout: 10s
-      retries: 3
+      retries: 5
+      start_period: 60s
     networks:
       - spring-net
 
@@ -108,12 +106,16 @@ services:
         condition: service_healthy
       discoveryserver:
         condition: service_healthy
+    volumes:
+      - ./logs:/logs  
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=UserDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:9001/actuator/health"]
@@ -135,12 +137,15 @@ services:
         condition: service_healthy
       discoveryserver:
         condition: service_healthy
+      zipkin:
+        condition: service_healthy
     environment:
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=ProductDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:9002/actuator/health"]
@@ -174,9 +179,10 @@ services:
       SPRING_RABBITMQ_PORT: 5672
       SPRING_RABBITMQ_USERNAME: guest
       SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9003/actuator/health"]
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9006/actuator/health"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -211,9 +217,10 @@ services:
       SPRING_RABBITMQ_PASSWORD: guest
       SPRING_DATA_REDIS_HOST: redis-ktpm
       SPRING_DATA_REDIS_PORT: 6379
+      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9004/actuator/health"]
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9003/actuator/health"]
       interval: 30s
       timeout: 10s
       retries: 3
@@ -244,6 +251,7 @@ services:
       SPRING_RABBITMQ_PORT: 5672
       SPRING_RABBITMQ_USERNAME: guest
       SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:9005/actuator/health"]
@@ -277,9 +285,10 @@ services:
       SPRING_RABBITMQ_PORT: 5672
       SPRING_RABBITMQ_USERNAME: guest
       SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9006/actuator/health"]
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9004/actuator/health"]
       interval: 30s
       timeout: 10s
       retries: 3

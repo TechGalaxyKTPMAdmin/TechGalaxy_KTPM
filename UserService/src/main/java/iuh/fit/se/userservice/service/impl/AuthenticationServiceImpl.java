@@ -9,6 +9,8 @@ import iuh.fit.se.userservice.exception.AppException;
 import iuh.fit.se.userservice.exception.ErrorCode;
 import iuh.fit.se.userservice.service.AuthenticationService;
 import iuh.fit.se.userservice.util.SecurityUtil;
+import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
@@ -28,6 +30,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
+@Slf4j
 public class AuthenticationServiceImpl implements AuthenticationService {
 
         private final AuthenticationManagerBuilder authenticationManagerBuilder;
@@ -53,6 +56,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
         @Override
         public ResponseEntity<DataResponse<LoginResponse>> login(LoginRequest loginDto) {
+                log.info("Login with username: {}", loginDto.getUsername());
                 UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
                                 loginDto.getUsername(), loginDto.getPassword());
                 try {

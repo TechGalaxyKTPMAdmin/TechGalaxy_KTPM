@@ -40,10 +40,9 @@ public class SecurityConfiguration {
         return new BCryptPasswordEncoder();
     }
 
-
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http,
-                                                   CustomAuthenticationEntryPoint customAuthenticationEntryPoint ) throws Exception {
+            CustomAuthenticationEntryPoint customAuthenticationEntryPoint) throws Exception {
 
         String[] whiteList = {
                 "/",
@@ -58,17 +57,16 @@ public class SecurityConfiguration {
                 "/payment/**",
                 "/file",
                 "/files",
+                "/health",
+                "/health/**",
         };
-
 
         http
                 .csrf(c -> c.disable())
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth
-//                        .requestMatchers(whiteList).permitAll()
-//                        .anyRequest().authenticated()
-                                .anyRequest().permitAll()
-                )
+                        .requestMatchers(whiteList).permitAll()
+                        .anyRequest().authenticated())
 
                 .httpBasic(Customizer.withDefaults())
                 .oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults())
@@ -81,7 +79,6 @@ public class SecurityConfiguration {
 
         return http.build();
     }
-
 
     @Bean
     public JwtAuthenticationConverter jwtAuthenticationConverter() {
