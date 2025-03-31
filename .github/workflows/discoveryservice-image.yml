@@ -1,0 +1,27 @@
+name: Docker Discovery Service Image CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build-push-discoveryservice:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build discovery service image
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Build and push discovery service image
+      env: 
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      run: | 
+        docker compose -f docker-compose.yml build discoveryserver
+        docker compose -f docker-compose.yml push discoveryserver
