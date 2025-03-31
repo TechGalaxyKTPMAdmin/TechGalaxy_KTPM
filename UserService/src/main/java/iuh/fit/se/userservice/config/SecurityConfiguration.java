@@ -65,8 +65,8 @@ public class SecurityConfiguration {
                 .csrf(c -> c.disable())
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(whiteList).permitAll()
-                        .anyRequest().authenticated())
+                        // .requestMatchers(whiteList).permitAll()
+                        .anyRequest().permitAll())
 
                 .httpBasic(Customizer.withDefaults())
                 .oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults())
