@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build and push discovery service image
-      env: 
+      env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: | 
         docker compose -f docker-compose.yml build discoveryserver
