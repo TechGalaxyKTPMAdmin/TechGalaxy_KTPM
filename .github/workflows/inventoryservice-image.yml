@@ -25,3 +25,19 @@ jobs:
       run: | 
         docker compose -f docker-compose.yml build inventoryservice
         docker compose -f docker-compose.yml push inventoryservice
+
+  deploy-inventoryservice:
+    needs: build-push-inventoryservice
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy inventory service image
+      uses: appleboy/ssh-action@v1.2.2
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USERNAME }}
+        key: ${{ secrets.SERVER_KEY }}
+        port: ${{ secrets.SERVER_PORT }}

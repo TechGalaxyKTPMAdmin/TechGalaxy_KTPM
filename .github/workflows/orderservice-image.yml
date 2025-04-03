@@ -25,3 +25,19 @@ jobs:
       run: | 
         docker compose -f docker-compose.yml build orderservice
         docker compose -f docker-compose.yml push orderservice
+  
+  deploy-orderservice:
+    needs: build-push-orderservice
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy order service image
+      uses: appleboy/ssh-action@v1.2.2
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USERNAME }}
+        key: ${{ secrets.SERVER_KEY }}
+        port: ${{ secrets.SERVER_PORT }}
