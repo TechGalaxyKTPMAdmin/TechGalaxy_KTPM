@@ -1,8 +1,9 @@
-package iuh.fit.se.notificationservice.exception;
+package iuh.fit.se.orderservice.exception;
 
-import iuh.fit.se.notificationservice.dto.response.DataResponse;
-import iuh.fit.se.notificationservice.dto.response.FieldErrorResponse;
-import iuh.fit.se.notificationservice.dto.response.ValidationErrorResponse;
+
+import iuh.fit.se.orderservice.dto.response.DataResponse;
+import iuh.fit.se.orderservice.dto.response.FieldErrorResponse;
+import iuh.fit.se.orderservice.dto.response.ValidationErrorResponse;
 import jakarta.validation.ConstraintViolation;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.ConstraintViolationException;

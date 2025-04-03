@@ -1,6 +1,8 @@
 package iuh.fit.se.productservice.exception;
 
 import iuh.fit.se.productservice.dto.response.DataResponse;
+import iuh.fit.se.productservice.dto.response.FieldErrorResponse;
+import iuh.fit.se.productservice.dto.response.ValidationErrorResponse;
 import jakarta.validation.ConstraintViolation;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.ConstraintViolationException;
@@ -13,8 +15,8 @@ import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 @ControllerAdvice
 @Slf4j
@@ -25,14 +27,16 @@ public class GlobalException {
     // Handle all exception
     @ExceptionHandler(Exception.class)
     public ResponseEntity<DataResponse> handleException() {
-        DataResponse dataResponse = DataResponse.builder().status(ErrorCode.UNCATEGORIZED_ERROR.getCode()).message(ErrorCode.UNCATEGORIZED_ERROR.getMessage()).build();
+        DataResponse dataResponse = DataResponse.builder().status(ErrorCode.UNCATEGORIZED_ERROR.getCode())
+                .message(ErrorCode.UNCATEGORIZED_ERROR.getMessage()).build();
         return ResponseEntity.status(ErrorCode.UNCATEGORIZED_ERROR.getHttpStatus()).body(dataResponse);
     }
 
     // Handle AppException Custom
     @ExceptionHandler(AppException.class)
     public ResponseEntity<DataResponse> handleAppException(AppException ex) {
-        String message = ex.getCustomMessage() != null ? ex.getErrorCode().getMessage() + " " + ex.getCustomMessage() : ex.getErrorCode().getMessage();
+        String message = ex.getCustomMessage() != null ? ex.getErrorCode().getMessage() + " " + ex.getCustomMessage()
+                : ex.getErrorCode().getMessage();
         DataResponse dataResponse = DataResponse.builder()
                 .status(ex.getErrorCode().getCode())
                 .message(message)
@@ -43,14 +47,16 @@ public class GlobalException {
     // Handle NoResourceFoundException File
     @ExceptionHandler(NoResourceFoundException.class)
     public ResponseEntity<DataResponse> handleNoResourceFoundException() {
-        DataResponse dataResponse = DataResponse.builder().status(ErrorCode.NO_RESOURCE_FOUND.getCode()).message(ErrorCode.NO_RESOURCE_FOUND.getMessage()).build();
+        DataResponse dataResponse = DataResponse.builder().status(ErrorCode.NO_RESOURCE_FOUND.getCode())
+                .message(ErrorCode.NO_RESOURCE_FOUND.getMessage()).build();
         return ResponseEntity.status(ErrorCode.NO_RESOURCE_FOUND.getHttpStatus()).body(dataResponse);
     }
 
     // Handle File Exception
-    @ExceptionHandler({URISyntaxException.class, IOException.class})
+    @ExceptionHandler({ URISyntaxException.class, IOException.class })
     public ResponseEntity<DataResponse> handleFileException() {
-        DataResponse dataResponse = DataResponse.builder().status(ErrorCode.CREATE_DIRECTORY_FAILED.getCode()).message(ErrorCode.CREATE_DIRECTORY_FAILED.getMessage()).build();
+        DataResponse dataResponse = DataResponse.builder().status(ErrorCode.CREATE_DIRECTORY_FAILED.getCode())
+                .message(ErrorCode.CREATE_DIRECTORY_FAILED.getMessage()).build();
         return ResponseEntity.status(ErrorCode.CREATE_DIRECTORY_FAILED.getHttpStatus()).body(dataResponse);
     }
 
@@ -59,36 +65,42 @@ public class GlobalException {
     public ResponseEntity<DataResponse> handleDataIntegrityViolationException(DataIntegrityViolationException ex) {
         if (ex.getCause() instanceof ConstraintViolationException) {
             ErrorCode errorCode = ErrorCode.DATA_DUPLICATE_PRODUCT_DETAIL;
-            return ResponseEntity.status(errorCode.getHttpStatus()).body(DataResponse.builder().status(errorCode.getCode()).message(errorCode.getMessage()).build());
+            return ResponseEntity.status(errorCode.getHttpStatus())
+                    .body(DataResponse.builder().status(errorCode.getCode()).message(errorCode.getMessage()).build());
         }
         return handleException();
     }
 
     // Handle Validation Exception
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<DataResponse> handleValidationException(MethodArgumentNotValidException ex) {
-        ErrorCode errorCode;
-        Map<String, Object> attributes = null;
+    public ResponseEntity<ValidationErrorResponse> handleValidationException(MethodArgumentNotValidException ex) {
+        int status = ErrorCode.INVALID_KEY.getCode();
+        String message = "Validation failed";
 
-        try {
-            var fieldError = ex.getBindingResult().getFieldError();
-            if (fieldError != null) {
-                errorCode = ErrorCode.valueOf(fieldError.getDefaultMessage());
-                var constraint = ex.getBindingResult().getAllErrors().get(0).unwrap(ConstraintViolation.class);
-                attributes = constraint.getConstraintDescriptor().getAttributes();
-            } else {
-                errorCode = ErrorCode.INVALID_KEY;
+        List<FieldErrorResponse> fieldErrors = ex.getBindingResult().getFieldErrors().stream().map(fieldError -> {
+            String field = fieldError.getField();
+            String errorMessage;
+
+            try {
+                ErrorCode code = ErrorCode.valueOf(fieldError.getDefaultMessage());
+                Map<String, Object> attributes = ex.getBindingResult().getAllErrors().get(0)
+                        .unwrap(ConstraintViolation.class)
+                        .getConstraintDescriptor().getAttributes();
+                errorMessage = mapAttributeMessage(code.getMessage(), attributes);
+                System.out.println("Error message: " + errorMessage);
+            } catch (Exception e) {
+                errorMessage = fieldError.getDefaultMessage();
             }
-        } catch (Exception e) {
-            errorCode = ErrorCode.INVALID_KEY;
-        }
 
-        DataResponse dataResponse = DataResponse.builder()
-                .status(errorCode.getCode())
-                .message(Objects.nonNull(attributes) ? mapAttributeMessage(errorCode.getMessage(), attributes) : errorCode.getMessage())
-                .build();
+            return new FieldErrorResponse(field, errorMessage);
+        }).toList();
 
-        return ResponseEntity.status(errorCode.getHttpStatus()).body(dataResponse);
+        ValidationErrorResponse response = ValidationErrorResponse.of(
+                status,
+                message,
+                fieldErrors);
+
+        return ResponseEntity.status(ErrorCode.INVALID_KEY.getHttpStatus()).body(response);
     }
 
     private String mapAttributeMessage(String message, Map<String, Object> attributes) {
