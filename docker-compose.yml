@@ -36,7 +36,7 @@ services:
       context: .
       dockerfile: DiscoveryServer/Dockerfile
     container_name: discoveryserver
-    image: ${DOCKER_USERNAME}/discoveryserver:latest
+    image: discoveryserver
     ports:
       - "8761:8761"
     restart: unless-stopped
@@ -53,7 +53,7 @@ services:
       context: .
       dockerfile: ConfigServer/Dockerfile
     container_name: configserver
-    image: ${DOCKER_USERNAME}/configserver:latest
+    image: configserver
     ports:
       - "8888:8888"
     depends_on:
@@ -75,7 +75,7 @@ services:
       context: .
       dockerfile: APIGateway/Dockerfile
     container_name: apigateway
-    image: ${DOCKER_USERNAME}/apigateway:latest
+    image: apigateway
     ports:
       - "8081:8081"
     depends_on:
@@ -102,7 +102,7 @@ services:
       context: .
       dockerfile: UserService/Dockerfile
     container_name: userservice
-    image: ${DOCKER_USERNAME}/userservice:latest
+    image: userservice
     ports:
       - "9001:9001"
     depends_on:
@@ -134,7 +134,7 @@ services:
       context: .
       dockerfile: ProductService/Dockerfile
     container_name: productservice
-    image: ${DOCKER_USERNAME}/productservice:latest
+    image: productservice
     ports:
       - "9002:9002"
     depends_on:
@@ -165,7 +165,7 @@ services:
       context: .
       dockerfile: InventoryService/Dockerfile
     container_name: inventoryservice
-    image: ${DOCKER_USERNAME}/inventoryservice:latest
+    image: inventoryservice
     ports:
       - "9006:9006"
     depends_on:
@@ -200,7 +200,7 @@ services:
       context: .
       dockerfile: OrderService/Dockerfile
     container_name: orderservice
-    image: ${DOCKER_USERNAME}/orderservice:latest
+    image: orderservice
     ports:
       - "9003:9003"
     depends_on:
@@ -239,7 +239,7 @@ services:
       context: .
       dockerfile: PaymentService/Dockerfile
     container_name: paymentservice
-    image: ${DOCKER_USERNAME}/paymentservice:latest
+    image: paymentservice
     ports:
       - "9005:9005"
     depends_on:
@@ -274,7 +274,7 @@ services:
       context: .
       dockerfile: NotificationService/Dockerfile
     container_name: notificationservice
-    image: ${DOCKER_USERNAME}/notificationservice:latest
+    image: notificationservice
     ports:
       - "9004:9004"
     depends_on:
