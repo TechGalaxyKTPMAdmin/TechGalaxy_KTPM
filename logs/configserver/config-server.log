@@ -1,0 +1,40 @@
+2025-04-05 03:00:45.926  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Starting ConfigServerApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/ConfigServer.jar started by root in /app)
+2025-04-05 03:00:45.947 DEBUG 1 --- [main] i.f.s.c.ConfigServerApplication          : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 03:00:45.950  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 03:00:50.252  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1d58f6a3-8bee-3924-80f4-797ac04e7474
+2025-04-05 03:00:51.218  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2025-04-05 03:00:51.270  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 03:00:51.276  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 03:00:51.452  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 03:00:51.455  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5402 ms
+2025-04-05 03:01:03.567  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 03:01:03.897  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 03:01:03.938  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-04-05 03:01:04.273  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 03:01:04.434  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 03:01:04.462  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 03:01:04.522  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 03:01:04.528  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 03:01:04.533  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 03:01:04.536  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 03:01:04.539  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 03:01:04.543  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 03:01:04.560  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 03:01:06.039  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 03:01:06.048  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 03:01:06.058  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 03:01:06.067  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743822066063 with initial instances count: 0
+2025-04-05 03:01:06.079  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CONFIGSERVER with eureka with status UP
+2025-04-05 03:01:06.083  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743822066083, current=UP, previous=STARTING]
+2025-04-05 03:01:06.090  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/af9e2795e834:ConfigServer:8888: registering service...
+2025-04-05 03:01:06.166  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2025-04-05 03:01:06.174  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8888
+2025-04-05 03:01:06.235  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Started ConfigServerApplication in 23.316 seconds (process running for 26.124)
+2025-04-05 03:01:06.273  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/af9e2795e834:ConfigServer:8888 - registration status: 204
+2025-04-05 03:01:10.213  INFO 1 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 03:01:10.215  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 03:01:10.220  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-04-05 03:01:28.464  INFO 1 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-14353416339303877292/PaymentService.properties]' via location 'file:/tmp/config-repo-14353416339303877292/'
+2025-04-05 03:01:29.992  INFO 1 --- [http-nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-14353416339303877292/UserService.properties]' via location 'file:/tmp/config-repo-14353416339303877292/'
+2025-04-05 03:01:30.732  INFO 1 --- [http-nio-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-14353416339303877292/OrderService.properties]' via location 'file:/tmp/config-repo-14353416339303877292/'
+2025-04-05 03:01:31.526  INFO 1 --- [http-nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-14353416339303877292/NotificationService.properties]' via location 'file:/tmp/config-repo-14353416339303877292/'

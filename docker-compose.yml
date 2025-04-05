@@ -39,6 +39,10 @@ services:
     image: discoveryserver
     ports:
       - "8761:8761"
+    volumes:
+      - ./logs/discoveryserver:/logs
+    environment:
+      LOG_PATH: /logs
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:8761/actuator/health"]
@@ -59,7 +63,10 @@ services:
     depends_on:
       discoveryserver:
         condition: service_healthy
+    volumes:
+      - ./logs/configserver:/logs
     environment:
+      LOG_PATH: /logs
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
     restart: unless-stopped
     healthcheck:
@@ -83,7 +90,10 @@ services:
         condition: service_healthy
       redis-ktpm:
         condition: service_healthy
+    volumes:
+      - ./logs/apigateway:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
       SPRING_DATA_REDIS_HOST: redis-ktpm
@@ -111,7 +121,7 @@ services:
       discoveryserver:
         condition: service_healthy
     volumes:
-      - ./logs:/logs  
+      - ./logs/userservice:/logs
     environment:
       LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=UserDB;encrypt=false
@@ -144,7 +154,10 @@ services:
         condition: service_healthy
       zipkin:
         condition: service_healthy
+    volumes:
+      - ./logs/productservice:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=ProductDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
@@ -175,7 +188,10 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+    volumes:
+      - ./logs/inventoryservice:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=InventoryDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
@@ -212,7 +228,10 @@ services:
         condition: service_healthy
       redis-ktpm:
         condition: service_healthy
+    volumes:
+      - ./logs/orderservice:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=OrderDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
@@ -249,7 +268,10 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+    volumes:
+      - ./logs/paymentservice:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=PaymentDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
@@ -284,7 +306,10 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+    volumes:
+      - ./logs/notificationservice:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=NotificationDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
