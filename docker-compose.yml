@@ -344,6 +344,46 @@ services:
       retries: 3
     networks:
       - spring-net
+  # elasticsearch:
+  #   image: elasticsearch:7.17.28
+  #   container_name: elasticsearch
+  #   environment:
+  #     - discovery.type=single-node
+  #     - xpack.security.enabled=false
+  #     - ES_JAVA_OPTS=-Xms512m -Xmx512m
+  #   ports:
+  #     - "9200:9200"
+  #   volumes:
+  #     - esdata:/usr/share/elasticsearch/data
+  #   restart: unless-stopped
+  #   networks:
+  #     - spring-net
+
+  # logstash:
+  #   image: docker.elastic.co/logstash/logstash:7.17.28
+  #   container_name: logstash
+  #   depends_on:
+  #     - elasticsearch
+  #   volumes:
+  #     - ./ELK/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+  #     - ./logs:/logs
+  #   command: logstash -f /usr/share/logstash/pipeline/logstash.conf
+  #   restart: unless-stopped
+  #   networks:
+  #     - spring-net
+
+  # kibana:
+  #   image: docker.elastic.co/kibana/kibana:7.17.28
+  #   container_name: kibana
+  #   depends_on:
+  #     - elasticsearch
+  #   ports:
+  #     - "5601:5601"
+  #   environment:
+  #     - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+  #   restart: unless-stopped
+  #   networks:
+  #     - spring-net
 
 networks:
   spring-net:
@@ -351,3 +391,4 @@ networks:
 
 volumes:
   redis-data:
+  # esdata:

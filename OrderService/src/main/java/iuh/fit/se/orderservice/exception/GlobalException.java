@@ -1,6 +1,5 @@
 package iuh.fit.se.orderservice.exception;
 
-
 import iuh.fit.se.orderservice.dto.response.DataResponse;
 import iuh.fit.se.orderservice.dto.response.FieldErrorResponse;
 import iuh.fit.se.orderservice.dto.response.ValidationErrorResponse;
@@ -65,11 +64,23 @@ public class GlobalException {
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<DataResponse> handleDataIntegrityViolationException(DataIntegrityViolationException ex) {
         if (ex.getCause() instanceof ConstraintViolationException) {
-            ErrorCode errorCode = ErrorCode.DATA_DUPLICATE_PRODUCT_DETAIL;
+            ErrorCode errorCode = ErrorCode.DATA_INTEGRITY_VIOLATION_EXCEPTION;
+
             return ResponseEntity.status(errorCode.getHttpStatus())
-                    .body(DataResponse.builder().status(errorCode.getCode()).message(errorCode.getMessage()).build());
+                    .body(DataResponse.builder()
+                            .status(errorCode.getCode())
+                            .message(errorCode.getMessage())
+                            .build());
         }
-        return handleException();
+
+        log.error("DataIntegrityViolationException: {}", ex.getMessage());
+        ErrorCode errorCode = ErrorCode.UNCATEGORIZED_ERROR;
+
+        return ResponseEntity.status(errorCode.getHttpStatus())
+                .body(DataResponse.builder()
+                        .status(errorCode.getCode())
+                        .message(errorCode.getMessage())
+                        .build());
     }
 
     // Handle Validation Exception
@@ -101,7 +112,7 @@ public class GlobalException {
                 message,
                 fieldErrors);
 
-        return ResponseEntity.status(ErrorCode.INVALID_KEY.getHttpStatus()).body(response);
+        return ResponseEntity.status(ErrorCode.DATA_INTEGRITY_VIOLATION_EXCEPTION.getHttpStatus()).body(response);
     }
 
     private String mapAttributeMessage(String message, Map<String, Object> attributes) {

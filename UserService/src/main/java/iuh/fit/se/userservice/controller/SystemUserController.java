@@ -26,7 +26,8 @@ public class SystemUserController {
     }
 
     @GetMapping
-    public ResponseEntity<DataResponse<ResultPaginationDTO>> getAllSystemUsers(Specification<SystemUser> spec, Pageable pageable) {
+    public ResponseEntity<DataResponse<ResultPaginationDTO>> getAllSystemUsers(Specification<SystemUser> spec,
+            Pageable pageable) {
         ResultPaginationDTO result = systemUserService.fetchAllSystemUser(spec, pageable);
         DataResponse<ResultPaginationDTO> response = DataResponse.<ResultPaginationDTO>builder()
                 .status(200)
@@ -59,7 +60,8 @@ public class SystemUserController {
     }
 
     @GetMapping("/status/{status}")
-    public ResponseEntity<DataResponse<List<SystemUserResponseDTO>>> getSystemUsersByStatus(@PathVariable SystemUserStatus status) {
+    public ResponseEntity<DataResponse<List<SystemUserResponseDTO>>> getSystemUsersByStatus(
+            @PathVariable SystemUserStatus status) {
         List<SystemUserResponseDTO> users = systemUserService.handleGetSystemUsersByStatus(status);
         DataResponse<List<SystemUserResponseDTO>> response = DataResponse.<List<SystemUserResponseDTO>>builder()
                 .status(200)
@@ -78,20 +80,19 @@ public class SystemUserController {
                         .status(200)
                         .message("System user fetched successfully")
                         .data(List.of(user))
-                        .build()
-        );
+                        .build());
     }
 
     @PostMapping
-    public ResponseEntity<DataResponse<SystemUserResponseDTO>> addSystemUser(@RequestBody SystemUserRequestDTO requestDTO) {
+    public ResponseEntity<DataResponse<SystemUserResponseDTO>> addSystemUser(
+            @RequestBody SystemUserRequestDTO requestDTO) {
         SystemUserResponseDTO response = systemUserService.handleCreateSystemUser(requestDTO);
         return ResponseEntity.ok(
                 DataResponse.<SystemUserResponseDTO>builder()
                         .status(201)
                         .message("System user created successfully")
                         .data(List.of(response))
-                        .build()
-        );
+                        .build());
     }
 
     @PutMapping("/{id}")
@@ -104,8 +105,7 @@ public class SystemUserController {
                         .status(200)
                         .message("System user updated successfully")
                         .data(List.of(response))
-                        .build()
-        );
+                        .build());
     }
 
     @DeleteMapping("/{id}")
@@ -115,20 +115,19 @@ public class SystemUserController {
                 DataResponse.<Void>builder()
                         .status(200)
                         .message("System user deleted successfully")
-                        .build()
-        );
+                        .build());
     }
 
     @PutMapping
-    public ResponseEntity<DataResponse<SystemUserResponseDTO>> updateSystemUserStatus(@RequestBody SystemUserRequestDTO requestDTO) {
+    public ResponseEntity<DataResponse<SystemUserResponseDTO>> updateSystemUserStatus(
+            @RequestBody SystemUserRequestDTO requestDTO) {
         SystemUserResponseDTO response = systemUserService.handleUpdateSystemUser(requestDTO);
         return ResponseEntity.ok(
                 DataResponse.<SystemUserResponseDTO>builder()
                         .status(200)
                         .message("System user status updated successfully")
                         .data(List.of(response))
-                        .build()
-        );
+                        .build());
     }
 
     @DeleteMapping
@@ -138,7 +137,6 @@ public class SystemUserController {
                 DataResponse.<Void>builder()
                         .status(200)
                         .message("System users deleted successfully")
-                        .build()
-        );
+                        .build());
     }
 }

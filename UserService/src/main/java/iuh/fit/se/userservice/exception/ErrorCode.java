@@ -18,11 +18,12 @@ public enum ErrorCode {
     NOT_IN_REQUEST(9995, "Not in request", HttpStatus.BAD_REQUEST),
     CUSTOMER_NOTMATCH_LOGIN(9994, "Customer not match", HttpStatus.BAD_REQUEST),
 
-    //8000 - 8999: error with authentication
+    // 8000 - 8999: error with authentication
     AUTHENTICATION_ERROR(8000, "You no access to method", HttpStatus.FORBIDDEN),
 
     // 1000 - 1999: Business error ( call data from database)
-    DATA_DUPLICATE_PRODUCT_DETAIL(1000, "Data duplicate product detail please check color and memories request", HttpStatus.BAD_REQUEST),
+    DATA_DUPLICATE_PRODUCT_DETAIL(1000, "Data duplicate product detail please check color and memories request",
+            HttpStatus.BAD_REQUEST),
     PRODUCT_UPDATE_FAILED(1001, "Product update failed", HttpStatus.INTERNAL_SERVER_ERROR),
     PRODUCT_DELETE_FAILED(1002, "Product delete failed", HttpStatus.INTERNAL_SERVER_ERROR),
     MEMORY_NOTFOUND(1003, "Memory not found", HttpStatus.NOT_FOUND),
@@ -41,9 +42,11 @@ public enum ErrorCode {
     SYSTEM_USER_NOT_FOUND(1016, "System user not found", HttpStatus.NOT_FOUND),
     PRODUCT_NOT_ENOUGH(1017, "Product not enough", HttpStatus.BAD_REQUEST),
     NOT_UPDATE_ORDER(1018, "Not update order", HttpStatus.BAD_REQUEST),
+    DATA_INTEGRITY_VIOLATION_EXCEPTION(1019, "Data integrity violation exception", HttpStatus.BAD_REQUEST),
 
     // 2000 - 2999: Validation error in request body
-    PRODUCT_DISCOUNT_INVALID(2000, "Product discount min value is {min} and max value is {max}", HttpStatus.BAD_REQUEST),
+    PRODUCT_DISCOUNT_INVALID(2000, "Product discount min value is {min} and max value is {max}",
+            HttpStatus.BAD_REQUEST),
     PRODUCT_NAME_INVALID(2002, "Product name min length is {min} and max length is {max}", HttpStatus.BAD_REQUEST),
     USERNAME_NOT_EMPTY(2003, "Username is not empty", HttpStatus.BAD_REQUEST),
     PASSWORD_NOT_EMPTY(2004, "Password is not empty", HttpStatus.BAD_REQUEST),
@@ -59,19 +62,22 @@ public enum ErrorCode {
     GENDER_NOT_EMPTY(2014, "Gender is not empty", HttpStatus.BAD_REQUEST),
     ROLE_NOT_EMPTY(2015, "Role is not empty", HttpStatus.BAD_REQUEST),
     INVALID_PRODUCT_QUANTITY(2016, "Invalid product quantity", HttpStatus.BAD_REQUEST),
-    ORDER_SERVICE_UNAVAILABLE(2017, "Order Service is temporarily unavailable. Please try again later.", HttpStatus.SERVICE_UNAVAILABLE),
+    ORDER_SERVICE_UNAVAILABLE(2017, "Order Service is temporarily unavailable. Please try again later.",
+            HttpStatus.SERVICE_UNAVAILABLE),
     CUSTOMER_NO_DELETE(2018, "Cannot delete account as the user has placed orders.", HttpStatus.BAD_REQUEST),
-    //Mail
+    // Mail
     FAILED_SEND_EMAIL(3000, "Failed to send email", HttpStatus.INTERNAL_SERVER_ERROR),
 
     // 4000 - 4999: Storage and file error
     NO_RESOURCE_FOUND(4010, "No resource found", HttpStatus.NOT_FOUND),
     FILE_EMPTY(4000, "File is empty. Please upload a file.", HttpStatus.BAD_REQUEST),
-    INVALID_FILE_EXTENSION(4001, "Invalid file extension. only allows pdf, jpg, jpeg, png, doc, docx", HttpStatus.BAD_REQUEST),
+    INVALID_FILE_EXTENSION(4001, "Invalid file extension. only allows pdf, jpg, jpeg, png, doc, docx",
+            HttpStatus.BAD_REQUEST),
     FILE_NOT_FOUND(4002, "File not found", HttpStatus.NOT_FOUND),
     FILE_SIZE_EXCEEDED(4003, "File size exceeded", HttpStatus.PAYLOAD_TOO_LARGE),
     MISSING_FILE(4004, "Missing file", HttpStatus.BAD_REQUEST),
     CREATE_DIRECTORY_FAILED(4005, "Create directory failed", HttpStatus.INTERNAL_SERVER_ERROR);
+
     int code;
     String message;
     HttpStatus httpStatus;
