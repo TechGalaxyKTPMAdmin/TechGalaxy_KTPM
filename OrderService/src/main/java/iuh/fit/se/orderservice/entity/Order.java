@@ -1,6 +1,7 @@
 package iuh.fit.se.orderservice.entity;
 
 
+import iuh.fit.se.orderservice.dto.request.PaymentMethod;
 import iuh.fit.se.orderservice.entity.enumeration.OrderStatus;
 import iuh.fit.se.orderservice.entity.enumeration.PaymentStatus;
 import jakarta.persistence.*;
@@ -44,8 +45,9 @@ public class Order {
     @Column(nullable = false)
     private OrderStatus orderStatus = OrderStatus.NEW;
 
-    @Column(name = "payment_method", length = 50)
-    private String paymentMethod;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "payment_method", nullable = false)
+    private PaymentMethod paymentMethod;
 
     @Column(name = "payment_id", length = 50)
     private String vnp_TxnRef;
