@@ -18,7 +18,6 @@ import iuh.fit.se.orderservice.repository.OrderRepository;
 import iuh.fit.se.orderservice.service.OrderService;
 import iuh.fit.se.orderservice.service.wrapper.CustomerServiceWrapper;
 import iuh.fit.se.orderservice.service.wrapper.InventoryServiceWrapper;
-//import iuh.fit.se.orderservice.service.wrapper.SystemUserServiceWrapper;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -77,11 +76,13 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     @CacheEvict(value = "OrderResponses", key = "#id")
-    public OrderResponse update(String id, OrderRequest orderRequest) {
+    public OrderResponse update(String id, OrderUpdateRequest orderRequest) {
         Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
+
         order.setAddress(orderRequest.getAddress());
         order.setOrderStatus(orderRequest.getOrderStatus());
         order.setPaymentStatus(orderRequest.getPaymentStatus());
+        order.setPaymentMethod(orderRequest.getPaymentMethod());
         Order orderSaved = orderRepository.save(order);
 
         updateFindAllCache();
@@ -167,7 +168,7 @@ public class OrderServiceImpl implements OrderService {
                 .systemUserId(orderCreateRequest.getSystemUserId())
                 .createdAt(LocalDateTime.now())
                 .address(orderCreateRequest.getAddress())
-                .paymentMethod(PaymentMethod.valueOf(orderCreateRequest.getPaymentMethod().name()).name())
+                .paymentMethod(orderCreateRequest.getPaymentMethod())
                 .build();
         Order savedOrder = orderRepository.save(order);
 
@@ -353,7 +354,5 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @CacheEvict(value = "Products", allEntries = true)
-    public void clearCache() {
-    }
-
+    public void clearCache() {}
 }

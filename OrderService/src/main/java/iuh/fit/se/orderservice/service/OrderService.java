@@ -2,6 +2,7 @@ package iuh.fit.se.orderservice.service;
 
 import iuh.fit.se.orderservice.dto.request.OrderRequest;
 import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
+import iuh.fit.se.orderservice.dto.request.OrderUpdateRequest;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.entity.Order;
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,7 +15,7 @@ public interface OrderService {
 
     OrderResponse findById(String id);
 
-    OrderResponse update(String id, OrderRequest orderRequest);
+    OrderResponse update(String id, OrderUpdateRequest orderUpdateRequest);
 
     PagedModel<OrderResponse> findAllOrders(int page, int size);
 

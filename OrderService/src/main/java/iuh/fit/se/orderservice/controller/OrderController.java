@@ -2,6 +2,7 @@ package iuh.fit.se.orderservice.controller;
 
 import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
 import iuh.fit.se.orderservice.dto.request.OrderRequest;
+import iuh.fit.se.orderservice.dto.request.OrderUpdateRequest;
 import iuh.fit.se.orderservice.dto.response.DataResponse;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.exception.AppException;
@@ -42,8 +43,8 @@ public class OrderController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<DataResponse<OrderResponse>> updateOrder(@PathVariable String id, @RequestBody OrderRequest request) {
-        List<OrderResponse> orderResponses = List.of(orderService.update(id, request));
+    public ResponseEntity<DataResponse<OrderResponse>> updateOrder(@PathVariable String id, @RequestBody OrderUpdateRequest orderUpdateRequest) {
+        List<OrderResponse> orderResponses = List.of(orderService.update(id, orderUpdateRequest));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Update order success")
                 .data(orderResponses)
