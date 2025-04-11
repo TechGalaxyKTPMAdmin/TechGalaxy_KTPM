@@ -36,7 +36,8 @@ public class PermissionController {
         }
 
         PermissionResponse response = this.permissionService.create(request);
-        return ResponseEntity.status(201).body(DataResponse.<PermissionResponse>builder().data(List.of(response)).build());
+        return ResponseEntity.status(201)
+                .body(DataResponse.<PermissionResponse>builder().data(List.of(response)).build());
     }
 
     @PutMapping("/{id}")
@@ -49,7 +50,8 @@ public class PermissionController {
         // Check if permission exists by ID
         if (this.permissionService.fetchById(id) == null) {
             return ResponseEntity.badRequest()
-                    .body(DataResponse.<PermissionResponse>builder().message("Permission với id = " + id + " không tồn tại.").build());
+                    .body(DataResponse.<PermissionResponse>builder()
+                            .message("Permission với id = " + id + " không tồn tại.").build());
         }
 
         // Check if permission exists by module, apiPath, and method
@@ -67,7 +69,8 @@ public class PermissionController {
         // Check if permission exists by ID
         if (this.permissionService.fetchById(id) == null) {
             return ResponseEntity.badRequest()
-                    .body(DataResponse.<Void>builder().message("Permission với id = " + id + " không tồn tại.").build());
+                    .body(DataResponse.<Void>builder().message("Permission với id = " + id + " không tồn tại.")
+                            .build());
         }
 
         this.permissionService.delete(id);

@@ -42,21 +42,17 @@ public class OpenAPIConfig {
 
     private Info createApiInfo() {
         return new Info()
-                .title("Tech Galaxy Mobile Store API")
-                .version("1.0")
+                .title("Tech Galaxy Mobile Store API Order Service")
+                .version("2.0")
                 .contact(createContact())
-                .description("""
-                            Welcome to the Tech Galaxy Mobile Store API!
-                        
-                            This project is developed by a team of enthusiastic members who are passionate about technology and customer satisfaction. 
-                        
-                            **Key Features**:
-                            - Secure and reliable API for managing mobile store operations.
-                            - Detailed product listings with real-time updates.
-                            - Comprehensive user and order management system.
-                        
-                            Enjoy exploring our API and happy coding!
-                        """)
+                .description(
+                        """
+                                    Welcome to the Tech Galaxy Mobile Store API Order Service.
+                                    This API provides access to manage orders in the Tech Galaxy Mobile Store.
+                                    You can perform various operations such as creating, updating, and retrieving orders.
+
+                                    Enjoy exploring our API and happy coding!
+                                """)
                 .license(createLicense());
     }
 
@@ -65,8 +61,7 @@ public class OpenAPIConfig {
         return new OpenAPI()
                 .info(createApiInfo())
                 .servers(List.of(
-                        createServer("http://localhost:8081", "Development Server - Local Environment"),
-                        createServer("http://localhost:8080", "Production Server - Live Environment")))
+                        createServer("http://localhost:8081/order-service", "API for Order Service Development")))
                 .addSecurityItem(new SecurityRequirement().addList("Bearer Authentication"))
                 .components(new Components().addSecuritySchemes("Bearer Authentication", createAPIKeyScheme()));
     }

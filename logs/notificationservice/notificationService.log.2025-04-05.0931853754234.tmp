@@ -1,0 +1,1170 @@
+2025-04-05 02:50:43.088  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 02:50:43.110 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 02:50:43.115  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 02:50:43.284  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 02:50:43.289  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 02:50:43.293  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 02:50:43.296  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 02:50:43.299  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@70e0accd uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 02:50:43.302  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 02:50:43.304  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=NotificationService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 02:50:43.308  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 02:50:43.311  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 02:50:43.315  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@372b0d86 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 02:50:43.319  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 02:50:43.322  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 02:50:43.325  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47747fb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 02:50:54.693  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 02:50:55.597  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 804 ms. Found 1 JPA repository interface.
+2025-04-05 02:50:58.411  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f8032e77-0b82-3692-a953-bb1dfc1af3a0
+2025-04-05 02:51:03.368  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9004 (http)
+2025-04-05 02:51:03.438  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 02:51:03.446  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 02:51:04.050  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 02:51:04.053  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 20719 ms
+2025-04-05 02:51:10.437  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 02:51:10.967  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05 02:51:11.306  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05 02:51:13.725  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 02:51:13.982  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05 02:51:14.996  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 63a6be5c-ed3d-415d-9e16-ceefa40be952
+2025-04-05 02:51:15.022  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05 02:51:15.472  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 02:51:15.777  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 02:51:22.083  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 02:51:23.350  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 02:51:31.533  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 02:51:32.371 DEBUG 1 --- [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-04-05 02:51:36.846  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 02:51:37.593 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Mvc [pattern='/api/auth/**'], Mvc [pattern='/swagger-ui/**'], Mvc [pattern='/v3/api-docs/**'], Mvc [pattern='/storage/**']] with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 02:51:38.623 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 02:51:50.080  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 02:51:50.523  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 02:51:51.008  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 02:51:51.190  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 02:51:51.212  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 02:51:51.262  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 02:51:51.265  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 02:51:51.268  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 02:51:51.271  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 02:51:51.276  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 02:51:51.279  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 02:51:51.282  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 02:51:52.209  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 02:51:52.223  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 02:51:52.236  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 02:51:52.242  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743821512241 with initial instances count: 3
+2025-04-05 02:51:52.294  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATIONSERVICE with eureka with status UP
+2025-04-05 02:51:52.298  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743821512298, current=UP, previous=STARTING]
+2025-04-05 02:51:52.306  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/3edd2ea29924:NotificationService:9004: registering service...
+2025-04-05 02:51:52.384  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9004 (http) with context path '/'
+2025-04-05 02:51:52.389  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9004
+2025-04-05 02:51:52.410  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 02:51:52.512  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/3edd2ea29924:NotificationService:9004 - registration status: 204
+2025-04-05 02:51:52.897  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#30090808:0/SimpleConnection@262ba2aa [delegate=amqp://guest@172.19.0.3:5672/, localPort=54022]
+2025-04-05 02:51:53.215  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 02:51:53.218  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 02:51:53.259  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Started NotificationServiceApplication in 83.582 seconds (process running for 89.115)
+2025-04-05 02:51:55.003  INFO 1 --- [http-nio-9004-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 02:51:55.007  INFO 1 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 02:51:55.019  INFO 1 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2025-04-05 02:51:55.218 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 02:51:55.389 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 02:52:25.524 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 02:52:25.531 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 02:52:55.576 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 02:52:55.579 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 02:53:25.641 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 02:53:25.644 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 02:53:51.775  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTIFICATIONSERVICE with eureka with status DOWN
+2025-04-05 02:53:51.777  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743821631777, current=DOWN, previous=UP]
+2025-04-05 02:53:51.789  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/3edd2ea29924:NotificationService:9004: registering service...
+2025-04-05 02:53:51.835  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 02:53:51.876  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/3edd2ea29924:NotificationService:9004 - registration status: 204
+2025-04-05 02:53:52.221  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 02:53:52.228  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 02:53:52.239  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 02:53:52.309  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 02:53:52.325  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05 02:53:52.341  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05 02:53:53.298  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 02:53:56.301  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 02:53:56.314  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/3edd2ea29924:NotificationService:9004 - deregister  status: 200
+2025-04-05 02:53:56.315  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 02:57:07.076  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 02:57:07.101 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 02:57:07.108  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 02:57:07.438  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 02:57:07.442  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 02:57:07.446  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 02:57:07.450  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 02:57:07.456  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@70e0accd uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 02:57:07.459  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 02:57:07.464  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=NotificationService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 02:57:07.467  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 02:57:07.471  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 02:57:07.475  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@372b0d86 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 02:57:07.481  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 02:57:07.489  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 02:57:07.495  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47747fb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 02:57:19.400  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 02:57:21.171  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1688 ms. Found 1 JPA repository interface.
+2025-04-05 02:57:25.131  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f8032e77-0b82-3692-a953-bb1dfc1af3a0
+2025-04-05 02:57:31.495  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9004 (http)
+2025-04-05 02:57:31.609  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 02:57:31.615  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 02:57:32.511  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 02:57:32.520  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 25006 ms
+2025-04-05 02:57:42.283  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 02:57:43.196  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05 02:57:43.700  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05 02:57:47.376  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 02:57:47.710  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05 02:57:49.221  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 7b44be1f-d128-4a0a-9f73-e023fc79f321
+2025-04-05 02:57:49.237  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05 02:57:49.656  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 02:57:49.860  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 02:57:56.980  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 02:57:58.240  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 02:58:07.408  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 02:58:08.257 DEBUG 1 --- [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-04-05 02:58:16.191  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 02:58:16.907 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Mvc [pattern='/api/auth/**'], Mvc [pattern='/swagger-ui/**'], Mvc [pattern='/v3/api-docs/**'], Mvc [pattern='/storage/**']] with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 02:58:17.302 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 02:58:27.176  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 02:58:27.896  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 02:58:28.597  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 02:58:28.733  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 02:58:28.752  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 02:58:28.789  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 02:58:28.791  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 02:58:28.794  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 02:58:28.797  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 02:58:28.799  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 02:58:28.801  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 02:58:28.804  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 02:58:29.779  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 02:58:29.800  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 02:58:29.817  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 02:58:29.836  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743821909835 with initial instances count: 3
+2025-04-05 02:58:29.928  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATIONSERVICE with eureka with status UP
+2025-04-05 02:58:29.943  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743821909942, current=UP, previous=STARTING]
+2025-04-05 02:58:29.953  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/cf5999a6c62c:NotificationService:9004: registering service...
+2025-04-05 02:58:30.084  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9004 (http) with context path '/'
+2025-04-05 02:58:30.093  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9004
+2025-04-05 02:58:30.120  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 02:58:30.181  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/cf5999a6c62c:NotificationService:9004 - registration status: 204
+2025-04-05 02:58:30.460  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#f562214:0/SimpleConnection@29df2302 [delegate=amqp://guest@172.19.0.3:5672/, localPort=53600]
+2025-04-05 02:58:30.759  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 02:58:30.762  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 02:58:30.774  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Started NotificationServiceApplication in 96.397 seconds (process running for 101.52)
+2025-04-05 02:58:31.245  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTIFICATIONSERVICE with eureka with status DOWN
+2025-04-05 02:58:31.254  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743821911254, current=DOWN, previous=UP]
+2025-04-05 02:58:31.258  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/cf5999a6c62c:NotificationService:9004: registering service...
+2025-04-05 02:58:31.289  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 02:58:31.333  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/cf5999a6c62c:NotificationService:9004 - registration status: 204
+2025-04-05 02:58:31.720  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 02:58:31.726  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 02:58:31.753  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 02:58:31.888  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 02:58:31.927  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05 02:58:31.955  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05 02:58:32.816  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 02:58:35.821  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 02:58:35.861  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/cf5999a6c62c:NotificationService:9004 - deregister  status: 200
+2025-04-05 02:58:35.863  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 03:01:34.133  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 03:01:34.183 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 03:01:34.188  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 03:01:34.679  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 03:01:34.683  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 03:01:34.696  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 03:01:34.699  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 03:01:34.703  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@70e0accd uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 03:01:34.711  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 03:01:34.714  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=NotificationService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 03:01:34.723  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 03:01:34.727  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 03:01:34.731  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@372b0d86 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 03:01:34.749  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 03:01:34.756  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 03:01:34.764  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47747fb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 03:01:47.755  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 03:01:49.270  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1384 ms. Found 1 JPA repository interface.
+2025-04-05 03:01:52.000  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f8032e77-0b82-3692-a953-bb1dfc1af3a0
+2025-04-05 03:01:56.278  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9004 (http)
+2025-04-05 03:01:56.403  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 03:01:56.406  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 03:01:57.227  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 03:01:57.240  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 22450 ms
+2025-04-05 03:02:01.111  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 03:02:01.505  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05 03:02:01.719  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05 03:02:03.625  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 03:02:03.848  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05 03:02:04.938  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 5ebeed06-46bd-4d2e-9c03-c25f88aa30a2
+2025-04-05 03:02:04.952  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05 03:02:05.297  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 03:02:05.547  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 03:02:11.375  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 03:02:13.048  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 03:23:58.345  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 03:23:58.368 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 03:23:58.373  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 03:23:58.580  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 03:23:58.582  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 03:23:58.585  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 03:23:58.588  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 03:23:58.591  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@70e0accd uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 03:23:58.595  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 03:23:58.597  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=NotificationService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 03:23:58.600  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 03:23:58.603  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 03:23:58.607  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@372b0d86 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 03:23:58.612  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 03:23:58.622  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 03:23:58.630  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47747fb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 03:24:15.801  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 03:24:17.391  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1411 ms. Found 1 JPA repository interface.
+2025-04-05 03:24:22.007  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f8032e77-0b82-3692-a953-bb1dfc1af3a0
+2025-04-05 03:24:28.629  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9004 (http)
+2025-04-05 03:24:28.777  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 03:24:28.786  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 03:24:29.551  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 03:24:29.556  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 30909 ms
+2025-04-05 03:24:36.821  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 03:24:37.723  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05 03:24:38.165  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05 03:24:41.197  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 03:24:41.497  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05 03:24:42.888  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: b3ac3af8-5abc-4962-816d-5346a6fae1d7
+2025-04-05 03:24:42.897  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05 03:24:43.435  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 03:24:43.567  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 03:24:50.998  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 03:24:52.937  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 03:25:03.810  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 03:25:04.561 DEBUG 1 --- [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-04-05 03:25:10.905  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 03:25:11.698 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Mvc [pattern='/api/auth/**'], Mvc [pattern='/swagger-ui/**'], Mvc [pattern='/v3/api-docs/**'], Mvc [pattern='/storage/**']] with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 03:25:12.310 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 03:25:24.829  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 03:25:25.341  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 03:25:25.987  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 03:25:26.237  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 03:25:26.309  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 03:25:26.383  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 03:25:26.386  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 03:25:26.388  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 03:25:26.391  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 03:25:26.395  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 03:25:26.399  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 03:25:26.404  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 03:25:27.344  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 03:25:27.359  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 03:25:27.383  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 03:25:27.391  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743823527390 with initial instances count: 3
+2025-04-05 03:25:27.441  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATIONSERVICE with eureka with status UP
+2025-04-05 03:25:27.446  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743823527446, current=UP, previous=STARTING]
+2025-04-05 03:25:27.459  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/ee86e9db727c:NotificationService:9004: registering service...
+2025-04-05 03:25:27.636  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9004 (http) with context path '/'
+2025-04-05 03:25:27.646  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9004
+2025-04-05 03:25:27.671  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 03:25:27.671  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/ee86e9db727c:NotificationService:9004 - registration status: 204
+2025-04-05 03:25:28.183  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#2300d2b4:0/SimpleConnection@35356aef [delegate=amqp://guest@172.19.0.4:5672/, localPort=47368]
+2025-04-05 03:25:28.357  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 03:25:28.361  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 03:25:28.600  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Started NotificationServiceApplication in 101.467 seconds (process running for 108.661)
+2025-04-05 03:25:41.668  INFO 1 --- [http-nio-9004-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 03:25:41.671  INFO 1 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 03:25:41.686  INFO 1 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2025-04-05 03:25:41.821 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 03:25:41.940 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 03:26:12.096 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 03:26:12.099 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 03:26:42.140 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 03:26:42.143 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 03:27:12.194 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 03:27:12.199 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 03:27:42.242 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 03:27:42.244 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 03:27:47.692  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTIFICATIONSERVICE with eureka with status DOWN
+2025-04-05 03:27:47.700  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743823667700, current=DOWN, previous=UP]
+2025-04-05 03:27:47.718  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/ee86e9db727c:NotificationService:9004: registering service...
+2025-04-05 03:27:47.770  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/ee86e9db727c:NotificationService:9004 - registration status: 204
+2025-04-05 03:27:47.798  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 03:27:48.519  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 03:27:48.524  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 03:27:48.532  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 03:27:48.601  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 03:27:48.618  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05 03:27:48.630  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05 03:27:49.451  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 03:27:52.454  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 03:27:52.498  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/ee86e9db727c:NotificationService:9004 - deregister  status: 200
+2025-04-05 03:27:52.502  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 06:54:40.063  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 06:54:40.093 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 06:54:40.098  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 06:54:40.379  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 06:54:40.382  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 06:54:40.385  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 06:54:40.389  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 06:54:40.393  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@70e0accd uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 06:54:40.396  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 06:54:40.399  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=NotificationService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 06:54:40.402  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 06:54:40.405  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 06:54:40.407  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@372b0d86 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 06:54:40.410  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 06:54:40.413  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 06:54:40.416  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47747fb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 06:54:58.939  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 06:55:00.165  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1148 ms. Found 1 JPA repository interface.
+2025-04-05 06:55:04.109  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f8032e77-0b82-3692-a953-bb1dfc1af3a0
+2025-04-05 06:55:16.433  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9004 (http)
+2025-04-05 06:55:16.528  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 06:55:16.545  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 06:55:17.739  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 06:55:17.758  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 37333 ms
+2025-04-05 06:55:28.412  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 06:55:29.215  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05 06:55:29.509  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05 06:55:31.172  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 06:55:31.295  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05 06:55:31.962  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 212bc5c4-d131-4274-a5ad-14aa8fc6d061
+2025-04-05 06:55:31.982  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05 06:55:32.218  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 06:55:32.331  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 06:55:37.359  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 06:55:38.289  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 06:55:44.396  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 06:55:44.800 DEBUG 1 --- [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-04-05 06:55:48.243  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 06:55:48.683 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Mvc [pattern='/api/auth/**'], Mvc [pattern='/swagger-ui/**'], Mvc [pattern='/v3/api-docs/**'], Mvc [pattern='/storage/**']] with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 06:55:48.936 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 06:55:55.075  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 06:55:55.431  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 06:55:55.877  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 06:55:55.961  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 06:55:55.975  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 06:55:56.000  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 06:55:56.002  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 06:55:56.004  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 06:55:56.006  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 06:55:56.008  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 06:55:56.010  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 06:55:56.012  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 06:55:56.714  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 06:55:56.722  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 06:55:56.730  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 06:55:56.736  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743836156735 with initial instances count: 3
+2025-04-05 06:55:56.768  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATIONSERVICE with eureka with status UP
+2025-04-05 06:55:56.772  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743836156772, current=UP, previous=STARTING]
+2025-04-05 06:55:56.778  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/90adb5e2c796:NotificationService:9004: registering service...
+2025-04-05 06:55:56.822  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9004 (http) with context path '/'
+2025-04-05 06:55:56.825  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9004
+2025-04-05 06:55:56.834  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 06:55:56.879  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/90adb5e2c796:NotificationService:9004 - registration status: 204
+2025-04-05 06:55:57.057  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#b692323:0/SimpleConnection@24af7177 [delegate=amqp://guest@172.19.0.5:5672/, localPort=56892]
+2025-04-05 06:55:57.313  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Started NotificationServiceApplication in 90.547 seconds (process running for 96.126)
+2025-04-05 06:55:57.719  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 06:55:57.721  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 06:56:21.773  INFO 1 --- [http-nio-9004-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 06:56:21.775  INFO 1 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 06:56:21.783  INFO 1 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-04-05 06:56:21.840 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 06:56:21.877 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 06:56:51.938 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 06:56:51.941 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 06:57:43.384 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 06:57:43.415 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 06:58:13.533 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 06:58:13.538 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 06:58:43.622 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 06:58:43.631 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 06:59:13.679 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 06:59:13.683 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 06:59:43.737 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 06:59:43.743 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 07:01:15.692 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 07:01:15.718 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 07:01:45.820 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 07:01:45.825 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 07:01:57.806  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 07:02:15.894 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 07:02:15.902 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 07:02:45.961 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 07:02:45.965 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 07:03:09.713  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTIFICATIONSERVICE with eureka with status DOWN
+2025-04-05 07:03:09.717  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743836589717, current=DOWN, previous=UP]
+2025-04-05 07:03:09.722  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/90adb5e2c796:NotificationService:9004: registering service...
+2025-04-05 07:03:09.759  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/90adb5e2c796:NotificationService:9004 - registration status: 204
+2025-04-05 07:03:09.923  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 07:03:09.951  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 07:03:09.974  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 07:03:10.004  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 07:03:10.272  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 07:03:10.326  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05 07:03:10.349  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05 07:03:11.206  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 07:03:14.210  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 07:03:14.235  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/90adb5e2c796:NotificationService:9004 - deregister  status: 200
+2025-04-05 07:03:14.238  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 11:45:18.647  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 11:45:18.704 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 11:45:18.721  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 11:45:19.248  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 11:45:19.275  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 11:45:19.280  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 11:45:19.285  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 11:45:19.290  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@70e0accd uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 11:45:19.295  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 11:45:19.303  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=NotificationService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 11:45:19.313  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 11:45:19.317  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 11:45:19.323  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@372b0d86 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 11:45:19.331  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 11:45:19.343  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 11:45:19.353  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47747fb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 11:47:10.097  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 11:47:11.272  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1052 ms. Found 1 JPA repository interface.
+2025-04-05 11:47:15.642  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f8032e77-0b82-3692-a953-bb1dfc1af3a0
+2025-04-05 11:47:27.220  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9004 (http)
+2025-04-05 11:47:27.425  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 11:47:27.435  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 11:47:28.976  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 11:47:28.980  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 129600 ms
+2025-04-05 11:47:37.027  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 11:47:37.708  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05 11:47:38.020  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05 11:47:39.751  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 11:47:39.903  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05 11:47:40.723  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 58121e90-1167-4f58-b823-da5c4c4c0dd3
+2025-04-05 11:47:40.734  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05 11:47:40.931  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 11:47:41.041  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 11:47:44.561  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 11:47:45.352  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 11:47:49.665  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 11:47:50.145 DEBUG 1 --- [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-04-05 11:47:53.314  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 11:47:53.707 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Mvc [pattern='/api/auth/**'], Mvc [pattern='/swagger-ui/**'], Mvc [pattern='/v3/api-docs/**'], Mvc [pattern='/storage/**']] with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 11:47:53.974 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 11:48:00.517  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 11:48:01.294  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 11:48:01.826  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 11:48:01.970  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 11:48:01.989  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 11:48:02.030  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 11:48:02.033  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 11:48:02.035  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 11:48:02.038  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 11:48:02.041  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 11:48:02.043  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 11:48:02.048  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 11:48:02.878  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 11:48:02.887  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 11:48:02.895  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 11:48:02.901  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743853682900 with initial instances count: 4
+2025-04-05 11:48:02.934  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATIONSERVICE with eureka with status UP
+2025-04-05 11:48:02.937  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743853682937, current=UP, previous=STARTING]
+2025-04-05 11:48:02.942  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/725cc74a858c:NotificationService:9004: registering service...
+2025-04-05 11:48:03.047  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9004 (http) with context path '/'
+2025-04-05 11:48:03.052  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9004
+2025-04-05 11:48:03.074  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 11:48:03.124  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/725cc74a858c:NotificationService:9004 - registration status: 204
+2025-04-05 11:48:03.341  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1d0c7a03:0/SimpleConnection@4b4be42c [delegate=amqp://guest@172.19.0.5:5672/, localPort=50086]
+2025-04-05 11:48:03.570  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Started NotificationServiceApplication in 182.508 seconds (process running for 187.863)
+2025-04-05 11:48:03.893  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 11:48:03.896  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 11:48:27.754  INFO 1 --- [http-nio-9004-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 11:48:27.757  INFO 1 --- [http-nio-9004-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 11:48:27.766  INFO 1 --- [http-nio-9004-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-04-05 11:48:27.834 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 11:48:27.863 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 11:48:57.921 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 11:48:57.924 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 11:49:27.961 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 11:49:27.963 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 11:49:58.004 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 11:49:58.007 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 11:50:28.057 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 11:50:28.062 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 11:50:39.459  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTIFICATIONSERVICE with eureka with status DOWN
+2025-04-05 11:50:39.467  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743853839467, current=DOWN, previous=UP]
+2025-04-05 11:50:39.483  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/725cc74a858c:NotificationService:9004: registering service...
+2025-04-05 11:50:39.530  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 11:50:39.545  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/725cc74a858c:NotificationService:9004 - registration status: 204
+2025-04-05 11:50:39.567  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 11:50:39.583  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 11:50:39.626  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 11:50:39.738  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 11:50:39.756  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05 11:50:39.767  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05 11:50:39.979  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 11:50:42.981  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 11:50:43.001  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/725cc74a858c:NotificationService:9004 - deregister  status: 200
+2025-04-05 11:50:43.003  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 12:11:49.523  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 12:11:49.596 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 12:11:49.609  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 12:11:50.076  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:11:50.081  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 12:11:50.085  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:11:50.088  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:11:50.091  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@70e0accd uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:11:50.096  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:11:50.101  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=NotificationService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 12:11:50.105  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:11:50.111  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:11:50.114  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@372b0d86 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:11:50.118  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:11:50.128  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:11:50.136  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47747fb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:12:42.628  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 12:12:42.901 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 12:12:42.956  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 12:12:44.485  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:12:44.531  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/application/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:12:44.565  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@61a002b1 uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/application/default": Connection refused
+2025-04-05 12:12:44.590  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:12:44.620  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:12:44.690  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3277e499 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:12:44.711  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:12:44.875  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:12:44.884  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5a62b2a4 uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/NotificationService/default": Connection refused
+2025-04-05 12:12:44.896  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:12:44.968  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:12:44.979  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@1051817b uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/NotificationService/default": Connection refused
+2025-04-05 12:12:45.007  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:12:45.020  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:12:45.024  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@620aa4ea uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:12:45.037  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:12:45.073  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:12:45.090  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2db2dd9d uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:13:21.931  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 12:13:25.497  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3195 ms. Found 1 JPA repository interface.
+2025-04-05 12:13:31.635  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=111a8098-c4ef-3da3-8e25-519525f5f1a8
+2025-04-05 12:13:40.008  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-05 12:13:40.122  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 12:13:40.127  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 12:13:41.359  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 12:13:41.373  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 56236 ms
+2025-04-05 12:13:47.641  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05 12:13:48.597  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: c254f299-6f65-4772-9e54-ed0eb9a6eb4f
+2025-04-05 12:13:48.615  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05 12:13:49.142  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 12:13:50.157  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05 12:13:50.583  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05 12:13:53.030  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 12:13:54.222  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 12:14:02.697  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 12:14:02.736  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 12:14:04.255  WARN 1 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitMQConfig': Injection of autowired dependencies failed
+2025-04-05 12:14:04.262  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 12:14:04.307  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-05 12:14:04.324  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-05 12:14:05.344  WARN 1 --- [main] z.r.i.AsyncReporter$BoundedAsyncReporter : Timed out waiting for in-flight spans to send
+2025-04-05 12:14:05.368  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-04-05 12:14:05.479  INFO 1 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-05 12:14:05.689 ERROR 1 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitMQConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at iuh.fit.se.notificationservice.NotificationServiceApplication.main(NotificationServiceApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.WarLauncher.main(WarLauncher.java:53)
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'rabbitmq.exchange.order' in value "${rabbitmq.exchange.order}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128)
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:201)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:971)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1552)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 26 common frames omitted
+
+2025-04-05 12:14:34.222  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 12:14:34.273 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 12:14:34.282  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 12:14:34.539  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:14:34.552  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 12:14:34.558  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:14:34.570  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:14:34.575  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@70e0accd uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:14:34.578  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:14:34.590  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=NotificationService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 12:14:34.593  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:14:34.597  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:14:34.601  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@372b0d86 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:14:34.610  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:14:34.620  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:14:34.634  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47747fb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:14:47.415  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 12:14:49.129  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1493 ms. Found 1 JPA repository interface.
+2025-04-05 12:14:52.928  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f8032e77-0b82-3692-a953-bb1dfc1af3a0
+2025-04-05 12:15:11.317  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9004 (http)
+2025-04-05 12:15:11.484  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 12:15:11.501  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 12:15:19.772  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 12:15:19.806  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 45133 ms
+2025-04-05 12:17:01.929  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 12:17:02.526  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05 12:17:02.835  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05 12:17:04.871  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 12:17:05.081  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05 12:17:06.037  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: dc47e35f-82f1-4b28-a1fa-dea58cac48d7
+2025-04-05 12:17:06.067  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05 12:17:06.395  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 12:17:06.574  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 12:17:12.063  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 12:17:12.924  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 12:17:27.092  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 12:17:28.985 DEBUG 1 --- [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-04-05 12:17:34.618  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 12:17:34.993 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Mvc [pattern='/api/auth/**'], Mvc [pattern='/swagger-ui/**'], Mvc [pattern='/v3/api-docs/**'], Mvc [pattern='/storage/**']] with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 12:17:35.231 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 12:17:40.407  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 12:17:40.714  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 12:17:41.166  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 12:17:41.288  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 12:17:41.300  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 12:17:41.323  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 12:17:41.325  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 12:17:41.327  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 12:17:41.329  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 12:17:41.332  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 12:17:41.334  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 12:17:41.336  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 12:17:42.138  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 12:17:42.146  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 12:17:42.153  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 12:17:42.159  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743855462158 with initial instances count: 3
+2025-04-05 12:17:42.183  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATIONSERVICE with eureka with status UP
+2025-04-05 12:17:42.187  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743855462187, current=UP, previous=STARTING]
+2025-04-05 12:17:42.192  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/750a796b41ac:NotificationService:9004: registering service...
+2025-04-05 12:17:42.250  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9004 (http) with context path '/'
+2025-04-05 12:17:42.256  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9004
+2025-04-05 12:17:42.272  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 12:17:42.322  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/750a796b41ac:NotificationService:9004 - registration status: 204
+2025-04-05 12:17:42.509  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#b9286ad:0/SimpleConnection@35ad04e3 [delegate=amqp://guest@172.19.0.3:5672/, localPort=50728]
+2025-04-05 12:17:42.706  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Started NotificationServiceApplication in 204.169 seconds (process running for 213.707)
+2025-04-05 12:17:43.124  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 12:17:43.127  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 12:17:58.823  INFO 1 --- [http-nio-9004-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 12:17:58.825  INFO 1 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 12:17:58.830  INFO 1 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-04-05 12:17:58.878 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 12:17:58.914 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 12:18:28.984 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 12:18:28.989 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 12:18:59.035 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 12:18:59.038 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 12:19:29.098 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 12:19:29.104 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 12:20:03.866 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 12:20:03.949 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 12:20:34.069 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 12:20:34.075 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 12:21:00.672  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTIFICATIONSERVICE with eureka with status DOWN
+2025-04-05 12:21:00.677  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743855660677, current=DOWN, previous=UP]
+2025-04-05 12:21:00.681  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/750a796b41ac:NotificationService:9004: registering service...
+2025-04-05 12:32:01.789  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 12:32:01.813 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 12:32:01.817  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 12:32:01.937  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:32:01.939  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 12:32:01.941  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:32:01.944  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:32:01.946  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@70e0accd uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:32:01.948  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:32:01.951  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=NotificationService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 12:32:01.953  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:32:01.955  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:32:01.958  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@372b0d86 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:32:01.960  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:32:01.963  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:32:01.965  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47747fb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:32:08.477  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-05 12:32:09.031  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 500 ms. Found 1 JPA repository interface.
+2025-04-05 12:32:10.511  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f8032e77-0b82-3692-a953-bb1dfc1af3a0
+2025-04-05 12:32:14.591  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9004 (http)
+2025-04-05 12:32:14.668  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 12:32:14.674  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 12:32:15.207  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 12:32:15.216  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13243 ms
+2025-04-05 12:32:19.676  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-05 12:32:20.244  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-05 12:32:20.600  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-05 12:32:22.661  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-05 12:32:22.852  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-05 12:32:23.498  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 4e155f80-dd98-40f1-ae49-35ff7984fa95
+2025-04-05 12:32:23.507  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-05 12:32:23.723  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-05 12:32:23.848  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-05 12:32:28.303  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-05 12:32:29.212  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-05 12:32:38.078  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-05 12:32:39.239 DEBUG 1 --- [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-04-05 12:32:44.325  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 12:32:44.830 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure Or [Mvc [pattern='/api/auth/**'], Mvc [pattern='/swagger-ui/**'], Mvc [pattern='/v3/api-docs/**'], Mvc [pattern='/storage/**']] with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 12:32:45.372 DEBUG 1 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-04-05 12:32:53.458  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 12:32:53.862  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 12:32:54.328  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 12:32:54.434  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 12:32:54.449  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 12:32:54.482  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 12:32:54.484  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 12:32:54.488  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 12:32:54.490  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 12:32:54.492  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 12:32:54.494  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 12:32:54.497  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 12:32:55.398  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 12:32:55.412  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 12:32:55.421  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 12:32:55.428  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743856375427 with initial instances count: 2
+2025-04-05 12:32:55.467  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTIFICATIONSERVICE with eureka with status UP
+2025-04-05 12:32:55.470  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743856375470, current=UP, previous=STARTING]
+2025-04-05 12:32:55.478  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/f635b55706ef:NotificationService:9004: registering service...
+2025-04-05 12:32:55.554  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9004 (http) with context path '/'
+2025-04-05 12:32:55.559  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9004
+2025-04-05 12:32:55.576  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 12:32:55.627  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTIFICATIONSERVICE/f635b55706ef:NotificationService:9004 - registration status: 204
+2025-04-05 12:32:55.864  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#445eed0b:0/SimpleConnection@36e99bce [delegate=amqp://guest@172.19.0.4:5672/, localPort=60308]
+2025-04-05 12:32:56.173  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Started NotificationServiceApplication in 87.003 seconds (process running for 90.125)
+2025-04-05 12:32:56.437  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 12:32:56.445  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 12:32:56.754  INFO 1 --- [http-nio-9004-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 12:32:56.758  INFO 1 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 12:32:56.776  INFO 1 --- [http-nio-9004-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2025-04-05 12:32:56.925 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-04-05 12:32:57.038 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-04-05 12:37:53.809  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 12:44:14.224  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/NotificationService.war started by root in /app)
+2025-04-05 12:44:14.331 DEBUG 1 --- [main] i.f.s.n.NotificationServiceApplication   : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 12:44:14.357  INFO 1 --- [main] i.f.s.n.NotificationServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 12:44:15.203  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:44:15.225  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/application/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:44:15.256  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@61a002b1 uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/application/default": Connection refused
+2025-04-05 12:44:15.292  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:44:15.321  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:44:15.353  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3277e499 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:44:15.386  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:44:15.409  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:44:15.449  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5a62b2a4 uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/NotificationService/default": Connection refused
+2025-04-05 12:44:15.468  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 12:44:15.533  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:44:15.544  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@1051817b uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/NotificationService/default": Connection refused
+2025-04-05 12:44:15.555  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:44:15.566  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:44:15.588  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@620aa4ea uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused
+2025-04-05 12:44:15.590  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 12:44:15.600  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused. Will be trying the next url if available
+2025-04-05 12:44:15.602  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2db2dd9d uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/NotificationService/default": Connection refused

@@ -42,21 +42,17 @@ public class OpenAPIConfig {
 
     private Info createApiInfo() {
         return new Info()
-                .title("Tech Galaxy Mobile Store API")
-                .version("1.0")
+                .title("Tech Galaxy Mobile Store API for Notification Service")
+                .version("2.0")
                 .contact(createContact())
-                .description("""
-                            Welcome to the Tech Galaxy Mobile Store API!
-                        
-                            This project is developed by a team of enthusiastic members who are passionate about technology and customer satisfaction. 
-                        
-                            **Key Features**:
-                            - Secure and reliable API for managing mobile store operations.
-                            - Detailed product listings with real-time updates.
-                            - Comprehensive user and order management system.
-                        
-                            Enjoy exploring our API and happy coding!
-                        """)
+                .description(
+                        """
+                                    Welcome to the Tech Galaxy Mobile Store API Notification Service!
+
+                                    This API provides endpoints for managing notifications in the Tech Galaxy Mobile Store.
+
+                                    Enjoy exploring our API and happy coding!
+                                """)
                 .license(createLicense());
     }
 
@@ -65,8 +61,8 @@ public class OpenAPIConfig {
         return new OpenAPI()
                 .info(createApiInfo())
                 .servers(List.of(
-                        createServer("http://localhost:8081", "Development Server - Local Environment"),
-                        createServer("http://localhost:8080", "Production Server - Live Environment")))
+                        createServer("http://localhost:8081/notification-service",
+                                "API for Notification Service Development")))
                 .addSecurityItem(new SecurityRequirement().addList("Bearer Authentication"))
                 .components(new Components().addSecuritySchemes("Bearer Authentication", createAPIKeyScheme()));
     }

@@ -1,0 +1,985 @@
+2025-04-05 09:50:45.587  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 09:50:45.629 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 09:50:45.635  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 09:50:45.918  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 09:50:45.921  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 09:50:45.926  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 09:50:45.934  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 09:50:45.937  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5af5def9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 09:50:45.940  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 09:50:45.945  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 09:50:45.950  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 09:50:45.954  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 09:50:45.957  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3ef41c66 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 09:50:45.961  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 09:50:45.965  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 09:50:45.975  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6b739528 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 09:50:54.391  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2abd85f7-8f3b-3ec7-8f75-b380122e5df5
+2025-04-05 09:50:55.937  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-05 09:50:56.016  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 09:50:56.034  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 09:50:56.238  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 09:50:56.243  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10256 ms
+2025-04-05 09:50:59.991  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-05 09:51:03.846  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 09:51:04.135  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 09:51:04.186  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 09:51:04.703  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 09:51:04.812  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 09:51:04.836  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 09:51:04.872  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 09:51:04.875  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 09:51:04.878  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 09:51:04.880  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 09:51:04.882  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 09:51:04.885  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 09:51:04.888  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 09:51:05.707  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 09:51:05.724  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 09:51:05.741  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 09:51:05.770  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743821465768 with initial instances count: 2
+2025-04-05 09:51:05.791  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENTSERVICE with eureka with status UP
+2025-04-05 09:51:05.805  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743821465805, current=UP, previous=STARTING]
+2025-04-05 09:51:05.840  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/60b9ab5e9983:PaymentService:9005: registering service...
+2025-04-05 09:51:05.934  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9005 (http) with context path '/'
+2025-04-05 09:51:05.942  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9005
+2025-04-05 09:51:06.006  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 09:51:06.150  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/60b9ab5e9983:PaymentService:9005 - registration status: 204
+2025-04-05 09:51:06.503  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3c826498:0/SimpleConnection@1ecf784f [delegate=amqp://guest@172.19.0.3:5672/, localPort=45280]
+2025-04-05 09:51:06.720  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 09:51:06.729  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 09:51:06.988  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Started PaymentServiceApplication in 38.188 seconds (process running for 42.919)
+2025-04-05 09:51:24.639  INFO 1 --- [http-nio-9005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 09:51:24.643  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 09:51:24.656  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2025-04-05 09:53:51.837  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PAYMENTSERVICE with eureka with status DOWN
+2025-04-05 09:53:51.851  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743821631851, current=DOWN, previous=UP]
+2025-04-05 09:53:51.863  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/60b9ab5e9983:PaymentService:9005: registering service...
+2025-04-05 09:53:51.902  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 09:53:51.921  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/60b9ab5e9983:PaymentService:9005 - registration status: 204
+2025-04-05 09:53:51.997  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 09:53:52.004  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 09:53:52.029  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 09:53:52.884  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 09:53:55.886  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 09:53:55.903  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/60b9ab5e9983:PaymentService:9005 - deregister  status: 200
+2025-04-05 09:53:55.905  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 09:57:12.150  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 09:57:12.195 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 09:57:12.205  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 09:57:12.531  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 09:57:12.549  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 09:57:12.563  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 09:57:12.575  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 09:57:12.609  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5af5def9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 09:57:12.626  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 09:57:12.642  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 09:57:12.652  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 09:57:12.674  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 09:57:12.678  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3ef41c66 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 09:57:12.689  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 09:57:12.694  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 09:57:12.709  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6b739528 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 09:57:25.364  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2abd85f7-8f3b-3ec7-8f75-b380122e5df5
+2025-04-05 09:57:27.207  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-05 09:57:27.275  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 09:57:27.278  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 09:57:27.513  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 09:57:27.517  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14782 ms
+2025-04-05 09:57:33.305  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-05 09:57:40.311  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 09:57:40.761  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 09:57:40.859  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 09:57:41.742  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 09:57:42.044  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 09:57:42.187  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 09:57:42.319  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 09:57:42.322  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 09:57:42.345  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 09:57:42.361  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 09:57:42.379  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 09:57:42.383  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 09:57:42.392  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 09:57:43.910  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 09:57:43.934  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 09:57:43.962  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 09:57:43.980  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743821863979 with initial instances count: 2
+2025-04-05 09:57:44.007  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENTSERVICE with eureka with status UP
+2025-04-05 09:57:44.011  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743821864011, current=UP, previous=STARTING]
+2025-04-05 09:57:44.023  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/d41e38f77378:PaymentService:9005: registering service...
+2025-04-05 09:57:44.246  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9005 (http) with context path '/'
+2025-04-05 09:57:44.259  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9005
+2025-04-05 09:57:44.301  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 09:57:44.469  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/d41e38f77378:PaymentService:9005 - registration status: 204
+2025-04-05 09:57:44.971  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#51df2a41:0/SimpleConnection@e2696e8 [delegate=amqp://guest@172.19.0.3:5672/, localPort=49408]
+2025-04-05 09:57:45.039  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 09:57:45.057  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 09:57:45.782  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Started PaymentServiceApplication in 52.594 seconds (process running for 56.418)
+2025-04-05 09:57:50.736  INFO 1 --- [http-nio-9005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 09:57:50.744  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 09:57:50.755  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-04-05 09:58:31.331  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PAYMENTSERVICE with eureka with status DOWN
+2025-04-05 09:58:31.338  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743821911338, current=DOWN, previous=UP]
+2025-04-05 09:58:31.342  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/d41e38f77378:PaymentService:9005: registering service...
+2025-04-05 09:58:31.384  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 09:58:31.415  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/d41e38f77378:PaymentService:9005 - registration status: 204
+2025-04-05 09:58:31.709  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 09:58:31.717  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 09:58:31.740  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 09:58:32.138  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 09:58:35.145  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 09:58:35.170  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/d41e38f77378:PaymentService:9005 - deregister  status: 200
+2025-04-05 09:58:35.176  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 10:01:29.421  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 10:01:29.444 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 10:01:29.448  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 10:01:29.577  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 10:01:29.580  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 10:01:29.582  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 10:01:29.584  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 10:01:29.586  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5af5def9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 10:01:29.588  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 10:01:29.590  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 10:01:29.592  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 10:01:29.594  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 10:01:29.596  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3ef41c66 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 10:01:29.599  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 10:01:29.602  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 10:01:29.604  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6b739528 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 10:01:33.503  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2abd85f7-8f3b-3ec7-8f75-b380122e5df5
+2025-04-05 10:01:35.510  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-05 10:01:35.611  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 10:01:35.616  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 10:01:35.954  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 10:01:35.964  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6354 ms
+2025-04-05 10:01:42.257  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-05 10:01:46.193  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 10:01:46.487  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 10:01:46.532  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 10:01:47.299  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 10:01:47.715  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 10:01:47.790  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 10:01:47.872  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 10:01:47.887  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 10:01:47.893  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 10:01:47.897  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 10:01:47.900  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 10:01:47.905  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 10:01:47.912  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 10:01:49.225  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 10:01:49.238  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 10:01:49.251  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 10:01:49.265  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743822109264 with initial instances count: 2
+2025-04-05 10:01:49.283  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENTSERVICE with eureka with status UP
+2025-04-05 10:01:49.297  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743822109297, current=UP, previous=STARTING]
+2025-04-05 10:01:49.310  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/8ef676b2f0a5:PaymentService:9005: registering service...
+2025-04-05 10:01:49.482  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9005 (http) with context path '/'
+2025-04-05 10:01:49.496  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9005
+2025-04-05 10:01:49.537  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 10:01:49.574  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/8ef676b2f0a5:PaymentService:9005 - registration status: 204
+2025-04-05 10:01:49.915  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#672d8370:0/SimpleConnection@40696fc6 [delegate=amqp://guest@172.19.0.5:5672/, localPort=53132]
+2025-04-05 10:01:50.253  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 10:01:50.263  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 10:01:50.337  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Started PaymentServiceApplication in 33.97 seconds (process running for 38.161)
+2025-04-05 10:02:04.561  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PAYMENTSERVICE with eureka with status DOWN
+2025-04-05 10:02:04.578  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743822124578, current=DOWN, previous=UP]
+2025-04-05 10:02:04.610  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/8ef676b2f0a5:PaymentService:9005: registering service...
+2025-04-05 10:02:04.675  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/8ef676b2f0a5:PaymentService:9005 - registration status: 204
+2025-04-05 10:02:04.707  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 10:02:05.284  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 10:02:05.296  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 10:02:05.339  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 10:02:06.320  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 10:02:09.324  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 10:02:09.367  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/8ef676b2f0a5:PaymentService:9005 - deregister  status: 200
+2025-04-05 10:02:09.372  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 10:24:01.783  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 10:24:01.829 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 10:24:01.839  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 10:24:02.063  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 10:24:02.073  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 10:24:02.076  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 10:24:02.079  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 10:24:02.082  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5af5def9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 10:24:02.085  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 10:24:02.090  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 10:24:02.094  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 10:24:02.096  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 10:24:02.099  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3ef41c66 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 10:24:02.106  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 10:24:02.110  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 10:24:02.114  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6b739528 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 10:24:16.370  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2abd85f7-8f3b-3ec7-8f75-b380122e5df5
+2025-04-05 10:24:18.987  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-05 10:24:19.090  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 10:24:19.093  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 10:24:19.434  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 10:24:19.440  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 17302 ms
+2025-04-05 10:24:25.863  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-05 10:24:30.854  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 10:24:31.152  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 10:24:31.211  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 10:24:31.725  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 10:24:31.905  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 10:24:31.945  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 10:24:32.093  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 10:24:32.100  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 10:24:32.119  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 10:24:32.126  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 10:24:32.132  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 10:24:32.136  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 10:24:32.142  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 10:24:33.644  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 10:24:33.706  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 10:24:33.732  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 10:24:33.744  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743823473741 with initial instances count: 2
+2025-04-05 10:24:33.771  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENTSERVICE with eureka with status UP
+2025-04-05 10:24:33.782  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743823473782, current=UP, previous=STARTING]
+2025-04-05 10:24:33.795  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/8ef676b2f0a5:PaymentService:9005: registering service...
+2025-04-05 10:24:34.309  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9005 (http) with context path '/'
+2025-04-05 10:24:34.353  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9005
+2025-04-05 10:24:34.428  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 10:24:34.561  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/8ef676b2f0a5:PaymentService:9005 - registration status: 204
+2025-04-05 10:24:34.755  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 10:24:34.786  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 10:24:35.501  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#13137835:0/SimpleConnection@40696fc6 [delegate=amqp://guest@172.19.0.4:5672/, localPort=53108]
+2025-04-05 10:24:36.449  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Started PaymentServiceApplication in 50.359 seconds (process running for 56.228)
+2025-04-05 10:24:41.259  INFO 1 --- [http-nio-9005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 10:24:41.262  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 10:24:41.277  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2025-04-05 10:27:47.679  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PAYMENTSERVICE with eureka with status DOWN
+2025-04-05 10:27:47.687  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743823667686, current=DOWN, previous=UP]
+2025-04-05 10:27:47.696  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/8ef676b2f0a5:PaymentService:9005: registering service...
+2025-04-05 10:27:47.744  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 10:27:47.779  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/8ef676b2f0a5:PaymentService:9005 - registration status: 204
+2025-04-05 10:27:48.403  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 10:27:48.411  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 10:27:48.424  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 10:27:48.957  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 10:27:51.961  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 10:27:51.977  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/8ef676b2f0a5:PaymentService:9005 - deregister  status: 200
+2025-04-05 10:27:51.979  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 13:54:47.198  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 13:54:47.310 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 13:54:47.328  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 13:54:48.102  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 13:54:48.122  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 13:54:48.132  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 13:54:48.142  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 13:54:48.159  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5af5def9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 13:54:48.174  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 13:54:48.189  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 13:54:48.198  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 13:54:48.203  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 13:54:48.214  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3ef41c66 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 13:54:48.284  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 13:54:48.298  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 13:54:48.323  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6b739528 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 13:55:01.817  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2abd85f7-8f3b-3ec7-8f75-b380122e5df5
+2025-04-05 13:55:04.280  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-05 13:55:04.454  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 13:55:04.457  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 13:55:04.781  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 13:55:04.787  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 16433 ms
+2025-04-05 13:55:16.120  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-05 13:55:24.542  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 13:55:25.017  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 13:55:25.088  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 13:55:26.072  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 13:55:26.329  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 13:55:26.378  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 13:55:26.451  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 13:55:26.494  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 13:55:26.508  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 13:55:26.524  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 13:55:26.544  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 13:55:26.556  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 13:55:26.574  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 13:55:28.393  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 13:55:28.439  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 13:55:28.467  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 13:55:28.486  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743836128485 with initial instances count: 2
+2025-04-05 13:55:28.550  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENTSERVICE with eureka with status UP
+2025-04-05 13:55:28.559  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743836128559, current=UP, previous=STARTING]
+2025-04-05 13:55:28.577  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/68ac5848a04f:PaymentService:9005: registering service...
+2025-04-05 13:55:28.852  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9005 (http) with context path '/'
+2025-04-05 13:55:28.891  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9005
+2025-04-05 13:55:28.942  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 13:55:29.099  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/68ac5848a04f:PaymentService:9005 - registration status: 204
+2025-04-05 13:55:29.358  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#64d93096:0/SimpleConnection@1e5190bd [delegate=amqp://guest@172.19.0.5:5672/, localPort=41532]
+2025-04-05 13:55:29.395  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 13:55:29.401  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 13:55:29.746  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Started PaymentServiceApplication in 63.89 seconds (process running for 68.579)
+2025-04-05 13:55:51.893  INFO 1 --- [http-nio-9005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 13:55:51.897  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 13:55:51.906  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-04-05 14:01:28.378  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 14:03:09.731  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PAYMENTSERVICE with eureka with status DOWN
+2025-04-05 14:03:09.737  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743836589737, current=DOWN, previous=UP]
+2025-04-05 14:03:09.742  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/68ac5848a04f:PaymentService:9005: registering service...
+2025-04-05 14:03:09.786  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/68ac5848a04f:PaymentService:9005 - registration status: 204
+2025-04-05 14:03:10.016  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 14:03:10.913  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 14:03:10.935  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 14:03:10.964  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 14:03:12.164  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 14:03:15.172  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 14:03:15.173  WARN 1 --- [DiscoveryClient-%d] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2025-04-05 14:03:15.187  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/68ac5848a04f:PaymentService:9005 - deregister  status: 200
+2025-04-05 14:03:15.189  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 18:45:19.261  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 18:45:19.360 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 18:45:19.369  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 18:45:19.735  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 18:45:19.742  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 18:45:19.752  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 18:45:19.756  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 18:45:19.758  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5af5def9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 18:45:19.761  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 18:45:19.764  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 18:45:19.767  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 18:45:19.770  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 18:45:19.774  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3ef41c66 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 18:45:19.777  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 18:45:19.780  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 18:45:19.783  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6b739528 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 18:47:09.214  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2abd85f7-8f3b-3ec7-8f75-b380122e5df5
+2025-04-05 18:47:11.572  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-05 18:47:11.739  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 18:47:11.743  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 18:47:12.206  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 18:47:12.215  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 112412 ms
+2025-04-05 18:47:19.399  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-05 18:47:28.869  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 18:47:29.406  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 18:47:29.520  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 18:47:30.562  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 18:47:31.228  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 18:47:31.328  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 18:47:31.484  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 18:47:31.508  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 18:47:31.513  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 18:47:31.529  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 18:47:31.532  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 18:47:31.539  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 18:47:31.547  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 18:47:33.611  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 18:47:33.647  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 18:47:33.672  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 18:47:33.688  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743853653686 with initial instances count: 2
+2025-04-05 18:47:33.700  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENTSERVICE with eureka with status UP
+2025-04-05 18:47:33.719  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743853653718, current=UP, previous=STARTING]
+2025-04-05 18:47:33.741  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/20ecd99c6531:PaymentService:9005: registering service...
+2025-04-05 18:47:34.012  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9005 (http) with context path '/'
+2025-04-05 18:47:34.039  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9005
+2025-04-05 18:47:34.083  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 18:47:34.150  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/20ecd99c6531:PaymentService:9005 - registration status: 204
+2025-04-05 18:47:34.452  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6614289a:0/SimpleConnection@7f5a25e2 [delegate=amqp://guest@172.19.0.5:5672/, localPort=34562]
+2025-04-05 18:47:34.657  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 18:47:34.692  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 18:47:35.044  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Started PaymentServiceApplication in 154.841 seconds (process running for 159.195)
+2025-04-05 18:47:57.943  INFO 1 --- [http-nio-9005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 18:47:57.951  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 18:47:57.962  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-04-05 18:50:39.477  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PAYMENTSERVICE with eureka with status DOWN
+2025-04-05 18:50:39.481  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743853839481, current=DOWN, previous=UP]
+2025-04-05 18:50:39.489  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/20ecd99c6531:PaymentService:9005: registering service...
+2025-04-05 18:50:39.543  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-05 18:50:39.554  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/20ecd99c6531:PaymentService:9005 - registration status: 204
+2025-04-05 18:50:39.989  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-05 18:50:39.993  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-05 18:50:40.001  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-05 18:50:40.893  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-05 18:50:43.896  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-05 18:50:43.906  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/20ecd99c6531:PaymentService:9005 - deregister  status: 200
+2025-04-05 18:50:43.908  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-05 19:11:39.424  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 19:11:39.452 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 19:11:39.456  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 19:11:39.611  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:11:39.614  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 19:11:39.617  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:11:39.620  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:11:39.623  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5af5def9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:11:39.630  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:11:39.633  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 19:11:39.636  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:11:39.638  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:11:39.642  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3ef41c66 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:11:39.646  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:11:39.652  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:11:39.657  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6b739528 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:11:47.455  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2abd85f7-8f3b-3ec7-8f75-b380122e5df5
+2025-04-05 19:11:49.533  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-05 19:11:49.638  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 19:11:49.648  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 19:11:49.878  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 19:11:49.883  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10209 ms
+2025-04-05 19:12:02.345  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-05 19:12:37.776  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 19:12:37.917 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 19:12:37.922  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 19:12:38.763  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:12:38.782  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/application/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:12:38.815  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7f69d591 uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/application/default": Connection refused
+2025-04-05 19:12:38.837  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:12:38.855  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:12:38.872  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@52c8295b uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:12:38.877  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:12:38.891  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:12:38.896  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@37d3d232 uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/PaymentService/default": Connection refused
+2025-04-05 19:12:38.904  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:12:38.935  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:12:38.942  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@30c0ccff uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/PaymentService/default": Connection refused
+2025-04-05 19:12:38.949  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:12:38.954  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:12:38.956  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@22db8f4 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:12:38.969  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:12:38.976  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:12:38.984  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2b46a8c1 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:13:01.846  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ddbdc3ad-f89c-315c-8998-502b0a1f57ff
+2025-04-05 19:13:07.182  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-05 19:13:07.485  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 19:13:07.495  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 19:13:08.807  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 19:13:08.815  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 29804 ms
+2025-04-05 19:13:18.332  WARN 1 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitMQConfig': Injection of autowired dependencies failed
+2025-04-05 19:13:19.350  WARN 1 --- [main] z.r.i.AsyncReporter$BoundedAsyncReporter : Timed out waiting for in-flight spans to send
+2025-04-05 19:13:19.415  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-04-05 19:13:19.740  INFO 1 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-05 19:13:20.174 ERROR 1 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'rabbitMQConfig': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:515)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:346)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1121)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1056)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at iuh.fit.se.paymentservice.PaymentServiceApplication.main(PaymentServiceApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.util.PlaceholderResolutionException: Could not resolve placeholder 'rabbitmq.exchange.order' in value "${rabbitmq.exchange.order}"
+	at org.springframework.util.PlaceholderResolutionException.withValue(PlaceholderResolutionException.java:81)
+	at org.springframework.util.PlaceholderParser$ParsedValue.resolve(PlaceholderParser.java:423)
+	at org.springframework.util.PlaceholderParser.replacePlaceholders(PlaceholderParser.java:128)
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:118)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:114)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:255)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:226)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:201)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:971)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1552)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	... 26 common frames omitted
+
+2025-04-05 19:13:47.672  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 19:13:47.702 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 19:13:47.709  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 19:13:47.993  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:13:47.998  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 19:13:48.004  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:13:48.008  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:13:48.010  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5af5def9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:13:48.014  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:13:48.019  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 19:13:48.023  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:13:48.027  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:13:48.031  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3ef41c66 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:13:48.040  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:13:48.044  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:13:48.057  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6b739528 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:13:58.586  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2abd85f7-8f3b-3ec7-8f75-b380122e5df5
+2025-04-05 19:14:01.326  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-05 19:14:01.525  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 19:14:01.537  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 19:14:01.947  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 19:14:01.967  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13873 ms
+2025-04-05 19:14:11.726  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-05 19:14:22.335  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 19:14:22.855  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 19:14:22.941  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 19:14:23.663  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 19:14:23.804  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 19:14:23.828  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 19:14:23.865  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 19:14:23.871  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 19:14:23.883  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 19:14:23.902  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 19:14:23.906  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 19:14:23.910  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 19:14:23.914  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 19:14:25.332  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 19:14:25.352  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 19:14:25.384  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 19:14:25.398  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743855265397 with initial instances count: 2
+2025-04-05 19:14:25.464  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENTSERVICE with eureka with status UP
+2025-04-05 19:14:25.494  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743855265494, current=UP, previous=STARTING]
+2025-04-05 19:14:25.529  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/7ffc165b84a0:PaymentService:9005: registering service...
+2025-04-05 19:14:25.812  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9005 (http) with context path '/'
+2025-04-05 19:14:25.818  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9005
+2025-04-05 19:14:25.849  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 19:14:26.134  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/7ffc165b84a0:PaymentService:9005 - registration status: 204
+2025-04-05 19:14:26.293  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#672d8370:0/SimpleConnection@6ca97ddf [delegate=amqp://guest@172.19.0.3:5672/, localPort=40120]
+2025-04-05 19:14:26.375  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 19:14:26.381  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 19:14:26.751  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Started PaymentServiceApplication in 54.241 seconds (process running for 62.715)
+2025-04-05 19:17:29.160  INFO 1 --- [http-nio-9005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 19:17:29.194  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 19:17:29.297  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 89 ms
+2025-04-05 19:19:23.910  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 19:21:00.636  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PAYMENTSERVICE with eureka with status DOWN
+2025-04-05 19:21:00.641  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743855660641, current=DOWN, previous=UP]
+2025-04-05 19:21:00.646  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/7ffc165b84a0:PaymentService:9005: registering service...
+2025-04-05 19:32:14.135  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 19:32:14.179 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 19:32:14.187  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 19:32:14.398  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:32:14.400  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 19:32:14.405  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:32:14.411  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:32:14.417  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@5af5def9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:32:14.422  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:32:14.432  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-05 19:32:14.437  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:32:14.446  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:32:14.450  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3ef41c66 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:32:14.453  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:32:14.458  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:32:14.462  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@6b739528 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:32:20.954  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2abd85f7-8f3b-3ec7-8f75-b380122e5df5
+2025-04-05 19:32:22.288  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-05 19:32:22.335  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-05 19:32:22.340  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-05 19:32:22.496  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-05 19:32:22.499  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8015 ms
+2025-04-05 19:32:25.805  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-05 19:32:28.697  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-05 19:32:28.833  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-05 19:32:28.858  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-05 19:32:29.220  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-05 19:32:29.347  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-05 19:32:29.379  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 19:32:29.428  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-05 19:32:29.436  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-05 19:32:29.445  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-05 19:32:29.448  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-05 19:32:29.451  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-05 19:32:29.455  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-05 19:32:29.463  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-05 19:32:30.799  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-05 19:32:30.819  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-05 19:32:30.829  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-05 19:32:30.854  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743856350853 with initial instances count: 2
+2025-04-05 19:32:30.896  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENTSERVICE with eureka with status UP
+2025-04-05 19:32:30.904  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743856350904, current=UP, previous=STARTING]
+2025-04-05 19:32:30.919  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/35e6b17f41da:PaymentService:9005: registering service...
+2025-04-05 19:32:31.042  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9005 (http) with context path '/'
+2025-04-05 19:32:31.054  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9005
+2025-04-05 19:32:31.098  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-05 19:32:31.200  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/35e6b17f41da:PaymentService:9005 - registration status: 204
+2025-04-05 19:32:31.483  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#672d8370:0/SimpleConnection@6ca97ddf [delegate=amqp://guest@172.19.0.4:5672/, localPort=55078]
+2025-04-05 19:32:31.850  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-05 19:32:31.860  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-05 19:32:31.978  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Started PaymentServiceApplication in 63.324 seconds (process running for 65.778)
+2025-04-05 19:32:56.753  INFO 1 --- [http-nio-9005-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-05 19:32:56.760  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-05 19:32:56.769  INFO 1 --- [http-nio-9005-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-04-05 19:37:29.039  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-05 19:44:13.513  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-05 19:44:13.590 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-05 19:44:13.620  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-05 19:44:14.121  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:44:14.136  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/application/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:44:14.138  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7f69d591 uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/application/default": Connection refused
+2025-04-05 19:44:14.154  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:44:14.156  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:44:14.179  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@52c8295b uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:44:14.192  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:44:14.228  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:44:14.236  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@37d3d232 uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/PaymentService/default": Connection refused
+2025-04-05 19:44:14.244  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-05 19:44:14.272  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://configserver:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://configserver:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:44:14.279  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@30c0ccff uris = array<String>['http://configserver:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://configserver:8888/PaymentService/default": Connection refused
+2025-04-05 19:44:14.294  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:44:14.308  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:44:14.323  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@22db8f4 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-05 19:44:14.333  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-05 19:44:14.363  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-05 19:44:14.373  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2b46a8c1 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused

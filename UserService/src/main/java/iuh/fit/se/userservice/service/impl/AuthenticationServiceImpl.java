@@ -5,6 +5,8 @@ import iuh.fit.se.userservice.dto.response.*;
 import iuh.fit.se.userservice.entities.Account;
 import iuh.fit.se.userservice.entities.Permission;
 import iuh.fit.se.userservice.entities.Role;
+import iuh.fit.se.userservice.entities.enumeration.CustomerStatus;
+import iuh.fit.se.userservice.entities.enumeration.SystemUserStatus;
 import iuh.fit.se.userservice.exception.AppException;
 import iuh.fit.se.userservice.exception.ErrorCode;
 import iuh.fit.se.userservice.service.AuthenticationService;
@@ -67,11 +69,25 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                         LoginResponse res = new LoginResponse();
                         Account currentUserDB = accountService.getAccountByEmail(loginDto.getUsername()).orElse(null);
 
-                        if (currentUserDB != null) {
-                                res.setAccount(new LoginResponse.AccountLogin(
-                                                currentUserDB.getId(),
-                                                currentUserDB.getEmail()));
+                        if (currentUserDB == null) {
+                                return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                                                .body(DataResponse.<LoginResponse>builder()
+                                                                .status(401)
+                                                                .message("Invalid username or password")
+                                                                .build());
                         }
+
+                        if (isAccountInactive(currentUserDB)) {
+                                return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                                                .body(DataResponse.<LoginResponse>builder()
+                                                                .status(401)
+                                                                .message("Account is inactive")
+                                                                .build());
+                        }
+
+                        res.setAccount(new LoginResponse.AccountLogin(
+                                        currentUserDB.getId(),
+                                        currentUserDB.getEmail()));
 
                         String accessToken = securityUtil.createAccessToken(authentication.getName(), res);
                         res.setAccessToken(accessToken);
@@ -101,6 +117,17 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                                                         .message("Invalid username or password")
                                                         .build());
                 }
+        }
+
+        private boolean isAccountInactive(Account account) {
+                if (account.getSystemUsers() != null) {
+                        SystemUserStatus status = account.getSystemUsers().getSystemUserStatus();
+                        return status == SystemUserStatus.INACTIVE || status == SystemUserStatus.SUSPENDED;
+                } else if (account.getCustomers() != null) {
+                        CustomerStatus status = account.getCustomers().getUserStatus();
+                        return status == CustomerStatus.INACTIVE || status == CustomerStatus.SUSPENDED;
+                }
+                return true;
         }
 
         @Override
