@@ -36,9 +36,14 @@ services:
       context: .
       dockerfile: DiscoveryServer/Dockerfile
     container_name: discoveryserver
-    image: ${DOCKER_USERNAME}/discoveryserver:latest
+    image: discoveryserver
+    # image: ${DOCKER_USERNAME}/discoveryserver:latest
     ports:
       - "8761:8761"
+    volumes:
+      - ./logs/discoveryserver:/logs
+    environment:
+      LOG_PATH: /logs
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:8761/actuator/health"]
@@ -53,13 +58,17 @@ services:
       context: .
       dockerfile: ConfigServer/Dockerfile
     container_name: configserver
-    image: ${DOCKER_USERNAME}/configserver:latest
+    image: configserver
+    # image: ${DOCKER_USERNAME}/configserver:latest
     ports:
       - "8888:8888"
     depends_on:
       discoveryserver:
         condition: service_healthy
+    volumes:
+      - ./logs/configserver:/logs
     environment:
+      LOG_PATH: /logs
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
     restart: unless-stopped
     healthcheck:
@@ -75,7 +84,8 @@ services:
       context: .
       dockerfile: APIGateway/Dockerfile
     container_name: apigateway
-    image: ${DOCKER_USERNAME}/apigateway:latest
+    image: apigateway
+    # image: ${DOCKER_USERNAME}/apigateway:latest
     ports:
       - "8081:8081"
     depends_on:
@@ -83,7 +93,10 @@ services:
         condition: service_healthy
       redis-ktpm:
         condition: service_healthy
+    volumes:
+      - ./logs/apigateway:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
       SPRING_DATA_REDIS_HOST: redis-ktpm
@@ -102,7 +115,8 @@ services:
       context: .
       dockerfile: UserService/Dockerfile
     container_name: userservice
-    image: ${DOCKER_USERNAME}/userservice:latest
+    image: userservice
+    # image: ${DOCKER_USERNAME}/userservice:latest
     ports:
       - "9001:9001"
     depends_on:
@@ -111,7 +125,7 @@ services:
       discoveryserver:
         condition: service_healthy
     volumes:
-      - ./logs:/logs  
+      - ./logs/userservice:/logs
     environment:
       LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=UserDB;encrypt=false
@@ -134,7 +148,8 @@ services:
       context: .
       dockerfile: ProductService/Dockerfile
     container_name: productservice
-    image: ${DOCKER_USERNAME}/productservice:latest
+    image: productservice
+    # image: ${DOCKER_USERNAME}/productservice:latest
     ports:
       - "9002:9002"
     depends_on:
@@ -144,7 +159,10 @@ services:
         condition: service_healthy
       zipkin:
         condition: service_healthy
+    volumes:
+      - ./logs/productservice:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=ProductDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
@@ -165,7 +183,8 @@ services:
       context: .
       dockerfile: InventoryService/Dockerfile
     container_name: inventoryservice
-    image: ${DOCKER_USERNAME}/inventoryservice:latest
+    image: inventoryservice
+    # image: ${DOCKER_USERNAME}/inventoryservice:latest
     ports:
       - "9006:9006"
     depends_on:
@@ -175,7 +194,10 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+    volumes:
+      - ./logs/inventoryservice:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=InventoryDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
@@ -200,7 +222,8 @@ services:
       context: .
       dockerfile: OrderService/Dockerfile
     container_name: orderservice
-    image: ${DOCKER_USERNAME}/orderservice:latest
+    image: orderservice
+    # image: ${DOCKER_USERNAME}/orderservice:latest
     ports:
       - "9003:9003"
     depends_on:
@@ -212,7 +235,10 @@ services:
         condition: service_healthy
       redis-ktpm:
         condition: service_healthy
+    volumes:
+      - ./logs/orderservice:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=OrderDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
@@ -239,7 +265,8 @@ services:
       context: .
       dockerfile: PaymentService/Dockerfile
     container_name: paymentservice
-    image: ${DOCKER_USERNAME}/paymentservice:latest
+    image: paymentservice
+    # image: ${DOCKER_USERNAME}/paymentservice:latest
     ports:
       - "9005:9005"
     depends_on:
@@ -249,7 +276,10 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+    volumes:
+      - ./logs/paymentservice:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=PaymentDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
@@ -274,7 +304,8 @@ services:
       context: .
       dockerfile: NotificationService/Dockerfile
     container_name: notificationservice
-    image: ${DOCKER_USERNAME}/notificationservice:latest
+    image: notificationservice
+    # image: ${DOCKER_USERNAME}/notificationservice:latest
     ports:
       - "9004:9004"
     depends_on:
@@ -284,7 +315,10 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+    volumes:
+      - ./logs/notificationservice:/logs
     environment:
+      LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=NotificationDB;encrypt=false
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: sapassword
@@ -319,6 +353,46 @@ services:
       retries: 3
     networks:
       - spring-net
+  # elasticsearch:
+  #   image: elasticsearch:7.17.28
+  #   container_name: elasticsearch
+  #   environment:
+  #     - discovery.type=single-node
+  #     - xpack.security.enabled=false
+  #     - ES_JAVA_OPTS=-Xms512m -Xmx512m
+  #   ports:
+  #     - "9200:9200"
+  #   volumes:
+  #     - esdata:/usr/share/elasticsearch/data
+  #   restart: unless-stopped
+  #   networks:
+  #     - spring-net
+
+  # logstash:
+  #   image: docker.elastic.co/logstash/logstash:7.17.28
+  #   container_name: logstash
+  #   depends_on:
+  #     - elasticsearch
+  #   volumes:
+  #     - ./ELK/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+  #     - ./logs:/logs
+  #   command: logstash -f /usr/share/logstash/pipeline/logstash.conf
+  #   restart: unless-stopped
+  #   networks:
+  #     - spring-net
+
+  # kibana:
+  #   image: docker.elastic.co/kibana/kibana:7.17.28
+  #   container_name: kibana
+  #   depends_on:
+  #     - elasticsearch
+  #   ports:
+  #     - "5601:5601"
+  #   environment:
+  #     - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+  #   restart: unless-stopped
+  #   networks:
+  #     - spring-net
 
 networks:
   spring-net:
@@ -326,3 +400,4 @@ networks:
 
 volumes:
   redis-data:
+  # esdata:

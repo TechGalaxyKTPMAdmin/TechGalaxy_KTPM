@@ -44,7 +44,8 @@ public class RoleController {
     public ResponseEntity<DataResponse<RoleResponse>> update(@Valid @RequestBody RoleRequest request) {
         if (this.roleService.fetchById(request.getId()) == null) {
             return ResponseEntity.badRequest()
-                    .body(DataResponse.<RoleResponse>builder().message("Role với id = " + request.getId() + " không tồn tại.").build());
+                    .body(DataResponse.<RoleResponse>builder()
+                            .message("Role với id = " + request.getId() + " không tồn tại.").build());
         }
 
         RoleResponse roleResponse = this.roleService.update(request);
@@ -76,7 +77,8 @@ public class RoleController {
 
         if (roleResponse == null) {
             return ResponseEntity.badRequest()
-                    .body(DataResponse.<RoleResponse>builder().message("Role với id = " + id + " không tồn tại.").build());
+                    .body(DataResponse.<RoleResponse>builder().message("Role với id = " + id + " không tồn tại.")
+                            .build());
         }
 
         return ResponseEntity.ok(DataResponse.<RoleResponse>builder().data(List.of(roleResponse)).build());
@@ -88,7 +90,8 @@ public class RoleController {
 
         if (roleResponse == null) {
             return ResponseEntity.badRequest()
-                    .body(DataResponse.<RoleResponse>builder().message("Role với email = " + email + " không tồn tại.").build());
+                    .body(DataResponse.<RoleResponse>builder().message("Role với email = " + email + " không tồn tại.")
+                            .build());
         }
 
         return ResponseEntity.ok(DataResponse.<RoleResponse>builder().data(roleResponse).build());

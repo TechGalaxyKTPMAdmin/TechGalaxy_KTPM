@@ -108,7 +108,7 @@ class RouteValidator {
     private final List<String> whiteList = List.of(
             "/", "/api/accounts/auth/register", "/api/accounts/auth/login",
             "/storage/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html",
-            "/payment/**", "/file", "/files", "/actuator/**", "/actuator/health", "/health/**");
+            "/payment/**", "/file", "/files", "/actuator/**", "/actuator/health", "/health/**", "/inventory/**");
 
     private final List<String> whiteListGetOnly = List.of(
             "/products/**", "/colors/**", "/trademarks/**", "/memories/**",
