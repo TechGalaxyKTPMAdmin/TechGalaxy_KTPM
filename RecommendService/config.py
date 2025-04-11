@@ -1,5 +1,6 @@
 class Config:
-    DB_DRIVER = '{ODBC Driver 18 for SQL Server}'
+    # Cấu hình cho RecommendDB và UserDB (TechGalaxy)
+    DB_DRIVER = '{ODBC Driver 17 for SQL Server}'
     DB_SERVER = 'host.docker.internal\\SQLEXPRESS'
     DB_NAME = 'TechGalaxy' 
     DB_USER = 'sa'
