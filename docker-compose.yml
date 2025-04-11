@@ -143,198 +143,217 @@ services:
     networks:
       - spring-net
 
-  productservice:
-    build:
-      context: .
-      dockerfile: ProductService/Dockerfile
-    container_name: productservice
-    image: productservice
-    # image: ${DOCKER_USERNAME}/productservice:latest
-    ports:
-      - "9002:9002"
-    depends_on:
-      configserver:
-        condition: service_healthy
-      discoveryserver:
-        condition: service_healthy
-      zipkin:
-        condition: service_healthy
-    volumes:
-      - ./logs/productservice:/logs
-    environment:
-      LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=ProductDB;encrypt=false
-      SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
-      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
-      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9002/actuator/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    networks:
-      - spring-net
+  # productservice:
+  #   build:
+  #     context: .
+  #     dockerfile: ProductService/Dockerfile
+  #   container_name: productservice
+  #   image: productservice
+  #   # image: ${DOCKER_USERNAME}/productservice:latest
+  #   ports:
+  #     - "9002:9002"
+  #   depends_on:
+  #     configserver:
+  #       condition: service_healthy
+  #     discoveryserver:
+  #       condition: service_healthy
+  #     zipkin:
+  #       condition: service_healthy
+  #   volumes:
+  #     - ./logs/productservice:/logs
+  #   environment:
+  #     LOG_PATH: /logs
+  #     SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=ProductDB;encrypt=false
+  #     SPRING_DATASOURCE_USERNAME: sa
+  #     SPRING_DATASOURCE_PASSWORD: sapassword
+  #     SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
+  #     EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+  #     SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD", "wget", "--spider", "-q", "http://localhost:9002/actuator/health"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+  #   networks:
+  #     - spring-net
 
-  inventoryservice:
-    build:
-      context: .
-      dockerfile: InventoryService/Dockerfile
-    container_name: inventoryservice
-    image: inventoryservice
-    # image: ${DOCKER_USERNAME}/inventoryservice:latest
-    ports:
-      - "9006:9006"
-    depends_on:
-      configserver:
-        condition: service_healthy
-      discoveryserver:
-        condition: service_healthy
-      rabbitmq:
-        condition: service_healthy
-    volumes:
-      - ./logs/inventoryservice:/logs
-    environment:
-      LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=InventoryDB;encrypt=false
-      SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
-      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
-      SPRING_RABBITMQ_HOST: rabbitmq
-      SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
-      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9006/actuator/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    networks:
-      - spring-net
+  # inventoryservice:
+  #   build:
+  #     context: .
+  #     dockerfile: InventoryService/Dockerfile
+  #   container_name: inventoryservice
+  #   image: inventoryservice
+  #   # image: ${DOCKER_USERNAME}/inventoryservice:latest
+  #   ports:
+  #     - "9006:9006"
+  #   depends_on:
+  #     configserver:
+  #       condition: service_healthy
+  #     discoveryserver:
+  #       condition: service_healthy
+  #     rabbitmq:
+  #       condition: service_healthy
+  #   volumes:
+  #     - ./logs/inventoryservice:/logs
+  #   environment:
+  #     LOG_PATH: /logs
+  #     SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=InventoryDB;encrypt=false
+  #     SPRING_DATASOURCE_USERNAME: sa
+  #     SPRING_DATASOURCE_PASSWORD: sapassword
+  #     SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
+  #     EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+  #     SPRING_RABBITMQ_HOST: rabbitmq
+  #     SPRING_RABBITMQ_PORT: 5672
+  #     SPRING_RABBITMQ_USERNAME: guest
+  #     SPRING_RABBITMQ_PASSWORD: guest
+  #     SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD", "wget", "--spider", "-q", "http://localhost:9006/actuator/health"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+  #   networks:
+  #     - spring-net
 
-  orderservice:
-    build:
-      context: .
-      dockerfile: OrderService/Dockerfile
-    container_name: orderservice
-    image: orderservice
-    # image: ${DOCKER_USERNAME}/orderservice:latest
-    ports:
-      - "9003:9003"
-    depends_on:
-      configserver:
-        condition: service_healthy
-      discoveryserver:
-        condition: service_healthy
-      rabbitmq:
-        condition: service_healthy
-      redis-ktpm:
-        condition: service_healthy
-    volumes:
-      - ./logs/orderservice:/logs
-    environment:
-      LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=OrderDB;encrypt=false
-      SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
-      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
-      SPRING_RABBITMQ_HOST: rabbitmq
-      SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
-      SPRING_DATA_REDIS_HOST: redis-ktpm
-      SPRING_DATA_REDIS_PORT: 6379
-      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9003/actuator/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    networks:
-      - spring-net
+  # orderservice:
+  #   build:
+  #     context: .
+  #     dockerfile: OrderService/Dockerfile
+  #   container_name: orderservice
+  #   image: orderservice
+  #   # image: ${DOCKER_USERNAME}/orderservice:latest
+  #   ports:
+  #     - "9003:9003"
+  #   depends_on:
+  #     configserver:
+  #       condition: service_healthy
+  #     discoveryserver:
+  #       condition: service_healthy
+  #     rabbitmq:
+  #       condition: service_healthy
+  #     redis-ktpm:
+  #       condition: service_healthy
+  #   volumes:
+  #     - ./logs/orderservice:/logs
+  #   environment:
+  #     LOG_PATH: /logs
+  #     SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=OrderDB;encrypt=false
+  #     SPRING_DATASOURCE_USERNAME: sa
+  #     SPRING_DATASOURCE_PASSWORD: sapassword
+  #     SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
+  #     EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+  #     SPRING_RABBITMQ_HOST: rabbitmq
+  #     SPRING_RABBITMQ_PORT: 5672
+  #     SPRING_RABBITMQ_USERNAME: guest
+  #     SPRING_RABBITMQ_PASSWORD: guest
+  #     SPRING_DATA_REDIS_HOST: redis-ktpm
+  #     SPRING_DATA_REDIS_PORT: 6379
+  #     SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD", "wget", "--spider", "-q", "http://localhost:9003/actuator/health"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+  #   networks:
+  #     - spring-net
 
-  paymentservice:
-    build:
-      context: .
-      dockerfile: PaymentService/Dockerfile
-    container_name: paymentservice
-    image: paymentservice
-    # image: ${DOCKER_USERNAME}/paymentservice:latest
-    ports:
-      - "9005:9005"
-    depends_on:
-      configserver:
-        condition: service_healthy
-      discoveryserver:
-        condition: service_healthy
-      rabbitmq:
-        condition: service_healthy
-    volumes:
-      - ./logs/paymentservice:/logs
-    environment:
-      LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=PaymentDB;encrypt=false
-      SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
-      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
-      SPRING_RABBITMQ_HOST: rabbitmq
-      SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
-      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9005/actuator/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    networks:
-      - spring-net
+  # paymentservice:
+  #   build:
+  #     context: .
+  #     dockerfile: PaymentService/Dockerfile
+  #   container_name: paymentservice
+  #   image: paymentservice
+  #   # image: ${DOCKER_USERNAME}/paymentservice:latest
+  #   ports:
+  #     - "9005:9005"
+  #   depends_on:
+  #     configserver:
+  #       condition: service_healthy
+  #     discoveryserver:
+  #       condition: service_healthy
+  #     rabbitmq:
+  #       condition: service_healthy
+  #   volumes:
+  #     - ./logs/paymentservice:/logs
+  #   environment:
+  #     LOG_PATH: /logs
+  #     SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=PaymentDB;encrypt=false
+  #     SPRING_DATASOURCE_USERNAME: sa
+  #     SPRING_DATASOURCE_PASSWORD: sapassword
+  #     SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
+  #     EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+  #     SPRING_RABBITMQ_HOST: rabbitmq
+  #     SPRING_RABBITMQ_PORT: 5672
+  #     SPRING_RABBITMQ_USERNAME: guest
+  #     SPRING_RABBITMQ_PASSWORD: guest
+  #     SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD", "wget", "--spider", "-q", "http://localhost:9005/actuator/health"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+  #   networks:
+  #     - spring-net
 
-  notificationservice:
+  # notificationservice:
+  #   build:
+  #     context: .
+  #     dockerfile: NotificationService/Dockerfile
+  #   container_name: notificationservice
+  #   image: notificationservice
+  #   # image: ${DOCKER_USERNAME}/notificationservice:latest
+  #   ports:
+  #     - "9004:9004"
+  #   depends_on:
+  #     configserver:
+  #       condition: service_healthy
+  #     discoveryserver:
+  #       condition: service_healthy
+  #     rabbitmq:
+  #       condition: service_healthy
+  #   volumes:
+  #     - ./logs/notificationservice:/logs
+  #   environment:
+  #     LOG_PATH: /logs
+  #     SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=NotificationDB;encrypt=false
+  #     SPRING_DATASOURCE_USERNAME: sa
+  #     SPRING_DATASOURCE_PASSWORD: sapassword
+  #     SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
+  #     EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
+  #     SPRING_RABBITMQ_HOST: rabbitmq
+  #     SPRING_RABBITMQ_PORT: 5672
+  #     SPRING_RABBITMQ_USERNAME: guest
+  #     SPRING_RABBITMQ_PASSWORD: guest
+  #     SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD", "wget", "--spider", "-q", "http://localhost:9004/actuator/health"]
+  #     interval: 30s
+  #     timeout: 10s
+  #     retries: 3
+  #   networks:
+  #     - spring-net
+
+
+  recommendsservice:
     build:
-      context: .
-      dockerfile: NotificationService/Dockerfile
-    container_name: notificationservice
-    image: notificationservice
-    # image: ${DOCKER_USERNAME}/notificationservice:latest
+      context: ./RecommendService  
+      dockerfile: Dockerfile
+    container_name: recommendService
+    image: recommendservice
+    # image: ${DOCKER_USERNAME}/RecommendService:latest
     ports:
-      - "9004:9004"
+      - "5000:5000"
     depends_on:
-      configserver:
-        condition: service_healthy
       discoveryserver:
         condition: service_healthy
-      rabbitmq:
-        condition: service_healthy
-    volumes:
-      - ./logs/notificationservice:/logs
     environment:
-      LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=NotificationDB;encrypt=false
-      SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
-      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
-      SPRING_RABBITMQ_HOST: rabbitmq
-      SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
-      SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
+      EUREKA_SERVER: http://discoveryserver:8761/eureka
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9004/actuator/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
     networks:
       - spring-net
 

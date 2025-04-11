@@ -10,6 +10,24 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: RecommendationService
+          uri: lb://RecommendationService
+          predicates:
+            - Path=/api/recommendations/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1000
+                redis-rate-limiter.burstCapacity: 1000
+                redis-rate-limiter.requestedTokens: 1
+            - name: Retry
+              args:
+                retries: 3
+                statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
+                methods: GET,POST
+                backoff:
+                  firstBackoff: 100ms
+                  maxBackoff: 500ms
         - id: UserService
           uri: lb://UserService
           predicates:

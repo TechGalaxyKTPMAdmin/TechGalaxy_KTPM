@@ -1,3 +1,4 @@
+import py_eureka_client.eureka_client as eureka_client
 from flask import Flask, request, jsonify
 from content_based import content_based_filtering, get_product_details
 from collaborative import collaborative_filtering
@@ -6,6 +7,12 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
+
+eureka_client.init(
+    eureka_server="http://discoveryserver:8761/eureka/",
+    app_name="RecommendationService",
+    instance_port=5000
+)
 
 @app.route('/api/recommendations/content-based/<customer_id>', methods=['GET'])
 def get_content_based_recommendations(customer_id):
