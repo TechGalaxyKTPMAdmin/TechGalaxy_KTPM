@@ -475,3 +475,59 @@
 2025-04-06 12:34:18.004  INFO 1 --- [TaskBatchingWorker-target_localhost-15] o.apache.http.impl.execchain.RetryExec   : I/O exception (java.net.SocketException) caught when processing request to {}->http://localhost:8761: Broken pipe
 2025-04-06 12:34:18.005  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
 2025-04-06 12:34:18.237  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2025-04-06 13:51:31.383  INFO 1 --- [main] i.f.s.d.DiscoveryServerApplication       : Starting DiscoveryServerApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/DiscoveryServer.jar started by root in /app)
+2025-04-06 13:51:31.417 DEBUG 1 --- [main] i.f.s.d.DiscoveryServerApplication       : Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-04-06 13:51:31.423  INFO 1 --- [main] i.f.s.d.DiscoveryServerApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-04-06 13:51:36.142  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=139eb455-9e46-3a3c-8029-ef9c3bf3f1d4
+2025-04-06 13:51:36.943  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-04-06 13:51:36.990  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-06 13:51:36.993  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-06 13:51:37.097  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-06 13:51:37.099  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5531 ms
+2025-04-06 13:51:40.261  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-06 13:51:42.154  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-06 13:51:42.205  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-06 13:51:42.874  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-04-06 13:51:42.993  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DISCOVERYSERVER with eureka with status UP
+2025-04-06 13:51:43.022  INFO 1 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-04-06 13:51:43.026  INFO 1 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-04-06 13:51:43.034  INFO 1 --- [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-04-06 13:51:43.049  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-04-06 13:51:43.052  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-04-06 13:51:43.085  INFO 1 --- [main] i.f.s.d.DiscoveryServerApplication       : Started DiscoveryServerApplication in 15.325 seconds (process running for 17.143)
+2025-04-06 13:51:56.134  INFO 1 --- [http-nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-06 13:51:56.136  INFO 1 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-06 13:51:56.141  INFO 1 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-04-06 13:56:11.202  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DISCOVERYSERVER with eureka with status DOWN
+2025-04-06 13:56:11.214  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 13:56:11.221  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-06 13:56:11.232  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2025-04-06 13:56:11.242  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2025-04-06 16:02:33.039  INFO 1 --- [main] i.f.s.d.DiscoveryServerApplication       : Starting DiscoveryServerApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/DiscoveryServer.jar started by root in /app)
+2025-04-06 16:02:33.061 DEBUG 1 --- [main] i.f.s.d.DiscoveryServerApplication       : Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-04-06 16:02:33.064  INFO 1 --- [main] i.f.s.d.DiscoveryServerApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-04-06 16:02:36.660  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=139eb455-9e46-3a3c-8029-ef9c3bf3f1d4
+2025-04-06 16:02:37.419  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2025-04-06 16:02:37.450  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-06 16:02:37.452  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-04-06 16:02:37.541  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-06 16:02:37.544  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4368 ms
+2025-04-06 16:02:41.577  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-06 16:02:44.030  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-06 16:02:44.126  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-06 16:02:45.274  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-04-06 16:02:45.464  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DISCOVERYSERVER with eureka with status UP
+2025-04-06 16:02:45.498  INFO 1 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-04-06 16:02:45.504  INFO 1 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-04-06 16:02:45.514  INFO 1 --- [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-04-06 16:02:45.538  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2025-04-06 16:02:45.542  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2025-04-06 16:02:45.576  INFO 1 --- [main] i.f.s.d.DiscoveryServerApplication       : Started DiscoveryServerApplication in 14.798 seconds (process running for 16.875)
+2025-04-06 16:02:58.907  INFO 1 --- [http-nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-06 16:02:58.911  INFO 1 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-06 16:02:58.918  INFO 1 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-04-06 16:21:10.411  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DISCOVERYSERVER with eureka with status DOWN
+2025-04-06 16:21:10.450  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 16:21:10.459  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-06 16:21:10.467  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2025-04-06 16:21:10.480  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...

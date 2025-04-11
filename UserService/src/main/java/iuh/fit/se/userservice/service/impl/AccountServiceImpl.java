@@ -11,10 +11,8 @@ import iuh.fit.se.userservice.repository.AccountRepository;
 import iuh.fit.se.userservice.repository.RoleRepository;
 import iuh.fit.se.userservice.repository.SystemUserRepository;
 import iuh.fit.se.userservice.service.AccountService;
-import iuh.fit.se.userservice.util.SecurityUtil;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -28,11 +26,9 @@ public class AccountServiceImpl implements AccountService {
     private final AccountRepository accountRepository;
     private final SystemUserRepository systemUserRepository;
     private final PasswordEncoder passwordEncoder;
-    private final SecurityUtil securityUtil;
 
     private final AccountMapper accountMapper;
     public final RoleRepository roleRepository;
-
 
     @Override
     public Account createAccount(Account account) {
@@ -48,7 +44,6 @@ public class AccountServiceImpl implements AccountService {
     public AccountUpdateResponse updateAccount(AccountUpdateRequest account) {
         Account existingAccount = accountRepository.findById(account.getId())
                 .orElseThrow(() -> new EntityNotFoundException("Account not found"));
-
 
         if (account.getEmail() != null && !account.getEmail().isEmpty()) {
             if (existingAccount.getEmail().equals(account.getEmail())) {
@@ -81,7 +76,6 @@ public class AccountServiceImpl implements AccountService {
     public AccountUpdateResponse updateAccountWithoutPassword(AccountUpdateRequest account) {
         Account existingAccount = accountRepository.findById(account.getId())
                 .orElseThrow(() -> new EntityNotFoundException("Account not found"));
-
 
         if (account.getEmail() != null && !account.getEmail().isEmpty()) {
             if (existingAccount.getEmail().equals(account.getEmail())) {
@@ -150,7 +144,6 @@ public class AccountServiceImpl implements AccountService {
         return accountRepository.findByEmail(email);
     }
 
-
     @Override
     public void resetPassword(String id, String newPassword) {
         Account account = accountRepository.findById(id)
@@ -183,6 +176,5 @@ public class AccountServiceImpl implements AccountService {
     public boolean existsByEmail(String email) {
         return accountRepository.existsByEmail(email);
     }
-
 
 }

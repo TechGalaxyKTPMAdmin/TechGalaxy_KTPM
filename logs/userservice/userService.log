@@ -3790,3 +3790,298 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 2025-04-06 12:34:19.638  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 2025-04-06 12:34:20.360  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
 2025-04-06 12:34:23.384  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-06 13:52:50.700  INFO 1 --- [main] i.f.s.u.UserServiceApplication           : Starting UserServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/UserService.jar started by root in /app)
+2025-04-06 13:52:50.732 DEBUG 1 --- [main] i.f.s.u.UserServiceApplication           : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-06 13:52:50.737  INFO 1 --- [main] i.f.s.u.UserServiceApplication           : The following 1 profile is active: "dev"
+2025-04-06 13:52:50.932  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-06 13:52:50.936  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-06 13:52:50.939  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-06 13:52:50.943  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=UserService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-06 13:52:50.949  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-06 13:52:50.952  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=UserService, profiles=[dev], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-06 13:52:58.930  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 13:52:59.989  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1009 ms. Found 5 JPA repository interfaces.
+2025-04-06 13:53:02.606  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ae55c27d-5536-3036-b234-ae0059912f6f
+2025-04-06 13:53:07.169  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9001 (http)
+2025-04-06 13:53:07.212  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-06 13:53:07.215  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-06 13:53:07.337  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-06 13:53:07.340  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 16379 ms
+2025-04-06 13:53:10.761  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-06 13:53:10.992  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-06 13:53:11.154  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-06 13:53:12.395  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-06 13:53:12.577  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-06 13:53:13.348  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 0a04d9b2-fed5-4678-8845-872c2f3517c9
+2025-04-06 13:53:13.357  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-06 13:53:13.543  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-06 13:53:13.633  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-06 13:53:17.846  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-06 13:53:18.884  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 13:53:20.773  INFO 1 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-06 13:53:24.657  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-06 13:53:25.334  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'OrderService' URL not provided. Will try picking an instance via load-balancing.
+2025-04-06 13:53:26.921  INFO 1 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-04-06 13:53:30.731  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-06 13:53:32.233  WARN 1 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-04-06 13:53:37.408  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-06 13:53:37.585  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-06 13:53:37.730  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-06 13:53:37.785  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-06 13:53:37.794  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-06 13:53:37.814  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-06 13:53:37.816  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-06 13:53:37.817  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-06 13:53:37.819  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-06 13:53:37.820  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-06 13:53:37.822  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-06 13:53:37.823  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-06 13:53:38.207  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-06 13:53:38.212  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-06 13:53:38.217  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-06 13:53:38.221  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743947618221 with initial instances count: 4
+2025-04-06 13:53:38.237  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERSERVICE with eureka with status UP
+2025-04-06 13:53:38.240  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743947618240, current=UP, previous=STARTING]
+2025-04-06 13:53:38.244  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/6f155775b19b:UserService:9001: registering service...
+2025-04-06 13:53:38.281  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9001 (http) with context path '/'
+2025-04-06 13:53:38.283  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9001
+2025-04-06 13:53:38.311  INFO 1 --- [main] i.f.s.u.UserServiceApplication           : Started UserServiceApplication in 64.726 seconds (process running for 68.748)
+2025-04-06 13:53:38.312  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/6f155775b19b:UserService:9001 - registration status: 204
+2025-04-06 13:53:39.220  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-06 13:53:39.221  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-06 13:54:00.033  INFO 1 --- [http-nio-9001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-06 13:54:00.036  INFO 1 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-06 13:54:00.051  INFO 1 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2025-04-06 13:56:00.031  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERSERVICE with eureka with status DOWN
+2025-04-06 13:56:00.035  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743947760035, current=DOWN, previous=UP]
+2025-04-06 13:56:00.042  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/6f155775b19b:UserService:9001: registering service...
+2025-04-06 13:56:00.063  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 13:56:00.068  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/6f155775b19b:UserService:9001 - registration status: 204
+2025-04-06 13:56:00.075  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-06 13:56:00.150  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 13:56:00.158  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-06 13:56:00.169  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-06 13:56:00.286  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-06 13:56:03.289  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-06 13:56:03.301  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/6f155775b19b:UserService:9001 - deregister  status: 200
+2025-04-06 13:56:03.303  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-06 16:03:42.401  INFO 1 --- [main] i.f.s.u.UserServiceApplication           : Starting UserServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/UserService.jar started by root in /app)
+2025-04-06 16:03:42.480 DEBUG 1 --- [main] i.f.s.u.UserServiceApplication           : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-06 16:03:42.485  INFO 1 --- [main] i.f.s.u.UserServiceApplication           : The following 1 profile is active: "dev"
+2025-04-06 16:03:43.190  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-06 16:03:43.206  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-06 16:03:43.210  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-06 16:03:43.213  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=UserService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-06 16:03:43.220  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-06 16:03:43.223  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=UserService, profiles=[dev], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-06 16:03:59.655  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-06 16:04:02.314  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2543 ms. Found 5 JPA repository interfaces.
+2025-04-06 16:04:07.446  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ae55c27d-5536-3036-b234-ae0059912f6f
+2025-04-06 16:04:20.776  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9001 (http)
+2025-04-06 16:04:21.248  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-06 16:04:21.346  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-06 16:04:21.876  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-06 16:04:21.897  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 38660 ms
+2025-04-06 16:04:37.852  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-06 16:04:39.105  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-04-06 16:04:39.684  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-06 16:04:42.557  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-06 16:04:43.063  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-06 16:04:44.280  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: ebc0a1e6-75d5-473e-94da-a3fa87231ea5
+2025-04-06 16:04:44.297  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-06 16:04:45.027  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-06 16:04:45.304  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-06 16:04:52.930  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-06 16:04:54.311  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 16:04:56.916  INFO 1 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-06 16:05:02.248  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-06 16:05:03.175  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'OrderService' URL not provided. Will try picking an instance via load-balancing.
+2025-04-06 16:05:05.063  INFO 1 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-04-06 16:05:10.962  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-06 16:05:12.692  WARN 1 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-04-06 16:05:16.619  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-06 16:05:16.916  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-06 16:05:17.333  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-06 16:05:17.412  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-06 16:05:17.425  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-06 16:05:17.460  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-06 16:05:17.462  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-06 16:05:17.464  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-06 16:05:17.467  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-06 16:05:17.469  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-06 16:05:17.472  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-06 16:05:17.474  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-06 16:05:18.005  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-06 16:05:18.013  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-06 16:05:18.020  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-06 16:05:18.028  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743955518027 with initial instances count: 3
+2025-04-06 16:05:18.053  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERSERVICE with eureka with status UP
+2025-04-06 16:05:18.059  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743955518059, current=UP, previous=STARTING]
+2025-04-06 16:05:18.065  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/6f155775b19b:UserService:9001: registering service...
+2025-04-06 16:05:18.108  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9001 (http) with context path '/'
+2025-04-06 16:05:18.111  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9001
+2025-04-06 16:05:18.157  INFO 1 --- [main] i.f.s.u.UserServiceApplication           : Started UserServiceApplication in 109.439 seconds (process running for 112.882)
+2025-04-06 16:05:18.196  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/6f155775b19b:UserService:9001 - registration status: 204
+2025-04-06 16:05:19.019  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-06 16:05:19.024  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-06 16:05:25.981  INFO 1 --- [http-nio-9001-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-06 16:05:25.982  INFO 1 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-06 16:05:25.987  INFO 1 --- [http-nio-9001-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-04-06 16:06:08.676  INFO 1 --- [http-nio-9001-exec-3] i.f.s.u.s.i.AuthenticationServiceImpl    : Login with username: minhduc@gmail.com
+2025-04-06 16:06:09.255 DEBUG 1 --- [http-nio-9001-exec-3] org.hibernate.SQL                        : select a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at from accounts a1_0 where a1_0.email=?
+2025-04-06 16:06:09.458 DEBUG 1 --- [http-nio-9001-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.account_id=?
+2025-04-06 16:06:09.608 DEBUG 1 --- [http-nio-9001-exec-3] org.hibernate.SQL                        : select su1_0.id,su1_0.account_id,a1_0.id,a1_0.created_at,c1_0.id,c1_0.account_id,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at from system_users su1_0 join accounts a1_0 on a1_0.id=su1_0.account_id left join customers c1_0 on a1_0.id=c1_0.account_id where su1_0.account_id=?
+2025-04-06 16:06:09.709 DEBUG 1 --- [http-nio-9001-exec-3] org.hibernate.SQL                        : select r1_0.account_id,r1_1.id,r1_1.active,r1_1.created_at,r1_1.description,r1_1.name,r1_1.updated_at from account_role r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.account_id=?
+2025-04-06 16:06:09.824 DEBUG 1 --- [http-nio-9001-exec-3] org.hibernate.SQL                        : select a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at from accounts a1_0 where a1_0.email=?
+2025-04-06 16:06:10.254 DEBUG 1 --- [http-nio-9001-exec-3] org.hibernate.SQL                        : select a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at from accounts a1_0 where a1_0.email=?
+2025-04-06 16:06:10.488 DEBUG 1 --- [http-nio-9001-exec-3] org.hibernate.SQL                        : update accounts set created_at=?,email=?,password=?,refresh_token=?,updated_at=? where id=?
+2025-04-06 16:06:20.552  INFO 1 --- [http-nio-9001-exec-4] i.f.s.u.controller.AuthController        : Received token [a2209b3b-74e7-4aee-8b47-7e46c6d67965]: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaW5oZHVjQGdtYWlsLmNvbSIsInBlcm1pc3Npb24iOlsiUk9MRV9VU0VSX0NSRUFURSIsIlJPTEVfVVNFUl9VUERBVEUiXSwiZXhwIjoxNzQ0MDQxOTY5LCJpYXQiOjE3NDM5NTU1NjksInVzZXIiOnsiaWQiOiIzNWM1ZTM1ZC0zZjJmLTQ4YzMtOTBkMS03YjM1YzI0Y2JkZjAiLCJlbWFpbCI6Im1pbmhkdWNAZ21haWwuY29tIn19.1A68VG9-OV5JA-m1oJ9ruW243qVAotucbPTZVsyos0QgfsNcRGCs_INxPciIDMQ_LDtRLxzxioVz3idVZwQJUg
+2025-04-06 16:06:20.568 DEBUG 1 --- [http-nio-9001-exec-4] org.hibernate.SQL                        : select a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at from accounts a1_0 where a1_0.email=?
+2025-04-06 16:06:20.596 DEBUG 1 --- [http-nio-9001-exec-4] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.account_id=?
+2025-04-06 16:06:20.640 DEBUG 1 --- [http-nio-9001-exec-4] org.hibernate.SQL                        : select su1_0.id,su1_0.account_id,a1_0.id,a1_0.created_at,c1_0.id,c1_0.account_id,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at from system_users su1_0 join accounts a1_0 on a1_0.id=su1_0.account_id left join customers c1_0 on a1_0.id=c1_0.account_id where su1_0.account_id=?
+2025-04-06 16:06:20.672 DEBUG 1 --- [http-nio-9001-exec-4] org.hibernate.SQL                        : select r1_0.account_id,r1_1.id,r1_1.active,r1_1.created_at,r1_1.description,r1_1.name,r1_1.updated_at from account_role r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.account_id=?
+2025-04-06 16:06:20.689 DEBUG 1 --- [http-nio-9001-exec-4] org.hibernate.SQL                        : select p1_0.role_id,p1_1.id,p1_1.api_path,p1_1.created_at,p1_1.created_by,p1_1.method,p1_1.module,p1_1.name,p1_1.updated_at,p1_1.updated_by from permission_role p1_0 join permissions p1_1 on p1_1.id=p1_0.permission_id where p1_0.role_id=?
+2025-04-06 16:06:21.003  INFO 1 --- [http-nio-9001-exec-4] i.f.s.u.controller.AuthController        : Returning response [a2209b3b-74e7-4aee-8b47-7e46c6d67965]: iuh.fit.se.userservice.dto.response.DataResponse@78d4c1c3
+2025-04-06 16:06:25.583 DEBUG 1 --- [http-nio-9001-exec-5] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.id=?
+2025-04-06 16:10:17.450  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-06 16:11:03.079  INFO 1 --- [http-nio-9001-exec-9] i.f.s.u.controller.AuthController        : Received token [32c7ae24-a1b0-4756-917d-f85cb2d4f0b0]: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaW5oZHVjQGdtYWlsLmNvbSIsInBlcm1pc3Npb24iOlsiUk9MRV9VU0VSX0NSRUFURSIsIlJPTEVfVVNFUl9VUERBVEUiXSwiZXhwIjoxNzQ0MDQxOTY5LCJpYXQiOjE3NDM5NTU1NjksInVzZXIiOnsiaWQiOiIzNWM1ZTM1ZC0zZjJmLTQ4YzMtOTBkMS03YjM1YzI0Y2JkZjAiLCJlbWFpbCI6Im1pbmhkdWNAZ21haWwuY29tIn19.1A68VG9-OV5JA-m1oJ9ruW243qVAotucbPTZVsyos0QgfsNcRGCs_INxPciIDMQ_LDtRLxzxioVz3idVZwQJUg
+2025-04-06 16:11:03.091 DEBUG 1 --- [http-nio-9001-exec-9] org.hibernate.SQL                        : select a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at from accounts a1_0 where a1_0.email=?
+2025-04-06 16:11:03.111 DEBUG 1 --- [http-nio-9001-exec-9] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.account_id=?
+2025-04-06 16:11:03.124 DEBUG 1 --- [http-nio-9001-exec-9] org.hibernate.SQL                        : select su1_0.id,su1_0.account_id,a1_0.id,a1_0.created_at,c1_0.id,c1_0.account_id,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at from system_users su1_0 join accounts a1_0 on a1_0.id=su1_0.account_id left join customers c1_0 on a1_0.id=c1_0.account_id where su1_0.account_id=?
+2025-04-06 16:11:03.137 DEBUG 1 --- [http-nio-9001-exec-9] org.hibernate.SQL                        : select r1_0.account_id,r1_1.id,r1_1.active,r1_1.created_at,r1_1.description,r1_1.name,r1_1.updated_at from account_role r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.account_id=?
+2025-04-06 16:11:03.146 DEBUG 1 --- [http-nio-9001-exec-9] org.hibernate.SQL                        : select p1_0.role_id,p1_1.id,p1_1.api_path,p1_1.created_at,p1_1.created_by,p1_1.method,p1_1.module,p1_1.name,p1_1.updated_at,p1_1.updated_by from permission_role p1_0 join permissions p1_1 on p1_1.id=p1_0.permission_id where p1_0.role_id=?
+2025-04-06 16:11:03.207  INFO 1 --- [http-nio-9001-exec-9] i.f.s.u.controller.AuthController        : Returning response [32c7ae24-a1b0-4756-917d-f85cb2d4f0b0]: iuh.fit.se.userservice.dto.response.DataResponse@3ce4d00b
+2025-04-06 16:11:03.527 DEBUG 1 --- [http-nio-9001-exec-10] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.id=?
+2025-04-06 16:11:15.719  INFO 1 --- [http-nio-9001-exec-1] i.f.s.u.controller.AuthController        : Received token [c28761b7-4b09-41f7-a802-6e0eb239d582]: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaW5oZHVjQGdtYWlsLmNvbSIsInBlcm1pc3Npb24iOlsiUk9MRV9VU0VSX0NSRUFURSIsIlJPTEVfVVNFUl9VUERBVEUiXSwiZXhwIjoxNzQ0MDQxOTY5LCJpYXQiOjE3NDM5NTU1NjksInVzZXIiOnsiaWQiOiIzNWM1ZTM1ZC0zZjJmLTQ4YzMtOTBkMS03YjM1YzI0Y2JkZjAiLCJlbWFpbCI6Im1pbmhkdWNAZ21haWwuY29tIn19.1A68VG9-OV5JA-m1oJ9ruW243qVAotucbPTZVsyos0QgfsNcRGCs_INxPciIDMQ_LDtRLxzxioVz3idVZwQJUg
+2025-04-06 16:11:15.728 DEBUG 1 --- [http-nio-9001-exec-1] org.hibernate.SQL                        : select a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at from accounts a1_0 where a1_0.email=?
+2025-04-06 16:11:15.738 DEBUG 1 --- [http-nio-9001-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.account_id=?
+2025-04-06 16:11:15.745 DEBUG 1 --- [http-nio-9001-exec-1] org.hibernate.SQL                        : select su1_0.id,su1_0.account_id,a1_0.id,a1_0.created_at,c1_0.id,c1_0.account_id,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at from system_users su1_0 join accounts a1_0 on a1_0.id=su1_0.account_id left join customers c1_0 on a1_0.id=c1_0.account_id where su1_0.account_id=?
+2025-04-06 16:11:15.752 DEBUG 1 --- [http-nio-9001-exec-1] org.hibernate.SQL                        : select r1_0.account_id,r1_1.id,r1_1.active,r1_1.created_at,r1_1.description,r1_1.name,r1_1.updated_at from account_role r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.account_id=?
+2025-04-06 16:11:15.759 DEBUG 1 --- [http-nio-9001-exec-1] org.hibernate.SQL                        : select p1_0.role_id,p1_1.id,p1_1.api_path,p1_1.created_at,p1_1.created_by,p1_1.method,p1_1.module,p1_1.name,p1_1.updated_at,p1_1.updated_by from permission_role p1_0 join permissions p1_1 on p1_1.id=p1_0.permission_id where p1_0.role_id=?
+2025-04-06 16:11:15.795  INFO 1 --- [http-nio-9001-exec-1] i.f.s.u.controller.AuthController        : Returning response [c28761b7-4b09-41f7-a802-6e0eb239d582]: iuh.fit.se.userservice.dto.response.DataResponse@280a5840
+2025-04-06 16:11:16.000 DEBUG 1 --- [http-nio-9001-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.id=?
+2025-04-06 16:11:30.361  INFO 1 --- [http-nio-9001-exec-4] i.f.s.u.controller.AuthController        : Received token [e41381b7-7faa-4b29-97ca-a6bc368a61d2]: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtaW5oZHVjQGdtYWlsLmNvbSIsInBlcm1pc3Npb24iOlsiUk9MRV9VU0VSX0NSRUFURSIsIlJPTEVfVVNFUl9VUERBVEUiXSwiZXhwIjoxNzQ0MDQxOTY5LCJpYXQiOjE3NDM5NTU1NjksInVzZXIiOnsiaWQiOiIzNWM1ZTM1ZC0zZjJmLTQ4YzMtOTBkMS03YjM1YzI0Y2JkZjAiLCJlbWFpbCI6Im1pbmhkdWNAZ21haWwuY29tIn19.1A68VG9-OV5JA-m1oJ9ruW243qVAotucbPTZVsyos0QgfsNcRGCs_INxPciIDMQ_LDtRLxzxioVz3idVZwQJUg
+2025-04-06 16:11:30.372 DEBUG 1 --- [http-nio-9001-exec-4] org.hibernate.SQL                        : select a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at from accounts a1_0 where a1_0.email=?
+2025-04-06 16:11:30.394 DEBUG 1 --- [http-nio-9001-exec-4] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.account_id=?
+2025-04-06 16:11:30.413 DEBUG 1 --- [http-nio-9001-exec-4] org.hibernate.SQL                        : select su1_0.id,su1_0.account_id,a1_0.id,a1_0.created_at,c1_0.id,c1_0.account_id,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status,a1_0.email,a1_0.password,a1_0.refresh_token,a1_0.updated_at,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at from system_users su1_0 join accounts a1_0 on a1_0.id=su1_0.account_id left join customers c1_0 on a1_0.id=c1_0.account_id where su1_0.account_id=?
+2025-04-06 16:11:30.427 DEBUG 1 --- [http-nio-9001-exec-4] org.hibernate.SQL                        : select r1_0.account_id,r1_1.id,r1_1.active,r1_1.created_at,r1_1.description,r1_1.name,r1_1.updated_at from account_role r1_0 join roles r1_1 on r1_1.id=r1_0.role_id where r1_0.account_id=?
+2025-04-06 16:11:30.439 DEBUG 1 --- [http-nio-9001-exec-4] org.hibernate.SQL                        : select p1_0.role_id,p1_1.id,p1_1.api_path,p1_1.created_at,p1_1.created_by,p1_1.method,p1_1.module,p1_1.name,p1_1.updated_at,p1_1.updated_by from permission_role p1_0 join permissions p1_1 on p1_1.id=p1_0.permission_id where p1_0.role_id=?
+2025-04-06 16:11:30.500  INFO 1 --- [http-nio-9001-exec-4] i.f.s.u.controller.AuthController        : Returning response [e41381b7-7faa-4b29-97ca-a6bc368a61d2]: iuh.fit.se.userservice.dto.response.DataResponse@33bcba82
+2025-04-06 16:11:30.874 DEBUG 1 --- [http-nio-9001-exec-5] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.id=?
+2025-04-06 16:15:17.430  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-06 16:20:17.397  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-06 16:20:58.955  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERSERVICE with eureka with status DOWN
+2025-04-06 16:20:58.960  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743956458960, current=DOWN, previous=UP]
+2025-04-06 16:20:58.966  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/6f155775b19b:UserService:9001: registering service...
+2025-04-06 16:20:59.042  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/6f155775b19b:UserService:9001 - registration status: 204
+2025-04-06 16:20:59.173  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 16:20:59.207  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-06 16:20:59.337  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-06 16:20:59.389  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-06 16:20:59.410  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-04-06 16:20:59.568  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-06 16:21:02.566  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-06 16:21:02.744  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERSERVICE/6f155775b19b:UserService:9001 - deregister  status: 200
+2025-04-06 16:21:02.754  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

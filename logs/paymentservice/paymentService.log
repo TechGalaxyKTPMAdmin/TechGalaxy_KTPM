@@ -1803,3 +1803,246 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Thread.run(Thread.java:833)
 
 2025-04-06 19:34:26.119  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-06 20:52:48.842  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-06 20:52:48.870 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-06 20:52:48.875  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-06 20:52:49.048  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-06 20:52:49.051  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-06 20:52:49.054  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-06 20:52:49.057  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-06 20:52:49.060  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7692cd34 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-06 20:52:49.064  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-06 20:52:49.067  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-06 20:52:49.070  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-06 20:52:49.072  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-06 20:52:49.075  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3d526ad9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-06 20:52:49.079  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-06 20:52:49.082  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-06 20:52:49.085  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@e041f0c uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-06 20:52:55.473  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=572b4986-3af7-3872-8762-9e5a89e1e758
+2025-04-06 20:52:56.935  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-06 20:52:56.985  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-06 20:52:56.988  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-06 20:52:57.134  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-06 20:52:57.138  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8040 ms
+2025-04-06 20:53:01.318  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-06 20:53:04.817  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-06 20:53:05.003  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-06 20:53:05.042  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-06 20:53:05.460  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-06 20:53:05.629  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-06 20:53:05.664  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-06 20:53:05.709  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-06 20:53:05.712  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-06 20:53:05.715  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-06 20:53:05.719  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-06 20:53:05.721  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-06 20:53:05.723  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-06 20:53:05.727  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-06 20:53:06.708  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-06 20:53:06.729  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-06 20:53:06.744  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-06 20:53:06.755  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743947586753 with initial instances count: 2
+2025-04-06 20:53:06.776  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENTSERVICE with eureka with status UP
+2025-04-06 20:53:06.781  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743947586781, current=UP, previous=STARTING]
+2025-04-06 20:53:06.799  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/f9188e823525:PaymentService:9005: registering service...
+2025-04-06 20:53:06.938  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9005 (http) with context path '/'
+2025-04-06 20:53:06.943  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9005
+2025-04-06 20:53:06.960  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-06 20:53:07.033  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/f9188e823525:PaymentService:9005 - registration status: 204
+2025-04-06 20:53:07.196  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#69b1e8f8:0/SimpleConnection@41c83af0 [delegate=amqp://guest@172.19.0.3:5672/, localPort=48534]
+2025-04-06 20:53:07.467  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Started PaymentServiceApplication in 34.404 seconds (process running for 38.293)
+2025-04-06 20:53:07.722  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-06 20:53:07.725  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-06 20:53:29.724  INFO 1 --- [http-nio-9005-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-06 20:53:29.734  INFO 1 --- [http-nio-9005-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-06 20:53:29.745  INFO 1 --- [http-nio-9005-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-04-06 20:55:59.959  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PAYMENTSERVICE with eureka with status DOWN
+2025-04-06 20:55:59.963  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743947759963, current=DOWN, previous=UP]
+2025-04-06 20:55:59.967  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/f9188e823525:PaymentService:9005: registering service...
+2025-04-06 20:55:59.991  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/f9188e823525:PaymentService:9005 - registration status: 204
+2025-04-06 20:55:59.992  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-06 20:56:00.452  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-06 20:56:00.458  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 20:56:00.469  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-06 20:56:00.807  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-06 20:56:03.811  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-06 20:56:03.827  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/f9188e823525:PaymentService:9005 - deregister  status: 200
+2025-04-06 20:56:03.830  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-06 23:04:02.520  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 1 (/app/PaymentService.jar started by root in /app)
+2025-04-06 23:04:02.604 DEBUG 1 --- [main] i.f.s.p.PaymentServiceApplication        : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-06 23:04:02.612  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-04-06 23:04:02.962  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-06 23:04:02.978  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-06 23:04:02.980  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-06 23:04:02.984  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-06 23:04:02.990  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@7692cd34 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-06 23:04:02.995  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-04-06 23:04:02.998  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=PaymentService, profiles=[default], label=null, version=2efb5a6a549b71a42b590f6a2b08183ed8af3466, state=
+2025-04-06 23:04:03.011  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-06 23:04:03.014  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-06 23:04:03.018  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3d526ad9 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-06 23:04:03.027  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-04-06 23:04:03.033  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused. Will be trying the next url if available
+2025-04-06 23:04:03.040  WARN 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@e041f0c uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/PaymentService/default": Connection refused
+2025-04-06 23:04:17.370  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=572b4986-3af7-3872-8762-9e5a89e1e758
+2025-04-06 23:04:22.884  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9005 (http)
+2025-04-06 23:04:23.151  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-06 23:04:23.168  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-04-06 23:04:23.778  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-06 23:04:23.806  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 20740 ms
+2025-04-06 23:04:35.875  INFO 1 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-04-06 23:04:43.663  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-06 23:04:43.989  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-06 23:04:44.070  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-04-06 23:04:44.841  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-06 23:04:45.105  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-06 23:04:45.145  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-06 23:04:45.238  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-06 23:04:45.244  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-06 23:04:45.252  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-06 23:04:45.255  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-06 23:04:45.263  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-06 23:04:45.268  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-06 23:04:45.279  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-06 23:04:47.110  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-06 23:04:47.151  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-06 23:04:47.204  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-06 23:04:47.254  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1743955487253 with initial instances count: 2
+2025-04-06 23:04:47.284  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PAYMENTSERVICE with eureka with status UP
+2025-04-06 23:04:47.353  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743955487353, current=UP, previous=STARTING]
+2025-04-06 23:04:47.377  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/f9188e823525:PaymentService:9005: registering service...
+2025-04-06 23:04:47.548  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9005 (http) with context path '/'
+2025-04-06 23:04:47.568  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9005
+2025-04-06 23:04:47.616  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-04-06 23:04:47.665  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/f9188e823525:PaymentService:9005 - registration status: 204
+2025-04-06 23:04:47.957  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#126af200:0/SimpleConnection@395115ac [delegate=amqp://guest@172.19.0.4:5672/, localPort=45258]
+2025-04-06 23:04:48.114  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-04-06 23:04:48.120  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
+	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
+	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
+	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
+	... 9 common frames omitted
+
+2025-04-06 23:04:48.507  INFO 1 --- [main] i.f.s.p.PaymentServiceApplication        : Started PaymentServiceApplication in 64.514 seconds (process running for 72.139)
+2025-04-06 23:05:07.494  INFO 1 --- [http-nio-9005-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-06 23:05:07.502  INFO 1 --- [http-nio-9005-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-06 23:05:07.515  INFO 1 --- [http-nio-9005-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2025-04-06 23:06:25.046  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] i.f.s.p.event.PaymentEventListener       : 📥 Received inventory.reserved for order: 9edb2932-9987-49cd-b163-3016effb30c3
+2025-04-06 23:06:25.090  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] i.f.s.p.service.impl.PaymentServiceImpl  : Generated VNPay payment URL for order 9edb2932-9987-49cd-b163-3016effb30c3: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html?vnp_Amount=4065000000&vnp_Command=pay&vnp_CreateDate=20250406230625&vnp_CurrCode=VND&vnp_ExpireDate=20250406232125&vnp_IpAddr=172.19.0.1&vnp_Locale=vn&vnp_OrderInfo=Thanh+to%3Fn+%3F%3Fn+h%3Fng%3A+9edb2932-9987-49cd-b163-3016effb30c3&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A8081%2Fpayment%2Fvn-pay-callback&vnp_TmnCode=2M388J6X&vnp_TxnRef=9edb2932-9987-49cd-b163-3016effb30c3&vnp_Version=2.1.0&vnp_SecureHash=f24c9cdf11724d449b72be681c49432314fa0b5ec861ab4517fe78ded8cd6e055bbe3d1a88aad83008b077aeef20de1c8c759ee7de912e182f0acfb6fb703f4f
+2025-04-06 23:06:25.094  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] i.f.s.p.event.PaymentEventListener       : ✅ Created VNPay URL for order 9edb2932-9987-49cd-b163-3016effb30c3: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html?vnp_Amount=4065000000&vnp_Command=pay&vnp_CreateDate=20250406230625&vnp_CurrCode=VND&vnp_ExpireDate=20250406232125&vnp_IpAddr=172.19.0.1&vnp_Locale=vn&vnp_OrderInfo=Thanh+to%3Fn+%3F%3Fn+h%3Fng%3A+9edb2932-9987-49cd-b163-3016effb30c3&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A8081%2Fpayment%2Fvn-pay-callback&vnp_TmnCode=2M388J6X&vnp_TxnRef=9edb2932-9987-49cd-b163-3016effb30c3&vnp_Version=2.1.0&vnp_SecureHash=f24c9cdf11724d449b72be681c49432314fa0b5ec861ab4517fe78ded8cd6e055bbe3d1a88aad83008b077aeef20de1c8c759ee7de912e182f0acfb6fb703f4f
+2025-04-06 23:06:25.171 ERROR 1 --- [AMQP Connection 172.19.0.4:5672] o.s.a.r.c.CachingConnectionFactory       : Shutdown Signal: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - unknown delivery tag 1, class-id=60, method-id=80)
+2025-04-06 23:06:26.191  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@19d3f4fb: tags=[[amq.ctag-ybxLifXmdfn6r5MNaH5ZMA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@172.19.0.4:5672/,1), conn: Proxy@73e63b4d Shared Rabbit Connection: SimpleConnection@395115ac [delegate=amqp://guest@172.19.0.4:5672/, localPort=45258], acknowledgeMode=AUTO local queue size=0
+2025-04-06 23:09:45.271  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-06 23:11:03.457  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] i.f.s.p.event.PaymentEventListener       : 📥 Received inventory.reserved for order: d7399101-e7e5-45c0-8335-6da274471be3
+2025-04-06 23:11:03.468  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] i.f.s.p.service.impl.PaymentServiceImpl  : Generated VNPay payment URL for order d7399101-e7e5-45c0-8335-6da274471be3: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html?vnp_Amount=4065000000&vnp_Command=pay&vnp_CreateDate=20250406231103&vnp_CurrCode=VND&vnp_ExpireDate=20250406232603&vnp_IpAddr=172.19.0.1&vnp_Locale=vn&vnp_OrderInfo=Thanh+to%3Fn+%3F%3Fn+h%3Fng%3A+d7399101-e7e5-45c0-8335-6da274471be3&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A8081%2Fpayment%2Fvn-pay-callback&vnp_TmnCode=2M388J6X&vnp_TxnRef=d7399101-e7e5-45c0-8335-6da274471be3&vnp_Version=2.1.0&vnp_SecureHash=891e82e1815b508a59111f5cd6275e77a96a8f3e78699a4474a2b0ef290119bd1fed425a5a889a82f53857062d72ce19c4809b65e6b543d021cdef130d573bb8
+2025-04-06 23:11:03.471  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] i.f.s.p.event.PaymentEventListener       : ✅ Created VNPay URL for order d7399101-e7e5-45c0-8335-6da274471be3: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html?vnp_Amount=4065000000&vnp_Command=pay&vnp_CreateDate=20250406231103&vnp_CurrCode=VND&vnp_ExpireDate=20250406232603&vnp_IpAddr=172.19.0.1&vnp_Locale=vn&vnp_OrderInfo=Thanh+to%3Fn+%3F%3Fn+h%3Fng%3A+d7399101-e7e5-45c0-8335-6da274471be3&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A8081%2Fpayment%2Fvn-pay-callback&vnp_TmnCode=2M388J6X&vnp_TxnRef=d7399101-e7e5-45c0-8335-6da274471be3&vnp_Version=2.1.0&vnp_SecureHash=891e82e1815b508a59111f5cd6275e77a96a8f3e78699a4474a2b0ef290119bd1fed425a5a889a82f53857062d72ce19c4809b65e6b543d021cdef130d573bb8
+2025-04-06 23:11:03.486 ERROR 1 --- [AMQP Connection 172.19.0.4:5672] o.s.a.r.c.CachingConnectionFactory       : Shutdown Signal: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - unknown delivery tag 1, class-id=60, method-id=80)
+2025-04-06 23:11:04.479  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@589b6131: tags=[[amq.ctag-BuY7BRDtAscwMEOE4ScGFA]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@172.19.0.4:5672/,2), conn: Proxy@73e63b4d Shared Rabbit Connection: SimpleConnection@395115ac [delegate=amqp://guest@172.19.0.4:5672/, localPort=45258], acknowledgeMode=AUTO local queue size=0
+2025-04-06 23:11:15.966  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-3] i.f.s.p.event.PaymentEventListener       : 📥 Received inventory.reserved for order: 8128cb37-3386-4d2f-b8d3-bd959ea92ea6
+2025-04-06 23:11:15.973  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-3] i.f.s.p.service.impl.PaymentServiceImpl  : Generated VNPay payment URL for order 8128cb37-3386-4d2f-b8d3-bd959ea92ea6: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html?vnp_Amount=4065000000&vnp_Command=pay&vnp_CreateDate=20250406231115&vnp_CurrCode=VND&vnp_ExpireDate=20250406232615&vnp_IpAddr=172.19.0.1&vnp_Locale=vn&vnp_OrderInfo=Thanh+to%3Fn+%3F%3Fn+h%3Fng%3A+8128cb37-3386-4d2f-b8d3-bd959ea92ea6&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A8081%2Fpayment%2Fvn-pay-callback&vnp_TmnCode=2M388J6X&vnp_TxnRef=8128cb37-3386-4d2f-b8d3-bd959ea92ea6&vnp_Version=2.1.0&vnp_SecureHash=dea1c90af904cd0e70417636444cb1f20919996163f466d9ae6751037d827edb55083f711bc9f32c2c5fa1ef62b893d0dcf94caebc11a25407a0865b60e63b13
+2025-04-06 23:11:15.975  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-3] i.f.s.p.event.PaymentEventListener       : ✅ Created VNPay URL for order 8128cb37-3386-4d2f-b8d3-bd959ea92ea6: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html?vnp_Amount=4065000000&vnp_Command=pay&vnp_CreateDate=20250406231115&vnp_CurrCode=VND&vnp_ExpireDate=20250406232615&vnp_IpAddr=172.19.0.1&vnp_Locale=vn&vnp_OrderInfo=Thanh+to%3Fn+%3F%3Fn+h%3Fng%3A+8128cb37-3386-4d2f-b8d3-bd959ea92ea6&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A8081%2Fpayment%2Fvn-pay-callback&vnp_TmnCode=2M388J6X&vnp_TxnRef=8128cb37-3386-4d2f-b8d3-bd959ea92ea6&vnp_Version=2.1.0&vnp_SecureHash=dea1c90af904cd0e70417636444cb1f20919996163f466d9ae6751037d827edb55083f711bc9f32c2c5fa1ef62b893d0dcf94caebc11a25407a0865b60e63b13
+2025-04-06 23:11:15.981 ERROR 1 --- [AMQP Connection 172.19.0.4:5672] o.s.a.r.c.CachingConnectionFactory       : Shutdown Signal: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - unknown delivery tag 1, class-id=60, method-id=80)
+2025-04-06 23:11:16.980  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-3] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@219f0080: tags=[[amq.ctag-bhNZKH4jmD-CKY4pRMNORQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@172.19.0.4:5672/,3), conn: Proxy@73e63b4d Shared Rabbit Connection: SimpleConnection@395115ac [delegate=amqp://guest@172.19.0.4:5672/, localPort=45258], acknowledgeMode=AUTO local queue size=0
+2025-04-06 23:11:30.825  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-4] i.f.s.p.event.PaymentEventListener       : 📥 Received inventory.reserved for order: 6728fc15-8710-41c6-8111-ed57c95d8791
+2025-04-06 23:11:30.833  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-4] i.f.s.p.service.impl.PaymentServiceImpl  : Generated VNPay payment URL for order 6728fc15-8710-41c6-8111-ed57c95d8791: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html?vnp_Amount=4065000000&vnp_Command=pay&vnp_CreateDate=20250406231130&vnp_CurrCode=VND&vnp_ExpireDate=20250406232630&vnp_IpAddr=172.19.0.1&vnp_Locale=vn&vnp_OrderInfo=Thanh+to%3Fn+%3F%3Fn+h%3Fng%3A+6728fc15-8710-41c6-8111-ed57c95d8791&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A8081%2Fpayment%2Fvn-pay-callback&vnp_TmnCode=2M388J6X&vnp_TxnRef=6728fc15-8710-41c6-8111-ed57c95d8791&vnp_Version=2.1.0&vnp_SecureHash=74b89150dcaeb3c6a393f439de04576eae6490245e47868271878436ffaf9e4c556c3a4ce3f3bc35f146c7208121b039b76bb1314b57e630b2948ce06d9781a1
+2025-04-06 23:11:30.839  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-4] i.f.s.p.event.PaymentEventListener       : ✅ Created VNPay URL for order 6728fc15-8710-41c6-8111-ed57c95d8791: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html?vnp_Amount=4065000000&vnp_Command=pay&vnp_CreateDate=20250406231130&vnp_CurrCode=VND&vnp_ExpireDate=20250406232630&vnp_IpAddr=172.19.0.1&vnp_Locale=vn&vnp_OrderInfo=Thanh+to%3Fn+%3F%3Fn+h%3Fng%3A+6728fc15-8710-41c6-8111-ed57c95d8791&vnp_OrderType=other&vnp_ReturnUrl=http%3A%2F%2Flocalhost%3A8081%2Fpayment%2Fvn-pay-callback&vnp_TmnCode=2M388J6X&vnp_TxnRef=6728fc15-8710-41c6-8111-ed57c95d8791&vnp_Version=2.1.0&vnp_SecureHash=74b89150dcaeb3c6a393f439de04576eae6490245e47868271878436ffaf9e4c556c3a4ce3f3bc35f146c7208121b039b76bb1314b57e630b2948ce06d9781a1
+2025-04-06 23:11:30.849 ERROR 1 --- [AMQP Connection 172.19.0.4:5672] o.s.a.r.c.CachingConnectionFactory       : Shutdown Signal: channel error; protocol method: #method<channel.close>(reply-code=406, reply-text=PRECONDITION_FAILED - unknown delivery tag 1, class-id=60, method-id=80)
+2025-04-06 23:11:31.847  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-4] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@32ceef37: tags=[[amq.ctag-SeGVjP35YKM6yGH62CeNFQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@172.19.0.4:5672/,4), conn: Proxy@73e63b4d Shared Rabbit Connection: SimpleConnection@395115ac [delegate=amqp://guest@172.19.0.4:5672/, localPort=45258], acknowledgeMode=AUTO local queue size=0
+2025-04-06 23:14:45.253  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-06 23:19:45.224  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-06 23:20:58.820  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PAYMENTSERVICE with eureka with status DOWN
+2025-04-06 23:20:58.827  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1743956458827, current=DOWN, previous=UP]
+2025-04-06 23:20:58.835  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/f9188e823525:PaymentService:9005: registering service...
+2025-04-06 23:20:58.878  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/f9188e823525:PaymentService:9005 - registration status: 204
+2025-04-06 23:20:58.899  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-6] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-04-06 23:20:58.938  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-6] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-04-06 23:20:58.957  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-06 23:20:59.022  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-06 23:20:59.716  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-06 23:21:02.714  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-06 23:21:02.747  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PAYMENTSERVICE/f9188e823525:PaymentService:9005 - deregister  status: 200
+2025-04-06 23:21:02.753  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
