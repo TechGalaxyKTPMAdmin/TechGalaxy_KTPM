@@ -79,6 +79,22 @@ public class OrderServiceImpl implements OrderService {
     public OrderResponse update(String id, OrderUpdateRequest orderRequest) {
         Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
 
+        Collection<CustomerResponseV2> customerResponses = customerServiceWrapper
+                .getCustomerById(orderRequest.getCustomer().getId());
+        customerResponses.stream().findFirst()
+                .orElseThrow(() -> new AppException(ErrorCode.CUSTOMER_NOT_FOUND));
+
+        boolean orderStatusValid = isValidOrderStatus(order.getOrderStatus(), orderRequest.getOrderStatus());
+        boolean paymentStatusValid = isValidPaymentStatus(order.getPaymentStatus(), orderRequest.getPaymentStatus());
+        if (!orderStatusValid) {
+            throw new AppException(ErrorCode.ORDER_STATUS_INVALID,
+                    "Trạng thái đơn hàng không hợp lệ: Không thể chuyển từ " + order.getOrderStatus() + " thành " + orderRequest.getOrderStatus() + ".");
+        }
+        if (!paymentStatusValid) {
+            throw new AppException(ErrorCode.PAYMENT_STATUS_INVALID,
+                    "Trạng thái thanh toán không hợp lệ: Không thể chuyển từ " + order.getPaymentStatus() + " thành " + orderRequest.getPaymentStatus() + ".");
+        }
+
         order.setAddress(orderRequest.getAddress());
         order.setOrderStatus(orderRequest.getOrderStatus());
         order.setPaymentStatus(orderRequest.getPaymentStatus());
@@ -355,4 +371,82 @@ public class OrderServiceImpl implements OrderService {
 
     @CacheEvict(value = "Products", allEntries = true)
     public void clearCache() {}
+
+    public boolean isValidPaymentStatus(PaymentStatus paymentStatusBefore, PaymentStatus paymentStatusAfter) {
+        // Nếu trạng thái trước và sau giống nhau thì hợp lệ
+        if (paymentStatusBefore == paymentStatusAfter) {
+            return true;
+        }
+
+        // Các quy tắc chuyển đổi trạng thái
+        switch (paymentStatusBefore) {
+            case PENDING:
+                // PENDING có thể chuyển thành bất kỳ trạng thái nào khác
+                return true;
+
+            case WAITING:
+                // WAITING có thể chuyển thành PAID, FAILED, hoặc CANCELLED
+                return paymentStatusAfter == PaymentStatus.PAID ||
+                        paymentStatusAfter == PaymentStatus.FAILED ||
+                        paymentStatusAfter == PaymentStatus.CANCELLED;
+
+            case PAID:
+                // PAID chỉ có thể chuyển thành REFUNDED
+                return paymentStatusAfter == PaymentStatus.REFUNDED;
+
+            case FAILED:
+                // FAILED có thể chuyển thành PENDING (thử lại) hoặc CANCELLED
+                return paymentStatusAfter == PaymentStatus.PENDING ||
+                        paymentStatusAfter == PaymentStatus.CANCELLED;
+
+            case REFUNDED:
+                // REFUNDED là trạng thái cuối, không thể chuyển sang trạng thái khác
+                return false;
+
+            case CANCELLED:
+                // CANCELLED là trạng thái cuối, không thể chuyển sang trạng thái khác
+                return false;
+
+            default:
+                return false;
+        }
+    }
+
+    public boolean isValidOrderStatus(OrderStatus orderStatusBefore, OrderStatus orderStatusAfter) {
+        // Nếu trạng thái trước và sau giống nhau thì hợp lệ
+        if (orderStatusBefore == orderStatusAfter) {
+            return true;
+        }
+
+        // Các quy tắc chuyển đổi trạng thái
+        switch (orderStatusBefore) {
+            case NEW:
+                // NEW có thể chuyển thành PROCESSING, CONFIRMED hoặc CANCELLED
+                return orderStatusAfter == OrderStatus.PROCESSING ||
+                        orderStatusAfter == OrderStatus.CONFIRMED ||
+                        orderStatusAfter == OrderStatus.CANCELLED;
+
+            case PROCESSING:
+                // PROCESSING có thể chuyển thành COMPLETED hoặc CANCELLED
+                return orderStatusAfter == OrderStatus.COMPLETED ||
+                        orderStatusAfter == OrderStatus.CANCELLED;
+
+            case CONFIRMED:
+                // CONFIRMED có thể chuyển thành PROCESSING hoặc CANCELLED
+                return orderStatusAfter == OrderStatus.PROCESSING ||
+                        orderStatusAfter == OrderStatus.CANCELLED;
+
+            case COMPLETED:
+                // COMPLETED là trạng thái cuối, không thể chuyển sang trạng thái khác
+                return false;
+
+            case CANCELLED:
+                // CANCELLED là trạng thái cuối, không thể chuyển sang trạng thái khác
+                return false;
+
+            default:
+                return false;
+        }
+    }
+
 }
