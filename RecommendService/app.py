@@ -54,6 +54,17 @@ def get_hybrid_recommendations(customer_id):
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
 
+@app.route('/api/product/<product_variant_id>', methods=['GET'])
+def get_product(product_variant_id):
+    try:
+        product = get_product_details(product_variant_id)
+        if product:
+            return jsonify({"success": True, "product": product})
+        else:
+            return jsonify({"success": False, "error": "Product variant not found"}), 404
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
 @app.route('/')
 def hello():
     return 'Hello, World!'

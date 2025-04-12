@@ -71,7 +71,7 @@ public class AuthController {
 
     @PostMapping("/logout")
     public ResponseEntity<DataResponse<String>> logout(HttpServletRequest request) {
-        return authService.logout();
+        return authService.logout(request);
     }
 
     @PostMapping("/refresh-token")
@@ -84,15 +84,20 @@ public class AuthController {
     public ResponseEntity<DataResponse<ValidateTokenResponse>> validateToken(
             @RequestHeader("Authorization") String authHeader,
             @RequestHeader(value = "X-Request-ID", required = false) String requestId) {
-        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-            log.warn("Invalid Authorization header [{}]", requestId);
-            return ResponseEntity.badRequest().build();
+        try {
+            if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+                log.warn("Invalid Authorization header [{}]", requestId);
+                return ResponseEntity.badRequest().build();
+            }
+            String token = authHeader.substring(7);
+            log.info("Received token [{}]: {}", requestId, token);
+            ResponseEntity<DataResponse<ValidateTokenResponse>> response = authService.validateToken(token);
+            log.info("Returning response [{}]: {}", requestId, response.getBody());
+            return response;
+        } catch (Exception e) {
+            log.error("Error validating token [{}]: {}", requestId, e.getMessage());
+            return ResponseEntity.status(401).body(new DataResponse<>(401, "Unauthorized", null));
         }
-        String token = authHeader.substring(7);
-        log.info("Received token [{}]: {}", requestId, token);
-        ResponseEntity<DataResponse<ValidateTokenResponse>> response = authService.validateToken(token);
-        log.info("Returning response [{}]: {}", requestId, response.getBody());
-        return response;
     }
 //    @PostMapping("/validate-token")
 //    public ResponseEntity<ValidateTokenResponse> validateToken(

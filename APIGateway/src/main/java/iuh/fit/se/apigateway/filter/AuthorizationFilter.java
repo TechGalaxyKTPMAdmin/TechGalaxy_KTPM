@@ -109,7 +109,7 @@ class RouteValidator {
             "/", "/api/accounts/auth/register", "/api/accounts/auth/login",
             "/storage/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html",
             "/payment/**", "/file", "/files", "/actuator/**", "/actuator/health", "/health/**", "/inventory/**",
-            "/api/recommendations/**");
+            "/api/recommendations/**", "/api/accounts/auth/refresh-token");
 
     private final List<String> whiteListGetOnly = List.of(
             "/products/**", "/colors/**", "/trademarks/**", "/memories/**",

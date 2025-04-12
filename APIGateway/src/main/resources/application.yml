@@ -50,7 +50,7 @@ spring:
         - id: UserService_Auth
           uri: lb://UserService
           predicates:
-            - Path=/api/accounts/auth/**
+            - Path=/api/accounts/**
           filters:
             - name: RequestRateLimiter
               args:
