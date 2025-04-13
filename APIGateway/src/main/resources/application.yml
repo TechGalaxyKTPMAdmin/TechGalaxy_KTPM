@@ -28,7 +28,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -50,7 +50,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -73,7 +73,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -96,7 +96,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -119,7 +119,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -142,7 +142,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -165,7 +165,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -188,7 +188,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -211,7 +211,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -234,7 +234,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -257,7 +257,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms        
@@ -280,7 +280,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms     
@@ -303,7 +303,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms     
@@ -326,7 +326,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms  
@@ -349,7 +349,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE,INTERNAL_SERVER_ERROR
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -372,7 +372,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -395,7 +395,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -418,7 +418,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -441,7 +441,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -464,7 +464,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE,INTERNAL_SERVER_ERROR
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -487,7 +487,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -510,7 +510,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -533,7 +533,7 @@ spring:
               args:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
-                methods: GET,POST
+                methods: GET,POST,PUT,DELETE,PATCH
                 backoff:
                   firstBackoff: 100ms
                   maxBackoff: 500ms
@@ -549,8 +549,9 @@ server:
   port: 8081
 logging:
   level:
-    org.springframework.cloud.gateway: DEBUG
-    reactor.netty: DEBUG
+    # org.springframework.cloud.gateway: DEBUG
+    # reactor.netty: DEBUG
+    io.github.resilience4j.circuitbreaker: DEBUG
 eureka:
   client:
     register-with-eureka: true
@@ -573,35 +574,34 @@ resilience4j:
   circuitbreaker:
     instances:
       userServiceCB:
-        slidingWindowSize: 10
+        slidingWindowSize: 1000
         failureRateThreshold: 50
-        slowCallRateThreshold: 50
-        slowCallDurationThreshold: 2s
-        permittedNumberOfCallsInHalfOpenState: 2
-        maxWaitDurationInHalfOpenState: 5s
-        waitDurationInOpenState: 10s
-        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
       productServiceCB:
-        slidingWindowSize: 10
+        slidingWindowSize: 1000
         failureRateThreshold: 50
-        waitDurationInOpenState: 10s
+        waitDurationInOpenState: 5s
       orderServiceCB:
-        slidingWindowSize: 10
+        slidingWindowSize: 1000
         failureRateThreshold: 50
-        waitDurationInOpenState: 10s
+        waitDurationInOpenState: 5s
       paymentServiceCB:
-        slidingWindowSize: 10
+        slidingWindowSize: 1000
         failureRateThreshold: 50
-        waitDurationInOpenState: 10s
+        waitDurationInOpenState: 5s
       inventoryServiceCB:
-        slidingWindowSize: 10
+        slidingWindowSize: 1000
         failureRateThreshold: 50
-        waitDurationInOpenState: 10s
+        waitDurationInOpenState: 5s
       notificationServiceCB:
-        slidingWindowSize: 100
+        slidingWindowSize: 10000
         failureRateThreshold: 50
-        waitDurationInOpenState: 10s
+        waitDurationInOpenState: 5s
       recommendationServiceCB:
-        slidingWindowSize: 10
+        slidingWindowSize: 1000
         failureRateThreshold: 50
-        waitDurationInOpenState: 10s
+        waitDurationInOpenState: 5s
+  timelimiter:
+    instances:
+      userServiceCB:
+        timeoutDuration: 3s
