@@ -2,6 +2,7 @@ package iuh.fit.se.userservice.config;
 
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;
+import iuh.fit.se.userservice.filter.TokenBlacklistFilter;
 import iuh.fit.se.userservice.util.SecurityUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -42,13 +43,14 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http,
-            CustomAuthenticationEntryPoint customAuthenticationEntryPoint) throws Exception {
+            CustomAuthenticationEntryPoint customAuthenticationEntryPoint, TokenBlacklistFilter tokenBlacklistFilter) throws Exception {
 
         String[] whiteList = {
                 "/",
                 "/api/auth/**",
                 "/api/v1/user/auth/**",
                 "/api/accounts/auth/register", "/api/accounts/auth/login",
+                "/api/accounts/auth/refresh-token",
                 "/storage/**",
                 "/v3/api-docs/**",
                 "/swagger-ui/**",
@@ -69,6 +71,7 @@ public class SecurityConfiguration {
                         .anyRequest().permitAll())
 
                 .httpBasic(Customizer.withDefaults())
+                .addFilterBefore(tokenBlacklistFilter, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class)
                 .oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults())
                         .authenticationEntryPoint(customAuthenticationEntryPoint))
                 .exceptionHandling(exceptions -> exceptions
@@ -99,7 +102,7 @@ public class SecurityConfiguration {
             try {
                 return jwtDecoder.decode(token);
             } catch (Exception e) {
-                log.error("Error decoding token", e.getMessage());
+                log.error("Error decoding token", e);
                 throw e;
             }
         };
