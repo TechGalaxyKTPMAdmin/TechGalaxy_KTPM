@@ -15,6 +15,10 @@ spring:
           predicates:
             - Path=/api/recommendations/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: recommendationServiceCB
+                fallbackUri: forward:/fallback/recommendation
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1000
@@ -33,6 +37,10 @@ spring:
           predicates:
             - Path=/api/v1/user/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: userServiceCB
+                fallbackUri: forward:/fallback/user
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1000
@@ -52,6 +60,10 @@ spring:
           predicates:
             - Path=/api/accounts/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: userServiceCB
+                fallbackUri: forward:/fallback/user
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1000
@@ -71,6 +83,10 @@ spring:
           predicates:
             - Path=/roles/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: userServiceCB
+                fallbackUri: forward:/fallback/user
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1000
@@ -90,6 +106,10 @@ spring:
           predicates:
             - Path=/permissions/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: userServiceCB
+                fallbackUri: forward:/fallback/user
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1000
@@ -109,6 +129,10 @@ spring:
           predicates:
             - Path=/system-users/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: userServiceCB
+                fallbackUri: forward:/fallback/user
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1000
@@ -128,6 +152,10 @@ spring:
           predicates:
             - Path=/customers/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: userServiceCB
+                fallbackUri: forward:/fallback/user
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1000
@@ -147,6 +175,10 @@ spring:
           predicates:
             - Path=/products/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: productServiceCB
+                fallbackUri: forward:/fallback/product
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1400
@@ -166,6 +198,10 @@ spring:
           predicates:
             - Path=/attributes/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: productServiceCB
+                fallbackUri: forward:/fallback/product
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1400
@@ -185,6 +221,10 @@ spring:
           predicates:
             - Path=/trademarks/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: productServiceCB
+                fallbackUri: forward:/fallback/product
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1400
@@ -204,6 +244,10 @@ spring:
           predicates:
             - Path=/product-feedbacks/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: productServiceCB
+                fallbackUri: forward:/fallback/product
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1400
@@ -223,6 +267,10 @@ spring:
           predicates:
             - Path=/usageCategories/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: productServiceCB
+                fallbackUri: forward:/fallback/product
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1400
@@ -242,6 +290,10 @@ spring:
           predicates:
             - Path=/colors/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: productServiceCB
+                fallbackUri: forward:/fallback/product
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1400
@@ -261,6 +313,10 @@ spring:
           predicates:
             - Path=/memories/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: productServiceCB
+                fallbackUri: forward:/fallback/product
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1400
@@ -280,6 +336,10 @@ spring:
           predicates:
             - Path=/orders/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: orderServiceCB
+                fallbackUri: forward:/fallback/order
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 600
@@ -299,6 +359,10 @@ spring:
           predicates:
             - Path=/order-details/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: orderServiceCB
+                fallbackUri: forward:/fallback/order
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 600
@@ -318,6 +382,10 @@ spring:
           predicates:
             - Path=/payment/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: paymentServiceCB
+                fallbackUri: forward:/fallback/payment
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1000
@@ -337,6 +405,10 @@ spring:
           predicates:
             - Path=/inventory/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: inventoryServiceCB
+                fallbackUri: forward:/fallback/inventory
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 800
@@ -356,6 +428,10 @@ spring:
           predicates:
             - Path=/api/v1/notification/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: notificationServiceCB
+                fallbackUri: forward:/fallback/notification
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1200
@@ -375,6 +451,10 @@ spring:
           predicates:
             - Path=/file/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: notificationServiceCB
+                fallbackUri: forward:/fallback/notification
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1200
@@ -394,6 +474,10 @@ spring:
           predicates:
             - Path=/files/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: notificationServiceCB
+                fallbackUri: forward:/fallback/notification
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1200
@@ -413,6 +497,10 @@ spring:
           predicates:
             - Path=/storage/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: notificationServiceCB
+                fallbackUri: forward:/fallback/notification
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1200
@@ -432,6 +520,10 @@ spring:
           predicates:
             - Path=/email/**
           filters:
+            - name: CircuitBreaker
+              args:
+                name: notificationServiceCB
+                fallbackUri: forward:/fallback/notification
             - name: RequestRateLimiter
               args:
                 redis-rate-limiter.replenishRate: 1200
@@ -507,5 +599,9 @@ resilience4j:
         waitDurationInOpenState: 10s
       notificationServiceCB:
         slidingWindowSize: 100
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+      recommendationServiceCB:
+        slidingWindowSize: 10
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
