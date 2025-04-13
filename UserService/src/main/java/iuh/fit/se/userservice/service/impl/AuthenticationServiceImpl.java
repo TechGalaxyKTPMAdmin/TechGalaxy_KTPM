@@ -9,8 +9,12 @@ import iuh.fit.se.userservice.entities.enumeration.CustomerStatus;
 import iuh.fit.se.userservice.entities.enumeration.SystemUserStatus;
 import iuh.fit.se.userservice.exception.AppException;
 import iuh.fit.se.userservice.exception.ErrorCode;
+import iuh.fit.se.userservice.provider.TokenProvider;
+import iuh.fit.se.userservice.service.AccountService;
 import iuh.fit.se.userservice.service.AuthenticationService;
+import iuh.fit.se.userservice.service.TokenService;
 import iuh.fit.se.userservice.util.SecurityUtil;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,24 +40,31 @@ import java.util.List;
 public class AuthenticationServiceImpl implements AuthenticationService {
 
         private final AuthenticationManagerBuilder authenticationManagerBuilder;
-        private final AccountServiceImpl accountService;
+        private final AccountService accountService;
+        private final TokenProvider.TokenExtractor tokenExtractor;
+
         private final SecurityUtil securityUtil;
 
         private final JwtDecoder jwtDecoder;
+
+        private final TokenService tokenService;
+
 
         @Value("${jwt.refresh-token-validity-in-seconds}")
         private long refreshTokenExpiration;
 
         @Autowired
         public AuthenticationServiceImpl(
-                        AuthenticationManagerBuilder authenticationManagerBuilder,
-                        AccountServiceImpl accountService,
-                        SecurityUtil securityUtil,
-                        JwtDecoder jwtDecoder) {
+                AuthenticationManagerBuilder authenticationManagerBuilder,
+                AccountServiceImpl accountService, TokenProvider.TokenExtractor tokenExtractor,
+                SecurityUtil securityUtil,
+                JwtDecoder jwtDecoder, TokenServiceImpl tokenService) {
                 this.authenticationManagerBuilder = authenticationManagerBuilder;
                 this.accountService = accountService;
-                this.securityUtil = securityUtil;
+            this.tokenExtractor = tokenExtractor;
+            this.securityUtil = securityUtil;
                 this.jwtDecoder = jwtDecoder;
+            this.tokenService = tokenService;
         }
 
         @Override
@@ -98,7 +109,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                         ResponseCookie resCookie = ResponseCookie
                                         .from("refresh_token", refreshToken)
                                         .httpOnly(true)
-                                        .secure(true)
+                                        .secure(false)
                                         .path("/")
                                         .maxAge(refreshTokenExpiration)
                                         .build();
@@ -163,12 +174,22 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         }
 
         @Override
-        public ResponseEntity<DataResponse<String>> logout() {
+        public ResponseEntity<DataResponse<String>> logout(HttpServletRequest request) {
                 String email = SecurityUtil.getCurrentUserLogin().orElse("");
 
                 if (email.isEmpty()) {
                         throw new AppException(ErrorCode.NO_LOGIN);
                 }
+
+                String token = tokenExtractor.extract(request);
+                if (token == null) {
+                        throw new AppException(ErrorCode.NOT_IN_REQUEST);
+                }
+
+                System.out.println("Token: " + token);
+
+                // Blacklist token
+                tokenService.blacklistToken(token);
 
                 // Update token in account
                 this.accountService.updateToken("", email);
@@ -232,7 +253,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
                 String accessToken = securityUtil.createAccessToken(email, res);
                 res.setAccessToken(accessToken);
-
+                System.out.println("Access token after refresh: " + accessToken);
                 String new_refresh_token = securityUtil.createRefreshToken(email, res);
                 this.accountService.updateToken(email, new_refresh_token);
                 res.setAccount(null);

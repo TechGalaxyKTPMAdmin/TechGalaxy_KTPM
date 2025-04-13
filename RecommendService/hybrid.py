@@ -1,4 +1,3 @@
-
 from collaborative import collaborative_filtering
 from content_based import content_based_filtering
 
@@ -10,10 +9,9 @@ def hybrid_recommendation(customer_id, top_n=5):
     seen = set()
 
     for product in collaborative_results + content_based_results:
-        if product and product['id'] not in seen:
+        if product and product['variant_id'] not in seen:
             combined_results.append(product)
-            seen.add(product['id'])
-
+            seen.add(product['variant_id'])
         if len(combined_results) >= top_n:
             break
 

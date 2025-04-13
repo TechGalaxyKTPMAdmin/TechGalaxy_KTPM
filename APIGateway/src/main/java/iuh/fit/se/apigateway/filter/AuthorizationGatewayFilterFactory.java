@@ -87,7 +87,7 @@ public class AuthorizationGatewayFilterFactory extends AbstractGatewayFilterFact
                     })
                     .onErrorResume(e -> {
                         log.error("Error validating token", e);
-                        exchange.getResponse().setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR);
+                        exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
                         return exchange.getResponse().setComplete();
                     });
         };

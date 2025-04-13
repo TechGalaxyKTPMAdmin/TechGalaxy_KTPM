@@ -7,6 +7,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 public class CorsConfig {
@@ -27,10 +28,10 @@ public class CorsConfig {
 
         // gửi kèm cookies hay không
         configuration.setAllowCredentials(true);
-//
-//        // Cho phép FE đọc Set-Cookie
-//        configuration.setExposedHeaders(List.of("Set-Cookie"));
-//
+        //
+        // // Cho phép FE đọc Set-Cookie
+        configuration.setExposedHeaders(List.of("Set-Cookie"));
+        //
         // thời gian pre-flight request có thể cache (tính theo seconds)
         configuration.setMaxAge(3600L);
 

@@ -27,6 +27,7 @@ public class GlobalException {
     // Handle all exception
     @ExceptionHandler(Exception.class)
     public ResponseEntity<DataResponse> handleException() {
+        System.out.println("Exception: " + Exception.class.getName() + " occurred");
         DataResponse dataResponse = DataResponse.builder().status(ErrorCode.UNCATEGORIZED_ERROR.getCode())
                 .message(ErrorCode.UNCATEGORIZED_ERROR.getMessage()).build();
         return ResponseEntity.status(ErrorCode.UNCATEGORIZED_ERROR.getHttpStatus()).body(dataResponse);

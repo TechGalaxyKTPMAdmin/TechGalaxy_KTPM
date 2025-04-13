@@ -133,6 +133,7 @@ public class AccountController {
 
     @GetMapping
     public ResponseEntity<DataResponse<AccountResponse>> getAllSystemUserAccounts() {
+        System.out.println("Get alls");
         List<AccountResponse> accounts = accountService.findAllSystemUserAccounts();
         return ResponseEntity.ok(DataResponse.<AccountResponse>builder()
                 .status(200)
