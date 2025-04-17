@@ -1,6 +1,7 @@
 package iuh.fit.se.orderservice.dto.request;
 
 import iuh.fit.se.orderservice.entity.enumeration.OrderStatus;
+import iuh.fit.se.orderservice.entity.enumeration.PaymentMethod;
 import iuh.fit.se.orderservice.entity.enumeration.PaymentStatus;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;

@@ -1,10 +1,9 @@
 package iuh.fit.se.orderservice.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-import iuh.fit.se.orderservice.dto.request.PaymentMethod;
+import iuh.fit.se.orderservice.entity.enumeration.PaymentMethod;
 import iuh.fit.se.orderservice.entity.OrderDetail;
 import iuh.fit.se.orderservice.entity.enumeration.OrderStatus;
 import iuh.fit.se.orderservice.entity.enumeration.PaymentStatus;
