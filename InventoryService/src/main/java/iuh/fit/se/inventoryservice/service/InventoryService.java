@@ -1,11 +1,13 @@
 package iuh.fit.se.inventoryservice.service;
 
+import iuh.fit.se.inventoryservice.dto.request.InventoryRequest;
 import iuh.fit.se.inventoryservice.entities.Inventory;
 import iuh.fit.se.inventoryservice.entities.InventoryLog;
 import iuh.fit.se.inventoryservice.entities.enumeration.ChangeType;
 import iuh.fit.se.inventoryservice.event.OrderEvent;
 import iuh.fit.se.inventoryservice.repository.InventoryLogRepository;
 import iuh.fit.se.inventoryservice.repository.InventoryRepository;
+import jakarta.persistence.criteria.CriteriaBuilder.In;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -160,6 +162,32 @@ public class InventoryService {
                 .changeReason("Rollback for order: " + orderId)
                 .build();
         inventoryLogRepository.save(log);
+    }
+
+    public Inventory getInventoryByProductVariantDetailId(String productVariantDetailId) {
+        return inventoryRepository.findByProductVariantDetailId(productVariantDetailId)
+                .orElseThrow(() -> new RuntimeException("Product not found: " + productVariantDetailId));
+    }
+
+    public Inventory getInventoryById(String id) {
+        return inventoryRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Inventory not found: " + id));
+    }
+
+    // add new inventory
+    public Inventory addInventory(InventoryRequest inventoryRequest) {
+        Inventory existingInventory = inventoryRepository
+                .findByProductVariantDetailId(inventoryRequest.getProductVariantDetailId()).orElse(null);
+        if (existingInventory != null) {
+            existingInventory
+                    .setStockQuantity(existingInventory.getStockQuantity() + inventoryRequest.getStockQuantity());
+            return inventoryRepository.save(existingInventory);
+        }
+        Inventory inventory = new Inventory();
+        inventory.setProductVariantDetailId(inventoryRequest.getProductVariantDetailId());
+        inventory.setStockQuantity(inventoryRequest.getStockQuantity());
+
+        return inventoryRepository.save(inventory);
     }
 
 }

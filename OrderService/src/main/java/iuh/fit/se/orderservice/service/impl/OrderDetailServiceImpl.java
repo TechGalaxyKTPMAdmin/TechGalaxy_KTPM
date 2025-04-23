@@ -1,6 +1,6 @@
 package iuh.fit.se.orderservice.service.impl;
 
-import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
+import iuh.fit.se.orderservice.dto.request.OrderRequestV2;
 import iuh.fit.se.orderservice.dto.request.OrderDetailRequest;
 import iuh.fit.se.orderservice.dto.response.OrderDetailResponse;
 import iuh.fit.se.orderservice.entity.Order;
@@ -37,10 +37,11 @@ public class OrderDetailServiceImpl implements OrderDetailService {
     }
 
     @Override
-    public boolean save(List<OrderCreateRequest.ProductDetailRequest> productDetails, Order order) {
-        for (OrderCreateRequest.ProductDetailRequest productDetail : productDetails) {// check product
-//            if (restTemplate.getForObject('url', ProductDetailResponse.class, productDetail.getProductVariantDetailId()))
-//                return false;
+    public boolean save(List<OrderRequestV2.ProductDetailOrder> productDetails, Order order) {
+        for (OrderRequestV2.ProductDetailOrder productDetail : productDetails) {// check product
+            // if (restTemplate.getForObject('url', ProductDetailResponse.class,
+            // productDetail.getProductVariantDetailId()))
+            // return false;
             OrderDetail orderDetail = new OrderDetail();
             orderDetail.setOrder(order);
             orderDetail.setDetailStatus(DetailStatus.PENDING);
@@ -55,7 +56,8 @@ public class OrderDetailServiceImpl implements OrderDetailService {
 
     @Override
     public OrderDetailResponse findById(String id) {
-        return OrderDetailMapper.INSTANCE.toOrderDetailResponse(orderDetailRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_DETAIL_NOTFOUND)));
+        return OrderDetailMapper.INSTANCE.toOrderDetailResponse(orderDetailRepository.findById(id)
+                .orElseThrow(() -> new AppException(ErrorCode.ORDER_DETAIL_NOTFOUND)));
     }
 
     @Override
@@ -64,8 +66,10 @@ public class OrderDetailServiceImpl implements OrderDetailService {
     }
 
     @Override
-    public OrderDetailResponse getOrderDetailByOrderIdAndProductVariantDetailId(String orderId, String productVariantDetailId) {
-        OrderDetail orderDetail = orderDetailRepository.findOrderDetailByOrderIdAndProductVariantDetailId(orderId, productVariantDetailId);
+    public OrderDetailResponse getOrderDetailByOrderIdAndProductVariantDetailId(String orderId,
+            String productVariantDetailId) {
+        OrderDetail orderDetail = orderDetailRepository.findOrderDetailByOrderIdAndProductVariantDetailId(orderId,
+                productVariantDetailId);
         return OrderDetailMapper.INSTANCE.toOrderDetailResponse(orderDetail);
     }
 }

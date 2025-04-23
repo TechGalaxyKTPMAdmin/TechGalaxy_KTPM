@@ -2,6 +2,11 @@ package iuh.fit.se.productservice.dto.request;
 
 import iuh.fit.se.productservice.entities.enumeration.ProductStatus;
 import iuh.fit.se.productservice.validate.DiscountConstraint;
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -11,7 +16,11 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ProductDetailUpdateRequest {
+
+    @DecimalMin(value = "0.0", message = "PRODUCT_PRICE_INVALID")
+    @NotNull(message = "PRODUCT_PRICE_INVALID")
     Double price;
+    @NotNull(message = "PRODUCT_DISCOUNT_INVALID")
     @DiscountConstraint(message = "PRODUCT_DISCOUNT_INVALID")
     Double sale;
     ProductStatus status;
