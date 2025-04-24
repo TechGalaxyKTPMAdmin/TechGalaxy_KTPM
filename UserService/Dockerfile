@@ -1,20 +1,23 @@
 # === Build Stage ===
-FROM maven:3.8.5-openjdk-17-slim AS build
+FROM eclipse-temurin:17 AS build
 WORKDIR /app
 
 # 1. Copy pom.xml để cache Maven dependencies
 COPY ./UserService/pom.xml ./UserService/pom.xml
-RUN mvn -f ./UserService/pom.xml dependency:go-offline
+COPY ./UserService/mvnw ./UserService/mvnw
+COPY ./UserService/.mvn ./UserService/.mvn
+
+RUN ./UserService/mvnw -f ./UserService/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ mã nguồn
 COPY ./UserService ./UserService
 
 # 3. Build ứng dụng
 WORKDIR /app/UserService
-RUN mvn clean package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 # === Runtime Stage ===
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17
 WORKDIR /app
 
 # Cài đặt wget

@@ -1,20 +1,23 @@
 # === Build Stage ===
-FROM maven:3.8.5-openjdk-17-slim AS build
+FROM eclipse-temurin:17 AS build
 WORKDIR /app
 
 # 1. Copy pom.xml để cache dependencies
 COPY ./OrderService/pom.xml ./OrderService/pom.xml
-RUN mvn -f ./OrderService/pom.xml dependency:go-offline
+COPY ./OrderService/mvnw ./OrderService/mvnw
+COPY ./OrderService/.mvn ./OrderService/.mvn
+
+RUN ./OrderService/mvnw -f ./OrderService/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ mã nguồn sau khi dependencies đã cache
 COPY ./OrderService ./OrderService
 
 # 3. Build ứng dụng
 WORKDIR /app/OrderService
-RUN mvn clean package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 # === Runtime Stage ===
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17
 WORKDIR /app
 
 # Cài đặt wget

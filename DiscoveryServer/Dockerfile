@@ -1,21 +1,24 @@
 # === Build Stage ===
-FROM maven:3.8.5-openjdk-17-slim AS build
+FROM eclipse-temurin:17 AS build
 
 WORKDIR /app
 
 # 1. Copy pom.xml trước để cache dependencies
 COPY ./DiscoveryServer/pom.xml ./DiscoveryServer/pom.xml
-RUN mvn -f ./DiscoveryServer/pom.xml dependency:go-offline
+COPY ./DiscoveryServer/mvnw ./DiscoveryServer/mvnw
+COPY ./DiscoveryServer/.mvn ./DiscoveryServer/.mvn
+
+RUN ./DiscoveryServer/mvnw -f ./DiscoveryServer/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ source code
 COPY ./DiscoveryServer ./DiscoveryServer
 
 # 3. Build project
 WORKDIR /app/DiscoveryServer
-RUN mvn clean package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 # === Runtime Stage ===
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17
 WORKDIR /app
 
 # Cài đặt wget

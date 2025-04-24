@@ -1,20 +1,23 @@
 # === Build Stage ===
-FROM maven:3.8.5-openjdk-17-slim AS build
+FROM eclipse-temurin:17 AS build
 WORKDIR /app
 
 # 1. Copy pom.xml để cache dependencies
 COPY ./PaymentService/pom.xml ./PaymentService/pom.xml
-RUN mvn -f ./PaymentService/pom.xml dependency:go-offline
+COPY ./PaymentService/mvnw ./PaymentService/mvnw
+COPY ./PaymentService/.mvn ./PaymentService/.mvn
+
+RUN ./PaymentService/mvnw -f ./PaymentService/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ source code sau khi dependencies đã cache
 COPY ./PaymentService ./PaymentService
 
 # 3. Build ứng dụng
 WORKDIR /app/PaymentService
-RUN mvn clean package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 # === Runtime Stage ===
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17
 WORKDIR /app
 
 ENV DEBIAN_FRONTEND=noninteractive

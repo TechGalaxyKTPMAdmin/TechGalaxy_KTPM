@@ -1,20 +1,23 @@
 # === Build Stage ===
-FROM maven:3.8.5-openjdk-17-slim AS build
+FROM eclipse-temurin:17 AS build
 WORKDIR /app
 
 # 1. Cache dependencies qua pom.xml
 COPY ./NotificationService/pom.xml ./NotificationService/pom.xml
-RUN mvn -f ./NotificationService/pom.xml dependency:go-offline
+COPY ./NotificationService/mvnw ./NotificationService/mvnw
+COPY ./NotificationService/.mvn ./NotificationService/.mvn
+
+RUN ./NotificationService/mvnw -f ./NotificationService/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ mã nguồn
 COPY ./NotificationService ./NotificationService
 
 # 3. Build WAR file
 WORKDIR /app/NotificationService
-RUN mvn clean package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 # === Runtime Stage ===
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17
 WORKDIR /app
 
 # Cài đặt wget
