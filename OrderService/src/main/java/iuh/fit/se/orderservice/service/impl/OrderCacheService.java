@@ -6,6 +6,7 @@ import iuh.fit.se.orderservice.dto.response.SystemUserResponse;
 import iuh.fit.se.orderservice.mapper.OrderMapper;
 import iuh.fit.se.orderservice.repository.OrderRepository;
 import iuh.fit.se.orderservice.service.wrapper.CustomerServiceWrapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ public class OrderCacheService {
     private final OrderMapper orderMapper;
     private final CustomerServiceWrapper customerServiceWrapper;
 
+    @Autowired
     public OrderCacheService(OrderRepository orderRepository, OrderMapper orderMapper, CustomerServiceWrapper customerServiceWrapper) {
         this.orderRepository = orderRepository;
         this.orderMapper = orderMapper;
