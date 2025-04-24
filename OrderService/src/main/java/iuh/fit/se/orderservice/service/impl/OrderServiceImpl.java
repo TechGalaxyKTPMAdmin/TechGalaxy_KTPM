@@ -49,6 +49,7 @@ public class OrderServiceImpl implements OrderService {
     private final OrderDetailRepository orderDetailRepository;
     private final InventoryServiceWrapper inventoryServiceWrapper;
     private final CustomerServiceWrapper customerServiceWrapper;
+    private final OrderCacheService orderCacheService;
     // private final SystemUserServiceWrapper systemUserServiceWrapper;
     private final OrderResponseCache orderResponseCache;
     private final RabbitTemplate rabbitTemplate;
@@ -67,10 +68,6 @@ public class OrderServiceImpl implements OrderService {
         Order order = orderRepository.findById(id).orElseThrow(() -> new AppException(ErrorCode.ORDER_NOTFOUND));
         List<OrderDetail> orderDetails = orderDetailRepository.findOrderDetailsByOrderId(order.getId());
         order.setOrderDetails(orderDetails);
-        orderDetails.forEach(orderDetail -> {
-            System.out.println("test");
-            System.out.println(orderDetail.getId());
-        });
         return objectMapper.convertValue(orderMapper.toOrderResponse(order), OrderResponse.class);
     }
 
@@ -103,16 +100,8 @@ public class OrderServiceImpl implements OrderService {
         order.setPaymentMethod(orderRequest.getPaymentMethod());
         Order orderSaved = orderRepository.save(order);
 
-        updateFindAllCache();
+        orderCacheService.updateFindAllCache();
         return orderMapper.toOrderResponse(orderSaved);
-    }
-
-    @CachePut(value = "OrderResponses", key = "'findAll'")
-    public List<OrderResponse> updateFindAllCache() {
-        List<Order> orders = orderRepository.findAll();
-        return orders.stream()
-                .map(orderMapper::toOrderResponse)
-                .collect(Collectors.toList());
     }
 
     @Override
