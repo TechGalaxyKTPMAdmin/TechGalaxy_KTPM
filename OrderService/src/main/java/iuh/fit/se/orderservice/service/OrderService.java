@@ -1,7 +1,8 @@
 package iuh.fit.se.orderservice.service;
 
+import iuh.fit.se.orderservice.dto.request.OrderRequestV2;
 import iuh.fit.se.orderservice.dto.request.OrderRequest;
-import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
+import iuh.fit.se.orderservice.dto.request.OrderRequestV2;
 import iuh.fit.se.orderservice.dto.request.OrderUpdateRequest;
 import iuh.fit.se.orderservice.dto.response.OrderResponse;
 import iuh.fit.se.orderservice.entity.Order;
@@ -11,7 +12,7 @@ import org.springframework.hateoas.PagedModel;
 import java.util.List;
 
 public interface OrderService {
-//    OrderResponse save(OrderRequest orderRequest);
+    // OrderResponse save(OrderRequest orderRequest);
 
     OrderResponse findById(String id);
 
@@ -23,5 +24,5 @@ public interface OrderService {
 
     List<OrderResponse> findOrdersByCustomerId(String id);
 
-    OrderResponse createOrders(OrderCreateRequest orderCreateRequest, HttpServletRequest request);
+    OrderResponse createOrders(OrderRequestV2 OrderRequestV2, HttpServletRequest request);
 }

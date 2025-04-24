@@ -1,6 +1,6 @@
 package iuh.fit.se.orderservice.controller;
 
-import iuh.fit.se.orderservice.dto.request.OrderCreateRequest;
+import iuh.fit.se.orderservice.dto.request.OrderRequestV2;
 import iuh.fit.se.orderservice.dto.request.OrderRequest;
 import iuh.fit.se.orderservice.dto.request.OrderUpdateRequest;
 import iuh.fit.se.orderservice.dto.response.DataResponse;
@@ -33,9 +33,10 @@ public class OrderController {
                 .build());
     }
 
-    @PostMapping
-    public ResponseEntity<DataResponse<OrderResponse>> createOrder(@RequestBody OrderCreateRequest request, HttpServletRequest httpRequest) {
-        List<OrderResponse> orderResponses = List.of(orderService.createOrders(request,httpRequest));
+    @PostMapping("/v2")
+    public ResponseEntity<DataResponse<OrderResponse>> createOrder(@RequestBody OrderRequestV2 request,
+            HttpServletRequest httpRequest) {
+        List<OrderResponse> orderResponses = List.of(orderService.createOrders(request, httpRequest));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Create order success")
                 .data(orderResponses)
@@ -43,7 +44,8 @@ public class OrderController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<DataResponse<OrderResponse>> updateOrder(@PathVariable String id, @RequestBody OrderUpdateRequest orderUpdateRequest) {
+    public ResponseEntity<DataResponse<OrderResponse>> updateOrder(@PathVariable String id,
+            @RequestBody OrderUpdateRequest orderUpdateRequest) {
         List<OrderResponse> orderResponses = List.of(orderService.update(id, orderUpdateRequest));
         return ResponseEntity.ok(DataResponse.<OrderResponse>builder()
                 .message("Update order success")
@@ -55,10 +57,10 @@ public class OrderController {
     public ResponseEntity<DataResponse<OrderResponse>> getOrderById(@PathVariable String id) {
         OrderResponse orderResponse = orderService.findById(id);
 
-//        System.out.println("57");
-//        orderResponse.getOrderDetails().forEach(orderDetail -> {
-//            System.out.println(orderDetail.getId());
-//        });
+        // System.out.println("57");
+        // orderResponse.getOrderDetails().forEach(orderDetail -> {
+        // System.out.println(orderDetail.getId());
+        // });
 
         if (orderResponse == null)
             throw new AppException(ErrorCode.ORDER_NOTFOUND);

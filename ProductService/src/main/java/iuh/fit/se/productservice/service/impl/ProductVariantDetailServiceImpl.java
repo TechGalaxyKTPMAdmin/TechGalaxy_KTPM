@@ -1,7 +1,8 @@
 package iuh.fit.se.productservice.service.impl;
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import iuh.fit.se.productservice.dto.request.InventoryRequest;
 import iuh.fit.se.productservice.dto.request.ProductDetailUpdateRequest;
 import iuh.fit.se.productservice.dto.request.ProductVariantDetailRequest;
 import iuh.fit.se.productservice.dto.response.ProductDetailResponse;
@@ -19,6 +20,7 @@ import iuh.fit.se.productservice.repository.MemoryRepository;
 import iuh.fit.se.productservice.repository.ProductVariantDetailRepository;
 import iuh.fit.se.productservice.repository.ProductVariantRepository;
 import iuh.fit.se.productservice.service.ProductVariantDetailService;
+import iuh.fit.se.productservice.service.wrapper.InventoryServiceWrapper;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -49,6 +51,8 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     @Qualifier("redisObjectMapper")
     ObjectMapper objectMapper;
 
+    InventoryServiceWrapper inventoryServiceWrapper;
+
     @Override
     public ProductVariantDetailResponse getProductVariantDetail(String variantId) {
         List<ProductVariantDetail> details = productVariantDetailRepository.findAllByProductVariantId(variantId);
@@ -63,13 +67,15 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     public ProductDetailResponse getProductDetail(String productDetailId) {
         ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productDetailId)
                 .orElseThrow(() -> new AppException(ErrorCode.PRODUCT_NOTFOUND));
-        return objectMapper.convertValue(productVariantDetailMapper.toResponse(productVariantDetail), ProductDetailResponse.class);
+        return objectMapper.convertValue(productVariantDetailMapper.toResponse(productVariantDetail),
+                ProductDetailResponse.class);
     }
 
     @Override
     @Cacheable(value = "ProductDetailResponses", key = "'getProductDetailsByIds'", unless = "#result.isEmpty()")
     public List<ProductDetailResponse> getProductDetailsByIds(List<String> productDetailIds) {
-        List<ProductVariantDetail> productVariantDetails = productVariantDetailRepository.findAllByIdIsIn(productDetailIds);
+        List<ProductVariantDetail> productVariantDetails = productVariantDetailRepository
+                .findAllByIdIsIn(productDetailIds);
         if (!productVariantDetails.isEmpty()) {
             return productVariantDetails.stream().map(productVariantDetailMapper::toResponse).toList();
         }
@@ -78,13 +84,15 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
 
     @Override
     @CacheEvict(value = "ProductDetailResponses", key = "#productDetailId")
-    public ProductDetailResponse updateProductVariantDetail(String productDetailId, ProductDetailUpdateRequest productDetailUpdateRequest) {
+    public ProductDetailResponse updateProductVariantDetail(String productDetailId,
+            ProductDetailUpdateRequest productDetailUpdateRequest) {
         ProductDetailResponse productDetailResponse;
-        ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productDetailId).orElseThrow(() ->
-                new AppException(ErrorCode.PRODUCT_NOTFOUND));
+        ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productDetailId)
+                .orElseThrow(() -> new AppException(ErrorCode.PRODUCT_NOTFOUND));
         productVariantDetailMapper.toUpdate(productVariantDetail, productDetailUpdateRequest);
         try {
-            productDetailResponse = productVariantDetailMapper.toResponse(productVariantDetailRepository.save(productVariantDetail));
+            productDetailResponse = productVariantDetailMapper
+                    .toResponse(productVariantDetailRepository.save(productVariantDetail));
         } catch (Exception e) {
             throw new AppException(ErrorCode.PRODUCT_UPDATE_FAILED);
         }
@@ -96,15 +104,16 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     @CacheEvict(value = "ProductDetailResponses", key = "#productVariantDetailId")
     public ProductDetailResponse updateQuantity(String productVariantDetailId, int quantity) {
         ProductDetailResponse productDetailResponse;
-        ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productVariantDetailId).orElseThrow(() ->
-                new AppException(ErrorCode.PRODUCT_NOTFOUND));
+        ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productVariantDetailId)
+                .orElseThrow(() -> new AppException(ErrorCode.PRODUCT_NOTFOUND));
         if (productVariantDetail.getQuantity() >= quantity) {
             productVariantDetail.setQuantity(productVariantDetail.getQuantity() - quantity);
         } else {
             throw new AppException(ErrorCode.PRODUCT_NOT_ENOUGH);
         }
         try {
-            productDetailResponse = productVariantDetailMapper.toResponse(productVariantDetailRepository.save(productVariantDetail));
+            productDetailResponse = productVariantDetailMapper
+                    .toResponse(productVariantDetailRepository.save(productVariantDetail));
         } catch (Exception e) {
             throw new AppException(ErrorCode.PRODUCT_UPDATE_FAILED);
         }
@@ -119,7 +128,8 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     }
 
     @Override
-    public List<String> createProductVariantDetail(String variantId, List<ProductVariantDetailRequest> productVariantDetailRequests) {
+    public List<String> createProductVariantDetail(String variantId,
+            List<ProductVariantDetailRequest> productVariantDetailRequests) {
         ProductVariant productVariant = productVariantRepository.findById(variantId)
                 .orElseThrow(() -> new AppException(ErrorCode.PRODUCT_NOTFOUND));
         List<ProductVariantDetail> detailsToSave = new ArrayList<>();
@@ -130,12 +140,23 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
             for (ProductVariantDetailRequest.ColorRequest colorRequest : requestDTO.getColors()) {
                 Color color = colorRepository.findById(colorRequest.getColorId())
                         .orElseThrow(() -> new AppException(ErrorCode.COLOR_NOTFOUND));
-                ProductVariantDetail detail = productVariantDetailMapper.toProductVariantDetail(requestDTO, colorRequest, color, memory, productVariant);
+                ProductVariantDetail detail = productVariantDetailMapper.toProductVariantDetail(requestDTO,
+                        colorRequest, color, memory, productVariant);
                 detailsToSave.add(detail);
             }
         }
-        //productVariantDetailRepository.saveAll(detailsToSave);
+        // productVariantDetailRepository.saveAll(detailsToSave);
         Iterable<ProductVariantDetail> savedDetails = productVariantDetailRepository.saveAll(detailsToSave);
+
+        if (savedDetails.iterator().hasNext()) {
+            savedDetails.forEach(detail -> {
+                InventoryRequest inventoryRequest = new InventoryRequest();
+                inventoryRequest.setProductVariantDetailId(detail.getId());
+                inventoryRequest.setStockQuantity(detail.getQuantity());
+                inventoryServiceWrapper.saveInventory(inventoryRequest);
+            });
+        }
+
         List<String> detailIds = new ArrayList<>();
         if (savedDetails.iterator().hasNext()) {
             savedDetails.forEach(detail -> detailIds.add(detail.getId()));
@@ -147,10 +168,11 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     @Override
     public void deleteProductVariantDetail(String productDetailId) {
         try {
-//            long usageCount = productVariantDetailRepository.countOrderDetailsByProductVariantDetailId(productDetailId);
-//            if (usageCount > 0) {
-//                throw new AppException(ErrorCode.PRODUCT_DELETE_FAILED);
-//            }
+            // long usageCount =
+            // productVariantDetailRepository.countOrderDetailsByProductVariantDetailId(productDetailId);
+            // if (usageCount > 0) {
+            // throw new AppException(ErrorCode.PRODUCT_DELETE_FAILED);
+            // }
             productVariantDetailRepository.deleteById(productDetailId);
         } catch (Exception e) {
             throw new AppException(ErrorCode.PRODUCT_DELETE_FAILED);
@@ -158,21 +180,27 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     }
 
     @Override
-    public Page<ProductPageResponse> getFilteredProductDetails(List<String> trademark, Double minPrice, Double maxPrice, List<String> memory, List<String> usageCategoryId, List<String> values, String sort, Integer page, Integer size) {
+    public Page<ProductPageResponse> getFilteredProductDetails(List<String> trademark, Double minPrice, Double maxPrice,
+            List<String> memory, List<String> usageCategoryId, List<String> values, String sort, Integer page,
+            Integer size) {
         Pageable pageable;
         if (sort != null && !sort.isEmpty()) {
-            Sort sortOrder = sort.equalsIgnoreCase("asc") ? Sort.by("price").ascending() : Sort.by("price").descending();
+            Sort sortOrder = sort.equalsIgnoreCase("asc") ? Sort.by("price").ascending()
+                    : Sort.by("price").descending();
             pageable = PageRequest.of(page, size, sortOrder);
         } else {
             pageable = PageRequest.of(page, size);
         }
-        Page<ProductVariantDetail> productVariantDetails = productVariantDetailRepository.findFilteredProductDetails(trademark, minPrice, maxPrice, memory, usageCategoryId, values, pageable);
+        Page<ProductVariantDetail> productVariantDetails = productVariantDetailRepository
+                .findFilteredProductDetails(trademark, minPrice, maxPrice, memory, usageCategoryId, values, pageable);
         return productVariantDetails.map(productVariantDetailMapper::toResponsePage);
     }
 
     @Override
-    public ProductDetailResponse findProductVariantDetailByProductVariantAndColorAndMemory(String productVariantId, String color, String memory) {
-        ProductVariantDetail productVariantDetail = productVariantDetailRepository.findProductVariantDetailByProductVariantAndColorAndMemory(productVariantId, color, memory);
+    public ProductDetailResponse findProductVariantDetailByProductVariantAndColorAndMemory(String productVariantId,
+            String color, String memory) {
+        ProductVariantDetail productVariantDetail = productVariantDetailRepository
+                .findProductVariantDetailByProductVariantAndColorAndMemory(productVariantId, color, memory);
         return productVariantDetailMapper.toResponse(productVariantDetail);
     }
 

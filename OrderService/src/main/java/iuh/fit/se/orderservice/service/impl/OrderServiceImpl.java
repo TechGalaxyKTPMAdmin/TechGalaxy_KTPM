@@ -88,11 +88,13 @@ public class OrderServiceImpl implements OrderService {
         boolean paymentStatusValid = isValidPaymentStatus(order.getPaymentStatus(), orderRequest.getPaymentStatus());
         if (!orderStatusValid) {
             throw new AppException(ErrorCode.ORDER_STATUS_INVALID,
-                    "Trạng thái đơn hàng không hợp lệ: Không thể chuyển từ " + order.getOrderStatus() + " thành " + orderRequest.getOrderStatus() + ".");
+                    "Trạng thái đơn hàng không hợp lệ: Không thể chuyển từ " + order.getOrderStatus() + " thành "
+                            + orderRequest.getOrderStatus() + ".");
         }
         if (!paymentStatusValid) {
             throw new AppException(ErrorCode.PAYMENT_STATUS_INVALID,
-                    "Trạng thái thanh toán không hợp lệ: Không thể chuyển từ " + order.getPaymentStatus() + " thành " + orderRequest.getPaymentStatus() + ".");
+                    "Trạng thái thanh toán không hợp lệ: Không thể chuyển từ " + order.getPaymentStatus() + " thành "
+                            + orderRequest.getPaymentStatus() + ".");
         }
 
         order.setAddress(orderRequest.getAddress());
@@ -163,11 +165,11 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     @Transactional
-    public OrderResponse createOrders(OrderCreateRequest orderCreateRequest, HttpServletRequest request) {
+    public OrderResponse createOrders(OrderRequestV2 OrderRequestV2, HttpServletRequest request) {
 
         // 1. Kiểm tra tồn kho cho tất cả sản phẩm (sync check)
         // Chỉ cần 1 sản phẩm không đủ số lượng => thông báo lỗi
-        for (OrderCreateRequest.ProductDetailRequest productDetail : orderCreateRequest.getProductDetailOrders()) {
+        for (OrderRequestV2.ProductDetailOrder productDetail : OrderRequestV2.getProductDetailOrders()) {
             boolean isAvailable = inventoryServiceWrapper.checkStock(productDetail.getProductVariantDetailId(),
                     productDetail.getQuantity());
             if (!isAvailable) {
@@ -178,18 +180,18 @@ public class OrderServiceImpl implements OrderService {
 
         // 2. Tạo đơn hàng
         Order order = Order.builder()
-                .paymentStatus(orderCreateRequest.getPaymentStatus())
-                .orderStatus(orderCreateRequest.getOrderStatus())
-                .customerId(orderCreateRequest.getCustomerId())
-                .systemUserId(orderCreateRequest.getSystemUserId())
+                .paymentStatus(OrderRequestV2.getPaymentStatus())
+                .orderStatus(OrderRequestV2.getOrderStatus())
+                .customerId(OrderRequestV2.getCustomerId())
+                .systemUserId(OrderRequestV2.getSystemUserId())
                 .createdAt(LocalDateTime.now())
-                .address(orderCreateRequest.getAddress())
-                .paymentMethod(orderCreateRequest.getPaymentMethod())
+                .address(OrderRequestV2.getAddress())
+                .paymentMethod(OrderRequestV2.getPaymentMethod())
                 .build();
         Order savedOrder = orderRepository.save(order);
 
         // 3. Tạo chi tiết đơn hàng
-        List<OrderDetail> orderDetails = orderCreateRequest.getProductDetailOrders().stream().map(productDetail -> {
+        List<OrderDetail> orderDetails = OrderRequestV2.getProductDetailOrders().stream().map(productDetail -> {
             return OrderDetail.builder()
                     .createdAt(LocalDateTime.now())
                     .order(savedOrder)
@@ -220,8 +222,8 @@ public class OrderServiceImpl implements OrderService {
         // 7. Tạo OrderEvent hoàn chỉnh
         OrderEvent orderEvent = OrderEvent.builder()
                 .orderId(savedOrder.getId())
-                .customerId(orderCreateRequest.getCustomerId())
-                .paymentMethod(orderCreateRequest.getPaymentMethod().name()) // Enum to String
+                .customerId(OrderRequestV2.getCustomerId())
+                .paymentMethod(OrderRequestV2.getPaymentMethod().name()) // Enum to String
                 .totalAmount(totalAmount)
                 .ipAddress(ipAddress)
                 .productVariantDetails(productVariantDetails)
@@ -370,7 +372,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @CacheEvict(value = "Products", allEntries = true)
-    public void clearCache() {}
+    public void clearCache() {
+    }
 
     public boolean isValidPaymentStatus(PaymentStatus paymentStatusBefore, PaymentStatus paymentStatusAfter) {
         // Nếu trạng thái trước và sau giống nhau thì hợp lệ

@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -63,7 +64,14 @@ public class SecurityConfiguration {
                 .csrf(c -> c.disable())
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth
-                        // .requestMatchers(whiteList).permitAll()
+                        .requestMatchers(whiteList).permitAll()
+                        .requestMatchers(HttpMethod.GET, "/products/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/colors/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/trademarks/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/memories/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/usageCategories/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/attributes/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/product-feedbacks/**").permitAll()
                         .anyRequest().permitAll())
                 .oauth2ResourceServer(
                         oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter())))

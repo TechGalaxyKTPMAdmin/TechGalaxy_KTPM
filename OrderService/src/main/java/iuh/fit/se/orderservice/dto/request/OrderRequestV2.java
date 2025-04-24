@@ -18,7 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class OrderCreateRequest {
+public class OrderRequestV2 {
     @NotBlank(message = "Customer ID cannot be blank")
     String customerId;
     String systemUserId;
@@ -30,14 +30,14 @@ public class OrderCreateRequest {
     OrderStatus orderStatus = OrderStatus.NEW;
     @NotNull(message = "Product detail orders must not be null")
     @Size(min = 1, message = "At least one product is required")
-    List<ProductDetailRequest> productDetailOrders;
+    List<ProductDetailOrder> productDetailOrders;
 
     @Getter
     @Setter
     @NoArgsConstructor
     @AllArgsConstructor
     @FieldDefaults(level = AccessLevel.PRIVATE)
-    public static class ProductDetailRequest {
+    public static class ProductDetailOrder {
         @NotBlank(message = "Product variant detail ID cannot be blank")
         String productVariantDetailId;
         @NotNull(message = "Quantity is required")
