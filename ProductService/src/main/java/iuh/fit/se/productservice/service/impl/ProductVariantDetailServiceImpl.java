@@ -48,6 +48,7 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     ProductVariantDetailMapper productVariantDetailMapper;
     ColorRepository colorRepository;
     MemoryRepository memoryRepository;
+    ProductCacheService productCacheService;
     @Qualifier("redisObjectMapper")
     ObjectMapper objectMapper;
 
@@ -96,7 +97,7 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
         } catch (Exception e) {
             throw new AppException(ErrorCode.PRODUCT_UPDATE_FAILED);
         }
-        updateFindAllCache();
+        productCacheService.updateFindAllDetailCache();
         return productDetailResponse;
     }
 
@@ -117,15 +118,11 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
         } catch (Exception e) {
             throw new AppException(ErrorCode.PRODUCT_UPDATE_FAILED);
         }
-        updateFindAllCache();
+        productCacheService.updateFindAllDetailCache();
         return productDetailResponse;
     }
 
-    @CachePut(value = "ProductDetailResponses", key = "'getProductDetailsByIds'")
-    public List<ProductDetailResponse> updateFindAllCache() {
-        List<ProductVariantDetail> productVariantDetails = productVariantDetailRepository.findAll();
-        return productVariantDetails.stream().map(productVariantDetailMapper::toResponse).toList();
-    }
+
 
     @Override
     public List<String> createProductVariantDetail(String variantId,

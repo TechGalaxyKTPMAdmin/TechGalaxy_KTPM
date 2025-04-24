@@ -33,6 +33,7 @@ public class ProductServiceImpl implements ProductService {
     ProductRepository productRepository;
     TrademarkRepository trademarkRepository;
     ProductMapper productMapper;
+    ProductCacheService productCacheService;
     @Qualifier("redisObjectMapper")
     ObjectMapper objectMapper;
 
@@ -68,16 +69,8 @@ public class ProductServiceImpl implements ProductService {
         Product product = productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
         productMapper.updateProductFromRequest(product, productRequest);
 
-        updateFindAllCache();
+        productCacheService.updateFindAllCache();
         return productMapper.toProductResponse(productRepository.save(product));
-    }
-
-    @CachePut(value = "ProductResponses", key = "'getAllProducts'")
-    public List<ProductResponse> updateFindAllCache() {
-        List<Product> products = productRepository.findAll();
-        return products.stream()
-                .map(productMapper::toProductResponse)
-                .collect(Collectors.toList());
     }
 
     @Override
