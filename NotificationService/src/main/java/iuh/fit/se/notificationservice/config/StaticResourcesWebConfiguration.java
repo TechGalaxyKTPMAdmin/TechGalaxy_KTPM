@@ -1,6 +1,5 @@
 package iuh.fit.se.notificationservice.config;
 
-
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -11,11 +10,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Configuration
-public class StaticResourcesWebConfiguration
-        implements WebMvcConfigurer {
+public class StaticResourcesWebConfiguration implements WebMvcConfigurer {
 
     @Value("${upload-file.base-uri}")
     private String uploadDir;
+
     private String baseURI;
 
     @PostConstruct

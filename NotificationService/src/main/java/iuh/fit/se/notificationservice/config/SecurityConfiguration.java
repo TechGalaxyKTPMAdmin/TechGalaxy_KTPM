@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -39,26 +40,36 @@ public class SecurityConfiguration {
     private String jwtKey;
 
     @Bean
-    @Order(1)
-    public SecurityFilterChain publicApiFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
+        String[] whiteList = {
+                "/",
+                "/api/auth/**",
+                "/api/v1/user/auth/**",
+                "/api/accounts/auth/register", "/api/accounts/auth/login",
+                "/storage/**",
+                "/v3/api-docs/**",
+                "/swagger-ui/**",
+                "/swagger-ui.html",
+                "/storage/**",
+                "/payment/**",
+                "/file",
+                "/files",
+        };
+
         http
-                .securityMatcher("/api/auth/**", "/swagger-ui/**", "/v3/api-docs/**",
-                        "/storage/**")
                 .csrf(c -> c.disable())
                 .cors(Customizer.withDefaults())
-                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-
-        return http.build();
-    }
-
-    @Bean
-    @Order(2)
-    public SecurityFilterChain securedApiFilterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(c -> c.disable())
-                .cors(Customizer.withDefaults())
-                .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers(whiteList).permitAll()
+                        .requestMatchers(HttpMethod.GET, "/products/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/colors/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/trademarks/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/memories/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/usageCategories/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/attributes/**").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/product-feedbacks/**").permitAll()
+                        .anyRequest().permitAll())
                 .oauth2ResourceServer(
                         oauth2 -> oauth2.jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter())))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

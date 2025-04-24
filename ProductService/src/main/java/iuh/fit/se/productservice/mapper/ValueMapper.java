@@ -15,13 +15,11 @@ public interface ValueMapper {
     @Mapping(target = "updatedAt", ignore = true)
     Value toValue(AttributeValueRequest valueRequest, Attribute attribute, ProductVariant productVariant);
 
-
     ValueResponse toValueResponse(Value value);
 
     @Mapping(target = "type", source = "value.attribute.type")
     ValueResponse toAttributeName(Value value, String attributeName);
 
     ValueResponse toAttributeId(Value value, String attributeId);
-
 
 }

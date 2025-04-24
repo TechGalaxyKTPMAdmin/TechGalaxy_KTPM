@@ -64,10 +64,12 @@ public enum ErrorCode {
     INVALID_PRODUCT_QUANTITY(2016, "Invalid product quantity", HttpStatus.BAD_REQUEST),
     ORDER_SERVICE_UNAVAILABLE(2017, "Order Service is temporarily unavailable. Please try again later.",
             HttpStatus.SERVICE_UNAVAILABLE),
+
     CUSTOMER_NO_DELETE(2018, "Cannot delete account as the user has placed orders.", HttpStatus.BAD_REQUEST),
     // Mail
     FAILED_SEND_EMAIL(3000, "Failed to send email", HttpStatus.INTERNAL_SERVER_ERROR),
-
+    NOTIFICATION_SERVICE_UNAVAILABLE(2017, "Notification Service is temporarily unavailable. Please try again later.",
+            HttpStatus.SERVICE_UNAVAILABLE),
     // 4000 - 4999: Storage and file error
     NO_RESOURCE_FOUND(4010, "No resource found", HttpStatus.NOT_FOUND),
     FILE_EMPTY(4000, "File is empty. Please upload a file.", HttpStatus.BAD_REQUEST),

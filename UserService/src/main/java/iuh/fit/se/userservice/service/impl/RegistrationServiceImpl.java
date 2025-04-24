@@ -1,6 +1,7 @@
 package iuh.fit.se.userservice.service.impl;
 
 import iuh.fit.se.userservice.dto.request.CustomerRequest;
+import iuh.fit.se.userservice.dto.request.EmailRequestRegister;
 import iuh.fit.se.userservice.dto.request.SystemUserRequestDTO;
 import iuh.fit.se.userservice.dto.request.UserRegisterRequest;
 import iuh.fit.se.userservice.dto.response.*;
@@ -9,6 +10,7 @@ import iuh.fit.se.userservice.entities.Role;
 import iuh.fit.se.userservice.entities.enumeration.CustomerStatus;
 import iuh.fit.se.userservice.mapper.RoleMapper;
 import iuh.fit.se.userservice.service.RoleService;
+import iuh.fit.se.userservice.service.wrapper.NotificationServiceWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +31,8 @@ public class RegistrationServiceImpl {
         private final RoleMapper roleMapper;
         private final CustomerServiceImpl customerService;
         private final SystemUserServiceImpl systemUserService;
+
+        private final NotificationServiceWrapper notificationServiceWrapper;
         // private final EmailServiceImpl emailService;
 
         @Autowired
@@ -38,13 +42,15 @@ public class RegistrationServiceImpl {
                         RoleService roleService,
                         RoleMapper roleMapper,
                         CustomerServiceImpl customerService,
-                        SystemUserServiceImpl systemUserService) {
+                        SystemUserServiceImpl systemUserService,
+                        NotificationServiceWrapper notificationServiceWrapper) {
                 this.accountService = accountService;
                 this.passwordEncoder = passwordEncoder;
                 this.roleService = roleService;
                 this.roleMapper = roleMapper;
                 this.customerService = customerService;
                 this.systemUserService = systemUserService;
+                this.notificationServiceWrapper = notificationServiceWrapper;
         }
 
         public ResponseEntity<DataResponse<CustommerCreateResponse>> registerCustomer(UserRegisterRequest user) {
@@ -108,6 +114,12 @@ public class RegistrationServiceImpl {
                 // emailService.sendSuccessRegistrationEmail(newAccount.getEmail(),
                 // "Registration Confirmation", variables);
 
+                EmailRequestRegister emailRequestRegister = new EmailRequestRegister();
+                emailRequestRegister.setEmail(customerResponse.getName());
+                emailRequestRegister.setName(newAccount.getEmail());
+                emailRequestRegister.setRegistrationDate(LocalDateTime.now().toString());
+                // String result = notificationServiceWrapper.sendSuccessRegistrationEmail(emailRequestRegister);
+                // System.out.println(result);
                 return ResponseEntity.ok(DataResponse.<CustommerCreateResponse>builder()
                                 .status(200)
                                 .message("Account created successfully")
