@@ -317,7 +317,7 @@ services:
         condition: service_healthy
     volumes:
       - ./logs/notificationservice:/logs
-      - ./uploads:/app/uploads
+      - ./NotificationService/uploads:/app/uploads
     environment:
       LOG_PATH: /logs
       SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=NotificationDB;encrypt=false
