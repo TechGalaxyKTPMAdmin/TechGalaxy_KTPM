@@ -1,6 +1,7 @@
 package iuh.fit.se.productservice.service;
 
 import iuh.fit.se.productservice.dto.request.AttributeRequest;
+import iuh.fit.se.productservice.dto.request.AttributeValueRequest;
 import iuh.fit.se.productservice.dto.request.AttributeValueUpdateRequest;
 import iuh.fit.se.productservice.dto.response.AttributeResponse;
 import iuh.fit.se.productservice.dto.response.ValueResponse;
@@ -17,10 +18,9 @@ public interface AttributeService {
 
     AttributeResponse getAttributeById(String id);
 
-
     Set<AttributeResponse> getAllAttribute();
 
-//   boolean createValueProductVariant(String variantId, List<AttributeValueRequest> attributeValueRequest);
+    boolean createValueProductVariant(String variantId, List<AttributeValueRequest> attributeValueRequest);
 
     boolean deleteValue(String valueId);
 

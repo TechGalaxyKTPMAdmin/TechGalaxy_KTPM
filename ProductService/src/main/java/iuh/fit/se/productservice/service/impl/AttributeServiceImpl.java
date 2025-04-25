@@ -1,15 +1,17 @@
 package iuh.fit.se.productservice.service.impl;
 
 import iuh.fit.se.productservice.dto.request.AttributeRequest;
+import iuh.fit.se.productservice.dto.request.AttributeValueRequest;
 import iuh.fit.se.productservice.dto.request.AttributeValueUpdateRequest;
 import iuh.fit.se.productservice.dto.response.AttributeResponse;
 import iuh.fit.se.productservice.dto.response.ValueResponse;
 import iuh.fit.se.productservice.entities.Attribute;
-
+import iuh.fit.se.productservice.entities.ProductVariant;
 import iuh.fit.se.productservice.entities.Value;
 import iuh.fit.se.productservice.mapper.AttributeMapper;
 import iuh.fit.se.productservice.mapper.ValueMapper;
 import iuh.fit.se.productservice.repository.AttributeRepository;
+import iuh.fit.se.productservice.repository.ProductVariantRepository;
 import iuh.fit.se.productservice.repository.ValueRepository;
 import iuh.fit.se.productservice.service.AttributeService;
 import jakarta.transaction.Transactional;
@@ -22,6 +24,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -36,9 +39,7 @@ public class AttributeServiceImpl implements AttributeService {
     AttributeRepository attributeRepository;
     ValueRepository valueRepository;
     ValueMapper valueMapper;
-
-
-
+    ProductVariantRepository productVariantRepository;
 
     @Override
     public AttributeResponse createAttribute(AttributeRequest attributeRequest) {
@@ -46,13 +47,29 @@ public class AttributeServiceImpl implements AttributeService {
         return attributeMapper.toAttributeResponse(attributeRepository.save(attribute));
 
     }
-@Transactional
+
+    @Override
+    public boolean createValueProductVariant(String variantId, List<AttributeValueRequest> attributeValueRequest) {
+        ProductVariant productVaritant = productVariantRepository.findById(variantId)
+                .orElseThrow(() -> new RuntimeException("ProductVariant not found"));
+        List<Value> values = new ArrayList<Value>();
+        for (AttributeValueRequest att : attributeValueRequest) {
+            Attribute attribute = attributeRepository.findById(att.getAttributeId())
+                    .orElseThrow(() -> new RuntimeException("Attribute not found"));
+            Value value = valueMapper.toValue(att, attribute, productVaritant);
+            values.add(value);
+        }
+        valueRepository.saveAll(values);
+        return true;
+    }
+
+    @Transactional
     @Override
     public AttributeResponse updateAttribute(String id, AttributeRequest attributeRequest) {
-    Attribute attribute = attributeRepository.findById(id)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Attribute not found"));
-    attributeMapper.updateAttributeFromRequest(attribute, attributeRequest);
-    return attributeMapper.toAttributeResponse(attributeRepository.save(attribute));
+        Attribute attribute = attributeRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Attribute not found"));
+        attributeMapper.updateAttributeFromRequest(attribute, attributeRequest);
+        return attributeMapper.toAttributeResponse(attributeRepository.save(attribute));
     }
 
     @Override
@@ -79,7 +96,7 @@ public class AttributeServiceImpl implements AttributeService {
 
     @Override
     public boolean deleteValue(String valueId) {
-        Value value =  valueRepository.findById(valueId)
+        Value value = valueRepository.findById(valueId)
                 .orElseThrow(() -> new RuntimeException("Value not found"));
         valueRepository.delete(value);
         return true;
@@ -87,14 +104,21 @@ public class AttributeServiceImpl implements AttributeService {
 
     @Override
     public ValueResponse getValueById(String valueId) {
+        System.out.println(valueId);
         Value value = valueRepository.findById(valueId)
                 .orElseThrow(() -> new RuntimeException("Value not found"));
-        return valueMapper.toValueResponse(value); // Thay đổi nếu cần
+        System.out.println(value.toString());
+        ValueResponse response = valueMapper.toValueResponse(value);
+        response.setAttributeId(value.getAttribute().getId());
+        response.setAttributeName(value.getAttribute().getName());
+        System.out.println(response.toString());
+
+        return response;
     }
 
-
     @Override
-    public ValueResponse updateValueProductVariant(String variantId, AttributeValueUpdateRequest attributeValueRequest) {
+    public ValueResponse updateValueProductVariant(String variantId,
+            AttributeValueUpdateRequest attributeValueRequest) {
         Value value = valueRepository.findById(attributeValueRequest.getId())
                 .orElseThrow(() -> new RuntimeException("Value not found"));
 

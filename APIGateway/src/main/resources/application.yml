@@ -604,16 +604,16 @@ resilience4j:
   timelimiter:
     instances:
       userServiceCB:
-        timeoutDuration: 10s
+        timeoutDuration: 100s
       productServiceCB:
-        timeoutDuration: 10s
+        timeoutDuration: 100s
       orderServiceCB:
-        timeoutDuration: 10s
+        timeoutDuration: 100s
       paymentServiceCB:
-        timeoutDuration: 10s
+        timeoutDuration: 100s
       inventoryServiceCB:
-        timeoutDuration: 10s
+        timeoutDuration: 100s
       notificationServiceCB:
-        timeoutDuration: 10s
+        timeoutDuration: 100s
       recommendationServiceCB:
-        timeoutDuration: 10s
+        timeoutDuration: 100s

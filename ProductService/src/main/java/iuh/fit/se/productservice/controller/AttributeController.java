@@ -1,6 +1,8 @@
 package iuh.fit.se.productservice.controller;
 
 import iuh.fit.se.productservice.dto.request.AttributeRequest;
+import iuh.fit.se.productservice.dto.request.AttributeValueRequest;
+import iuh.fit.se.productservice.dto.request.AttributeValueUpdateRequest;
 import iuh.fit.se.productservice.dto.response.AttributeResponse;
 import iuh.fit.se.productservice.dto.response.DataResponse;
 import iuh.fit.se.productservice.dto.response.ValueResponse;
@@ -26,8 +28,10 @@ public class AttributeController {
 
     @GetMapping
     public ResponseEntity<DataResponse<AttributeResponse>> getAllAttribute() {
-        return ResponseEntity.ok(DataResponse.<AttributeResponse>builder().data(attributeServiceImpl.getAllAttribute()).build());
+        return ResponseEntity
+                .ok(DataResponse.<AttributeResponse>builder().data(attributeServiceImpl.getAllAttribute()).build());
     }
+
     @GetMapping("/attributes/{id}")
     public ResponseEntity<DataResponse<AttributeResponse>> getAttributeById(@PathVariable String id) {
         Set<AttributeResponse> attributeRespone = new HashSet<>();
@@ -43,7 +47,8 @@ public class AttributeController {
     }
 
     @PutMapping("/attributes/{id}")
-    public ResponseEntity<DataResponse<AttributeResponse>> updateAttribute(@PathVariable String id, @RequestBody AttributeRequest request) {
+    public ResponseEntity<DataResponse<AttributeResponse>> updateAttribute(@PathVariable String id,
+            @RequestBody AttributeRequest request) {
         Set<AttributeResponse> attributeRespone = new HashSet<>();
         attributeRespone.add(attributeServiceImpl.updateAttribute(id, request));
         return ResponseEntity.ok(DataResponse.<AttributeResponse>builder().data(attributeRespone).build());
@@ -56,7 +61,6 @@ public class AttributeController {
         return ResponseEntity.ok(DataResponse.<AttributeResponse>builder().data(attributeRespone).build());
     }
 
-
     @DeleteMapping("/value/{id}")
     public ResponseEntity<DataResponse<Boolean>> deleteValue(@PathVariable String id) {
         attributeServiceImpl.deleteValue(id);
@@ -65,6 +69,7 @@ public class AttributeController {
 
     @GetMapping("/value/{id}")
     public ResponseEntity<DataResponse<ValueResponse>> getValueById(@PathVariable String id) {
+        System.out.println("getValueById ");
         ValueResponse valueResponse = attributeServiceImpl.getValueById(id);
         return ResponseEntity.ok(DataResponse.<ValueResponse>builder().data(List.of(valueResponse)).build());
     }
@@ -81,4 +86,17 @@ public class AttributeController {
         return ResponseEntity.ok(DataResponse.<ValueResponse>builder().data(valueResponses).build());
     }
 
+    @PostMapping("/productvariant/{provariant}")
+    public ResponseEntity<DataResponse<Boolean>> createAttributeValueVariant(@PathVariable String provariant,
+            @RequestBody List<AttributeValueRequest> request) {
+        attributeServiceImpl.createValueProductVariant(provariant, request);
+        return ResponseEntity.ok(DataResponse.<Boolean>builder().message("Ok").build());
+    }
+
+    @PutMapping("/productvariant/{provariant}")
+    public ResponseEntity<DataResponse<ValueResponse>> updateAttributeValueVariant(@PathVariable String provariant,
+            @RequestBody AttributeValueUpdateRequest request) {
+        ValueResponse valueResponse = attributeServiceImpl.updateValueProductVariant(provariant, request);
+        return ResponseEntity.ok(DataResponse.<ValueResponse>builder().data(List.of(valueResponse)).build());
+    }
 }
