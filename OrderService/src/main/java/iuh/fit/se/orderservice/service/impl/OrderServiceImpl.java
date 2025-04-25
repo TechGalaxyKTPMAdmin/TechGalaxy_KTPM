@@ -36,6 +36,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
@@ -166,16 +167,17 @@ public class OrderServiceImpl implements OrderService {
                         "Sản phẩm đã hết hàng: " + productDetail.getProductVariantDetailId());
             }
         }
+        log.info(OrderRequestV2.toString());
 
         // 2. Tạo đơn hàng
         Order order = Order.builder()
                 .paymentStatus(OrderRequestV2.getPaymentStatus())
                 .orderStatus(OrderRequestV2.getOrderStatus())
                 .customerId(OrderRequestV2.getCustomerId())
-                .systemUserId(OrderRequestV2.getSystemUserId())
                 .createdAt(LocalDateTime.now())
                 .address(OrderRequestV2.getAddress())
                 .paymentMethod(OrderRequestV2.getPaymentMethod())
+                .systemUserId(Optional.ofNullable(OrderRequestV2.getSystemUserId()).orElse("SYSTEM"))
                 .build();
         Order savedOrder = orderRepository.save(order);
 

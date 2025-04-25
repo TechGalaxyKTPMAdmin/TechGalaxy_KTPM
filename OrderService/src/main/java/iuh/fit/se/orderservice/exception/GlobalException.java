@@ -7,6 +7,7 @@ import jakarta.validation.ConstraintViolation;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -26,10 +27,23 @@ public class GlobalException {
 
     // Handle all exception
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<DataResponse> handleException() {
-        DataResponse dataResponse = DataResponse.builder().status(ErrorCode.UNCATEGORIZED_ERROR.getCode())
-                .message(ErrorCode.UNCATEGORIZED_ERROR.getMessage()).build();
+    public ResponseEntity<DataResponse> handleException(Exception ex) {
+        log.error("Uncategorized error occurred: ", ex); // Thêm log chi tiết
+        DataResponse dataResponse = DataResponse.builder()
+                .status(ErrorCode.UNCATEGORIZED_ERROR.getCode())
+                .message(ErrorCode.UNCATEGORIZED_ERROR.getMessage())
+                .build();
         return ResponseEntity.status(ErrorCode.UNCATEGORIZED_ERROR.getHttpStatus()).body(dataResponse);
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<DataResponse> handleIllegalArgumentException(IllegalArgumentException ex) {
+        log.error("IllegalArgumentException occurred: ", ex);
+        DataResponse dataResponse = DataResponse.builder()
+                .status(ErrorCode.INVALID_KEY.getCode())
+                .message("Invalid argument: " + ex.getMessage())
+                .build();
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(dataResponse);
     }
 
     // Handle AppException Custom

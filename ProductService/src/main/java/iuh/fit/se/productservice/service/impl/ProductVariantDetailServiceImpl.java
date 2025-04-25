@@ -76,7 +76,8 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     }
 
     @Override
-    @Cacheable(value = "ProductDetailResponses", key = "'getProductDetailsByIds'", unless = "#result.isEmpty()")
+    // @Cacheable(value = "ProductDetailResponses", key =
+    // "'getProductDetailsByIds'", unless = "#result.isEmpty()")
     public List<ProductDetailResponse> getProductDetailsByIds(List<String> productDetailIds) {
         List<ProductVariantDetail> productVariantDetails = productVariantDetailRepository
                 .findAllByIdIsIn(productDetailIds);

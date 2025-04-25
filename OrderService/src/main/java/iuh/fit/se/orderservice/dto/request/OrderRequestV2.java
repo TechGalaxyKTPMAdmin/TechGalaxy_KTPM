@@ -17,6 +17,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class OrderRequestV2 {
     @NotBlank(message = "Customer ID cannot be blank")
@@ -37,6 +38,7 @@ public class OrderRequestV2 {
     @NoArgsConstructor
     @AllArgsConstructor
     @FieldDefaults(level = AccessLevel.PRIVATE)
+    @ToString
     public static class ProductDetailOrder {
         @NotBlank(message = "Product variant detail ID cannot be blank")
         String productVariantDetailId;

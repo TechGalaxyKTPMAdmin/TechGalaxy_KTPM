@@ -1,6 +1,5 @@
 package iuh.fit.se.orderservice.entity;
 
-
 import iuh.fit.se.orderservice.entity.enumeration.PaymentMethod;
 import iuh.fit.se.orderservice.entity.enumeration.OrderStatus;
 import iuh.fit.se.orderservice.entity.enumeration.PaymentStatus;
@@ -12,7 +11,6 @@ import org.hibernate.annotations.UuidGenerator;
 
 import java.time.LocalDateTime;
 import java.util.List;
-
 
 @Getter
 @Setter
@@ -30,8 +28,7 @@ public class Order {
     @Column(name = "customer_id", nullable = false)
     private String customerId;
 
-
-    @Column(name = "system_user_id", nullable = false)
+    @Column(name = "system_user_id", nullable = true)
     private String systemUserId;
 
     @Enumerated(EnumType.STRING)
