@@ -59,6 +59,7 @@ public class AttributeServiceImpl implements AttributeService {
     public AttributeResponse deleteAttribute(String id) {
         Attribute attribute = attributeRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Attribute not found"));
+        attributeRepository.delete(attribute);
         return attributeMapper.toAttributeResponse(attribute);
 
     }
