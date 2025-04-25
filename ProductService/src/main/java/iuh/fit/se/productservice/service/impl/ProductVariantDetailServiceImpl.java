@@ -33,9 +33,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -122,8 +125,6 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
         return productDetailResponse;
     }
 
-
-
     @Override
     public List<String> createProductVariantDetail(String variantId,
             List<ProductVariantDetailRequest> productVariantDetailRequests) {
@@ -177,9 +178,17 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     }
 
     @Override
-    public Page<ProductPageResponse> getFilteredProductDetails(List<String> trademark, Double minPrice, Double maxPrice,
-            List<String> memory, List<String> usageCategoryId, List<String> values, String sort, Integer page,
+    public Page<ProductPageResponse> getFilteredProductDetails(
+            List<String> trademark,
+            Double minPrice,
+            Double maxPrice,
+            List<String> memory,
+            List<String> usageCategoryId,
+            List<String> values,
+            String sort,
+            Integer page,
             Integer size) {
+
         Pageable pageable;
         if (sort != null && !sort.isEmpty()) {
             Sort sortOrder = sort.equalsIgnoreCase("asc") ? Sort.by("price").ascending()
@@ -188,9 +197,32 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
         } else {
             pageable = PageRequest.of(page, size);
         }
-        Page<ProductVariantDetail> productVariantDetails = productVariantDetailRepository
-                .findFilteredProductDetails(trademark, minPrice, maxPrice, memory, usageCategoryId, values, pageable);
-        return productVariantDetails.map(productVariantDetailMapper::toResponsePage);
+
+        if (trademark == null)
+            trademark = Collections.emptyList();
+        if (memory == null)
+            memory = Collections.emptyList();
+        if (usageCategoryId == null)
+            usageCategoryId = Collections.emptyList();
+        if (values == null)
+            values = Collections.emptyList();
+
+        log.info("Trademark: {}", trademark);
+        log.info("Memory: {}", memory);
+        log.info("UsageCategoryId: {}", usageCategoryId);
+        log.info("Values: {}", values);
+        log.info("MinPrice: {}, MaxPrice: {}", minPrice, maxPrice);
+
+        try {
+            Page<ProductVariantDetail> productVariantDetails = productVariantDetailRepository
+                    .findFilteredProductDetails(trademark, minPrice, maxPrice, memory, usageCategoryId, values,
+                            pageable);
+
+            return productVariantDetails.map(productVariantDetailMapper::toResponsePage);
+        } catch (Exception e) {
+            log.error("Lỗi khi lọc sản phẩm:", e);
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Có lỗi xảy ra khi lọc sản phẩm");
+        }
     }
 
     @Override
