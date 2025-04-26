@@ -42,7 +42,7 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_KEY }}
         port: ${{ secrets.SERVER_PORT }}
-        source: "scripts/deploy.sh"
+        source: "../../scripts/deploy.sh"
         target: "../../scripts/deploy.sh"
 
     - name: Execute deploy script
@@ -53,5 +53,5 @@ jobs:
         key: ${{ secrets.SERVER_KEY }}
         port: ${{ secrets.SERVER_PORT }}
         script: |
-          chmod +x /tmp/deploy.sh
-          DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }} DOCKER_PASSWORD=${{ secrets.DOCKER_PASSWORD }} /tmp/deploy.sh
+          chmod +x ../../scripts/deploy.sh
+          DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }} DOCKER_PASSWORD=${{ secrets.DOCKER_PASSWORD }} ../../scripts/deploy.sh
