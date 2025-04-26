@@ -28,13 +28,11 @@ public class SystemUserServiceImpl implements SystemUserService {
     private final SystemUserRepository systemUserRepository;
     private final AccountRepository accountRepository;
 
-
     @Autowired
     public SystemUserServiceImpl(SystemUserRepository systemUserRepository, AccountRepository accountRepository) {
         this.systemUserRepository = systemUserRepository;
         this.accountRepository = accountRepository;
     }
-
 
     @Override
     public SystemUserResponseDTO handleCreateSystemUser(SystemUserRequestDTO userRequestDTO) {
@@ -114,7 +112,6 @@ public class SystemUserServiceImpl implements SystemUserService {
 
         return SystemUserMapper.INSTANCE.toResponseDTO(updatedUser);
     }
-
 
     @Override
     public boolean isEmailExist(String email) {
