@@ -42,8 +42,8 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SERVER_KEY }}
         port: ${{ secrets.SERVER_PORT }}
-        source: "../../scripts/deploy.sh"
-        target: "../../scripts/deploy.sh"
+        source: "scripts/deploy.sh"
+        target: "/tmp/deploy.sh"
 
     - name: Execute deploy script
       uses: appleboy/ssh-action@v1.2.2
@@ -53,5 +53,7 @@ jobs:
         key: ${{ secrets.SERVER_KEY }}
         port: ${{ secrets.SERVER_PORT }}
         script: |
-          chmod +x ../../scripts/deploy.sh
-          DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }} DOCKER_PASSWORD=${{ secrets.DOCKER_PASSWORD }} ../../scripts/deploy.sh
+          chmod +x /tmp/deploy.sh
+          export DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
+          export DOCKER_PASSWORD=${{ secrets.DOCKER_PASSWORD }}
+          /tmp/deploy.sh
