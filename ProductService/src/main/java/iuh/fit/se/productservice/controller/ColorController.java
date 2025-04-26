@@ -52,7 +52,7 @@ public class ColorController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DataResponse<ColorResponse>> getColorById(String id) {
+    public ResponseEntity<DataResponse<ColorResponse>> getColorById(@PathVariable String id) {
         return ResponseEntity.ok(DataResponse.<ColorResponse>builder().data(List.of( colorServiceImpl.getColorById(id))).build());
     }
 

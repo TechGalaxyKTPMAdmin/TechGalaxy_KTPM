@@ -37,22 +37,20 @@ public class AttributeServiceImpl implements AttributeService {
     ValueRepository valueRepository;
     ValueMapper valueMapper;
 
-
-
-
     @Override
     public AttributeResponse createAttribute(AttributeRequest attributeRequest) {
         Attribute attribute = attributeMapper.toAttribute(attributeRequest);
         return attributeMapper.toAttributeResponse(attributeRepository.save(attribute));
 
     }
-@Transactional
+
+    @Transactional
     @Override
     public AttributeResponse updateAttribute(String id, AttributeRequest attributeRequest) {
-    Attribute attribute = attributeRepository.findById(id)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Attribute not found"));
-    attributeMapper.updateAttributeFromRequest(attribute, attributeRequest);
-    return attributeMapper.toAttributeResponse(attributeRepository.save(attribute));
+        Attribute attribute = attributeRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Attribute not found"));
+        attributeMapper.updateAttributeFromRequest(attribute, attributeRequest);
+        return attributeMapper.toAttributeResponse(attributeRepository.save(attribute));
     }
 
     @Override
@@ -80,7 +78,7 @@ public class AttributeServiceImpl implements AttributeService {
 
     @Override
     public boolean deleteValue(String valueId) {
-        Value value =  valueRepository.findById(valueId)
+        Value value = valueRepository.findById(valueId)
                 .orElseThrow(() -> new RuntimeException("Value not found"));
         valueRepository.delete(value);
         return true;
@@ -93,9 +91,9 @@ public class AttributeServiceImpl implements AttributeService {
         return valueMapper.toValueResponse(value); // Thay đổi nếu cần
     }
 
-
     @Override
-    public ValueResponse updateValueProductVariant(String variantId, AttributeValueUpdateRequest attributeValueRequest) {
+    public ValueResponse updateValueProductVariant(String variantId,
+            AttributeValueUpdateRequest attributeValueRequest) {
         Value value = valueRepository.findById(attributeValueRequest.getId())
                 .orElseThrow(() -> new RuntimeException("Value not found"));
 

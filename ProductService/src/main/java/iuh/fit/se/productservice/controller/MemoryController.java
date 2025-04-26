@@ -53,7 +53,7 @@ public class MemoryController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DataResponse<MemoryResponse>> getMemoryById(String id) {
+    public ResponseEntity<DataResponse<MemoryResponse>> getMemoryById(@PathVariable String id) {
         return ResponseEntity.ok(DataResponse.<MemoryResponse>builder().data(List.of( memoryServiceImpl.getMemoryById(id))).build());
     }
 
