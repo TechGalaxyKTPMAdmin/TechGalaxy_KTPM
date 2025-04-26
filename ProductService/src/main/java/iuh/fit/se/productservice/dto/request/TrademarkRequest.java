@@ -1,10 +1,8 @@
 package iuh.fit.se.productservice.dto.request;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Getter
@@ -13,6 +11,10 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class TrademarkRequest {
-	String id;
-	String name;
+
+    String id;
+
+    @NotBlank(message = "TRADEMARK_NAME_NOT_EMPTY")
+    @Size(max = 255, message = "TRADEMARK_NAME_MAX_LENGTH_255")
+    String name;
 }

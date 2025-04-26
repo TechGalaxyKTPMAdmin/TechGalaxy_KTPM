@@ -51,6 +51,7 @@ public class Permission {
         this.module = module;
     }
 
+    
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "permissions")
     @JsonIgnore
     private List<Role> roles;
