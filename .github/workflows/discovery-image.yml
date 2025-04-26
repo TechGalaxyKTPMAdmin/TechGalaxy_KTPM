@@ -43,7 +43,7 @@ jobs:
         key: ${{ secrets.SERVER_KEY }}
         port: ${{ secrets.SERVER_PORT }}
         source: "scripts/deploy.sh"
-        target: "/tmp/deploy.sh"
+        target: "../../scripts/deploy.sh"
 
     - name: Execute deploy script
       uses: appleboy/ssh-action@v1.2.2
