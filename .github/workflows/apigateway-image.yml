@@ -40,6 +40,7 @@ jobs:
         key: ${{ secrets.SERVER_KEY }}
         port: ${{ secrets.SERVER_PORT }}
         script: |
+          export DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker pull ${{ secrets.DOCKER_USERNAME }}/apigateway:latest
           docker-compose -f docker-compose-deploy.yml up -d apigateway
