@@ -231,7 +231,7 @@ services:
       retries: 3
     networks:
       - spring-net
-
+  
   paymentservice:
     container_name: paymentservice
     image: ${DOCKER_USERNAME}/paymentservice:latest
