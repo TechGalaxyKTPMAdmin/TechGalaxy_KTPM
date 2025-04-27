@@ -42,4 +42,4 @@ jobs:
         script: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker pull ${{ secrets.DOCKER_USERNAME }}/orderservice:latest
-          docker compose -f docker-compose-deploy.yml up -d orderservice
+          docker-compose -f docker-compose-deploy.yml up -d orderservice

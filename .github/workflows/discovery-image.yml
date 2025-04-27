@@ -41,4 +41,4 @@ jobs:
         script: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker pull ${{ secrets.DOCKER_USERNAME }}/discoveryserver:latest
-          docker compose -f docker-compose-deploy.yml up -d discoveryserver
+          docker-compose -f docker-compose-deploy.yml up -d discoveryserver

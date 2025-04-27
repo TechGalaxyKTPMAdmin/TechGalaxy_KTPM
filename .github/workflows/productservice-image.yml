@@ -42,4 +42,4 @@ jobs:
         script: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker pull ${{ secrets.DOCKER_USERNAME }}/productservice:latest
-          docker compose -f docker-compose-deploy.yml up -d productservice
+          docker-compose -f docker-compose-deploy.yml up -d productservice
