@@ -1,0 +1,22 @@
+name: Docker Cleanup
+
+on:
+  workflow_run:
+    workflows: ["apigateway-image", "configserver-image", "discovery-image", "inventoryservice-image", "notificationsservice-image", "orderservice-image", "paymentservice-image", "productservice-image", "userservice-image"]
+    types:
+      - completed
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Cleanup Docker
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            docker system prune -af
