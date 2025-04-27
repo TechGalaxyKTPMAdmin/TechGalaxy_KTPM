@@ -318,7 +318,7 @@ services:
       - spring-net
 
   redis-ktpm:
-    image: redis:7.2
+    image: redis:alpine
     container_name: redis-ktpm
     ports:
       - "6379:6379"
