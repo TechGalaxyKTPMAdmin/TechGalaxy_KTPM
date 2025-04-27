@@ -2,7 +2,7 @@ name: Docker Cleanup
 
 on:
   workflow_run:
-    workflows: ["apigateway-image", "configserver-image", "discovery-image", "inventoryservice-image", "notificationsservice-image", "orderservice-image", "paymentservice-image", "productservice-image", "userservice-image"]
+    workflows: ["Docker API Gateway Service Image CI/CD", "Docker Config Server Service Image CI/CD", "Docker Discovery Service Image CI/CD", "Docker Inventory Service Image CI/CD", "Docker Notification Service Image CI/CD", "Docker Order Service Image CI/CD", "Docker Payment Service Image CI/CD", "Docker Product Service Image CI/CD", "Docker User Service Image CI/CD"]
     types:
       - completed
 
