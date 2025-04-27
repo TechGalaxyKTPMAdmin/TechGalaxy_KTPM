@@ -42,5 +42,13 @@ jobs:
         script: |
           export DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+          if ! docker ps -a --format '{{.Names}}' | grep -q '^rabbitmq$'; then
+            echo "Khởi tạo rabbitmq..."
+            docker-compose -f docker-compose-deploy.yml up -d rabbitmq
+          else
+            echo "Container rabbitmq đã tồn tại, bỏ qua..."
+          fi
+
           docker pull ${{ secrets.DOCKER_USERNAME }}/orderservice:latest
           docker-compose -f docker-compose-deploy.yml up -d orderservice
