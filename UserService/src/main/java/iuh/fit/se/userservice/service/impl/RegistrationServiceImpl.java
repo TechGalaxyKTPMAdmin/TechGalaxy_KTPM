@@ -115,11 +115,10 @@ public class RegistrationServiceImpl {
                 // "Registration Confirmation", variables);
 
                 EmailRequestRegister emailRequestRegister = new EmailRequestRegister();
-                emailRequestRegister.setEmail(customerResponse.getName());
-                emailRequestRegister.setName(newAccount.getEmail());
+                emailRequestRegister.setName(customerResponse.getName());
+                emailRequestRegister.setEmail(newAccount.getEmail());
                 emailRequestRegister.setRegistrationDate(LocalDateTime.now().toString());
-                // String result = notificationServiceWrapper.sendSuccessRegistrationEmail(emailRequestRegister);
-                // System.out.println(result);
+                String result = notificationServiceWrapper.sendSuccessRegistrationEmail(emailRequestRegister);
                 return ResponseEntity.ok(DataResponse.<CustommerCreateResponse>builder()
                                 .status(200)
                                 .message("Account created successfully")
