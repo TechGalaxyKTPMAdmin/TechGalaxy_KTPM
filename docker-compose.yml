@@ -340,23 +340,23 @@ services:
       - spring-net
 
 
-  recommendsservice:
-    build:
-      context: ./RecommendService  
-      dockerfile: Dockerfile
-    container_name: recommendService
-    image: recommendservice
-    # image: ${DOCKER_USERNAME}/RecommendService:latest
-    ports:
-      - "5000:5000"
-    depends_on:
-      discoveryserver:
-        condition: service_healthy
-    environment:
-      EUREKA_SERVER: http://discoveryserver:8761/eureka
-    restart: unless-stopped
-    networks:
-      - spring-net
+  # recommendsservice:
+  #   build:
+  #     context: ./RecommendService  
+  #     dockerfile: Dockerfile
+  #   container_name: recommendService
+  #   image: recommendservice
+  #   # image: ${DOCKER_USERNAME}/RecommendService:latest
+  #   ports:
+  #     - "5000:5000"
+  #   depends_on:
+  #     discoveryserver:
+  #       condition: service_healthy
+  #   environment:
+  #     EUREKA_SERVER: http://discoveryserver:8761/eureka
+  #   restart: unless-stopped
+  #   networks:
+  #     - spring-net
 
   redis-ktpm:
     image: redis:7.2

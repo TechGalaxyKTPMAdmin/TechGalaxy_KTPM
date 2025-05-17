@@ -309,15 +309,15 @@ public class OrderServiceImpl implements OrderService {
 
         // 5. Chuẩn bị dữ liệu cho Email
         EmailRequest emailRequest = EmailRequest.builder()
-                .paymentInfo("Thanh toán đơn hàng " + order.getId())
+                .paymentInfo("Order payment result:" + order.getId())
                 .orderCode(order.getId())
                 .shippingAddress(order.getAddress())
                 .orderNumber(order.getId())
                 .symbol("VND")
                 .invoiceDate(LocalDateTime.now().toString())
                 .invoiceNumber(order.getId())
-                .customerName(customerResponse.getName()) // Sử dụng tên khách hàng thực tế
-                .taxCode("123456789") // Cập nhật theo đúng thông tin doanh nghiệp nếu có
+                .customerName(customerResponse.getName())
+                .taxCode("123456789")
                 .searchCode("123456789")
                 .build();
 
@@ -349,10 +349,10 @@ public class OrderServiceImpl implements OrderService {
         NotificationDto notificationDto = NotificationDto.builder()
                 .orderId(order.getId())
                 .customerId(order.getCustomerId())
-                .subject("Kết quả thanh toán đơn hàng #" + order.getId())
+                .subject("Order payment result:" + order.getId())
                 .message(PaymentStatus.PAID.equals(response.getStatus())
-                        ? "Đơn hàng của bạn đã thanh toán thành công!"
-                        : "Thanh toán thất bại. Đơn hàng của bạn đã bị hủy.")
+                        ? "Your order has been successfully paid!"
+                        : "Payment failed. Your order has been cancelled.")
                 .type(PaymentStatus.PAID.equals(response.getStatus()) ? "PAYMENT_PAID" : "PAYMENT_FAILED")
                 .emailRequest(emailRequest)
                 .email(customerResponse.getAccount().getEmail())

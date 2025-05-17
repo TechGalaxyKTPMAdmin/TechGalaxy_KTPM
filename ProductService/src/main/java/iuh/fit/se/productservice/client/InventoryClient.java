@@ -10,6 +10,6 @@ import iuh.fit.se.productservice.dto.response.InventoryResponseAdd;
 
 @FeignClient(name = "InventoryService")
 public interface InventoryClient {
-    @PostMapping("/save")
+    @PostMapping("/inventory/save")
     DataResponse<InventoryResponseAdd> addInventory(@RequestBody InventoryRequest inventory);
 }

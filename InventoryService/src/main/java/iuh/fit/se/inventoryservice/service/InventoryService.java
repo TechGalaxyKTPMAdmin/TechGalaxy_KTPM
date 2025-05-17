@@ -174,19 +174,18 @@ public class InventoryService {
                 .orElseThrow(() -> new RuntimeException("Inventory not found: " + id));
     }
 
-    // add new inventory
-    public Inventory addInventory(InventoryRequest inventoryRequest) {
+    public Inventory saveOrUpdateInventory(InventoryRequest inventoryRequest) {
         Inventory existingInventory = inventoryRepository
                 .findByProductVariantDetailId(inventoryRequest.getProductVariantDetailId()).orElse(null);
         if (existingInventory != null) {
             existingInventory
-                    .setStockQuantity(existingInventory.getStockQuantity() + inventoryRequest.getStockQuantity());
+                    .setStockQuantity(inventoryRequest.getStockQuantity());
             return inventoryRepository.save(existingInventory);
         }
         Inventory inventory = new Inventory();
         inventory.setProductVariantDetailId(inventoryRequest.getProductVariantDetailId());
         inventory.setStockQuantity(inventoryRequest.getStockQuantity());
-
+        inventory.setReservedQuantity(0);
         return inventoryRepository.save(inventory);
     }
 

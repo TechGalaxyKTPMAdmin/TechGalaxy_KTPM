@@ -40,8 +40,8 @@ public class InventoryController {
     @PostMapping("/save")
     public ResponseEntity<DataResponse<InventoryResponseAdd>> saveInventory(
             @Valid @RequestBody InventoryRequest inventory) {
-
-        Inventory inventoryAdd = inventoryService.addInventory(inventory);
+        System.out.println("InventoryRequest: " + inventory);
+        Inventory inventoryAdd = inventoryService.saveOrUpdateInventory(inventory);
         if (inventoryAdd == null) {
             return ResponseEntity.badRequest().build();
         }

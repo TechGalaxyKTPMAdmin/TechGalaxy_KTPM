@@ -1060,3 +1060,325 @@ Caused by: java.net.SocketTimeoutException: Connect timed out
 2025-04-26 12:01:20.827  INFO 1 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-15045547724077758171/OrderService.properties]' via location 'file:/tmp/config-repo-15045547724077758171/'
 2025-04-26 12:05:40.141  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2025-04-26 12:05:45.089  WARN 1 --- [http-nio-8888-exec-7] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: https://github.com/minhducn14/TechGalaxy_KTPM_ConfigServer
+2025-05-17 08:12:44.025  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Starting ConfigServerApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/ConfigServer.jar started by root in /app)
+2025-05-17 08:12:44.081 DEBUG 1 --- [main] i.f.s.c.ConfigServerApplication          : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-05-17 08:12:44.090  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-05-17 08:12:51.114  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1d58f6a3-8bee-3924-80f4-797ac04e7474
+2025-05-17 08:12:52.557  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2025-05-17 08:12:52.654  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-17 08:12:52.656  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-17 08:12:52.850  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-17 08:12:52.859  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8405 ms
+2025-05-17 08:13:13.553  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-17 08:13:13.998  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-17 08:13:14.067  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-05-17 08:13:14.486  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-17 08:13:14.738  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-17 08:13:14.790  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 08:13:14.845  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-17 08:13:14.852  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-17 08:13:14.855  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-17 08:13:14.862  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-17 08:13:14.865  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-17 08:13:14.876  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-17 08:13:14.880  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-17 08:13:16.405  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-17 08:13:16.419  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-17 08:13:16.435  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-17 08:13:16.449  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747469596447 with initial instances count: 1
+2025-05-17 08:13:16.465  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CONFIGSERVER with eureka with status UP
+2025-05-17 08:13:16.478  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747469596477, current=UP, previous=STARTING]
+2025-05-17 08:13:16.491  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/7c38b2f1e21a:ConfigServer:8888: registering service...
+2025-05-17 08:13:16.581  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2025-05-17 08:13:16.684  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8888
+2025-05-17 08:13:16.763  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/7c38b2f1e21a:ConfigServer:8888 - registration status: 204
+2025-05-17 08:13:16.785  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Started ConfigServerApplication in 37.515 seconds (process running for 41.431)
+2025-05-17 08:13:35.812  INFO 1 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-17 08:13:35.818  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-17 08:13:35.835  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2025-05-17 08:13:58.132  INFO 1 --- [http-nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-7832660839773105260/PaymentService.properties]' via location 'file:/tmp/config-repo-7832660839773105260/'
+2025-05-17 08:13:59.165  INFO 1 --- [http-nio-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-7832660839773105260/OrderService.properties]' via location 'file:/tmp/config-repo-7832660839773105260/'
+2025-05-17 08:14:03.587  INFO 1 --- [http-nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-7832660839773105260/UserService.properties]' via location 'file:/tmp/config-repo-7832660839773105260/'
+2025-05-17 08:14:04.823  INFO 1 --- [http-nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-7832660839773105260/InventoryService.properties]' via location 'file:/tmp/config-repo-7832660839773105260/'
+2025-05-17 08:14:06.074  INFO 1 --- [http-nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-7832660839773105260/NotificationService.properties]' via location 'file:/tmp/config-repo-7832660839773105260/'
+2025-05-17 08:14:07.326  INFO 1 --- [http-nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-7832660839773105260/ProductService.properties]' via location 'file:/tmp/config-repo-7832660839773105260/'
+2025-05-17 08:14:08.697  INFO 1 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-7832660839773105260/UserService.properties]' via location 'file:/tmp/config-repo-7832660839773105260/'
+2025-05-17 08:18:14.827  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 08:23:14.860  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 08:28:14.851  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 08:33:14.854  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 08:38:14.867  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 08:43:14.864  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 08:48:14.851  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 08:53:14.833  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 08:58:14.833  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:03:14.814  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:08:14.804  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:13:14.785  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:18:14.782  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:23:14.770  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:28:14.765  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:33:14.745  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:38:14.732  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:43:14.741  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:48:14.751  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:53:14.746  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 09:58:14.733  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:03:14.724  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:08:14.712  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:13:14.710  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:18:14.694  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:23:14.677  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:28:14.660  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:33:14.641  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:38:14.623  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:43:14.611  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:48:14.612  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:53:14.596  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 10:58:14.581  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 11:03:14.565  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 11:08:14.549  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 11:13:14.533  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 14:59:29.644  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Starting ConfigServerApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/ConfigServer.jar started by root in /app)
+2025-05-17 14:59:29.842 DEBUG 1 --- [main] i.f.s.c.ConfigServerApplication          : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-05-17 14:59:29.848  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-05-17 14:59:44.097  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1d58f6a3-8bee-3924-80f4-797ac04e7474
+2025-05-17 14:59:47.415  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2025-05-17 14:59:47.686  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-17 14:59:47.690  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-17 14:59:48.198  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-17 14:59:48.215  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 17594 ms
+2025-05-17 15:00:29.820  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-17 15:00:32.046  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-17 15:00:32.313  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-05-17 15:00:33.802  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-17 15:00:34.187  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-17 15:00:34.272  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:00:34.381  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-17 15:00:34.410  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-17 15:00:34.414  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-17 15:00:34.418  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-17 15:00:34.423  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-17 15:00:34.434  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-17 15:00:34.451  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-17 15:00:40.094  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-17 15:00:40.112  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-17 15:00:40.135  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-17 15:00:40.177  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747494040173 with initial instances count: 0
+2025-05-17 15:00:40.278  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CONFIGSERVER with eureka with status UP
+2025-05-17 15:00:40.284  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747494040284, current=UP, previous=STARTING]
+2025-05-17 15:00:40.335  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/7c38b2f1e21a:ConfigServer:8888: registering service...
+2025-05-17 15:00:40.594  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2025-05-17 15:00:40.623  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8888
+2025-05-17 15:00:40.863  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Started ConfigServerApplication in 80.426 seconds (process running for 88.523)
+2025-05-17 15:00:42.654  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/7c38b2f1e21a:ConfigServer:8888 - registration status: 204
+2025-05-17 15:00:43.912  INFO 1 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-17 15:00:43.928  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-17 15:00:43.959  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-05-17 15:01:10.112  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-17 15:01:10.116  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-17 15:01:10.119  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-17 15:01:10.127  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-17 15:01:10.132  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-17 15:01:10.135  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-05-17 15:01:10.146  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-17 15:01:10.220  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-17 15:01:17.972  INFO 1 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-13388271688501866621/InventoryService.properties]' via location 'file:/tmp/config-repo-13388271688501866621/'
+2025-05-17 15:01:21.747  INFO 1 --- [http-nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-13388271688501866621/PaymentService.properties]' via location 'file:/tmp/config-repo-13388271688501866621/'
+2025-05-17 15:01:30.942  INFO 1 --- [http-nio-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-13388271688501866621/NotificationService.properties]' via location 'file:/tmp/config-repo-13388271688501866621/'
+2025-05-17 15:01:31.918  INFO 1 --- [http-nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-13388271688501866621/OrderService.properties]' via location 'file:/tmp/config-repo-13388271688501866621/'
+2025-05-17 15:01:35.518  INFO 1 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-13388271688501866621/UserService.properties]' via location 'file:/tmp/config-repo-13388271688501866621/'
+2025-05-17 15:01:36.485  INFO 1 --- [http-nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-13388271688501866621/ProductService.properties]' via location 'file:/tmp/config-repo-13388271688501866621/'
+2025-05-17 15:01:37.513  INFO 1 --- [http-nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-13388271688501866621/UserService.properties]' via location 'file:/tmp/config-repo-13388271688501866621/'
+2025-05-17 15:05:34.451  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:06:16.955  INFO 1 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-13388271688501866621/InventoryService.properties]' via location 'file:/tmp/config-repo-13388271688501866621/'
+2025-05-17 15:10:34.450  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:15:34.436  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:16:28.049  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CONFIGSERVER with eureka with status DOWN
+2025-05-17 15:16:28.052  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747494988052, current=DOWN, previous=UP]
+2025-05-17 15:16:28.055  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/7c38b2f1e21a:ConfigServer:8888: registering service...
+2025-05-17 15:16:28.082  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/7c38b2f1e21a:ConfigServer:8888 - registration status: 204
+2025-05-17 15:16:28.111  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-17 15:16:28.126  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-17 15:16:28.179  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-17 15:16:31.182  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-17 15:16:31.198  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/7c38b2f1e21a:ConfigServer:8888 - deregister  status: 200
+2025-05-17 15:16:31.201  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-17 15:20:08.629  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Starting ConfigServerApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/ConfigServer.jar started by root in /app)
+2025-05-17 15:20:08.653 DEBUG 1 --- [main] i.f.s.c.ConfigServerApplication          : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-05-17 15:20:08.656  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-05-17 15:20:11.821  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1d58f6a3-8bee-3924-80f4-797ac04e7474
+2025-05-17 15:20:12.538  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2025-05-17 15:20:12.566  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-17 15:20:12.568  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-17 15:20:12.664  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-17 15:20:12.667  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3924 ms
+2025-05-17 15:20:23.399  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-17 15:20:23.654  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-17 15:20:23.678  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-05-17 15:20:23.890  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-17 15:20:24.001  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-17 15:20:24.025  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:20:24.089  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-17 15:20:24.093  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-17 15:20:24.100  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-17 15:20:24.103  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-17 15:20:24.106  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-17 15:20:24.111  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-17 15:20:24.115  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-17 15:20:25.260  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-17 15:20:25.264  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-17 15:20:25.268  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-17 15:20:25.272  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747495225271 with initial instances count: 0
+2025-05-17 15:20:25.279  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CONFIGSERVER with eureka with status UP
+2025-05-17 15:20:25.282  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747495225282, current=UP, previous=STARTING]
+2025-05-17 15:20:25.286  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/a6b24bdaf2e4:ConfigServer:8888: registering service...
+2025-05-17 15:20:25.316  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2025-05-17 15:20:25.320  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8888
+2025-05-17 15:20:25.372  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Started ConfigServerApplication in 18.857 seconds (process running for 20.499)
+2025-05-17 15:20:25.704  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/a6b24bdaf2e4:ConfigServer:8888 - registration status: 204
+2025-05-17 15:20:34.996  INFO 1 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-17 15:20:34.998  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-17 15:20:35.002  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-17 15:20:49.060  INFO 1 --- [http-nio-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3370882881329815239/ProductService.properties]' via location 'file:/tmp/config-repo-3370882881329815239/'
+2025-05-17 15:20:49.839  INFO 1 --- [http-nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3370882881329815239/UserService.properties]' via location 'file:/tmp/config-repo-3370882881329815239/'
+2025-05-17 15:20:51.499  INFO 1 --- [http-nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3370882881329815239/PaymentService.properties]' via location 'file:/tmp/config-repo-3370882881329815239/'
+2025-05-17 15:20:53.033  INFO 1 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3370882881329815239/NotificationService.properties]' via location 'file:/tmp/config-repo-3370882881329815239/'
+2025-05-17 15:20:53.894  INFO 1 --- [http-nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3370882881329815239/UserService.properties]' via location 'file:/tmp/config-repo-3370882881329815239/'
+2025-05-17 15:20:54.714  INFO 1 --- [http-nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3370882881329815239/OrderService.properties]' via location 'file:/tmp/config-repo-3370882881329815239/'
+2025-05-17 15:20:55.264  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-17 15:20:55.267  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-17 15:20:55.270  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-17 15:20:55.272  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-17 15:20:55.275  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-17 15:20:55.277  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-05-17 15:20:55.280  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-17 15:20:55.342  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-17 15:20:55.531  INFO 1 --- [http-nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3370882881329815239/InventoryService.properties]' via location 'file:/tmp/config-repo-3370882881329815239/'
+2025-05-17 15:25:02.272  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CONFIGSERVER with eureka with status DOWN
+2025-05-17 15:25:02.277  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747495502277, current=DOWN, previous=UP]
+2025-05-17 15:25:02.279  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/a6b24bdaf2e4:ConfigServer:8888: registering service...
+2025-05-17 15:25:02.296  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-17 15:25:02.298  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/a6b24bdaf2e4:ConfigServer:8888 - registration status: 204
+2025-05-17 15:25:02.306  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-17 15:25:02.332  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-17 15:25:05.333  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-17 15:25:05.345  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/a6b24bdaf2e4:ConfigServer:8888 - deregister  status: 200
+2025-05-17 15:25:05.346  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-17 15:27:20.177  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Starting ConfigServerApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/ConfigServer.jar started by root in /app)
+2025-05-17 15:27:20.211 DEBUG 1 --- [main] i.f.s.c.ConfigServerApplication          : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-05-17 15:27:20.214  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-05-17 15:27:24.638  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1d58f6a3-8bee-3924-80f4-797ac04e7474
+2025-05-17 15:27:25.431  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2025-05-17 15:27:25.460  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-17 15:27:25.462  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-17 15:27:25.571  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-17 15:27:25.575  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5183 ms
+2025-05-17 15:27:37.342  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-17 15:27:37.802  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-17 15:27:37.871  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-05-17 15:27:38.209  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-17 15:27:38.328  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-17 15:27:38.349  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:27:38.383  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-17 15:27:38.386  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-17 15:27:38.390  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-17 15:27:38.393  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-17 15:27:38.394  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-17 15:27:38.396  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-17 15:27:38.399  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-17 15:27:39.630  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-17 15:27:39.636  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-17 15:27:39.643  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-17 15:27:39.649  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747495659648 with initial instances count: 0
+2025-05-17 15:27:39.659  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CONFIGSERVER with eureka with status UP
+2025-05-17 15:27:39.662  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747495659662, current=UP, previous=STARTING]
+2025-05-17 15:27:39.668  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/4651500cbd4a:ConfigServer:8888: registering service...
+2025-05-17 15:27:39.730  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2025-05-17 15:27:39.742  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8888
+2025-05-17 15:27:39.816  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Started ConfigServerApplication in 22.031 seconds (process running for 23.937)
+2025-05-17 15:27:39.894  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/4651500cbd4a:ConfigServer:8888 - registration status: 204
+2025-05-17 15:27:46.034  INFO 1 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-17 15:27:46.038  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-17 15:27:46.046  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2025-05-17 15:27:59.077  INFO 1 --- [http-nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-2642027403115035755/PaymentService.properties]' via location 'file:/tmp/config-repo-2642027403115035755/'
+2025-05-17 15:28:02.209  INFO 1 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-2642027403115035755/InventoryService.properties]' via location 'file:/tmp/config-repo-2642027403115035755/'
+2025-05-17 15:28:03.018  INFO 1 --- [http-nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-2642027403115035755/UserService.properties]' via location 'file:/tmp/config-repo-2642027403115035755/'
+2025-05-17 15:28:03.796  INFO 1 --- [http-nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-2642027403115035755/NotificationService.properties]' via location 'file:/tmp/config-repo-2642027403115035755/'
+2025-05-17 15:28:04.706  INFO 1 --- [http-nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-2642027403115035755/OrderService.properties]' via location 'file:/tmp/config-repo-2642027403115035755/'
+2025-05-17 15:28:05.520  INFO 1 --- [http-nio-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-2642027403115035755/ProductService.properties]' via location 'file:/tmp/config-repo-2642027403115035755/'
+2025-05-17 15:28:06.379  INFO 1 --- [http-nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-2642027403115035755/UserService.properties]' via location 'file:/tmp/config-repo-2642027403115035755/'
+2025-05-17 15:28:09.637  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-17 15:28:09.641  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-17 15:28:09.645  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-17 15:28:09.649  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-17 15:28:09.651  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-17 15:28:09.654  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-05-17 15:28:09.658  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-17 15:28:09.777  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-17 15:32:38.387  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:37:38.378  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:42:38.363  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:47:38.348  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:48:15.079  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CONFIGSERVER with eureka with status DOWN
+2025-05-17 15:48:15.082  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747496895082, current=DOWN, previous=UP]
+2025-05-17 15:48:15.084  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/4651500cbd4a:ConfigServer:8888: registering service...
+2025-05-17 15:48:15.124  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/4651500cbd4a:ConfigServer:8888 - registration status: 204
+2025-05-17 15:48:15.148  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-17 15:48:15.164  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-17 15:48:15.222  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-17 15:48:18.224  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-17 15:48:18.234  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/4651500cbd4a:ConfigServer:8888 - deregister  status: 200
+2025-05-17 15:48:18.237  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-17 15:50:31.832  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Starting ConfigServerApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/ConfigServer.jar started by root in /app)
+2025-05-17 15:50:31.862 DEBUG 1 --- [main] i.f.s.c.ConfigServerApplication          : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-05-17 15:50:31.868  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-05-17 15:50:36.615  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1d58f6a3-8bee-3924-80f4-797ac04e7474
+2025-05-17 15:50:37.341  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2025-05-17 15:50:37.378  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-17 15:50:37.381  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-17 15:50:37.499  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-17 15:50:37.502  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5455 ms
+2025-05-17 15:50:49.549  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-17 15:50:50.702  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-17 15:50:50.830  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-05-17 15:50:51.323  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-17 15:50:51.538  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-17 15:50:51.588  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-17 15:50:51.679  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-17 15:50:51.682  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-17 15:50:51.694  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-17 15:50:51.697  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-17 15:50:51.700  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-17 15:50:51.704  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-17 15:50:51.708  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-17 15:50:53.530  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-17 15:50:53.536  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-17 15:50:53.544  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-17 15:50:53.551  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747497053549 with initial instances count: 0
+2025-05-17 15:50:53.559  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CONFIGSERVER with eureka with status UP
+2025-05-17 15:50:53.562  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747497053562, current=UP, previous=STARTING]
+2025-05-17 15:50:53.568  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/f25fd3f05915:ConfigServer:8888: registering service...
+2025-05-17 15:50:53.606  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2025-05-17 15:50:53.616  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8888
+2025-05-17 15:50:53.663  INFO 1 --- [main] i.f.s.c.ConfigServerApplication          : Started ConfigServerApplication in 24.695 seconds (process running for 26.72)
+2025-05-17 15:50:53.677  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIGSERVER/f25fd3f05915:ConfigServer:8888 - registration status: 204
+2025-05-17 15:50:57.058  INFO 1 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-17 15:50:57.060  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-17 15:50:57.065  INFO 1 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-05-17 15:51:10.392  INFO 1 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-16889543819583902625/PaymentService.properties]' via location 'file:/tmp/config-repo-16889543819583902625/'
+2025-05-17 15:51:13.688  INFO 1 --- [http-nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-16889543819583902625/InventoryService.properties]' via location 'file:/tmp/config-repo-16889543819583902625/'
+2025-05-17 15:51:15.311  INFO 1 --- [http-nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-16889543819583902625/OrderService.properties]' via location 'file:/tmp/config-repo-16889543819583902625/'
+2025-05-17 15:51:16.169  INFO 1 --- [http-nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-16889543819583902625/NotificationService.properties]' via location 'file:/tmp/config-repo-16889543819583902625/'
+2025-05-17 15:51:17.224  INFO 1 --- [http-nio-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-16889543819583902625/ProductService.properties]' via location 'file:/tmp/config-repo-16889543819583902625/'
+2025-05-17 15:51:18.133  INFO 1 --- [http-nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-16889543819583902625/UserService.properties]' via location 'file:/tmp/config-repo-16889543819583902625/'
+2025-05-17 15:51:19.506  INFO 1 --- [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-16889543819583902625/UserService.properties]' via location 'file:/tmp/config-repo-16889543819583902625/'
+2025-05-17 15:51:23.540  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-17 15:51:23.545  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-17 15:51:23.559  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-17 15:51:23.561  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-17 15:51:23.630  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-17 15:51:23.645  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-05-17 15:51:23.665  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-17 15:51:23.859  INFO 1 --- [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-17 15:55:51.708  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

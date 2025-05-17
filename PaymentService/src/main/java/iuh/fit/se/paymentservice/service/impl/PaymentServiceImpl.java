@@ -50,7 +50,7 @@ public class PaymentServiceImpl implements PaymentService {
 
         // Thêm các tham số bắt buộc
         vnpParamsMap.put("vnp_Amount", String.valueOf(amount));
-        vnpParamsMap.put("vnp_OrderInfo", "Thanh toán đơn hàng: " + event.getOrderId());
+        vnpParamsMap.put("vnp_OrderInfo", "Order payment result:" + event.getOrderId());
         vnpParamsMap.put("vnp_TxnRef", event.getOrderId());
         vnpParamsMap.put("vnp_IpAddr", event.getIpAddress());
 

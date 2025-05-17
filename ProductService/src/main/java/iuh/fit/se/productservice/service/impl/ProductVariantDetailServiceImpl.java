@@ -92,12 +92,19 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
     public ProductDetailResponse updateProductVariantDetail(String productDetailId,
             ProductDetailUpdateRequest productDetailUpdateRequest) {
         ProductDetailResponse productDetailResponse;
+
         ProductVariantDetail productVariantDetail = productVariantDetailRepository.findById(productDetailId)
                 .orElseThrow(() -> new AppException(ErrorCode.PRODUCT_NOTFOUND));
         productVariantDetailMapper.toUpdate(productVariantDetail, productDetailUpdateRequest);
         try {
             productDetailResponse = productVariantDetailMapper
                     .toResponse(productVariantDetailRepository.save(productVariantDetail));
+
+            InventoryRequest inventoryRequest = new InventoryRequest();
+            inventoryRequest.setProductVariantDetailId(productDetailId);
+            inventoryRequest.setStockQuantity(productDetailResponse.getQuantity());
+            inventoryServiceWrapper.saveInventory(inventoryRequest);
+
         } catch (Exception e) {
             throw new AppException(ErrorCode.PRODUCT_UPDATE_FAILED);
         }
@@ -113,6 +120,12 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
                 .orElseThrow(() -> new AppException(ErrorCode.PRODUCT_NOTFOUND));
         if (productVariantDetail.getQuantity() >= quantity) {
             productVariantDetail.setQuantity(productVariantDetail.getQuantity() - quantity);
+
+            InventoryRequest inventoryRequest = new InventoryRequest();
+            inventoryRequest.setProductVariantDetailId(productVariantDetail.getId());
+            inventoryRequest.setStockQuantity(productVariantDetail.getQuantity());
+            inventoryServiceWrapper.saveInventory(inventoryRequest);
+
         } else {
             throw new AppException(ErrorCode.PRODUCT_NOT_ENOUGH);
         }
@@ -173,6 +186,12 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
             // throw new AppException(ErrorCode.PRODUCT_DELETE_FAILED);
             // }
             productVariantDetailRepository.deleteById(productDetailId);
+
+            InventoryRequest inventoryRequest = new InventoryRequest();
+            inventoryRequest.setProductVariantDetailId(productDetailId);
+            inventoryRequest.setStockQuantity(0);
+            inventoryServiceWrapper.saveInventory(inventoryRequest);
+
         } catch (Exception e) {
             throw new AppException(ErrorCode.PRODUCT_DELETE_FAILED);
         }
