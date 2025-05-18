@@ -103,6 +103,7 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
             InventoryRequest inventoryRequest = new InventoryRequest();
             inventoryRequest.setProductVariantDetailId(productDetailId);
             inventoryRequest.setStockQuantity(productDetailResponse.getQuantity());
+            inventoryRequest.setInternal(true);
             inventoryServiceWrapper.saveInventory(inventoryRequest);
 
         } catch (Exception e) {
@@ -124,6 +125,7 @@ public class ProductVariantDetailServiceImpl implements ProductVariantDetailServ
             InventoryRequest inventoryRequest = new InventoryRequest();
             inventoryRequest.setProductVariantDetailId(productVariantDetail.getId());
             inventoryRequest.setStockQuantity(productVariantDetail.getQuantity());
+            inventoryRequest.setInternal(true);
             inventoryServiceWrapper.saveInventory(inventoryRequest);
 
         } else {

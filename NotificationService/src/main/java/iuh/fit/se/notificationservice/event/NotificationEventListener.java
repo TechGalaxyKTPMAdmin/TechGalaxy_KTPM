@@ -46,6 +46,7 @@ public class NotificationEventListener {
             switch (type.toUpperCase()) {
                 case "PAYMENT_PAID" -> {
                     System.out.println("Gửi email tới " + to);
+                    emailRequest.setPaymentInfo("VNPAY");
                     emailService.sendEmailFromTemplateSync(
                             to, subject, "email-template-payment-success", emailRequest);
                     log.info("✅ Sent PAYMENT_PAID notification to {}", to);
@@ -76,12 +77,10 @@ public class NotificationEventListener {
             log.error("📡 [SMTP ERROR] Gửi email thất bại tới {}. Sẽ retry! Error: {}", to, e.getMessage());
             channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, true); // Retry
 
-        }
-        catch (AppException e) {
+        } catch (AppException e) {
             log.error("❌ [App ERROR] Gửi email thất bại tới {}. Đẩy qua DLQ. Error: {}", to, e.getMessage(), e);
             channel.basicReject(message.getMessageProperties().getDeliveryTag(), false);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             log.error("❌ [Unhandled ERROR] Không xử lý được email tới {}. Đẩy qua DLQ. Error: {}", to, e.getMessage(),
                     e);
             channel.basicReject(message.getMessageProperties().getDeliveryTag(), false);

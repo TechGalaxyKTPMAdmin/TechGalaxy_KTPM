@@ -35,7 +35,8 @@ public class Order {
     @Column(length = 50)
     private PaymentStatus paymentStatus = PaymentStatus.PENDING;
 
-    @Column(length = 255)
+    // NVARCHAR(255) in SQL Server
+    @Column(columnDefinition = "NVARCHAR(255)")
     private String address;
 
     @Enumerated(EnumType.STRING)

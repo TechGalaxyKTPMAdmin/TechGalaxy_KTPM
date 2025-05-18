@@ -23,4 +23,7 @@ public class InventoryRequest {
     @Max(2000000000)
     private Integer stockQuantity;
 
+
+    private Boolean internal = false;
+
 }

@@ -1,20 +1,24 @@
 package iuh.fit.se.inventoryservice.service;
 
 import iuh.fit.se.inventoryservice.dto.request.InventoryRequest;
+import iuh.fit.se.inventoryservice.dto.request.ProductDetailUpdateRequest;
+import iuh.fit.se.inventoryservice.dto.response.DataResponse;
+import iuh.fit.se.inventoryservice.dto.response.ProductDetailResponse;
 import iuh.fit.se.inventoryservice.entities.Inventory;
 import iuh.fit.se.inventoryservice.entities.InventoryLog;
 import iuh.fit.se.inventoryservice.entities.enumeration.ChangeType;
 import iuh.fit.se.inventoryservice.event.OrderEvent;
 import iuh.fit.se.inventoryservice.repository.InventoryLogRepository;
 import iuh.fit.se.inventoryservice.repository.InventoryRepository;
-import jakarta.persistence.criteria.CriteriaBuilder.In;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import iuh.fit.se.inventoryservice.wrapper.ProductServiceWrapper;
 
+import java.util.Collection;
 import java.util.Optional;
 
 @Service
@@ -25,6 +29,7 @@ public class InventoryService {
     private final InventoryRepository inventoryRepository;
     private final InventoryLogRepository inventoryLogRepository;
     private final RabbitTemplate rabbitTemplate;
+    private final ProductServiceWrapper productServiceWrapper;
 
     @Value("${rabbitmq.exchange.order}")
     private String orderExchange;
@@ -180,12 +185,48 @@ public class InventoryService {
         if (existingInventory != null) {
             existingInventory
                     .setStockQuantity(inventoryRequest.getStockQuantity());
-            return inventoryRepository.save(existingInventory);
+            Inventory inventorySave= inventoryRepository.save(existingInventory);
+            if (!Boolean.TRUE.equals(inventoryRequest.getInternal())) {
+
+                Collection<ProductDetailResponse> productDetailResponse = productServiceWrapper
+                        .getProductDetail(inventoryRequest.getProductVariantDetailId());
+                if (productDetailResponse.isEmpty()) {
+                    log.error("Product detail not found for ID: {}", inventoryRequest.getProductVariantDetailId());
+                    throw new RuntimeException("Product detail not found for ID: " + inventoryRequest.getProductVariantDetailId());
+                }
+                ProductDetailResponse productDetail = productDetailResponse.iterator().next();
+
+                ProductDetailUpdateRequest request = new ProductDetailUpdateRequest();
+                request.setQuantity(inventoryRequest.getStockQuantity());
+                request.setPrice(productDetail.getPrice());
+                request.setSale(productDetail.getSale());
+                request.setStatus(productDetail.getStatus());
+                productServiceWrapper.updateProductDetail(inventoryRequest.getProductVariantDetailId(), request);
+            }
+            return inventorySave;
         }
         Inventory inventory = new Inventory();
         inventory.setProductVariantDetailId(inventoryRequest.getProductVariantDetailId());
         inventory.setStockQuantity(inventoryRequest.getStockQuantity());
         inventory.setReservedQuantity(0);
+
+        if (!Boolean.TRUE.equals(inventoryRequest.getInternal())) {
+            Collection<ProductDetailResponse> productDetailResponse = productServiceWrapper
+                    .getProductDetail(inventoryRequest.getProductVariantDetailId());
+            if (productDetailResponse.isEmpty()) {
+                log.error("Product detail not found for ID: {}", inventoryRequest.getProductVariantDetailId());
+                throw new RuntimeException("Product detail not found for ID: " + inventoryRequest.getProductVariantDetailId());
+            }
+            ProductDetailResponse productDetail = productDetailResponse.iterator().next();
+
+            ProductDetailUpdateRequest request = new ProductDetailUpdateRequest();
+            request.setQuantity(inventoryRequest.getStockQuantity());
+            request.setPrice(productDetail.getPrice());
+            request.setSale(productDetail.getSale());
+            request.setStatus(productDetail.getStatus());
+            productServiceWrapper.updateProductDetail(inventoryRequest.getProductVariantDetailId(), request);
+        }
+
         return inventoryRepository.save(inventory);
     }
 

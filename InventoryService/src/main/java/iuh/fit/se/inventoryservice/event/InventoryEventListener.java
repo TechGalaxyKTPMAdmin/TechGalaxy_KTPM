@@ -1,5 +1,7 @@
 package iuh.fit.se.inventoryservice.event;
 
+import iuh.fit.se.inventoryservice.dto.request.ProductDetailUpdateRequest;
+import iuh.fit.se.inventoryservice.dto.response.ProductDetailResponse;
 import iuh.fit.se.inventoryservice.entities.InventoryLog;
 import iuh.fit.se.inventoryservice.entities.enumeration.ChangeType;
 import iuh.fit.se.inventoryservice.repository.InventoryLogRepository;
@@ -11,6 +13,8 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import java.util.Collection;
+import iuh.fit.se.inventoryservice.wrapper.ProductServiceWrapper;
 
 @Service
 // @RequiredArgsConstructor
@@ -22,12 +26,16 @@ public class InventoryEventListener {
     private final InventoryLogRepository inventoryLogRepository;
     private final RabbitTemplate rabbitTemplate;
 
+    private final ProductServiceWrapper productServiceWrapper;
+
     public InventoryEventListener(InventoryService inventoryService, InventoryRepository inventoryRepository,
-            InventoryLogRepository inventoryLogRepository, RabbitTemplate rabbitTemplate) {
+            InventoryLogRepository inventoryLogRepository, RabbitTemplate rabbitTemplate,
+            ProductServiceWrapper productServiceWrapper) {
         this.inventoryService = inventoryService;
         this.inventoryRepository = inventoryRepository;
         this.inventoryLogRepository = inventoryLogRepository;
         this.rabbitTemplate = rabbitTemplate;
+        this.productServiceWrapper = productServiceWrapper;
     }
 
     @Value("${rabbitmq.exchange.order}")
@@ -85,22 +93,47 @@ public class InventoryEventListener {
         try {
             for (InventoryUpdateMessage.ProductVariantDetail detail : message.getProductVariantDetails()) {
                 inventoryRepository.findByProductVariantDetailId(detail.getProductVariantDetailId())
-                        .ifPresent(inventory -> {
-                            inventory.setReservedQuantity(
-                                    Math.max(0, inventory.getReservedQuantity() - detail.getQuantity()));
+                        .ifPresentOrElse(inventory -> {
+                            int before = inventory.getReservedQuantity();
+                            int updated = Math.max(0, before - detail.getQuantity());
+
+                            inventory.setReservedQuantity(updated);
                             inventoryRepository.save(inventory);
 
-                            // Ghi log
+                            Collection<ProductDetailResponse> productDetailResponse = productServiceWrapper
+                                    .getProductDetail(inventory.getProductVariantDetailId());
+                            if (productDetailResponse.isEmpty()) {
+                                log.error("Product detail not found for ID: {}", inventory.getProductVariantDetailId());
+                                throw new RuntimeException(
+                                        "Product detail not found for ID: " + inventory.getProductVariantDetailId());
+                            }
+                            ProductDetailResponse productDetail = productDetailResponse.iterator().next();
+
+                            ProductDetailUpdateRequest request = new ProductDetailUpdateRequest();
+                            request.setPrice(productDetail.getPrice());
+                            request.setSale(productDetail.getSale());
+                            request.setStatus(productDetail.getStatus());
+                            request.setQuantity(inventory.getStockQuantity());
+                            productServiceWrapper.updateProductDetail(
+                                    inventory.getProductVariantDetailId(), request);
+
+                            log.info("✅ Updated inventory [{}]: reservedQuantity {} → {}",
+                                    inventory.getProductVariantDetailId(), before, updated);
+
                             inventoryLogRepository.save(InventoryLog.builder()
                                     .productVariantDetailId(detail.getProductVariantDetailId())
                                     .changeQuantity(-detail.getQuantity())
                                     .changeType(ChangeType.STOCK_OUT)
                                     .orderId(message.getOrderId())
                                     .inventory(inventory)
-                                    .changeReason("Thanh toán thành công")
+                                    .changeReason("Payment success for order: " + message.getOrderId())
                                     .build());
+                        }, () -> {
+                            log.warn("⚠️ No inventory found for productVariantDetailId={}",
+                                    detail.getProductVariantDetailId());
                         });
             }
+
         } catch (Exception e) {
             log.error("❌ Error handling inventory.update: {}", e.getMessage(), e);
 
