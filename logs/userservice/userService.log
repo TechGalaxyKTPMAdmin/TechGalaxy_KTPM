@@ -1338,3 +1338,25 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 2025-05-18 07:13:06.813 DEBUG 1 --- [http-nio-9001-exec-10] org.hibernate.SQL                        : select top (?) bt1_0.id from blacklisted_tokens bt1_0 where bt1_0.token=?
 2025-05-18 07:13:06.913 DEBUG 1 --- [http-nio-9001-exec-10] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.id=?
 2025-05-18 07:13:42.015 DEBUG 1 --- [http-nio-9001-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.account_id,a1_0.id,a1_0.created_at,a1_0.email,a1_0.password,a1_0.refresh_token,su1_0.id,su1_0.account_id,su1_0.address,su1_0.avatar,su1_0.created_at,su1_0.gender,su1_0.level,su1_0.name,su1_0.phone,su1_0.system_user_status,su1_0.updated_at,a1_0.updated_at,c1_0.avatar,c1_0.created_at,c1_0.date_of_birth,c1_0.gender,c1_0.name,c1_0.phone,c1_0.updated_at,c1_0.user_status from customers c1_0 join accounts a1_0 on a1_0.id=c1_0.account_id left join system_users su1_0 on a1_0.id=su1_0.account_id where c1_0.id=?
+2025-05-18 07:15:19.412  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:20:19.398  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:25:19.384  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:30:19.371  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:35:19.360  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:40:19.348  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:45:19.338  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:50:19.328  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:55:19.316  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:00:19.303  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:05:19.290  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:10:19.278  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:15:19.266  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:20:19.255  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:25:19.242  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:30:19.229  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:35:19.215  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:40:19.199  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:45:19.184  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:50:19.171  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:55:19.157  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 09:00:19.143  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

@@ -1395,3 +1395,25 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 2025-05-18 07:13:42.003  INFO [traceId=, spanId=] 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] i.f.s.o.s.w.CustomerServiceWrapper       : 🔍 Calling CustomerService for customerId: ba21e63f-c8cc-41c1-aa7c-bde769860887
 2025-05-18 07:13:42.036  INFO [traceId=, spanId=] 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] i.f.s.o.service.impl.OrderServiceImpl    : Payment completed for order: 629683ba-8fb9-49e3-b893-94d1c2438ed3
 2025-05-18 07:13:42.117  INFO [traceId=, spanId=] 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] i.f.s.o.service.impl.OrderServiceImpl    : Notification sent to ggducvu@gmail.com
+2025-05-18 07:15:14.656  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:20:14.642  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:25:14.628  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:30:14.616  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:35:14.604  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:40:14.591  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:45:14.579  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:50:14.567  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:55:14.560  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:00:14.548  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:05:14.536  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:10:14.523  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:15:14.510  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:20:14.499  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:25:14.487  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:30:14.474  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:35:14.459  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:40:14.443  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:45:14.428  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:50:14.415  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:55:14.401  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 09:00:14.387  INFO [traceId=, spanId=] 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

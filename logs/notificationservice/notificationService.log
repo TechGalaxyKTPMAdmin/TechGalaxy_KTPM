@@ -4495,3 +4495,1486 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 2025-05-18 07:14:00.228 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
 2025-05-18 07:14:00.230 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
 2025-05-18 07:14:00.232 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:14:33.272 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:14:33.277 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:14:33.280 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:15:07.081 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:15:07.083 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:15:07.085 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:15:09.593  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:15:40.715 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:15:40.717 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:15:40.719 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:16:14.488 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:16:14.489 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:16:14.491 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:16:48.265 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:16:48.267 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:16:48.269 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:17:21.963 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:17:21.965 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:17:21.966 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:17:55.474 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:17:55.476 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:17:55.478 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:18:28.975 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:18:28.977 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:18:28.978 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:19:02.695 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:19:02.697 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:19:02.699 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:19:36.314 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:19:36.316 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:19:36.318 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:20:09.577  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:20:10.015 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:20:10.016 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:20:10.018 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:20:43.666 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:20:43.667 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:20:43.668 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:21:16.812 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:21:16.814 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:21:16.815 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:21:50.525 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:21:50.526 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:21:50.528 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:22:24.118 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:22:24.119 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:22:24.121 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:22:57.659 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:22:57.661 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:22:57.663 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:23:30.655 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:23:30.656 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:23:30.658 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:24:03.770 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:24:03.771 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:24:03.773 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:24:36.878 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:24:36.880 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:24:36.883 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:25:09.563  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:25:10.649 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:25:10.651 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:25:10.653 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:25:44.180 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:25:44.183 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:25:44.184 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:26:17.780 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:26:17.782 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:26:17.783 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:26:51.418 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:26:51.420 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:26:51.421 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:27:24.529 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:27:24.530 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:27:24.532 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:27:58.251 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:27:58.253 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:27:58.255 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:28:31.374 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:28:31.376 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:28:31.378 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:29:05.025 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:29:05.029 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:29:05.033 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:29:38.103 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:29:38.105 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:29:38.108 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:30:09.549  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:30:11.603 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:30:11.604 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:30:11.606 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:30:45.285 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:30:45.287 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:30:45.289 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:31:18.943 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:31:18.944 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:31:18.945 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:31:52.656 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:31:52.658 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:31:52.660 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:32:26.216 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:32:26.217 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:32:26.218 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:32:59.721 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:32:59.723 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:32:59.725 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:33:33.372 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:33:33.374 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:33:33.376 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:34:06.938 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:34:06.940 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:34:06.942 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:34:40.601 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:34:40.602 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:34:40.604 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:35:09.536  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:35:14.331 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:35:14.333 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:35:14.335 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:35:48.045 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:35:48.047 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:35:48.050 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:36:21.817 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:36:21.819 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:36:21.821 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:36:55.568 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:36:55.570 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:36:55.572 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:37:29.283 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:37:29.285 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:37:29.288 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:38:02.949 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:38:02.951 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:38:02.953 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:38:36.662 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:38:36.664 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:38:36.666 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:39:09.798 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:39:09.800 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:39:09.802 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:39:43.499 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:39:43.500 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:39:43.502 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:40:09.524  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:40:16.607 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:40:16.608 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:40:16.610 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:40:50.126 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:40:50.128 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:40:50.130 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:41:23.732 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:41:23.734 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:41:23.736 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:41:57.758 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:41:57.760 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:41:57.761 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:42:31.317 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:42:31.318 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:42:31.321 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:43:05.052 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:43:05.055 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:43:05.058 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:43:38.683 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:43:38.684 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:43:38.686 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:44:12.384 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:44:12.386 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:44:12.388 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:44:46.886 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:44:46.888 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:44:46.889 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:45:09.510  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:45:20.637 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:45:20.641 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:45:20.644 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:45:54.417 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:45:54.423 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:45:54.429 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:46:28.081 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:46:28.084 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:46:28.086 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:47:01.902 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:47:01.905 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:47:01.906 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:47:35.033 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:47:35.036 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:47:35.038 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:48:08.732 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:48:08.734 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:48:08.736 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:48:42.444 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:48:42.446 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:48:42.448 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:49:16.115 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:49:16.116 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:49:16.119 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:49:49.290 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:49:49.293 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:49:49.296 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:50:09.497  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:50:23.023 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:50:23.027 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:50:23.030 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:50:56.773 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:50:56.777 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:50:56.779 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:51:30.558 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:51:30.561 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:51:30.563 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:52:04.370 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:52:04.374 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:52:04.377 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:52:38.102 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:52:38.105 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:52:38.109 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:53:11.786 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:53:11.788 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:53:11.792 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:53:45.517 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:53:45.520 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:53:45.523 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:54:18.671 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:54:18.673 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:54:18.675 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:54:51.923 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:54:51.928 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:54:51.932 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:55:09.486  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 07:55:25.686 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:55:25.688 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:55:25.691 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:55:58.803 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:55:58.805 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:55:58.807 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:56:32.621 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:56:32.623 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:56:32.626 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:57:06.420 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:57:06.422 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:57:06.424 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:57:40.143 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:57:40.146 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:57:40.149 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:58:13.954 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:58:13.957 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:58:13.961 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:58:47.133 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:58:47.135 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:58:47.138 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:59:20.831 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:59:20.832 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:59:20.834 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 07:59:54.540 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 07:59:54.543 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 07:59:54.546 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:00:09.473  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:00:28.242 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:00:28.244 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:00:28.246 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:01:01.915 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:01:01.917 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:01:01.919 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:01:35.127 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:01:35.130 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:01:35.132 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:02:08.927 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:02:08.929 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:02:08.931 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:02:42.618 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:02:42.620 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:02:42.621 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:03:15.725 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:03:15.726 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:03:15.728 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:03:48.826 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:03:48.828 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:03:48.831 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:03:53.867  WARN 1 --- [http-nio-9004-exec-6] o.s.b.actuate.mail.MailHealthIndicator   : Mail health check failed
+
+org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout 5000
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2243)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:729)
+	at jakarta.mail.Service.connect(Service.java:345)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:360)
+	at org.springframework.boot.actuate.mail.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:52)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:69)
+	at jdk.internal.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:327)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:434)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.doHead(HttpServlet.java:211)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:128)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.eclipse.angus.mail.util.WriteTimeoutSocket.connect(WriteTimeoutSocket.java:118)
+	at org.eclipse.angus.mail.util.SocketFetcher.createSocket(SocketFetcher.java:366)
+	at org.eclipse.angus.mail.util.SocketFetcher.getSocket(SocketFetcher.java:243)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2193)
+	... 162 common frames omitted
+
+2025-05-18 08:04:23.928 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:04:23.930 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:04:23.932 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:04:30.061  WARN 1 --- [http-nio-9004-exec-5] o.s.b.actuate.mail.MailHealthIndicator   : Mail health check failed
+
+jakarta.mail.MessagingException: Exception reading response
+	at org.eclipse.angus.mail.smtp.SMTPTransport.readServerResponse(SMTPTransport.java:2509)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2205)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:729)
+	at jakarta.mail.Service.connect(Service.java:345)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:360)
+	at org.springframework.boot.actuate.mail.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:52)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:69)
+	at jdk.internal.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:327)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:434)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.doHead(HttpServlet.java:211)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:128)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at org.eclipse.angus.mail.util.TraceInputStream.read(TraceInputStream.java:107)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:263)
+	at org.eclipse.angus.mail.util.LineInputStream.readLine(LineInputStream.java:104)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.readServerResponse(SMTPTransport.java:2489)
+	... 163 common frames omitted
+
+2025-05-18 08:05:00.120 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:05:00.124 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:05:00.128 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:05:09.459  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:05:33.705 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:05:33.706 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:05:33.708 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:06:06.824 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:06:06.826 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:06:06.829 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:06:11.911  WARN 1 --- [http-nio-9004-exec-1] o.s.b.actuate.mail.MailHealthIndicator   : Mail health check failed
+
+org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout 5000
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2243)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:729)
+	at jakarta.mail.Service.connect(Service.java:345)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:360)
+	at org.springframework.boot.actuate.mail.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:52)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:69)
+	at jdk.internal.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:327)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:434)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.doHead(HttpServlet.java:211)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:128)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.eclipse.angus.mail.util.WriteTimeoutSocket.connect(WriteTimeoutSocket.java:118)
+	at org.eclipse.angus.mail.util.SocketFetcher.createSocket(SocketFetcher.java:366)
+	at org.eclipse.angus.mail.util.SocketFetcher.getSocket(SocketFetcher.java:243)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2193)
+	... 162 common frames omitted
+
+2025-05-18 08:06:41.958 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:06:41.960 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:06:41.961 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:06:47.040  WARN 1 --- [http-nio-9004-exec-10] o.s.b.actuate.mail.MailHealthIndicator   : Mail health check failed
+
+org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout 5000
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2243)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:729)
+	at jakarta.mail.Service.connect(Service.java:345)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:360)
+	at org.springframework.boot.actuate.mail.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:52)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:69)
+	at jdk.internal.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:327)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:434)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.doHead(HttpServlet.java:211)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:128)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.eclipse.angus.mail.util.WriteTimeoutSocket.connect(WriteTimeoutSocket.java:118)
+	at org.eclipse.angus.mail.util.SocketFetcher.createSocket(SocketFetcher.java:366)
+	at org.eclipse.angus.mail.util.SocketFetcher.getSocket(SocketFetcher.java:243)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2193)
+	... 162 common frames omitted
+
+2025-05-18 08:07:17.083 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:07:17.084 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:07:17.086 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:07:50.813 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:07:50.815 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:07:50.816 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:08:24.516 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:08:24.517 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:08:24.519 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:08:58.142 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:08:58.143 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:08:58.145 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:09:31.830 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:09:31.833 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:09:31.835 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:10:05.537 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:10:05.539 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:10:05.541 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:10:09.447  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:10:39.284 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:10:39.286 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:10:39.287 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:11:12.961 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:11:12.963 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:11:12.965 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:11:46.755 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:11:46.758 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:11:46.761 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:12:20.509 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:12:20.511 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:12:20.513 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:12:54.101 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:12:54.103 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:12:54.105 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:13:28.678 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:13:28.681 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:13:28.683 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:14:06.659 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:14:06.662 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:14:06.663 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:14:39.756 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:14:39.758 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:14:39.763 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:15:09.434  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:15:13.440 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:15:13.441 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:15:13.443 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:15:47.097 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:15:47.098 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:15:47.100 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:16:20.683 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:16:20.685 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:16:20.687 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:16:54.295 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:16:54.297 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:16:54.299 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:17:28.050 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:17:28.051 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:17:28.054 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:18:03.135 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:18:03.136 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:18:03.138 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:18:36.810 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:18:36.812 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:18:36.813 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:19:10.542 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:19:10.545 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:19:10.548 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:19:43.659 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:19:43.660 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:19:43.662 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:20:09.422  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:20:16.755 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:20:16.756 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:20:16.758 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:20:49.836 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:20:49.837 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:20:49.839 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:21:25.421 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:21:25.423 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:21:25.425 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:21:58.612 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:21:58.614 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:21:58.616 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:22:32.285 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:22:32.286 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:22:32.289 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:23:05.461 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:23:05.463 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:23:05.465 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:23:39.192 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:23:39.193 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:23:39.195 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:24:12.327 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:24:12.329 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:24:12.331 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:24:45.419 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:24:45.421 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:24:45.424 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:25:09.410  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:25:19.148 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:25:19.149 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:25:19.151 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:25:52.277 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:25:52.279 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:25:52.280 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:26:00.412  WARN 1 --- [http-nio-9004-exec-2] o.s.b.actuate.mail.MailHealthIndicator   : Mail health check failed
+
+jakarta.mail.MessagingException: Exception reading response
+	at org.eclipse.angus.mail.smtp.SMTPTransport.readServerResponse(SMTPTransport.java:2509)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2205)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:729)
+	at jakarta.mail.Service.connect(Service.java:345)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:360)
+	at org.springframework.boot.actuate.mail.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:52)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.getHealth(HealthEndpointWebExtension.java:47)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:80)
+	at org.springframework.boot.actuate.health.HealthEndpointWebExtension.health(HealthEndpointWebExtension.java:69)
+	at jdk.internal.reflect.GeneratedMethodAccessor28.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$ServletWebOperationAdapter.handle(AbstractWebMvcEndpointHandlerMapping.java:327)
+	at org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(AbstractWebMvcEndpointHandlerMapping.java:434)
+	at jdk.internal.reflect.GeneratedMethodAccessor27.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.doHead(HttpServlet.java:211)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:128)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:114)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at org.eclipse.angus.mail.util.TraceInputStream.read(TraceInputStream.java:107)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:263)
+	at org.eclipse.angus.mail.util.LineInputStream.readLine(LineInputStream.java:104)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.readServerResponse(SMTPTransport.java:2489)
+	... 163 common frames omitted
+
+2025-05-18 08:26:30.458 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:26:30.460 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:26:30.462 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:27:04.090 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:27:04.092 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:27:04.094 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:27:37.871 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:27:37.872 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:27:37.874 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:28:10.974 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:28:10.976 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:28:10.977 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:28:44.691 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:28:44.693 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:28:44.695 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:29:18.399 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:29:18.401 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:29:18.403 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:29:51.470 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:29:51.472 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:29:51.475 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:30:09.397  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:30:24.594 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:30:24.597 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:30:24.599 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:30:57.703 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:30:57.705 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:30:57.706 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:31:31.470 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:31:31.474 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:31:31.477 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:32:04.747 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:32:04.749 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:32:04.752 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:32:38.824 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:32:38.825 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:32:38.827 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:33:12.550 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:33:12.551 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:33:12.553 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:33:45.662 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:33:45.664 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:33:45.667 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:34:19.417 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:34:19.419 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:34:19.421 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:34:52.524 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:34:52.525 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:34:52.527 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:35:09.381  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:35:27.074 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:35:27.076 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:35:27.078 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:36:01.582 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:36:01.584 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:36:01.586 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:36:35.152 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:36:35.154 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:36:35.155 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:37:09.112 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:37:09.121 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:37:09.124 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:37:42.957 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:37:42.959 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:37:42.961 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:38:16.859 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:38:16.861 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:38:16.863 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:38:50.071 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:38:50.073 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:38:50.075 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:39:23.717 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:39:23.719 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:39:23.720 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:39:57.405 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:39:57.407 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:39:57.408 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:40:09.365  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:40:30.534 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:40:30.535 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:40:30.536 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:41:04.238 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:41:04.241 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:41:04.244 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:41:37.571 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:41:37.577 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:41:37.584 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:42:10.850 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:42:10.852 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:42:10.853 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:42:44.005 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:42:44.007 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:42:44.009 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:43:17.726 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:43:17.728 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:43:17.730 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:43:51.418 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:43:51.420 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:43:51.422 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:44:25.134 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:44:25.135 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:44:25.137 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:44:58.730 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:44:58.732 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:44:58.733 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:45:09.349  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:45:32.438 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:45:32.439 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:45:32.441 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:46:06.134 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:46:06.135 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:46:06.136 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:46:39.798 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:46:39.800 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:46:39.803 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:47:13.011 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:47:13.013 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:47:13.015 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:47:47.625 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:47:47.627 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:47:47.629 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:48:21.323 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:48:21.325 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:48:21.327 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:48:54.494 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:48:54.496 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:48:54.497 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:49:28.245 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:49:28.246 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:49:28.248 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:50:01.936 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:50:01.938 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:50:01.939 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:50:09.334  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:50:35.029 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:50:35.031 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:50:35.033 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:51:08.723 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:51:08.724 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:51:08.726 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:51:42.470 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:51:42.473 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:51:42.474 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:52:16.099 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:52:16.101 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:52:16.102 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:52:49.878 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:52:49.879 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:52:49.881 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:53:23.458 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:53:23.460 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:53:23.461 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:53:56.571 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:53:56.572 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:53:56.574 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:54:30.275 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:54:30.276 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:54:30.278 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:55:03.964 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:55:03.966 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:55:03.968 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:55:09.319  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 08:55:37.692 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:55:37.694 DEBUG 1 --- [http-nio-9004-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:55:37.696 DEBUG 1 --- [http-nio-9004-exec-8] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:56:11.335 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:56:11.337 DEBUG 1 --- [http-nio-9004-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:56:11.339 DEBUG 1 --- [http-nio-9004-exec-9] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:56:45.092 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:56:45.094 DEBUG 1 --- [http-nio-9004-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:56:45.095 DEBUG 1 --- [http-nio-9004-exec-1] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:57:18.870 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:57:18.872 DEBUG 1 --- [http-nio-9004-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:57:18.874 DEBUG 1 --- [http-nio-9004-exec-10] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:57:52.621 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:57:52.622 DEBUG 1 --- [http-nio-9004-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:57:52.623 DEBUG 1 --- [http-nio-9004-exec-4] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:58:26.315 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:58:26.316 DEBUG 1 --- [http-nio-9004-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:58:26.318 DEBUG 1 --- [http-nio-9004-exec-3] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:58:59.434 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:58:59.436 DEBUG 1 --- [http-nio-9004-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:58:59.437 DEBUG 1 --- [http-nio-9004-exec-7] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 08:59:32.606 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 08:59:32.608 DEBUG 1 --- [http-nio-9004-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 08:59:32.610 DEBUG 1 --- [http-nio-9004-exec-2] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 09:00:06.165 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 09:00:06.167 DEBUG 1 --- [http-nio-9004-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 09:00:06.170 DEBUG 1 --- [http-nio-9004-exec-6] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health
+2025-05-18 09:00:09.305  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-18 09:00:39.905 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Securing HEAD /actuator/health
+2025-05-18 09:00:39.907 DEBUG 1 --- [http-nio-9004-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-18 09:00:39.910 DEBUG 1 --- [http-nio-9004-exec-5] o.s.security.web.FilterChainProxy        : Secured HEAD /actuator/health

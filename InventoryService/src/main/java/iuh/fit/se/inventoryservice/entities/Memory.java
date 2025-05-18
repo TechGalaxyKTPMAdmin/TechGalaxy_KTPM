@@ -14,25 +14,17 @@ import org.hibernate.annotations.UuidGenerator;
 
 import java.time.LocalDateTime;
 
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "Memories")
 public class Memory {
 
-    @Id
-    @UuidGenerator
     private String id;
 
-    @Column(nullable = false, length = 255)
     private String name;
 
-    @CreationTimestamp
     private LocalDateTime createdAt;
 
-    @UpdateTimestamp
     private LocalDateTime updatedAt;
 }
