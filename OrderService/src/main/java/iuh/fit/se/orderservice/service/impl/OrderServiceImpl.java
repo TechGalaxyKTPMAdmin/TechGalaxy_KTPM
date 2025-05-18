@@ -24,6 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
@@ -57,9 +58,12 @@ public class OrderServiceImpl implements OrderService {
     private final ObjectMapper objectMapper;
 
     private final String orderExchange = "order.exchange";
-    private final String orderCreatedRoutingKey = "order.created";
-    private final String inventoryUpdateRoutingKey = "inventory.update";
-    private final String inventoryRollbackRoutingKey = "inventory.rollback";
+    @Value("${rabbitmq.routing-key.order-created}")
+    private String orderCreatedRoutingKey;
+    @Value("${rabbitmq.routing-key.inventory-update}")
+    private String inventoryUpdateRoutingKey;
+    @Value("${rabbitmq.routing-key.inventory-rollback}")
+    private String inventoryRollbackRoutingKey;
 
     @Override
     @Cacheable(value = "OrderResponses", key = "#id", unless = "#result == null")
