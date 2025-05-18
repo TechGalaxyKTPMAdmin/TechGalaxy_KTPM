@@ -112,7 +112,7 @@ services:
       - ./logs/userservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=UserDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=UserDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
@@ -143,7 +143,7 @@ services:
       - ./logs/productservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=ProductDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=ProductDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
@@ -174,7 +174,7 @@ services:
       - ./logs/inventoryservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=InventoryDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=InventoryDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
@@ -211,7 +211,7 @@ services:
       - ./logs/orderservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=OrderDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=OrderDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
@@ -248,7 +248,7 @@ services:
       - ./logs/paymentservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=PaymentDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=PaymentDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
@@ -283,7 +283,7 @@ services:
       - ./logs/notificationservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=NotificationDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=NotificationDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
       SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
