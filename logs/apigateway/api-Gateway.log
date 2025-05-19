@@ -11834,3 +11834,1466 @@ org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAIL
 2025-04-25 15:22:35.412  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
 2025-04-25 15:22:35.427  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/76ef096c7e91:APIGateway:8081 - deregister  status: 200
 2025-04-25 15:22:35.428  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-26 12:10:59.554  INFO 1 --- [main] i.f.se.apigateway.ApiGatewayApplication  : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/APIGateway.jar started by root in /app)
+2025-04-26 12:10:59.575 DEBUG 1 --- [main] i.f.se.apigateway.ApiGatewayApplication  : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-26 12:10:59.578  INFO 1 --- [main] i.f.se.apigateway.ApiGatewayApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-04-26 12:11:03.405  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-26 12:11:03.414  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-26 12:11:03.489  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
+2025-04-26 12:11:04.535  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d6d79a07-8ff1-3466-b008-6fef020bf066
+2025-04-26 12:11:08.258  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-04-26 12:11:08.259  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-04-26 12:11:08.260  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-04-26 12:11:08.261  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-04-26 12:11:08.263  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-04-26 12:11:08.264  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-04-26 12:11:08.265  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-04-26 12:11:08.267  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-04-26 12:11:08.267  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-04-26 12:11:08.268  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-04-26 12:11:08.270  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-04-26 12:11:08.271  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-04-26 12:11:08.272  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-04-26 12:11:08.273  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-04-26 12:11:09.086  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 31 endpoints beneath base path '/actuator'
+2025-04-26 12:11:09.703  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-26 12:11:09.772  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-26 12:11:09.889  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-26 12:11:09.941  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-26 12:11:09.953  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-26 12:11:09.970  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-26 12:11:09.971  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-26 12:11:09.972  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-26 12:11:09.973  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-26 12:11:09.974  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-26 12:11:09.974  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-26 12:11:09.975  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-26 12:11:10.750  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-26 12:11:10.761  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-26 12:11:10.767  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-26 12:11:10.773  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1745669470773 with initial instances count: 1
+2025-04-26 12:11:10.781  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application APIGATEWAY with eureka with status UP
+2025-04-26 12:11:10.783  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1745669470783, current=UP, previous=STARTING]
+2025-04-26 12:11:10.789  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/6043c455dd7e:APIGateway:8081: registering service...
+2025-04-26 12:11:10.857  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/6043c455dd7e:APIGateway:8081 - registration status: 204
+2025-04-26 12:11:11.357  INFO 1 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
+2025-04-26 12:11:11.361  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2025-04-26 12:11:11.626  INFO 1 --- [main] i.f.se.apigateway.ApiGatewayApplication  : Started ApiGatewayApplication in 14.482 seconds (process running for 16.051)
+2025-04-26 12:16:09.962  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-26 12:17:06.888  INFO 1 --- [reactor-http-epoll-5] .s.a.f.AuthorizationGatewayFilterFactory : Processing request [1616e20b-e862-4b60-b0d2-ae8a758f664e]: http://localhost:8081/products/variants/all
+2025-04-26 12:17:06.903  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Checking path: /products/variants/all
+2025-04-26 12:17:06.904  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: / against path: /products/variants/all
+2025-04-26 12:17:06.906  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/register against path: /products/variants/all
+2025-04-26 12:17:06.908  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/login against path: /products/variants/all
+2025-04-26 12:17:06.909  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /storage/** against path: /products/variants/all
+2025-04-26 12:17:06.912  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /v3/api-docs/** against path: /products/variants/all
+2025-04-26 12:17:06.913  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui/** against path: /products/variants/all
+2025-04-26 12:17:06.913  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui.html against path: /products/variants/all
+2025-04-26 12:17:06.918  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /payment/** against path: /products/variants/all
+2025-04-26 12:17:06.930  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /file against path: /products/variants/all
+2025-04-26 12:17:06.934  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /files against path: /products/variants/all
+2025-04-26 12:17:06.941  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/** against path: /products/variants/all
+2025-04-26 12:17:06.944  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/health against path: /products/variants/all
+2025-04-26 12:17:06.945  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /health/** against path: /products/variants/all
+2025-04-26 12:17:06.947  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /inventory/** against path: /products/variants/all
+2025-04-26 12:17:06.950  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/recommendations/** against path: /products/variants/all
+2025-04-26 12:17:06.960  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/refresh-token against path: /products/variants/all
+2025-04-26 12:17:06.971  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : Matching GET-only pattern: /products/** against path: /products/variants/all
+2025-04-26 12:17:06.982  INFO 1 --- [reactor-http-epoll-5] i.f.se.apigateway.filter.RouteValidator  : GET Path /products/variants/all matches GET-only pattern /products/**
+2025-04-26 12:17:06.983  INFO 1 --- [reactor-http-epoll-5] .s.a.f.AuthorizationGatewayFilterFactory : Open endpoint detected [1616e20b-e862-4b60-b0d2-ae8a758f664e], bypassing authentication
+2025-04-26 12:17:07.708  WARN 1 --- [lettuce-epollEventLoop-5-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ProductService
+2025-04-26 12:17:07.727 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : CircuitBreaker 'productServiceCB' recorded an exception as failure:
+
+org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"
+	at org.springframework.cloud.gateway.support.NotFoundException.create(NotFoundException.java:45)
+	at org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter.lambda$filter$2(ReactiveLoadBalancerClientFilter.java:123)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:453)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onNext(FluxFlattenIterable.java:256)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:237)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onComplete(FluxDematerialize.java:121)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:91)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:402)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.request(FluxPeek.java:138)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onSubscribe(MonoIgnoreElements.java:72)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onSubscribe(FluxPeek.java:171)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onSubscribe(FluxDematerialize.java:77)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.DrainUtils.postCompleteDrain(DrainUtils.java:132)
+	at reactor.core.publisher.DrainUtils.postComplete(DrainUtils.java:187)
+	at reactor.core.publisher.FluxMaterialize$MaterializeSubscriber.onComplete(FluxMaterialize.java:141)
+	at reactor.core.publisher.FluxLimitRequest$FluxLimitRequestSubscriber.onNext(FluxLimitRequest.java:104)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onNext(FluxTimeout.java:181)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$FirstNonEmptyEmittingSubscriber.onComplete(FluxFirstNonEmptyEmitting.java:325)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:144)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8891)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$RaceCoordinator.subscribe(FluxFirstNonEmptyEmitting.java:203)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting.subscribe(FluxFirstNonEmptyEmitting.java:128)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.FluxRetryWhen.subscribe(FluxRetryWhen.java:81)
+	at reactor.core.publisher.MonoRetryWhen.subscribeOrReturn(MonoRetryWhen.java:46)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:75)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoReduceSeed$ReduceSeedSubscriber.onComplete(MonoReduceSeed.java:163)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredComplete(FluxUsingWhen.java:397)
+	at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:532)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:828)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxArray$ArraySubscription.slowPath(FluxArray.java:137)
+	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:99)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxMerge.subscribe(FluxMerge.java:73)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:389)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:241)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:905)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:707)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:617)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:574)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:330)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:345)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:787)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:69)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:67)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:749)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:684)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:601)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-04-26 12:17:07.754 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : Event ERROR published: 2025-04-26T12:17:07.749847940Z[Etc/UTC]: CircuitBreaker 'productServiceCB' recorded an error: 'org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"'. Elapsed time: 702 ms
+2025-04-26 12:21:09.989  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-26 12:24:10.877  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application APIGATEWAY with eureka with status DOWN
+2025-04-26 12:24:10.889  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1745670250889, current=DOWN, previous=UP]
+2025-04-26 12:24:10.927  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/6043c455dd7e:APIGateway:8081: registering service...
+2025-04-26 12:24:10.964  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/6043c455dd7e:APIGateway:8081 - registration status: 204
+2025-04-26 12:24:10.983  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-26 12:24:11.015  INFO 1 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2025-04-26 12:24:13.220  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-26 12:24:16.236  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-26 12:24:16.265  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/6043c455dd7e:APIGateway:8081 - deregister  status: 200
+2025-04-26 12:24:16.271  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-04-26 12:26:16.904  INFO 1 --- [main] i.f.se.apigateway.ApiGatewayApplication  : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/APIGateway.jar started by root in /app)
+2025-04-26 12:26:16.926 DEBUG 1 --- [main] i.f.se.apigateway.ApiGatewayApplication  : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-04-26 12:26:16.929  INFO 1 --- [main] i.f.se.apigateway.ApiGatewayApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-04-26 12:26:21.951  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-26 12:26:21.960  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-26 12:26:22.121  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 0 Redis repository interfaces.
+2025-04-26 12:26:23.809  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d6d79a07-8ff1-3466-b008-6fef020bf066
+2025-04-26 12:26:28.532  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2025-04-26 12:26:28.533  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2025-04-26 12:26:28.537  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2025-04-26 12:26:28.540  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2025-04-26 12:26:28.542  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2025-04-26 12:26:28.543  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2025-04-26 12:26:28.547  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2025-04-26 12:26:28.548  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2025-04-26 12:26:28.550  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2025-04-26 12:26:28.554  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2025-04-26 12:26:28.556  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2025-04-26 12:26:28.558  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-04-26 12:26:28.559  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2025-04-26 12:26:28.561  INFO 1 --- [main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-04-26 12:26:29.376  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 31 endpoints beneath base path '/actuator'
+2025-04-26 12:26:30.017  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-04-26 12:26:30.087  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-04-26 12:26:30.262  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-04-26 12:26:30.365  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-04-26 12:26:30.383  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-04-26 12:26:30.412  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-04-26 12:26:30.413  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-04-26 12:26:30.415  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-04-26 12:26:30.416  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-04-26 12:26:30.420  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-04-26 12:26:30.421  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-04-26 12:26:30.429  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-04-26 12:26:32.320  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-04-26 12:26:32.328  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-04-26 12:26:32.336  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-04-26 12:26:32.348  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1745670392347 with initial instances count: 1
+2025-04-26 12:26:32.359  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application APIGATEWAY with eureka with status UP
+2025-04-26 12:26:32.362  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1745670392362, current=UP, previous=STARTING]
+2025-04-26 12:26:32.367  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/6043c455dd7e:APIGateway:8081: registering service...
+2025-04-26 12:26:32.626  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/6043c455dd7e:APIGateway:8081 - registration status: 204
+2025-04-26 12:26:33.396  INFO 1 --- [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081 (http)
+2025-04-26 12:26:33.414  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2025-04-26 12:26:33.728  INFO 1 --- [main] i.f.se.apigateway.ApiGatewayApplication  : Started ApiGatewayApplication in 20.134 seconds (process running for 21.378)
+2025-04-26 12:27:06.165  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Processing request [772085b5-e69a-4897-aaef-ed5f924bda37]: http://localhost:8081/products/variants/all
+2025-04-26 12:27:06.168  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Checking path: /products/variants/all
+2025-04-26 12:27:06.170  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: / against path: /products/variants/all
+2025-04-26 12:27:06.171  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/register against path: /products/variants/all
+2025-04-26 12:27:06.172  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/login against path: /products/variants/all
+2025-04-26 12:27:06.174  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /storage/** against path: /products/variants/all
+2025-04-26 12:27:06.177  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /v3/api-docs/** against path: /products/variants/all
+2025-04-26 12:27:06.181  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui/** against path: /products/variants/all
+2025-04-26 12:27:06.188  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui.html against path: /products/variants/all
+2025-04-26 12:27:06.191  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /payment/** against path: /products/variants/all
+2025-04-26 12:27:06.192  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /file against path: /products/variants/all
+2025-04-26 12:27:06.193  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /files against path: /products/variants/all
+2025-04-26 12:27:06.195  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/** against path: /products/variants/all
+2025-04-26 12:27:06.196  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/health against path: /products/variants/all
+2025-04-26 12:27:06.199  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /health/** against path: /products/variants/all
+2025-04-26 12:27:06.211  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /inventory/** against path: /products/variants/all
+2025-04-26 12:27:06.232  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/recommendations/** against path: /products/variants/all
+2025-04-26 12:27:06.250  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/refresh-token against path: /products/variants/all
+2025-04-26 12:27:06.267  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching GET-only pattern: /products/** against path: /products/variants/all
+2025-04-26 12:27:06.268  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : GET Path /products/variants/all matches GET-only pattern /products/**
+2025-04-26 12:27:06.269  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Open endpoint detected [772085b5-e69a-4897-aaef-ed5f924bda37], bypassing authentication
+2025-04-26 12:27:06.791  WARN 1 --- [lettuce-epollEventLoop-5-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ProductService
+2025-04-26 12:27:06.822 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : CircuitBreaker 'productServiceCB' recorded an exception as failure:
+
+org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"
+	at org.springframework.cloud.gateway.support.NotFoundException.create(NotFoundException.java:45)
+	at org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter.lambda$filter$2(ReactiveLoadBalancerClientFilter.java:123)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:453)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onNext(FluxFlattenIterable.java:256)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:237)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onComplete(FluxDematerialize.java:121)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:91)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:402)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.request(FluxPeek.java:138)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onSubscribe(MonoIgnoreElements.java:72)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onSubscribe(FluxPeek.java:171)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onSubscribe(FluxDematerialize.java:77)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.DrainUtils.postCompleteDrain(DrainUtils.java:132)
+	at reactor.core.publisher.DrainUtils.postComplete(DrainUtils.java:187)
+	at reactor.core.publisher.FluxMaterialize$MaterializeSubscriber.onComplete(FluxMaterialize.java:141)
+	at reactor.core.publisher.FluxLimitRequest$FluxLimitRequestSubscriber.onNext(FluxLimitRequest.java:104)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onNext(FluxTimeout.java:181)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$FirstNonEmptyEmittingSubscriber.onComplete(FluxFirstNonEmptyEmitting.java:325)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:144)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8891)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$RaceCoordinator.subscribe(FluxFirstNonEmptyEmitting.java:203)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting.subscribe(FluxFirstNonEmptyEmitting.java:128)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.FluxRetryWhen.subscribe(FluxRetryWhen.java:81)
+	at reactor.core.publisher.MonoRetryWhen.subscribeOrReturn(MonoRetryWhen.java:46)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:75)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoReduceSeed$ReduceSeedSubscriber.onComplete(MonoReduceSeed.java:163)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredComplete(FluxUsingWhen.java:397)
+	at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:532)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:828)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxArray$ArraySubscription.slowPath(FluxArray.java:137)
+	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:99)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxMerge.subscribe(FluxMerge.java:73)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:389)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:241)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:905)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:707)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:617)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:574)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:330)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:345)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:787)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:69)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:67)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:749)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:684)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:601)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-04-26 12:27:06.862 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : Event ERROR published: 2025-04-26T12:27:06.860661834Z[Etc/UTC]: CircuitBreaker 'productServiceCB' recorded an error: 'org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"'. Elapsed time: 532 ms
+2025-04-26 12:27:13.285  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Processing request [d38f6af9-0b57-401e-aa95-232e61c31c84]: http://localhost:8081/products/variants/all
+2025-04-26 12:27:13.311  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Checking path: /products/variants/all
+2025-04-26 12:27:13.316  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: / against path: /products/variants/all
+2025-04-26 12:27:13.317  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/register against path: /products/variants/all
+2025-04-26 12:27:13.321  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/login against path: /products/variants/all
+2025-04-26 12:27:13.340  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /storage/** against path: /products/variants/all
+2025-04-26 12:27:13.343  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /v3/api-docs/** against path: /products/variants/all
+2025-04-26 12:27:13.344  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui/** against path: /products/variants/all
+2025-04-26 12:27:13.345  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui.html against path: /products/variants/all
+2025-04-26 12:27:13.370  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /payment/** against path: /products/variants/all
+2025-04-26 12:27:13.383  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /file against path: /products/variants/all
+2025-04-26 12:27:13.395  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /files against path: /products/variants/all
+2025-04-26 12:27:13.420  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/** against path: /products/variants/all
+2025-04-26 12:27:13.433  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/health against path: /products/variants/all
+2025-04-26 12:27:13.435  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /health/** against path: /products/variants/all
+2025-04-26 12:27:13.436  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /inventory/** against path: /products/variants/all
+2025-04-26 12:27:13.436  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/recommendations/** against path: /products/variants/all
+2025-04-26 12:27:13.440  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/refresh-token against path: /products/variants/all
+2025-04-26 12:27:13.457  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching GET-only pattern: /products/** against path: /products/variants/all
+2025-04-26 12:27:13.470  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : GET Path /products/variants/all matches GET-only pattern /products/**
+2025-04-26 12:27:13.480  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Open endpoint detected [d38f6af9-0b57-401e-aa95-232e61c31c84], bypassing authentication
+2025-04-26 12:27:13.534  WARN 1 --- [lettuce-epollEventLoop-5-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ProductService
+2025-04-26 12:27:13.553 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : CircuitBreaker 'productServiceCB' recorded an exception as failure:
+
+org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"
+	at org.springframework.cloud.gateway.support.NotFoundException.create(NotFoundException.java:45)
+	at org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter.lambda$filter$2(ReactiveLoadBalancerClientFilter.java:123)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:453)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onNext(FluxFlattenIterable.java:256)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:237)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onComplete(FluxDematerialize.java:121)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:91)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:402)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.request(FluxPeek.java:138)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onSubscribe(MonoIgnoreElements.java:72)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onSubscribe(FluxPeek.java:171)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onSubscribe(FluxDematerialize.java:77)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.DrainUtils.postCompleteDrain(DrainUtils.java:132)
+	at reactor.core.publisher.DrainUtils.postComplete(DrainUtils.java:187)
+	at reactor.core.publisher.FluxMaterialize$MaterializeSubscriber.onComplete(FluxMaterialize.java:141)
+	at reactor.core.publisher.FluxLimitRequest$FluxLimitRequestSubscriber.onNext(FluxLimitRequest.java:104)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onNext(FluxTimeout.java:181)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$FirstNonEmptyEmittingSubscriber.onComplete(FluxFirstNonEmptyEmitting.java:325)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:144)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8891)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$RaceCoordinator.subscribe(FluxFirstNonEmptyEmitting.java:203)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting.subscribe(FluxFirstNonEmptyEmitting.java:128)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.FluxRetryWhen.subscribe(FluxRetryWhen.java:81)
+	at reactor.core.publisher.MonoRetryWhen.subscribeOrReturn(MonoRetryWhen.java:46)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:75)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoReduceSeed$ReduceSeedSubscriber.onComplete(MonoReduceSeed.java:163)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredComplete(FluxUsingWhen.java:397)
+	at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:532)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:828)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxArray$ArraySubscription.slowPath(FluxArray.java:137)
+	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:99)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxMerge.subscribe(FluxMerge.java:73)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:389)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:241)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:905)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:707)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:617)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:574)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:330)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:345)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:787)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:69)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:67)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:749)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:684)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:601)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-04-26 12:27:13.584 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : Event ERROR published: 2025-04-26T12:27:13.584322679Z[Etc/UTC]: CircuitBreaker 'productServiceCB' recorded an error: 'org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"'. Elapsed time: 65 ms
+2025-04-26 12:28:15.446  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Processing request [cfba7a0f-98f0-4d00-a813-0e6a439d6405]: http://localhost:8081/products/variants/all
+2025-04-26 12:28:15.464  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Checking path: /products/variants/all
+2025-04-26 12:28:15.484  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: / against path: /products/variants/all
+2025-04-26 12:28:15.494  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/register against path: /products/variants/all
+2025-04-26 12:28:15.523  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/login against path: /products/variants/all
+2025-04-26 12:28:15.529  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /storage/** against path: /products/variants/all
+2025-04-26 12:28:15.532  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /v3/api-docs/** against path: /products/variants/all
+2025-04-26 12:28:15.536  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui/** against path: /products/variants/all
+2025-04-26 12:28:15.542  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui.html against path: /products/variants/all
+2025-04-26 12:28:15.544  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /payment/** against path: /products/variants/all
+2025-04-26 12:28:15.550  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /file against path: /products/variants/all
+2025-04-26 12:28:15.580  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /files against path: /products/variants/all
+2025-04-26 12:28:15.602  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/** against path: /products/variants/all
+2025-04-26 12:28:15.623  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/health against path: /products/variants/all
+2025-04-26 12:28:15.629  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /health/** against path: /products/variants/all
+2025-04-26 12:28:15.635  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /inventory/** against path: /products/variants/all
+2025-04-26 12:28:15.637  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/recommendations/** against path: /products/variants/all
+2025-04-26 12:28:15.640  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/refresh-token against path: /products/variants/all
+2025-04-26 12:28:15.644  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching GET-only pattern: /products/** against path: /products/variants/all
+2025-04-26 12:28:15.645  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : GET Path /products/variants/all matches GET-only pattern /products/**
+2025-04-26 12:28:15.661  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Open endpoint detected [cfba7a0f-98f0-4d00-a813-0e6a439d6405], bypassing authentication
+2025-04-26 12:28:15.708  WARN 1 --- [lettuce-epollEventLoop-5-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ProductService
+2025-04-26 12:28:15.720 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : CircuitBreaker 'productServiceCB' recorded an exception as failure:
+
+org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"
+	at org.springframework.cloud.gateway.support.NotFoundException.create(NotFoundException.java:45)
+	at org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter.lambda$filter$2(ReactiveLoadBalancerClientFilter.java:123)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:453)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onNext(FluxFlattenIterable.java:256)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:237)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onComplete(FluxDematerialize.java:121)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:91)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:402)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.request(FluxPeek.java:138)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onSubscribe(MonoIgnoreElements.java:72)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onSubscribe(FluxPeek.java:171)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onSubscribe(FluxDematerialize.java:77)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.DrainUtils.postCompleteDrain(DrainUtils.java:132)
+	at reactor.core.publisher.DrainUtils.postComplete(DrainUtils.java:187)
+	at reactor.core.publisher.FluxMaterialize$MaterializeSubscriber.onComplete(FluxMaterialize.java:141)
+	at reactor.core.publisher.FluxLimitRequest$FluxLimitRequestSubscriber.onNext(FluxLimitRequest.java:104)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onNext(FluxTimeout.java:181)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$FirstNonEmptyEmittingSubscriber.onComplete(FluxFirstNonEmptyEmitting.java:325)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:144)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8891)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$RaceCoordinator.subscribe(FluxFirstNonEmptyEmitting.java:203)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting.subscribe(FluxFirstNonEmptyEmitting.java:128)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.FluxRetryWhen.subscribe(FluxRetryWhen.java:81)
+	at reactor.core.publisher.MonoRetryWhen.subscribeOrReturn(MonoRetryWhen.java:46)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:75)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoReduceSeed$ReduceSeedSubscriber.onComplete(MonoReduceSeed.java:163)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredComplete(FluxUsingWhen.java:397)
+	at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:532)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:828)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxArray$ArraySubscription.slowPath(FluxArray.java:137)
+	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:99)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxMerge.subscribe(FluxMerge.java:73)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:389)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:241)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:905)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:707)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:617)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:574)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:330)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:345)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:787)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:69)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:67)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:749)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:684)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:601)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-04-26 12:28:15.732 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : Event ERROR published: 2025-04-26T12:28:15.732465893Z[Etc/UTC]: CircuitBreaker 'productServiceCB' recorded an error: 'org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"'. Elapsed time: 52 ms
+2025-04-26 12:28:32.000  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Processing request [05e03088-deff-47a5-9161-19459ae517e8]: http://localhost:8081/products/variants/all
+2025-04-26 12:28:32.009  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Checking path: /products/variants/all
+2025-04-26 12:28:32.011  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: / against path: /products/variants/all
+2025-04-26 12:28:32.013  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/register against path: /products/variants/all
+2025-04-26 12:28:32.014  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/login against path: /products/variants/all
+2025-04-26 12:28:32.015  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /storage/** against path: /products/variants/all
+2025-04-26 12:28:32.016  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /v3/api-docs/** against path: /products/variants/all
+2025-04-26 12:28:32.017  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui/** against path: /products/variants/all
+2025-04-26 12:28:32.018  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui.html against path: /products/variants/all
+2025-04-26 12:28:32.023  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /payment/** against path: /products/variants/all
+2025-04-26 12:28:32.025  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /file against path: /products/variants/all
+2025-04-26 12:28:32.028  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /files against path: /products/variants/all
+2025-04-26 12:28:32.030  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/** against path: /products/variants/all
+2025-04-26 12:28:32.031  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/health against path: /products/variants/all
+2025-04-26 12:28:32.032  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /health/** against path: /products/variants/all
+2025-04-26 12:28:32.033  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /inventory/** against path: /products/variants/all
+2025-04-26 12:28:32.034  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/recommendations/** against path: /products/variants/all
+2025-04-26 12:28:32.034  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/refresh-token against path: /products/variants/all
+2025-04-26 12:28:32.035  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching GET-only pattern: /products/** against path: /products/variants/all
+2025-04-26 12:28:32.036  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : GET Path /products/variants/all matches GET-only pattern /products/**
+2025-04-26 12:28:32.039  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Open endpoint detected [05e03088-deff-47a5-9161-19459ae517e8], bypassing authentication
+2025-04-26 12:28:32.050  WARN 1 --- [lettuce-epollEventLoop-5-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ProductService
+2025-04-26 12:28:32.052 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : CircuitBreaker 'productServiceCB' recorded an exception as failure:
+
+org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"
+	at org.springframework.cloud.gateway.support.NotFoundException.create(NotFoundException.java:45)
+	at org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter.lambda$filter$2(ReactiveLoadBalancerClientFilter.java:123)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:453)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onNext(FluxFlattenIterable.java:256)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:237)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onComplete(FluxDematerialize.java:121)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:91)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:402)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.request(FluxPeek.java:138)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onSubscribe(MonoIgnoreElements.java:72)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onSubscribe(FluxPeek.java:171)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onSubscribe(FluxDematerialize.java:77)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.DrainUtils.postCompleteDrain(DrainUtils.java:132)
+	at reactor.core.publisher.DrainUtils.postComplete(DrainUtils.java:187)
+	at reactor.core.publisher.FluxMaterialize$MaterializeSubscriber.onComplete(FluxMaterialize.java:141)
+	at reactor.core.publisher.FluxLimitRequest$FluxLimitRequestSubscriber.onNext(FluxLimitRequest.java:104)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onNext(FluxTimeout.java:181)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$FirstNonEmptyEmittingSubscriber.onComplete(FluxFirstNonEmptyEmitting.java:325)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:144)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8891)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$RaceCoordinator.subscribe(FluxFirstNonEmptyEmitting.java:203)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting.subscribe(FluxFirstNonEmptyEmitting.java:128)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.FluxRetryWhen.subscribe(FluxRetryWhen.java:81)
+	at reactor.core.publisher.MonoRetryWhen.subscribeOrReturn(MonoRetryWhen.java:46)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:75)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoReduceSeed$ReduceSeedSubscriber.onComplete(MonoReduceSeed.java:163)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredComplete(FluxUsingWhen.java:397)
+	at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:532)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:828)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxArray$ArraySubscription.slowPath(FluxArray.java:137)
+	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:99)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxMerge.subscribe(FluxMerge.java:73)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:389)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:241)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:905)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:707)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:617)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:574)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:330)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:345)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:787)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:69)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:67)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:749)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:684)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:601)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-04-26 12:28:32.056 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : Event ERROR published: 2025-04-26T12:28:32.056597524Z[Etc/UTC]: CircuitBreaker 'productServiceCB' recorded an error: 'org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"'. Elapsed time: 11 ms
+2025-04-26 12:28:33.139  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Processing request [44af22fe-396f-48fe-804b-14907e60b957]: http://localhost:8081/products/variants/all
+2025-04-26 12:28:33.150  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Checking path: /products/variants/all
+2025-04-26 12:28:33.152  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: / against path: /products/variants/all
+2025-04-26 12:28:33.155  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/register against path: /products/variants/all
+2025-04-26 12:28:33.157  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/login against path: /products/variants/all
+2025-04-26 12:28:33.159  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /storage/** against path: /products/variants/all
+2025-04-26 12:28:33.161  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /v3/api-docs/** against path: /products/variants/all
+2025-04-26 12:28:33.162  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui/** against path: /products/variants/all
+2025-04-26 12:28:33.164  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui.html against path: /products/variants/all
+2025-04-26 12:28:33.165  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /payment/** against path: /products/variants/all
+2025-04-26 12:28:33.168  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /file against path: /products/variants/all
+2025-04-26 12:28:33.170  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /files against path: /products/variants/all
+2025-04-26 12:28:33.172  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/** against path: /products/variants/all
+2025-04-26 12:28:33.173  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/health against path: /products/variants/all
+2025-04-26 12:28:33.174  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /health/** against path: /products/variants/all
+2025-04-26 12:28:33.176  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /inventory/** against path: /products/variants/all
+2025-04-26 12:28:33.179  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/recommendations/** against path: /products/variants/all
+2025-04-26 12:28:33.181  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/refresh-token against path: /products/variants/all
+2025-04-26 12:28:33.186  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching GET-only pattern: /products/** against path: /products/variants/all
+2025-04-26 12:28:33.191  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : GET Path /products/variants/all matches GET-only pattern /products/**
+2025-04-26 12:28:33.192  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Open endpoint detected [44af22fe-396f-48fe-804b-14907e60b957], bypassing authentication
+2025-04-26 12:28:33.206  WARN 1 --- [lettuce-epollEventLoop-5-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ProductService
+2025-04-26 12:28:33.209 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : CircuitBreaker 'productServiceCB' recorded an exception as failure:
+
+org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"
+	at org.springframework.cloud.gateway.support.NotFoundException.create(NotFoundException.java:45)
+	at org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter.lambda$filter$2(ReactiveLoadBalancerClientFilter.java:123)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:453)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onNext(FluxFlattenIterable.java:256)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:237)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onComplete(FluxDematerialize.java:121)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:91)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:402)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.request(FluxPeek.java:138)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onSubscribe(MonoIgnoreElements.java:72)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onSubscribe(FluxPeek.java:171)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onSubscribe(FluxDematerialize.java:77)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.DrainUtils.postCompleteDrain(DrainUtils.java:132)
+	at reactor.core.publisher.DrainUtils.postComplete(DrainUtils.java:187)
+	at reactor.core.publisher.FluxMaterialize$MaterializeSubscriber.onComplete(FluxMaterialize.java:141)
+	at reactor.core.publisher.FluxLimitRequest$FluxLimitRequestSubscriber.onNext(FluxLimitRequest.java:104)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onNext(FluxTimeout.java:181)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$FirstNonEmptyEmittingSubscriber.onComplete(FluxFirstNonEmptyEmitting.java:325)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:144)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8891)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$RaceCoordinator.subscribe(FluxFirstNonEmptyEmitting.java:203)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting.subscribe(FluxFirstNonEmptyEmitting.java:128)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.FluxRetryWhen.subscribe(FluxRetryWhen.java:81)
+	at reactor.core.publisher.MonoRetryWhen.subscribeOrReturn(MonoRetryWhen.java:46)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:75)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoReduceSeed$ReduceSeedSubscriber.onComplete(MonoReduceSeed.java:163)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredComplete(FluxUsingWhen.java:397)
+	at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:532)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:828)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxArray$ArraySubscription.slowPath(FluxArray.java:137)
+	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:99)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxMerge.subscribe(FluxMerge.java:73)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:389)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:241)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:905)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:707)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:617)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:574)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:330)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:345)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:787)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:69)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:67)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:749)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:684)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:601)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-04-26 12:28:33.216 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : Event ERROR published: 2025-04-26T12:28:33.216325524Z[Etc/UTC]: CircuitBreaker 'productServiceCB' recorded an error: 'org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"'. Elapsed time: 13 ms
+2025-04-26 12:28:33.945  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Processing request [69e05dc7-45ce-4ca4-870f-9e60a2886832]: http://localhost:8081/products/variants/all
+2025-04-26 12:28:33.950  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Checking path: /products/variants/all
+2025-04-26 12:28:33.951  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: / against path: /products/variants/all
+2025-04-26 12:28:33.957  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/register against path: /products/variants/all
+2025-04-26 12:28:33.959  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/login against path: /products/variants/all
+2025-04-26 12:28:33.960  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /storage/** against path: /products/variants/all
+2025-04-26 12:28:33.962  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /v3/api-docs/** against path: /products/variants/all
+2025-04-26 12:28:33.963  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui/** against path: /products/variants/all
+2025-04-26 12:28:33.965  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui.html against path: /products/variants/all
+2025-04-26 12:28:33.967  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /payment/** against path: /products/variants/all
+2025-04-26 12:28:33.968  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /file against path: /products/variants/all
+2025-04-26 12:28:33.976  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /files against path: /products/variants/all
+2025-04-26 12:28:33.978  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/** against path: /products/variants/all
+2025-04-26 12:28:33.979  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/health against path: /products/variants/all
+2025-04-26 12:28:33.980  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /health/** against path: /products/variants/all
+2025-04-26 12:28:33.981  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /inventory/** against path: /products/variants/all
+2025-04-26 12:28:33.983  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/recommendations/** against path: /products/variants/all
+2025-04-26 12:28:33.984  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/refresh-token against path: /products/variants/all
+2025-04-26 12:28:33.985  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching GET-only pattern: /products/** against path: /products/variants/all
+2025-04-26 12:28:33.990  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : GET Path /products/variants/all matches GET-only pattern /products/**
+2025-04-26 12:28:33.993  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Open endpoint detected [69e05dc7-45ce-4ca4-870f-9e60a2886832], bypassing authentication
+2025-04-26 12:28:34.005  WARN 1 --- [lettuce-epollEventLoop-5-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ProductService
+2025-04-26 12:28:34.009 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : CircuitBreaker 'productServiceCB' recorded an exception as failure:
+
+org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"
+	at org.springframework.cloud.gateway.support.NotFoundException.create(NotFoundException.java:45)
+	at org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter.lambda$filter$2(ReactiveLoadBalancerClientFilter.java:123)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:453)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onNext(FluxFlattenIterable.java:256)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:237)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onComplete(FluxDematerialize.java:121)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:91)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:402)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.request(FluxPeek.java:138)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onSubscribe(MonoIgnoreElements.java:72)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onSubscribe(FluxPeek.java:171)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onSubscribe(FluxDematerialize.java:77)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.DrainUtils.postCompleteDrain(DrainUtils.java:132)
+	at reactor.core.publisher.DrainUtils.postComplete(DrainUtils.java:187)
+	at reactor.core.publisher.FluxMaterialize$MaterializeSubscriber.onComplete(FluxMaterialize.java:141)
+	at reactor.core.publisher.FluxLimitRequest$FluxLimitRequestSubscriber.onNext(FluxLimitRequest.java:104)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onNext(FluxTimeout.java:181)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$FirstNonEmptyEmittingSubscriber.onComplete(FluxFirstNonEmptyEmitting.java:325)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:144)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8891)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$RaceCoordinator.subscribe(FluxFirstNonEmptyEmitting.java:203)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting.subscribe(FluxFirstNonEmptyEmitting.java:128)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.FluxRetryWhen.subscribe(FluxRetryWhen.java:81)
+	at reactor.core.publisher.MonoRetryWhen.subscribeOrReturn(MonoRetryWhen.java:46)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:75)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoReduceSeed$ReduceSeedSubscriber.onComplete(MonoReduceSeed.java:163)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredComplete(FluxUsingWhen.java:397)
+	at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:532)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:828)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxArray$ArraySubscription.slowPath(FluxArray.java:137)
+	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:99)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxMerge.subscribe(FluxMerge.java:73)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:389)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:241)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:905)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:707)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:617)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:574)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:330)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:345)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:787)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:69)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:67)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:749)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:684)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:601)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-04-26 12:28:34.016 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : Event ERROR published: 2025-04-26T12:28:34.016388825Z[Etc/UTC]: CircuitBreaker 'productServiceCB' recorded an error: 'org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"'. Elapsed time: 12 ms
+2025-04-26 12:28:34.350  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Processing request [53c3ee4e-49f3-431b-842c-218b5d176867]: http://localhost:8081/products/variants/all
+2025-04-26 12:28:34.362  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Checking path: /products/variants/all
+2025-04-26 12:28:34.368  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: / against path: /products/variants/all
+2025-04-26 12:28:34.388  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/register against path: /products/variants/all
+2025-04-26 12:28:34.396  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/login against path: /products/variants/all
+2025-04-26 12:28:34.412  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /storage/** against path: /products/variants/all
+2025-04-26 12:28:34.415  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /v3/api-docs/** against path: /products/variants/all
+2025-04-26 12:28:34.422  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui/** against path: /products/variants/all
+2025-04-26 12:28:34.424  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui.html against path: /products/variants/all
+2025-04-26 12:28:34.425  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /payment/** against path: /products/variants/all
+2025-04-26 12:28:34.427  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /file against path: /products/variants/all
+2025-04-26 12:28:34.433  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /files against path: /products/variants/all
+2025-04-26 12:28:34.437  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/** against path: /products/variants/all
+2025-04-26 12:28:34.440  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/health against path: /products/variants/all
+2025-04-26 12:28:34.441  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /health/** against path: /products/variants/all
+2025-04-26 12:28:34.442  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /inventory/** against path: /products/variants/all
+2025-04-26 12:28:34.444  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/recommendations/** against path: /products/variants/all
+2025-04-26 12:28:34.445  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/refresh-token against path: /products/variants/all
+2025-04-26 12:28:34.446  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching GET-only pattern: /products/** against path: /products/variants/all
+2025-04-26 12:28:34.447  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : GET Path /products/variants/all matches GET-only pattern /products/**
+2025-04-26 12:28:34.450  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Open endpoint detected [53c3ee4e-49f3-431b-842c-218b5d176867], bypassing authentication
+2025-04-26 12:28:34.463  WARN 1 --- [lettuce-epollEventLoop-5-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ProductService
+2025-04-26 12:28:34.465 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : CircuitBreaker 'productServiceCB' recorded an exception as failure:
+
+org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"
+	at org.springframework.cloud.gateway.support.NotFoundException.create(NotFoundException.java:45)
+	at org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter.lambda$filter$2(ReactiveLoadBalancerClientFilter.java:123)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:453)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onNext(FluxFlattenIterable.java:256)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:237)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onComplete(FluxDematerialize.java:121)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:91)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:402)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.request(FluxPeek.java:138)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onSubscribe(MonoIgnoreElements.java:72)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onSubscribe(FluxPeek.java:171)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onSubscribe(FluxDematerialize.java:77)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.DrainUtils.postCompleteDrain(DrainUtils.java:132)
+	at reactor.core.publisher.DrainUtils.postComplete(DrainUtils.java:187)
+	at reactor.core.publisher.FluxMaterialize$MaterializeSubscriber.onComplete(FluxMaterialize.java:141)
+	at reactor.core.publisher.FluxLimitRequest$FluxLimitRequestSubscriber.onNext(FluxLimitRequest.java:104)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onNext(FluxTimeout.java:181)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$FirstNonEmptyEmittingSubscriber.onComplete(FluxFirstNonEmptyEmitting.java:325)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:144)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8891)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$RaceCoordinator.subscribe(FluxFirstNonEmptyEmitting.java:203)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting.subscribe(FluxFirstNonEmptyEmitting.java:128)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.FluxRetryWhen.subscribe(FluxRetryWhen.java:81)
+	at reactor.core.publisher.MonoRetryWhen.subscribeOrReturn(MonoRetryWhen.java:46)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:75)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoReduceSeed$ReduceSeedSubscriber.onComplete(MonoReduceSeed.java:163)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredComplete(FluxUsingWhen.java:397)
+	at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:532)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:828)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxArray$ArraySubscription.slowPath(FluxArray.java:137)
+	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:99)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxMerge.subscribe(FluxMerge.java:73)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:389)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:241)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:905)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:707)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:617)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:574)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:330)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:345)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:787)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:69)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:67)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:749)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:684)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:601)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-04-26 12:28:34.468 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : Event ERROR published: 2025-04-26T12:28:34.468336674Z[Etc/UTC]: CircuitBreaker 'productServiceCB' recorded an error: 'org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"'. Elapsed time: 8 ms
+2025-04-26 12:28:34.581  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Processing request [b2f4e8d9-6d91-4dfa-aee9-d1902e4137d4]: http://localhost:8081/products/variants/all
+2025-04-26 12:28:34.597  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Checking path: /products/variants/all
+2025-04-26 12:28:34.599  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: / against path: /products/variants/all
+2025-04-26 12:28:34.615  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/register against path: /products/variants/all
+2025-04-26 12:28:34.617  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/login against path: /products/variants/all
+2025-04-26 12:28:34.626  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /storage/** against path: /products/variants/all
+2025-04-26 12:28:34.628  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /v3/api-docs/** against path: /products/variants/all
+2025-04-26 12:28:34.636  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui/** against path: /products/variants/all
+2025-04-26 12:28:34.641  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /swagger-ui.html against path: /products/variants/all
+2025-04-26 12:28:34.642  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /payment/** against path: /products/variants/all
+2025-04-26 12:28:34.643  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /file against path: /products/variants/all
+2025-04-26 12:28:34.646  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /files against path: /products/variants/all
+2025-04-26 12:28:34.659  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/** against path: /products/variants/all
+2025-04-26 12:28:34.660  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /actuator/health against path: /products/variants/all
+2025-04-26 12:28:34.663  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /health/** against path: /products/variants/all
+2025-04-26 12:28:34.688  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /inventory/** against path: /products/variants/all
+2025-04-26 12:28:34.693  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/recommendations/** against path: /products/variants/all
+2025-04-26 12:28:34.695  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching pattern: /api/accounts/auth/refresh-token against path: /products/variants/all
+2025-04-26 12:28:34.699  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : Matching GET-only pattern: /products/** against path: /products/variants/all
+2025-04-26 12:28:34.710  INFO 1 --- [reactor-http-epoll-3] i.f.se.apigateway.filter.RouteValidator  : GET Path /products/variants/all matches GET-only pattern /products/**
+2025-04-26 12:28:34.726  INFO 1 --- [reactor-http-epoll-3] .s.a.f.AuthorizationGatewayFilterFactory : Open endpoint detected [b2f4e8d9-6d91-4dfa-aee9-d1902e4137d4], bypassing authentication
+2025-04-26 12:28:34.763  WARN 1 --- [lettuce-epollEventLoop-5-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: ProductService
+2025-04-26 12:28:34.778 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : CircuitBreaker 'productServiceCB' recorded an exception as failure:
+
+org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"
+	at org.springframework.cloud.gateway.support.NotFoundException.create(NotFoundException.java:45)
+	at org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter.lambda$filter$2(ReactiveLoadBalancerClientFilter.java:123)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onNext(FluxPeek.java:185)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:98)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drainAsync(FluxFlattenIterable.java:453)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.drain(FluxFlattenIterable.java:724)
+	at reactor.core.publisher.FluxFlattenIterable$FlattenIterableSubscriber.onNext(FluxFlattenIterable.java:256)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.complete(MonoIgnoreThen.java:294)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onNext(MonoIgnoreThen.java:188)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:237)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:204)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onComplete(FluxDematerialize.java:121)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:91)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onNext(FluxDematerialize.java:44)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.fastPath(FluxIterable.java:402)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:291)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.request(FluxDematerialize.java:127)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.request(FluxPeek.java:138)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onSubscribe(MonoIgnoreElements.java:72)
+	at reactor.core.publisher.FluxPeek$PeekSubscriber.onSubscribe(FluxPeek.java:171)
+	at reactor.core.publisher.FluxDematerialize$DematerializeSubscriber.onSubscribe(FluxDematerialize.java:77)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.DrainUtils.postCompleteDrain(DrainUtils.java:132)
+	at reactor.core.publisher.DrainUtils.postComplete(DrainUtils.java:187)
+	at reactor.core.publisher.FluxMaterialize$MaterializeSubscriber.onComplete(FluxMaterialize.java:141)
+	at reactor.core.publisher.FluxLimitRequest$FluxLimitRequestSubscriber.onNext(FluxLimitRequest.java:104)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.SerializedSubscriber.onNext(SerializedSubscriber.java:99)
+	at reactor.core.publisher.FluxTimeout$TimeoutMainSubscriber.onNext(FluxTimeout.java:181)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$FirstNonEmptyEmittingSubscriber.onComplete(FluxFirstNonEmptyEmitting.java:325)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:144)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8891)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting$RaceCoordinator.subscribe(FluxFirstNonEmptyEmitting.java:203)
+	at org.springframework.cloud.commons.publisher.FluxFirstNonEmptyEmitting.subscribe(FluxFirstNonEmptyEmitting.java:128)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82)
+	at reactor.core.publisher.Operators.complete(Operators.java:137)
+	at reactor.core.publisher.MonoEmpty.subscribe(MonoEmpty.java:46)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:265)
+	at reactor.core.publisher.MonoIgnoreThen.subscribe(MonoIgnoreThen.java:51)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at reactor.core.publisher.FluxRetryWhen.subscribe(FluxRetryWhen.java:81)
+	at reactor.core.publisher.MonoRetryWhen.subscribeOrReturn(MonoRetryWhen.java:46)
+	at reactor.core.publisher.MonoFromFluxOperator.subscribe(MonoFromFluxOperator.java:75)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:53)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoReduceSeed$ReduceSeedSubscriber.onComplete(MonoReduceSeed.java:163)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.deferredComplete(FluxUsingWhen.java:397)
+	at reactor.core.publisher.FluxUsingWhen$CommitInner.onComplete(FluxUsingWhen.java:532)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:828)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxArray$ArraySubscription.slowPath(FluxArray.java:137)
+	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:99)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxMerge.subscribe(FluxMerge.java:73)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxUsingWhen$UsingWhenSubscriber.onComplete(FluxUsingWhen.java:389)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onComplete(FluxConcatMapNoPrefetch.java:241)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2231)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:905)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:707)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:617)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:574)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:330)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:345)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:787)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:69)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:67)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:749)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:684)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:601)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:799)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:501)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:399)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-04-26 12:28:34.783 DEBUG 1 --- [lettuce-epollEventLoop-5-1] i.g.r.c.i.CircuitBreakerStateMachine     : Event ERROR published: 2025-04-26T12:28:34.783492922Z[Etc/UTC]: CircuitBreaker 'productServiceCB' recorded an error: 'org.springframework.cloud.gateway.support.NotFoundException: 503 SERVICE_UNAVAILABLE "Unable to find instance for ProductService"'. Elapsed time: 37 ms
+2025-04-26 12:30:02.135  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application APIGATEWAY with eureka with status DOWN
+2025-04-26 12:30:02.147  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1745670602147, current=DOWN, previous=UP]
+2025-04-26 12:30:02.151  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/6043c455dd7e:APIGateway:8081: registering service...
+2025-04-26 12:30:02.230  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/6043c455dd7e:APIGateway:8081 - registration status: 204
+2025-04-26 12:30:02.245  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.embedded.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-26 12:30:02.283  INFO 1 --- [netty-shutdown] o.s.b.w.embedded.netty.GracefulShutdown  : Graceful shutdown complete
+2025-04-26 12:30:04.410  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-04-26 12:30:07.413  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-04-26 12:30:07.413  WARN 1 --- [DiscoveryClient-%d] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2025-04-26 12:30:07.429  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_APIGATEWAY/6043c455dd7e:APIGateway:8081 - deregister  status: 200
+2025-04-26 12:30:07.431  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
