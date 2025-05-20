@@ -17,6 +17,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+
 @RestController
 @Slf4j
 @RequestMapping("/api/accounts/auth")
@@ -36,6 +38,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
+    @RateLimiter(name = "userRateLimiter", fallbackMethod = "rateLimiterFallback")
     public ResponseEntity<DataResponse<LoginResponse>> login(@Valid @RequestBody LoginRequest loginDto) {
         System.out.println("Login request: " + loginDto);
         return authService.login(loginDto);
@@ -99,19 +102,25 @@ public class AuthController {
             return ResponseEntity.status(401).body(new DataResponse<>(401, "Unauthorized", null));
         }
     }
-//    @PostMapping("/validate-token")
-//    public ResponseEntity<ValidateTokenResponse> validateToken(
-//            @RequestHeader("Authorization") String authHeader,
-//            @RequestHeader(value = "X-Request-ID", required = false) String requestId) {
-//        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-//            log.warn("Invalid Authorization header [{}]", requestId);
-//            return ResponseEntity.badRequest().build();
-//        }
-//        String token = authHeader.substring(7);
-//        log.info("Received token [{}]: {}", requestId, token);
-//        ResponseEntity<ValidateTokenResponse> response = authService.validateTokenRaw(token);
-//        log.info("Returning response [{}]: {}", requestId, response.getBody());
-//        return response;
-//    }
+
+    public ResponseEntity<String> rateLimiterFallback(Exception ex) {
+        return ResponseEntity.status(429).body("Too many requests - please try again later.");
+    }
+
+    // @PostMapping("/validate-token")
+    // public ResponseEntity<ValidateTokenResponse> validateToken(
+    // @RequestHeader("Authorization") String authHeader,
+    // @RequestHeader(value = "X-Request-ID", required = false) String requestId) {
+    // if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+    // log.warn("Invalid Authorization header [{}]", requestId);
+    // return ResponseEntity.badRequest().build();
+    // }
+    // String token = authHeader.substring(7);
+    // log.info("Received token [{}]: {}", requestId, token);
+    // ResponseEntity<ValidateTokenResponse> response =
+    // authService.validateTokenRaw(token);
+    // log.info("Returning response [{}]: {}", requestId, response.getBody());
+    // return response;
+    // }
 
 }

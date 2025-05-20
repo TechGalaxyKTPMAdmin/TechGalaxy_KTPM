@@ -66,9 +66,9 @@ spring:
                 fallbackUri: forward:/fallback/user
             - name: RequestRateLimiter
               args:
-                redis-rate-limiter.replenishRate: 1000
-                redis-rate-limiter.burstCapacity: 1000
-                redis-rate-limiter.requestedTokens: 1
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 60
+                redis-rate-limiter.requestedTokens: 12
             - name: Retry
               args:
                 retries: 3
@@ -540,11 +540,11 @@ spring:
 
       default-filters:
         - name: Authorization
-        - name: RequestRateLimiter
-          args:
-            redis-rate-limiter.replenishRate: 1000
-            redis-rate-limiter.burstCapacity: 1000
-            redis-rate-limiter.requestedTokens: 1
+        # - name: RequestRateLimiter
+        #   args:
+        #     redis-rate-limiter.replenishRate: 1000
+        #     redis-rate-limiter.burstCapacity: 1000
+        #     redis-rate-limiter.requestedTokens: 1
 server:
   port: 8081
 logging:
