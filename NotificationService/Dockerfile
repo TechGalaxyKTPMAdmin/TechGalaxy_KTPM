@@ -16,6 +16,7 @@ COPY ./NotificationService ./NotificationService
 
 # 3. Build WAR file
 WORKDIR /app/NotificationService
+RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # === Runtime Stage ===

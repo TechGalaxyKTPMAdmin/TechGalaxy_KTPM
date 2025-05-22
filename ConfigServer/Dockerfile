@@ -16,6 +16,7 @@ COPY ./ConfigServer ./ConfigServer
 
 # 3. Build ứng dụng
 WORKDIR /app/ConfigServer
+RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # === Runtime Stage ===

@@ -17,6 +17,7 @@ COPY ./DiscoveryServer ./DiscoveryServer
 
 # 3. Build project
 WORKDIR /app/DiscoveryServer
+RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # === Runtime Stage ===

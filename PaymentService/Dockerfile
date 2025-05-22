@@ -16,6 +16,7 @@ COPY ./PaymentService ./PaymentService
 
 # 3. Build ứng dụng
 WORKDIR /app/PaymentService
+RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # === Runtime Stage ===

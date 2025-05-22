@@ -16,6 +16,7 @@ COPY ./InventoryService ./InventoryService
 
 # 3. Build ứng dụng
 WORKDIR /app/InventoryService
+RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 # === Runtime Stage ===
