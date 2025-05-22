@@ -1,0 +1,54 @@
+name: Docker Order Service Image CI/CD
+
+on:
+  push:
+    branches: [ "feature/ci-cd-setup" ]
+  pull_request:
+    branches: [ "feature/ci-cd-setup" ]
+
+jobs:
+  build-push-orderservice:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build order service image
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Build and push order service image
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      run: | 
+        docker compose -f docker-compose.yml build orderservice
+        docker compose -f docker-compose.yml push orderservice
+  
+  deploy-orderservice:
+    needs: build-push-orderservice
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy order service image
+      uses: appleboy/ssh-action@v1.2.2
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USERNAME }}
+        key: ${{ secrets.SERVER_KEY }}
+        port: ${{ secrets.SERVER_PORT }}
+        script: |
+          export DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+
+          if ! docker ps -a --format '{{.Names}}' | grep -q '^rabbitmq$'; then
+            echo "Khởi tạo rabbitmq..."
+            docker-compose -f docker-compose-deploy.yml up -d rabbitmq
+          else
+            echo "Container rabbitmq đã tồn tại, bỏ qua..."
+          fi
+
+          docker pull ${{ secrets.DOCKER_USERNAME }}/orderservice:latest
+          docker-compose -f docker-compose-deploy.yml up -d orderservice

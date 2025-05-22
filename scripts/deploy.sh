@@ -2,7 +2,9 @@ BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
 echo "Deploying branch: $BRANCH"
 
-cd app/TechGalaxy_KTPM
+echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+cd ~/app/TechGalaxy_KTPM || exit 1
 
 git fetch -a
 git checkout $BRANCH

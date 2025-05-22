@@ -32,12 +32,8 @@ services:
       - spring-net
 
   discoveryserver:
-    build:
-      context: .
-      dockerfile: DiscoveryServer/Dockerfile
     container_name: discoveryserver
-    image: discoveryserver
-    # image: ${DOCKER_USERNAME}/discoveryserver:latest
+    image: ${DOCKER_USERNAME}/discoveryserver:latest
     ports:
       - "8761:8761"
     volumes:
@@ -54,12 +50,8 @@ services:
       - spring-net
 
   configserver:
-    build:
-      context: .
-      dockerfile: ConfigServer/Dockerfile
     container_name: configserver
-    image: configserver
-    # image: ${DOCKER_USERNAME}/configserver:latest
+    image: ${DOCKER_USERNAME}/configserver:latest
     ports:
       - "8888:8888"
     depends_on:
@@ -80,12 +72,8 @@ services:
       - spring-net
 
   apigateway:
-    build:
-      context: .
-      dockerfile: APIGateway/Dockerfile
     container_name: apigateway
-    image: apigateway
-    # image: ${DOCKER_USERNAME}/apigateway:latest
+    image: ${DOCKER_USERNAME}/apigateway:latest
     ports:
       - "8081:8081"
     depends_on:
@@ -111,12 +99,8 @@ services:
       - spring-net
 
   userservice:
-    build:
-      context: .
-      dockerfile: UserService/Dockerfile
     container_name: userservice
-    image: userservice
-    # image: ${DOCKER_USERNAME}/userservice:latest
+    image: ${DOCKER_USERNAME}/userservice:latest
     ports:
       - "9001:9001"
     depends_on:
@@ -128,9 +112,9 @@ services:
       - ./logs/userservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=UserDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=UserDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
       SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
@@ -144,12 +128,8 @@ services:
       - spring-net
 
   productservice:
-    build:
-      context: .
-      dockerfile: ProductService/Dockerfile
     container_name: productservice
-    image: productservice
-    # image: ${DOCKER_USERNAME}/productservice:latest
+    image: ${DOCKER_USERNAME}/productservice:latest
     ports:
       - "9002:9002"
     depends_on:
@@ -163,9 +143,9 @@ services:
       - ./logs/productservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=ProductDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=ProductDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
       SPRING_ZIPKIN_BASE-URL: http://zipkin:9411
@@ -179,12 +159,8 @@ services:
       - spring-net
 
   inventoryservice:
-    build:
-      context: .
-      dockerfile: InventoryService/Dockerfile
     container_name: inventoryservice
-    image: inventoryservice
-    # image: ${DOCKER_USERNAME}/inventoryservice:latest
+    image: ${DOCKER_USERNAME}/inventoryservice:latest
     ports:
       - "9006:9006"
     depends_on:
@@ -198,9 +174,9 @@ services:
       - ./logs/inventoryservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=InventoryDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=InventoryDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
       SPRING_RABBITMQ_HOST: rabbitmq
@@ -218,12 +194,8 @@ services:
       - spring-net
 
   orderservice:
-    build:
-      context: .
-      dockerfile: OrderService/Dockerfile
     container_name: orderservice
-    image: orderservice
-    # image: ${DOCKER_USERNAME}/orderservice:latest
+    image: ${DOCKER_USERNAME}/orderservice:latest
     ports:
       - "9003:9003"
     depends_on:
@@ -239,9 +211,9 @@ services:
       - ./logs/orderservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=OrderDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=OrderDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
       SPRING_RABBITMQ_HOST: rabbitmq
@@ -259,14 +231,10 @@ services:
       retries: 3
     networks:
       - spring-net
-
+  
   paymentservice:
-    build:
-      context: .
-      dockerfile: PaymentService/Dockerfile
     container_name: paymentservice
-    image: paymentservice
-    # image: ${DOCKER_USERNAME}/paymentservice:latest
+    image: ${DOCKER_USERNAME}/paymentservice:latest
     ports:
       - "9005:9005"
     depends_on:
@@ -280,9 +248,9 @@ services:
       - ./logs/paymentservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=PaymentDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=PaymentDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
       SPRING_RABBITMQ_HOST: rabbitmq
@@ -300,12 +268,8 @@ services:
       - spring-net
 
   notificationservice:
-    build:
-      context: .
-      dockerfile: NotificationService/Dockerfile
     container_name: notificationservice
-    image: notificationservice
-    # image: ${DOCKER_USERNAME}/notificationservice:latest
+    image: ${DOCKER_USERNAME}/notificationservice:latest
     ports:
       - "9004:9004"
     depends_on:
@@ -319,9 +283,9 @@ services:
       - ./logs/notificationservice:/logs
     environment:
       LOG_PATH: /logs
-      SPRING_DATASOURCE_URL: jdbc:sqlserver://host.docker.internal:1433;databaseName=NotificationDB;encrypt=false
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://52.77.85.156:1433;databaseName=NotificationDB;encrypt=true;trustServerCertificate=true
       SPRING_DATASOURCE_USERNAME: sa
-      SPRING_DATASOURCE_PASSWORD: sapassword
+      SPRING_DATASOURCE_PASSWORD: TechGalaxy@12345
       SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8888
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discoveryserver:8761/eureka
       SPRING_RABBITMQ_HOST: rabbitmq
@@ -339,26 +303,22 @@ services:
       - spring-net
 
 
-  # recommendsservice:
-  #   build:
-  #     context: ./RecommendService
-  #     dockerfile: Dockerfile
-  #   container_name: recommendService
-  #   image: recommendservice
-  #   # image: ${DOCKER_USERNAME}/RecommendService:latest
-  #   ports:
-  #     - "5000:5000"
-  #   depends_on:
-  #     discoveryserver:
-  #       condition: service_healthy
-  #   environment:
-  #     EUREKA_SERVER: http://discoveryserver:8761/eureka
-  #   restart: unless-stopped
-  #   networks:
-  #     - spring-net
+  recommendsservice:
+    container_name: recommendService
+    image: ${DOCKER_USERNAME}/RecommendService:latest
+    ports:
+      - "5000:5000"
+    depends_on:
+      discoveryserver:
+        condition: service_healthy
+    environment:
+      EUREKA_SERVER: http://discoveryserver:8761/eureka
+    restart: unless-stopped
+    networks:
+      - spring-net
 
   redis-ktpm:
-    image: redis:7.2
+    image: redis:alpine
     container_name: redis-ktpm
     ports:
       - "6379:6379"
@@ -372,46 +332,6 @@ services:
       retries: 3
     networks:
       - spring-net
-  # elasticsearch:
-  #   image: elasticsearch:7.17.28
-  #   container_name: elasticsearch
-  #   environment:
-  #     - discovery.type=single-node
-  #     - xpack.security.enabled=false
-  #     - ES_JAVA_OPTS=-Xms512m -Xmx512m
-  #   ports:
-  #     - "9200:9200"
-  #   volumes:
-  #     - esdata:/usr/share/elasticsearch/data
-  #   restart: unless-stopped
-  #   networks:
-  #     - spring-net
-
-  # logstash:
-  #   image: docker.elastic.co/logstash/logstash:7.17.28
-  #   container_name: logstash
-  #   depends_on:
-  #     - elasticsearch
-  #   volumes:
-  #     - ./ELK/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-  #     - ./logs:/logs
-  #   command: logstash -f /usr/share/logstash/pipeline/logstash.conf
-  #   restart: unless-stopped
-  #   networks:
-  #     - spring-net
-
-  # kibana:
-  #   image: docker.elastic.co/kibana/kibana:7.17.28
-  #   container_name: kibana
-  #   depends_on:
-  #     - elasticsearch
-  #   ports:
-  #     - "5601:5601"
-  #   environment:
-  #     - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
-  #   restart: unless-stopped
-  #   networks:
-  #     - spring-net
 
 networks:
   spring-net:
@@ -419,4 +339,3 @@ networks:
 
 volumes:
   redis-data:
-  # esdata:
