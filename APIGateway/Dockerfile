@@ -7,6 +7,8 @@ COPY ./APIGateway/pom.xml ./APIGateway/pom.xml
 COPY ./APIGateway/mvnw ./APIGateway/mvnw
 COPY ./APIGateway/.mvn ./APIGateway/.mvn
 
+RUN chmod +x ./APIGateway/mvnw
+
 RUN ./APIGateway/mvnw -f ./APIGateway/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ mã nguồn sau

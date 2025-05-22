@@ -7,6 +7,8 @@ COPY ./PaymentService/pom.xml ./PaymentService/pom.xml
 COPY ./PaymentService/mvnw ./PaymentService/mvnw
 COPY ./PaymentService/.mvn ./PaymentService/.mvn
 
+RUN chmod +x ./PaymentService/mvnw
+
 RUN ./PaymentService/mvnw -f ./PaymentService/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ source code sau khi dependencies đã cache

@@ -7,6 +7,8 @@ COPY ./OrderService/pom.xml ./OrderService/pom.xml
 COPY ./OrderService/mvnw ./OrderService/mvnw
 COPY ./OrderService/.mvn ./OrderService/.mvn
 
+RUN chmod +x ./OrderService/mvnw
+
 RUN ./OrderService/mvnw -f ./OrderService/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ mã nguồn sau khi dependencies đã cache

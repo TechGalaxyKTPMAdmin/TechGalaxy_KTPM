@@ -7,6 +7,8 @@ COPY ./NotificationService/pom.xml ./NotificationService/pom.xml
 COPY ./NotificationService/mvnw ./NotificationService/mvnw
 COPY ./NotificationService/.mvn ./NotificationService/.mvn
 
+RUN chmod +x ./NotificationService/mvnw
+
 RUN ./NotificationService/mvnw -f ./NotificationService/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ mã nguồn

@@ -7,6 +7,8 @@ COPY ./ProductService/pom.xml ./ProductService/pom.xml
 COPY ./ProductService/mvnw ./ProductService/mvnw
 COPY ./ProductService/.mvn ./ProductService/.mvn
 
+RUN chmod +x ./ProductService/mvnw
+
 RUN ./ProductService/mvnw -f ./ProductService/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ mã nguồn

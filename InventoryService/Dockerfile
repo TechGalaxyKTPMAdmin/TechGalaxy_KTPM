@@ -7,6 +7,8 @@ COPY ./InventoryService/pom.xml ./InventoryService/pom.xml
 COPY ./InventoryService/mvnw ./InventoryService/mvnw
 COPY ./InventoryService/.mvn ./InventoryService/.mvn
 
+RUN chmod +x ./InventoryService/mvnw
+
 RUN ./InventoryService/mvnw -f ./InventoryService/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ source code sau

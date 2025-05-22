@@ -8,6 +8,8 @@ COPY ./DiscoveryServer/pom.xml ./DiscoveryServer/pom.xml
 COPY ./DiscoveryServer/mvnw ./DiscoveryServer/mvnw
 COPY ./DiscoveryServer/.mvn ./DiscoveryServer/.mvn
 
+RUN chmod +x ./DiscoveryServer/mvnw
+
 RUN ./DiscoveryServer/mvnw -f ./DiscoveryServer/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ source code

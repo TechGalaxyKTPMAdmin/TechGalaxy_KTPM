@@ -7,6 +7,8 @@ COPY ./UserService/pom.xml ./UserService/pom.xml
 COPY ./UserService/mvnw ./UserService/mvnw
 COPY ./UserService/.mvn ./UserService/.mvn
 
+RUN chmod +x ./UserService/mvnw
+
 RUN ./UserService/mvnw -f ./UserService/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ mã nguồn

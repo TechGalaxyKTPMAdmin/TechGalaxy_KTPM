@@ -7,6 +7,8 @@ COPY ./ConfigServer/pom.xml ./ConfigServer/pom.xml
 COPY ./ConfigServer/mvnw ./ConfigServer/mvnw
 COPY ./ConfigServer/.mvn ./ConfigServer/.mvn
 
+RUN chmod +x ./ConfigServer/mvnw
+
 RUN ./ConfigServer/mvnw -f ./ConfigServer/pom.xml dependency:go-offline
 
 # 2. Copy toàn bộ source code
