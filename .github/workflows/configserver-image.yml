@@ -40,7 +40,16 @@ jobs:
         key: ${{ secrets.SERVER_KEY }}
         port: ${{ secrets.SERVER_PORT }}
         script: |
+          set -e
           export DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker pull ${{ secrets.DOCKER_USERNAME }}/configserver:latest
+          docker login -u $DOCKER_USERNAME -p ${{ secrets.DOCKER_PASSWORD }}
+
+          echo "🧼 Stopping old container (if exists)..."
+          docker-compose -f docker-compose-deploy.yml stop configserver || true
+          docker-compose -f docker-compose-deploy.yml rm -f configserver || true
+
+          echo "📦 Pulling latest image..."
+          docker pull $DOCKER_USERNAME/configserver:latest
+
+          echo "🚀 Starting new container..."
           docker-compose -f docker-compose-deploy.yml up -d configserver

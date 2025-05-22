@@ -43,4 +43,4 @@ jobs:
           export DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker pull ${{ secrets.DOCKER_USERNAME }}/inventoryservice:latest
-          docker-compose -f docker-compose-deploy.yml up -d inventoryservice
+          docker-compose -f docker-compose-deploy.yml up -d --no-deps inventoryservice

@@ -51,4 +51,4 @@ jobs:
           fi
 
           docker pull ${{ secrets.DOCKER_USERNAME }}/notificationservice:latest
-          docker-compose -f docker-compose-deploy.yml up -d notificationservice
+          docker-compose -f docker-compose-deploy.yml up -d --no-deps notificationservice

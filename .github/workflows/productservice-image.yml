@@ -43,4 +43,4 @@ jobs:
           export DOCKER_USERNAME=${{ secrets.DOCKER_USERNAME }}
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker pull ${{ secrets.DOCKER_USERNAME }}/productservice:latest
-          docker-compose -f docker-compose-deploy.yml up -d productservice
+          docker-compose -f docker-compose-deploy.yml up -d --no-deps productservice
