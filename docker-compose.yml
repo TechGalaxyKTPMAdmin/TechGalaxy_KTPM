@@ -36,8 +36,8 @@ services:
       context: .
       dockerfile: DiscoveryServer/Dockerfile
     container_name: discoveryserver
-    image: discoveryserver
-    # image: ${DOCKER_USERNAME}/discoveryserver:latest
+#    image: discoveryserver
+    image: ${DOCKER_USERNAME}/discoveryserver:latest
     ports:
       - "8761:8761"
     volumes:
@@ -58,8 +58,8 @@ services:
       context: .
       dockerfile: ConfigServer/Dockerfile
     container_name: configserver
-    image: configserver
-    # image: ${DOCKER_USERNAME}/configserver:latest
+#    image: configserver
+    image: ${DOCKER_USERNAME}/configserver:latest
     ports:
       - "8888:8888"
     depends_on:
@@ -84,8 +84,8 @@ services:
       context: .
       dockerfile: APIGateway/Dockerfile
     container_name: apigateway
-    image: apigateway
-    # image: ${DOCKER_USERNAME}/apigateway:latest
+#    image: apigateway
+    image: ${DOCKER_USERNAME}/apigateway:latest
     ports:
       - "8081:8081"
     depends_on:
@@ -115,8 +115,8 @@ services:
       context: .
       dockerfile: UserService/Dockerfile
     container_name: userservice
-    image: userservice
-    # image: ${DOCKER_USERNAME}/userservice:latest
+#    image: userservice
+    image: ${DOCKER_USERNAME}/userservice:latest
     ports:
       - "9001:9001"
     depends_on:
@@ -148,8 +148,8 @@ services:
       context: .
       dockerfile: ProductService/Dockerfile
     container_name: productservice
-    image: productservice
-    # image: ${DOCKER_USERNAME}/productservice:latest
+#    image: productservice
+    image: ${DOCKER_USERNAME}/productservice:latest
     ports:
       - "9002:9002"
     depends_on:
@@ -183,8 +183,8 @@ services:
       context: .
       dockerfile: InventoryService/Dockerfile
     container_name: inventoryservice
-    image: inventoryservice
-    # image: ${DOCKER_USERNAME}/inventoryservice:latest
+#    image: inventoryservice
+    image: ${DOCKER_USERNAME}/inventoryservice:latest
     ports:
       - "9006:9006"
     depends_on:
@@ -222,8 +222,8 @@ services:
       context: .
       dockerfile: OrderService/Dockerfile
     container_name: orderservice
-    image: orderservice
-    # image: ${DOCKER_USERNAME}/orderservice:latest
+#    image: orderservice
+    image: ${DOCKER_USERNAME}/orderservice:latest
     ports:
       - "9003:9003"
     depends_on:
@@ -265,8 +265,8 @@ services:
       context: .
       dockerfile: PaymentService/Dockerfile
     container_name: paymentservice
-    image: paymentservice
-    # image: ${DOCKER_USERNAME}/paymentservice:latest
+#    image: paymentservice
+    image: ${DOCKER_USERNAME}/paymentservice:latest
     ports:
       - "9005:9005"
     depends_on:
@@ -304,8 +304,8 @@ services:
       context: .
       dockerfile: NotificationService/Dockerfile
     container_name: notificationservice
-    image: notificationservice
-    # image: ${DOCKER_USERNAME}/notificationservice:latest
+#    image: notificationservice
+    image: ${DOCKER_USERNAME}/notificationservice:latest
     ports:
       - "9004:9004"
     depends_on:
