@@ -185,14 +185,15 @@ public class InventoryService {
         if (existingInventory != null) {
             existingInventory
                     .setStockQuantity(inventoryRequest.getStockQuantity());
-            Inventory inventorySave= inventoryRepository.save(existingInventory);
+            Inventory inventorySave = inventoryRepository.save(existingInventory);
             if (!Boolean.TRUE.equals(inventoryRequest.getInternal())) {
 
                 Collection<ProductDetailResponse> productDetailResponse = productServiceWrapper
                         .getProductDetail(inventoryRequest.getProductVariantDetailId());
                 if (productDetailResponse.isEmpty()) {
                     log.error("Product detail not found for ID: {}", inventoryRequest.getProductVariantDetailId());
-                    throw new RuntimeException("Product detail not found for ID: " + inventoryRequest.getProductVariantDetailId());
+                    throw new RuntimeException(
+                            "Product detail not found for ID: " + inventoryRequest.getProductVariantDetailId());
                 }
                 ProductDetailResponse productDetail = productDetailResponse.iterator().next();
 
@@ -215,7 +216,8 @@ public class InventoryService {
                     .getProductDetail(inventoryRequest.getProductVariantDetailId());
             if (productDetailResponse.isEmpty()) {
                 log.error("Product detail not found for ID: {}", inventoryRequest.getProductVariantDetailId());
-                throw new RuntimeException("Product detail not found for ID: " + inventoryRequest.getProductVariantDetailId());
+                throw new RuntimeException(
+                        "Product detail not found for ID: " + inventoryRequest.getProductVariantDetailId());
             }
             ProductDetailResponse productDetail = productDetailResponse.iterator().next();
 
