@@ -1,27 +1,27 @@
-2025-05-20 05:56:33.580  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
-2025-05-20 05:56:33.986 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-05-20 05:56:34.000  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-05-20 05:56:34.591  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 05:56:34.619  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 05:56:34.642  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 05:56:34.652  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 05:57:00.429  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-20 05:57:03.137  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2480 ms. Found 2 JPA repository interfaces.
-2025-05-20 05:57:11.263  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
-2025-05-20 05:57:27.896  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
-2025-05-20 05:57:28.584  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-20 05:57:28.612  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-05-20 05:57:29.595  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-20 05:57:29.670  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 54962 ms
-2025-05-20 05:57:43.141  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-20 05:57:44.887  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-05-20 05:57:45.336  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-20 05:57:49.140  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-20 05:57:50.334  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-20 05:57:52.823  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: b2290bc4-e792-47f3-b65c-79c59621df3d
-2025-05-20 05:57:52.856  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-20 05:57:53.630  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-20 05:57:53.863  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-05-23 05:09:31.453  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
+2025-05-23 05:09:31.595 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-05-23 05:09:31.607  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-05-23 05:09:32.209  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-05-23 05:09:32.219  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
+2025-05-23 05:09:32.225  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-05-23 05:09:32.241  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
+2025-05-23 05:09:52.108  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-23 05:09:53.430  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1228 ms. Found 2 JPA repository interfaces.
+2025-05-23 05:09:57.667  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
+2025-05-23 05:10:07.774  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
+2025-05-23 05:10:07.959  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-23 05:10:07.984  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-23 05:10:08.359  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-23 05:10:08.364  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 36076 ms
+2025-05-23 05:10:16.695  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-23 05:10:17.257  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-05-23 05:10:17.576  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-23 05:10:19.377  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-23 05:10:19.647  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-23 05:10:21.074  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 463932a7-859c-4761-a675-99ff0b299cb6
+2025-05-23 05:10:21.102  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-23 05:10:21.615  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-23 05:10:21.813  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 16.0
@@ -29,37 +29,36 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-05-20 05:58:02.792  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-20 05:58:05.864  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 05:58:10.537  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-20 05:58:11.982  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
-2025-05-20 05:58:29.714  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-20 05:58:30.507  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-20 05:58:30.753  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-05-20 05:58:31.769  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-20 05:58:32.004  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-20 05:58:32.031  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 05:58:32.097  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-20 05:58:32.110  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-20 05:58:32.115  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-20 05:58:32.118  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-20 05:58:32.121  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-20 05:58:32.132  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-20 05:58:32.135  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-20 05:58:33.255  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-20 05:58:33.272  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-20 05:58:33.283  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-20 05:58:33.291  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747720713290 with initial instances count: 3
-2025-05-20 05:58:33.357  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
-2025-05-20 05:58:33.372  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747720713372, current=UP, previous=STARTING]
-2025-05-20 05:58:33.382  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/fa1e037555dd:InventoryService:9006: registering service...
-2025-05-20 05:58:33.533  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
-2025-05-20 05:58:33.597  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
-2025-05-20 05:58:33.620  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
-2025-05-20 05:58:33.701  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/fa1e037555dd:InventoryService:9006 - registration status: 204
-2025-05-20 05:58:34.072  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3a907c78:0/SimpleConnection@3e2c2452 [delegate=amqp://guest@172.19.0.4:5672/, localPort=60106]
-2025-05-20 05:58:34.285  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2025-05-20 05:58:34.297  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+2025-05-23 05:10:25.894  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-23 05:10:27.672  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-23 05:10:30.317  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-23 05:10:30.807  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
+2025-05-23 05:10:45.695  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-23 05:10:46.334  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-23 05:10:46.731  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-05-23 05:10:47.617  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-23 05:10:47.778  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-23 05:10:47.815  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 05:10:47.933  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-23 05:10:47.939  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-23 05:10:47.952  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-23 05:10:47.990  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-23 05:10:48.000  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-23 05:10:48.016  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-23 05:10:48.019  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-23 05:10:49.446  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-23 05:10:49.523  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-23 05:10:49.543  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-23 05:10:49.581  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747977049580 with initial instances count: 3
+2025-05-23 05:10:49.628  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
+2025-05-23 05:10:49.633  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747977049633, current=UP, previous=STARTING]
+2025-05-23 05:10:49.689  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006: registering service...
+2025-05-23 05:10:49.989  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
+2025-05-23 05:10:50.033  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
+2025-05-23 05:10:50.080  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-05-23 05:10:50.415  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006 - registration status: 204
+2025-05-23 05:10:50.709  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-05-23 05:10:50.744  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
 
 org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
@@ -104,58 +103,56 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
 	... 9 common frames omitted
 
-2025-05-20 05:58:34.478  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 137.527 seconds (process running for 149.046)
-2025-05-20 05:58:37.089  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-20 05:58:37.097  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-20 05:58:37.135  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2025-05-20 06:03:32.116  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 06:08:32.097  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 06:13:32.079  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 06:18:32.067  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 06:23:32.079  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 06:28:04.126  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
-2025-05-20 06:28:04.225  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747722484224, current=DOWN, previous=UP]
-2025-05-20 06:28:04.249  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/fa1e037555dd:InventoryService:9006: registering service...
-2025-05-20 06:28:04.502  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/fa1e037555dd:InventoryService:9006 - registration status: 204
-2025-05-20 06:28:05.249  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 06:28:05.257  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 06:28:05.260  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 06:28:05.624  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 06:28:05.647  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 06:28:05.653  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 06:28:05.752  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-20 06:28:05.854  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-20 06:28:06.591  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 06:28:06.758  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-20 06:28:06.797  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-20 06:28:07.153  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-20 06:28:10.158  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-20 06:28:10.191  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/fa1e037555dd:InventoryService:9006 - deregister  status: 200
-2025-05-20 06:28:10.194  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-20 06:38:05.748  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
-2025-05-20 06:38:05.773 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-05-20 06:38:05.777  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-05-20 06:38:05.898  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 06:38:05.914  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 06:38:05.915  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 06:38:05.917  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 06:38:15.603  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-20 06:38:16.545  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 879 ms. Found 2 JPA repository interfaces.
-2025-05-20 06:38:19.649  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
-2025-05-20 06:38:24.317  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
-2025-05-20 06:38:24.406  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-20 06:38:24.428  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-05-20 06:38:24.721  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-20 06:38:24.728  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 18797 ms
-2025-05-20 06:38:29.214  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-20 06:38:29.614  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-05-20 06:38:29.950  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-20 06:38:32.614  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-20 06:38:32.931  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-20 06:38:34.655  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: c2615720-67da-480b-a141-c8bce077c197
-2025-05-20 06:38:34.675  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-20 06:38:35.981  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-20 06:38:36.186  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-05-23 05:10:51.218  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#fffdd40:0/SimpleConnection@3d94d7f3 [delegate=amqp://guest@172.19.0.5:5672/, localPort=55596]
+2025-05-23 05:10:51.907  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 91.342 seconds (process running for 97.193)
+2025-05-23 05:11:15.792  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-23 05:11:15.796  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-23 05:11:15.806  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2025-05-23 05:15:48.014  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 05:20:48.022  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 05:23:21.608  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
+2025-05-23 05:23:21.640  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747977801640, current=DOWN, previous=UP]
+2025-05-23 05:23:21.653  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006: registering service...
+2025-05-23 05:23:21.760  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006 - registration status: 204
+2025-05-23 05:23:22.647  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-05-23 05:23:22.663  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-05-23 05:23:22.695  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-05-23 05:23:22.824  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-05-23 05:23:22.913  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-05-23 05:23:22.995  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-05-23 05:23:23.110  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-23 05:23:23.186  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-23 05:23:23.989  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-23 05:23:24.337  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-23 05:23:24.453  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-23 05:23:25.195  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-23 05:23:28.212  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-23 05:23:28.249  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006 - deregister  status: 200
+2025-05-23 05:23:28.253  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-23 08:47:45.757  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
+2025-05-23 08:47:45.783 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-05-23 08:47:45.788  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-05-23 08:47:45.990  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-05-23 08:47:45.994  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
+2025-05-23 08:47:45.996  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-05-23 08:47:45.999  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
+2025-05-23 08:48:00.539  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-23 08:48:02.013  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1388 ms. Found 2 JPA repository interfaces.
+2025-05-23 08:48:06.836  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
+2025-05-23 08:48:19.691  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
+2025-05-23 08:48:19.809  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-23 08:48:19.835  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-23 08:48:20.195  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-23 08:48:20.199  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 34190 ms
+2025-05-23 08:48:33.087  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-23 08:48:33.929  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-05-23 08:48:34.312  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-23 08:48:36.667  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-23 08:48:36.874  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-23 08:48:38.337  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: ff6bb837-3022-44f8-9db9-b75595f553bd
+2025-05-23 08:48:38.355  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-23 08:48:38.901  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-23 08:48:39.148  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 16.0
@@ -163,36 +160,37 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-05-20 06:38:45.248  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-20 06:38:47.784  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 06:38:53.867  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-20 06:38:55.766  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
-2025-05-20 06:39:11.533  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-20 06:39:12.085  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-20 06:39:12.330  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-05-20 06:39:13.115  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-20 06:39:13.301  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-20 06:39:13.328  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 06:39:13.398  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-20 06:39:13.404  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-20 06:39:13.407  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-20 06:39:13.413  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-20 06:39:13.416  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-20 06:39:13.420  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-20 06:39:13.429  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-20 06:39:15.006  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-20 06:39:15.036  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-20 06:39:15.054  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-20 06:39:15.066  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747723155065 with initial instances count: 3
-2025-05-20 06:39:15.116  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
-2025-05-20 06:39:15.128  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747723155128, current=UP, previous=STARTING]
-2025-05-20 06:39:15.137  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/f13d7db6cdff:InventoryService:9006: registering service...
-2025-05-20 06:39:15.468  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
-2025-05-20 06:39:15.498  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/f13d7db6cdff:InventoryService:9006 - registration status: 204
-2025-05-20 06:39:15.500  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
-2025-05-20 06:39:15.555  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
-2025-05-20 06:39:16.110  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2025-05-20 06:39:16.114  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+2025-05-23 08:48:46.296  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-23 08:48:48.811  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-23 08:48:57.242  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-23 08:48:59.585  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
+2025-05-23 08:49:13.383  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-23 08:49:13.844  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-23 08:49:13.980  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-05-23 08:49:14.459  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-23 08:49:14.574  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-23 08:49:14.598  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 08:49:14.647  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-23 08:49:14.650  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-23 08:49:14.656  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-23 08:49:14.666  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-23 08:49:14.674  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-23 08:49:14.684  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-23 08:49:14.694  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-23 08:49:15.837  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-23 08:49:15.849  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-23 08:49:15.867  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-23 08:49:15.879  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747990155877 with initial instances count: 3
+2025-05-23 08:49:15.926  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
+2025-05-23 08:49:15.933  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747990155932, current=UP, previous=STARTING]
+2025-05-23 08:49:15.940  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006: registering service...
+2025-05-23 08:49:16.122  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
+2025-05-23 08:49:16.141  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
+2025-05-23 08:49:16.180  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-05-23 08:49:16.442  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006 - registration status: 204
+2025-05-23 08:49:16.663  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#569e8e11:0/SimpleConnection@26c76404 [delegate=amqp://guest@172.19.0.4:5672/, localPort=59232]
+2025-05-23 08:49:16.843  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-05-23 08:49:16.848  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
 
 org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
@@ -237,58 +235,57 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
 	... 9 common frames omitted
 
-2025-05-20 06:39:16.372  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#24cb530d:0/SimpleConnection@456629a8 [delegate=amqp://guest@172.19.0.3:5672/, localPort=57076]
-2025-05-20 06:39:17.130  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 85.564 seconds (process running for 89.5)
-2025-05-20 06:39:19.345  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-20 06:39:19.365  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-20 06:39:19.385  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2025-05-20 06:44:13.418  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 06:49:13.409  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 06:54:13.390  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 06:59:13.369  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 07:02:03.890  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
-2025-05-20 07:02:03.915  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747724523914, current=DOWN, previous=UP]
-2025-05-20 07:02:03.925  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/f13d7db6cdff:InventoryService:9006: registering service...
-2025-05-20 07:02:04.066  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/f13d7db6cdff:InventoryService:9006 - registration status: 204
-2025-05-20 07:02:04.597  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:02:04.602  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:02:04.605  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:02:05.172  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:02:05.209  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:02:05.241  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:02:05.320  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-20 07:02:05.394  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-20 07:02:05.737  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 07:02:05.849  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-20 07:02:05.888  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-20 07:02:06.748  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-20 07:02:09.751  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-20 07:02:09.775  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/f13d7db6cdff:InventoryService:9006 - deregister  status: 200
-2025-05-20 07:02:09.779  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-20 07:05:57.099  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
-2025-05-20 07:05:57.138 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-05-20 07:05:57.145  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-05-20 07:05:57.478  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 07:05:57.501  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 07:05:57.505  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 07:05:57.507  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 07:06:10.914  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-20 07:06:12.561  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1489 ms. Found 2 JPA repository interfaces.
-2025-05-20 07:06:17.163  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
-2025-05-20 07:06:24.262  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
-2025-05-20 07:06:24.359  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-20 07:06:24.375  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-05-20 07:06:24.688  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-20 07:06:24.714  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 27150 ms
-2025-05-20 07:06:33.019  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-20 07:06:34.064  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-05-20 07:06:34.628  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-20 07:06:38.302  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-20 07:06:38.893  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-20 07:06:41.934  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 0ef73959-204b-41de-8ee8-b80639c91138
-2025-05-20 07:06:41.962  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-20 07:06:42.685  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-20 07:06:42.970  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-05-23 08:49:17.031  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 103.609 seconds (process running for 109.775)
+2025-05-23 08:49:28.566  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-23 08:49:28.577  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-23 08:49:28.591  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2025-05-23 08:54:14.684  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 08:59:14.658  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 09:04:14.628  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 09:09:14.605  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 09:10:54.121  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
+2025-05-23 09:10:54.127  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747991454127, current=DOWN, previous=UP]
+2025-05-23 09:10:54.132  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006: registering service...
+2025-05-23 09:10:54.204  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006 - registration status: 204
+2025-05-23 09:10:54.384  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-05-23 09:10:54.387  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-05-23 09:10:54.390  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-05-23 09:10:55.062  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-05-23 09:10:55.079  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-05-23 09:10:55.113  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-05-23 09:10:55.136  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-23 09:10:55.163  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-23 09:10:55.280  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-23 09:10:55.341  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-23 09:10:55.358  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-23 09:10:56.353  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-05-23 09:10:59.357  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-05-23 09:10:59.387  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006 - deregister  status: 200
+2025-05-23 09:10:59.391  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-23 09:46:25.718  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
+2025-05-23 09:46:25.852 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
+2025-05-23 09:46:25.875  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-05-23 09:46:26.384  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-05-23 09:46:26.410  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
+2025-05-23 09:46:26.516  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
+2025-05-23 09:46:26.521  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
+2025-05-23 09:46:50.810  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-23 09:46:52.058  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1164 ms. Found 2 JPA repository interfaces.
+2025-05-23 09:46:56.169  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
+2025-05-23 09:47:04.608  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
+2025-05-23 09:47:04.695  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-23 09:47:04.707  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-05-23 09:47:05.184  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-23 09:47:05.198  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 38536 ms
+2025-05-23 09:47:10.886  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-23 09:47:11.158  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-05-23 09:47:11.333  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-23 09:47:12.504  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-23 09:47:12.640  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-23 09:47:13.459  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 1368eb6b-3a46-4614-8dff-7529d8f10649
+2025-05-23 09:47:13.477  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-23 09:47:13.888  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-23 09:47:14.019  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 16.0
@@ -296,36 +293,38 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-05-20 07:06:51.784  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-20 07:06:54.719  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 07:07:01.694  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-20 07:07:04.374  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
-2025-05-20 07:07:20.629  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-20 07:07:21.302  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-20 07:07:21.546  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-05-20 07:07:22.269  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-20 07:07:22.392  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-20 07:07:22.425  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 07:07:22.487  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-20 07:07:22.490  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-20 07:07:22.493  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-20 07:07:22.498  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-20 07:07:22.503  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-20 07:07:22.505  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-20 07:07:22.517  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-20 07:07:23.537  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-20 07:07:23.554  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-20 07:07:23.569  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-20 07:07:23.578  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747724843577 with initial instances count: 2
-2025-05-20 07:07:23.637  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
-2025-05-20 07:07:23.647  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747724843647, current=UP, previous=STARTING]
-2025-05-20 07:07:23.659  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/6947d9ad1d10:InventoryService:9006: registering service...
-2025-05-20 07:07:23.857  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
-2025-05-20 07:07:23.863  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
-2025-05-20 07:07:23.893  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
-2025-05-20 07:07:23.970  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/6947d9ad1d10:InventoryService:9006 - registration status: 204
-2025-05-20 07:07:24.620  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2025-05-20 07:07:24.624  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
+2025-05-23 09:47:17.382  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-23 09:47:19.454  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-23 09:47:23.832  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-23 09:47:25.560  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
+2025-05-23 09:47:38.333  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-05-23 09:47:38.632  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-23 09:47:38.716  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2025-05-23 09:47:39.154  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-05-23 09:47:39.250  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-05-23 09:47:39.265  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 09:47:39.304  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-05-23 09:47:39.316  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-05-23 09:47:39.318  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-05-23 09:47:39.320  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-05-23 09:47:39.322  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-05-23 09:47:39.324  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-05-23 09:47:39.327  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-05-23 09:47:39.948  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-05-23 09:47:39.956  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-05-23 09:47:39.964  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-23 09:47:39.969  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747993659968 with initial instances count: 3
+2025-05-23 09:47:39.989  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
+2025-05-23 09:47:39.993  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747993659993, current=UP, previous=STARTING]
+2025-05-23 09:47:39.998  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006: registering service...
+2025-05-23 09:47:40.040  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
+2025-05-23 09:47:40.047  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
+2025-05-23 09:47:40.063  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2025-05-23 09:47:40.152  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006 - registration status: 204
+2025-05-23 09:47:40.296  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6ca404b:0/SimpleConnection@48e48923 [delegate=amqp://guest@172.19.0.4:5672/, localPort=42618]
+2025-05-23 09:47:40.551  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 96.555 seconds (process running for 101.135)
+2025-05-23 09:47:40.960  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2025-05-23 09:47:40.963  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
 
 org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
 	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
@@ -370,821 +369,25 @@ Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http:
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
 	... 9 common frames omitted
 
-2025-05-20 07:07:24.674  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6dd8dfe5:0/SimpleConnection@70025801 [delegate=amqp://guest@172.19.0.3:5672/, localPort=54066]
-2025-05-20 07:07:25.769  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 104.526 seconds (process running for 108.378)
-2025-05-20 07:07:39.069  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-20 07:07:39.073  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-20 07:07:39.111  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
-2025-05-20 07:12:22.507  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 07:12:56.404  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
-2025-05-20 07:12:56.409  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747725176409, current=DOWN, previous=UP]
-2025-05-20 07:12:56.419  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/6947d9ad1d10:InventoryService:9006: registering service...
-2025-05-20 07:12:56.473  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/6947d9ad1d10:InventoryService:9006 - registration status: 204
-2025-05-20 07:12:56.555  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:12:56.561  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:12:56.566  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:12:56.694  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:12:56.717  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:12:56.820  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:12:56.828  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-20 07:12:56.967  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-20 07:12:57.056  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 07:12:57.094  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-20 07:12:57.106  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-20 07:12:57.906  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-20 07:13:00.908  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-20 07:13:00.925  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/6947d9ad1d10:InventoryService:9006 - deregister  status: 200
-2025-05-20 07:13:00.927  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-20 07:17:38.175  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
-2025-05-20 07:17:38.248 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-05-20 07:17:38.254  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-05-20 07:17:38.722  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 07:17:38.752  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 07:17:38.755  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 07:17:38.761  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 07:17:56.897  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-20 07:17:59.450  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2399 ms. Found 2 JPA repository interfaces.
-2025-05-20 07:18:04.551  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
-2025-05-20 07:18:11.045  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
-2025-05-20 07:18:11.131  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-20 07:18:11.148  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-05-20 07:18:11.479  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-20 07:18:11.484  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 32703 ms
-2025-05-20 07:18:20.547  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-20 07:18:21.570  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-05-20 07:18:22.056  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-20 07:18:26.105  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-20 07:18:26.524  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-20 07:18:29.042  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: b91bd1ff-036d-4d4a-8423-39e2636c217b
-2025-05-20 07:18:29.065  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-20 07:18:30.135  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-20 07:18:30.401  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 16.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-20 07:18:42.053  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-20 07:18:47.013  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 07:18:52.541  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-20 07:18:54.439  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
-2025-05-20 07:19:13.963  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-20 07:19:14.735  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-20 07:19:14.976  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-05-20 07:19:15.822  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-20 07:19:16.019  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-20 07:19:16.054  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 07:19:16.125  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-20 07:19:16.131  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-20 07:19:16.136  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-20 07:19:16.140  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-20 07:19:16.143  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-20 07:19:16.147  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-20 07:19:16.151  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-20 07:19:17.418  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-20 07:19:17.435  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-20 07:19:17.448  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-20 07:19:17.455  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747725557454 with initial instances count: 3
-2025-05-20 07:19:17.530  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
-2025-05-20 07:19:17.537  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747725557537, current=UP, previous=STARTING]
-2025-05-20 07:19:17.549  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/02a0cfb501fe:InventoryService:9006: registering service...
-2025-05-20 07:19:17.842  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
-2025-05-20 07:19:17.849  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
-2025-05-20 07:19:17.881  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
-2025-05-20 07:19:17.948  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/02a0cfb501fe:InventoryService:9006 - registration status: 204
-2025-05-20 07:19:18.529  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2025-05-20 07:19:18.565  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
-
-org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
-	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
-	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
-	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
-	... 9 common frames omitted
-
-2025-05-20 07:19:18.611  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3c6c7782:0/SimpleConnection@55a2cb2a [delegate=amqp://guest@172.19.0.3:5672/, localPort=45746]
-2025-05-20 07:19:19.498  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 119.486 seconds (process running for 127.129)
-2025-05-20 07:19:44.285  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-20 07:19:44.297  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-20 07:19:44.307  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2025-05-20 07:24:16.156  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 07:28:52.871  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
-2025-05-20 07:28:52.881  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747726132881, current=DOWN, previous=UP]
-2025-05-20 07:28:52.899  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/02a0cfb501fe:InventoryService:9006: registering service...
-2025-05-20 07:28:53.040  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/02a0cfb501fe:InventoryService:9006 - registration status: 204
-2025-05-20 07:28:54.104  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:28:54.106  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:28:54.114  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:28:54.472  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:28:54.527  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:28:54.547  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:28:54.639  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-20 07:28:54.751  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-20 07:28:55.668  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 07:28:55.952  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-20 07:28:56.037  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-20 07:28:56.977  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-20 07:28:59.981  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-20 07:29:00.027  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/02a0cfb501fe:InventoryService:9006 - deregister  status: 200
-2025-05-20 07:29:00.042  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-20 07:33:57.469  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
-2025-05-20 07:33:57.543 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-05-20 07:33:57.559  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-05-20 07:33:58.116  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 07:33:58.123  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 07:33:58.137  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 07:33:58.140  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 07:34:17.839  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-20 07:34:19.786  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1842 ms. Found 2 JPA repository interfaces.
-2025-05-20 07:34:24.200  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
-2025-05-20 07:34:33.156  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
-2025-05-20 07:34:33.335  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-20 07:34:33.371  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-05-20 07:34:33.945  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-20 07:34:33.970  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 35795 ms
-2025-05-20 07:34:44.532  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-20 07:34:45.546  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-05-20 07:34:46.104  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-20 07:34:51.814  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-20 07:34:52.118  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-20 07:34:53.635  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: e1035fb8-e7c6-4a66-a12b-dd14ebc26e8f
-2025-05-20 07:34:53.697  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-20 07:34:54.497  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-20 07:34:54.737  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 16.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-20 07:35:02.497  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-20 07:35:06.396  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 07:35:15.391  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-20 07:35:17.701  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
-2025-05-20 07:35:37.963  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-20 07:35:38.648  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-20 07:35:38.996  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-05-20 07:35:40.012  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-20 07:35:40.204  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-20 07:35:40.240  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 07:35:40.312  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-20 07:35:40.332  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-20 07:35:40.336  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-20 07:35:40.345  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-20 07:35:40.353  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-20 07:35:40.355  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-20 07:35:40.359  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-20 07:35:41.578  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-20 07:35:41.600  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-20 07:35:41.624  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-20 07:35:41.634  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747726541634 with initial instances count: 3
-2025-05-20 07:35:41.679  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
-2025-05-20 07:35:41.689  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747726541689, current=UP, previous=STARTING]
-2025-05-20 07:35:41.699  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/a36ed8afebb4:InventoryService:9006: registering service...
-2025-05-20 07:35:41.872  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
-2025-05-20 07:35:41.895  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
-2025-05-20 07:35:41.914  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
-2025-05-20 07:35:41.959  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/a36ed8afebb4:InventoryService:9006 - registration status: 204
-2025-05-20 07:35:42.427  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#7790a6fb:0/SimpleConnection@40c87228 [delegate=amqp://guest@172.19.0.2:5672/, localPort=60584]
-2025-05-20 07:35:42.615  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2025-05-20 07:35:42.621  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
-
-org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
-	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
-	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
-	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
-	... 9 common frames omitted
-
-2025-05-20 07:35:43.171  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 119.17 seconds (process running for 129.634)
-2025-05-20 07:36:06.177  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-20 07:36:06.180  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-20 07:36:06.196  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2025-05-20 07:40:40.341  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 07:45:40.325  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 07:50:10.725  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
-2025-05-20 07:50:10.729  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747727410729, current=DOWN, previous=UP]
-2025-05-20 07:50:10.735  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/a36ed8afebb4:InventoryService:9006: registering service...
-2025-05-20 07:50:10.774  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/a36ed8afebb4:InventoryService:9006 - registration status: 204
-2025-05-20 07:50:10.893  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:50:10.903  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:50:10.907  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:50:11.155  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:50:11.201  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:50:11.220  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:50:11.232  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-20 07:50:11.245  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-20 07:50:11.337  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 07:50:11.368  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-20 07:50:11.383  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-20 07:50:11.945  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-20 07:50:14.947  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-20 07:50:14.961  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/a36ed8afebb4:InventoryService:9006 - deregister  status: 200
-2025-05-20 07:50:14.964  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-20 07:53:18.040  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
-2025-05-20 07:53:18.057 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-05-20 07:53:18.060  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-05-20 07:53:18.160  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 07:53:18.162  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 07:53:18.164  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 07:53:18.166  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 07:53:29.257  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-20 07:53:30.434  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1114 ms. Found 2 JPA repository interfaces.
-2025-05-20 07:53:34.956  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
-2025-05-20 07:53:42.022  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
-2025-05-20 07:53:42.135  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-20 07:53:42.147  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-05-20 07:53:42.463  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-20 07:53:42.469  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 24298 ms
-2025-05-20 07:53:49.419  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-20 07:53:49.898  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-05-20 07:53:50.101  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-20 07:53:53.675  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-20 07:53:54.031  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-20 07:53:55.676  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: f78b776a-cccc-4810-8cdc-440788786f1d
-2025-05-20 07:53:55.692  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-20 07:53:56.199  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-20 07:53:56.379  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 16.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-20 07:54:02.842  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-20 07:54:05.042  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 07:54:09.245  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-20 07:54:10.022  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
-2025-05-20 07:54:20.154  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-20 07:54:20.564  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-20 07:54:20.706  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-05-20 07:54:21.122  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-20 07:54:21.231  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-20 07:54:21.245  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 07:54:21.278  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-20 07:54:21.281  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-20 07:54:21.285  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-20 07:54:21.288  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-20 07:54:21.291  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-20 07:54:21.294  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-20 07:54:21.304  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-20 07:54:22.074  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-20 07:54:22.084  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-20 07:54:22.093  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-20 07:54:22.099  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747727662098 with initial instances count: 3
-2025-05-20 07:54:22.130  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
-2025-05-20 07:54:22.135  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747727662135, current=UP, previous=STARTING]
-2025-05-20 07:54:22.143  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/d81381a3a2ba:InventoryService:9006: registering service...
-2025-05-20 07:54:22.234  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
-2025-05-20 07:54:22.239  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
-2025-05-20 07:54:22.257  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
-2025-05-20 07:54:22.311  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/d81381a3a2ba:InventoryService:9006 - registration status: 204
-2025-05-20 07:54:22.536  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#749aa36f:0/SimpleConnection@89d4a1a [delegate=amqp://guest@172.19.0.3:5672/, localPort=37610]
-2025-05-20 07:54:22.970  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 74.359 seconds (process running for 78.118)
-2025-05-20 07:54:23.089  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2025-05-20 07:54:23.092  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
-
-org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
-	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
-	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
-	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
-	... 9 common frames omitted
-
-2025-05-20 07:54:35.463  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-20 07:54:35.467  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-20 07:54:35.479  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2025-05-20 07:58:22.625  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
-2025-05-20 07:58:22.629  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747727902629, current=DOWN, previous=UP]
-2025-05-20 07:58:22.634  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/d81381a3a2ba:InventoryService:9006: registering service...
-2025-05-20 07:58:22.653  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:58:22.658  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:58:22.654  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/d81381a3a2ba:InventoryService:9006 - registration status: 204
-2025-05-20 07:58:22.663  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 07:58:22.933  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:58:22.953  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:58:22.973  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 07:58:22.976  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-20 07:58:22.980  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-20 07:58:23.010  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 07:58:23.016  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-20 07:58:23.024  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-20 07:58:23.184  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-20 07:58:26.186  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-20 07:58:26.195  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/d81381a3a2ba:InventoryService:9006 - deregister  status: 200
-2025-05-20 07:58:26.197  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-20 08:01:46.654  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
-2025-05-20 08:01:46.734 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-05-20 08:01:46.745  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-05-20 08:01:47.090  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 08:01:47.107  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 08:01:47.124  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 08:01:47.144  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 08:02:00.177  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-20 08:02:01.509  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1244 ms. Found 2 JPA repository interfaces.
-2025-05-20 08:02:04.787  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
-2025-05-20 08:02:10.759  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
-2025-05-20 08:02:10.819  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-20 08:02:10.854  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-05-20 08:02:11.223  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-20 08:02:11.237  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 23988 ms
-2025-05-20 08:02:16.064  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-20 08:02:16.568  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-05-20 08:02:16.758  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-20 08:02:18.417  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-20 08:02:18.602  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-20 08:02:19.431  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 869dca63-308e-42a2-8289-62f55b78b8ac
-2025-05-20 08:02:19.442  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-20 08:02:19.658  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-20 08:02:19.798  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 16.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-20 08:02:23.806  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-20 08:02:25.734  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 08:02:28.844  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-20 08:02:29.830  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
-2025-05-20 08:02:38.405  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-20 08:02:38.719  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-20 08:02:38.800  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-05-20 08:02:39.145  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-20 08:02:39.263  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-20 08:02:39.276  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:02:39.311  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-20 08:02:39.313  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-20 08:02:39.315  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-20 08:02:39.319  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-20 08:02:39.322  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-20 08:02:39.324  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-20 08:02:39.326  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-20 08:02:39.956  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-20 08:02:39.966  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-20 08:02:39.974  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-20 08:02:40.019  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747728160017 with initial instances count: 3
-2025-05-20 08:02:40.049  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
-2025-05-20 08:02:40.053  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747728160053, current=UP, previous=STARTING]
-2025-05-20 08:02:40.060  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/f06df0fdcdbf:InventoryService:9006: registering service...
-2025-05-20 08:02:40.126  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
-2025-05-20 08:02:40.131  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
-2025-05-20 08:02:40.143  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
-2025-05-20 08:02:40.191  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/f06df0fdcdbf:InventoryService:9006 - registration status: 204
-2025-05-20 08:02:40.369  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#80ca2c3:0/SimpleConnection@48e48923 [delegate=amqp://guest@172.19.0.3:5672/, localPort=59644]
-2025-05-20 08:02:40.746  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 72.371 seconds (process running for 75.785)
-2025-05-20 08:02:40.973  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2025-05-20 08:02:40.976  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
-
-org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
-	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
-	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
-	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
-	... 9 common frames omitted
-
-2025-05-20 08:02:55.272  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-20 08:02:55.274  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-20 08:02:55.278  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2025-05-20 08:07:39.317  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:12:39.303  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:17:39.289  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:22:39.275  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:27:39.262  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:32:39.250  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:37:39.238  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:42:39.226  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:47:39.215  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:49:56.204  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
-2025-05-20 08:49:56.209  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747730996208, current=DOWN, previous=UP]
-2025-05-20 08:49:56.214  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/f06df0fdcdbf:InventoryService:9006: registering service...
-2025-05-20 08:49:56.288  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/f06df0fdcdbf:InventoryService:9006 - registration status: 204
-2025-05-20 08:49:56.485  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 08:49:56.487  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 08:49:56.490  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 08:49:57.074  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 08:49:57.075  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 08:49:57.107  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 08:49:57.132  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-20 08:49:57.155  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-20 08:49:57.306  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 08:49:57.378  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-20 08:49:57.393  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-20 08:49:57.920  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-20 08:50:00.923  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-20 08:50:00.941  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/f06df0fdcdbf:InventoryService:9006 - deregister  status: 200
-2025-05-20 08:50:00.945  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-20 08:53:19.400  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
-2025-05-20 08:53:19.468 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-05-20 08:53:19.492  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-05-20 08:53:19.872  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 08:53:19.896  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 08:53:19.918  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 08:53:19.928  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 08:53:37.170  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-20 08:53:38.409  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1139 ms. Found 2 JPA repository interfaces.
-2025-05-20 08:53:42.172  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
-2025-05-20 08:53:48.533  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
-2025-05-20 08:53:48.666  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-20 08:53:48.698  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-05-20 08:53:49.091  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-20 08:53:49.118  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 29178 ms
-2025-05-20 08:53:54.721  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-20 08:53:55.173  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-05-20 08:53:55.428  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-20 08:53:57.418  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-20 08:53:57.640  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-20 08:53:59.080  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: ecf098ec-6b0a-4fc5-92a4-ebbafb8e482a
-2025-05-20 08:53:59.102  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-20 08:53:59.495  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-20 08:53:59.690  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 16.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-20 08:54:05.513  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-20 08:54:07.085  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 08:54:10.793  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-20 08:54:12.427  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
-2025-05-20 08:54:23.364  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-20 08:54:23.663  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-20 08:54:23.798  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-05-20 08:54:24.297  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-20 08:54:24.376  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-20 08:54:24.387  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 08:54:24.415  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-20 08:54:24.418  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-20 08:54:24.420  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-20 08:54:24.422  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-20 08:54:24.425  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-20 08:54:24.427  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-20 08:54:24.429  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-20 08:54:24.988  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-20 08:54:24.995  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-20 08:54:25.003  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-20 08:54:25.009  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747731265008 with initial instances count: 3
-2025-05-20 08:54:25.032  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
-2025-05-20 08:54:25.036  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747731265036, current=UP, previous=STARTING]
-2025-05-20 08:54:25.042  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/1f98b4017ab8:InventoryService:9006: registering service...
-2025-05-20 08:54:25.084  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
-2025-05-20 08:54:25.090  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
-2025-05-20 08:54:25.103  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
-2025-05-20 08:54:25.160  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/1f98b4017ab8:InventoryService:9006 - registration status: 204
-2025-05-20 08:54:25.333  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#109d3527:0/SimpleConnection@53bdc355 [delegate=amqp://guest@172.19.0.3:5672/, localPort=53708]
-2025-05-20 08:54:25.772  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 82.351 seconds (process running for 86.021)
-2025-05-20 08:54:25.999  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2025-05-20 08:54:26.002  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
-
-org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
-	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
-	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
-	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
-	... 9 common frames omitted
-
-2025-05-20 08:54:30.780  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-20 08:54:30.784  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-20 08:54:30.792  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2025-05-20 08:55:53.083  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
-2025-05-20 08:55:53.085  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747731353085, current=DOWN, previous=UP]
-2025-05-20 08:55:53.087  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/1f98b4017ab8:InventoryService:9006: registering service...
-2025-05-20 08:55:53.107  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 08:55:53.109  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/1f98b4017ab8:InventoryService:9006 - registration status: 204
-2025-05-20 08:55:53.112  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 08:55:53.115  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 08:55:53.703  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 08:55:53.729  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 08:55:53.746  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 08:55:53.748  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-20 08:55:53.753  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-20 08:55:53.779  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 08:55:53.784  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-20 08:55:53.789  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-20 08:55:54.043  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-20 08:55:57.045  WARN 1 --- [DiscoveryClient-%d] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
-2025-05-20 08:55:57.045  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-20 08:55:57.058  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/1f98b4017ab8:InventoryService:9006 - deregister  status: 200
-2025-05-20 08:55:57.060  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2025-05-20 11:55:26.375  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.15 with PID 1 (/app/InventoryService.jar started by root in /app)
-2025-05-20 11:55:26.397 DEBUG 1 --- [main] i.f.s.i.InventoryServiceApplication      : Running with Spring Boot v3.4.3, Spring v6.2.3
-2025-05-20 11:55:26.400  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
-2025-05-20 11:55:26.547  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 11:55:26.549  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=application, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 11:55:26.552  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://configserver:8888
-2025-05-20 11:55:26.555  INFO 1 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=InventoryService, profiles=[default], label=null, version=1acc8d8659fd96ed52844c8881c260bdb5135241, state=
-2025-05-20 11:55:38.781  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-05-20 11:55:40.074  INFO 1 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1146 ms. Found 2 JPA repository interfaces.
-2025-05-20 11:55:45.806  INFO 1 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dd0bfa61-48ff-3d04-b17f-d29020581a56
-2025-05-20 11:55:58.375  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9006 (http)
-2025-05-20 11:55:58.507  INFO 1 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-05-20 11:55:58.518  INFO 1 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
-2025-05-20 11:55:59.066  INFO 1 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-05-20 11:55:59.100  INFO 1 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 32526 ms
-2025-05-20 11:56:08.071  INFO 1 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-05-20 11:56:08.983  INFO 1 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-05-20 11:56:09.240  INFO 1 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-05-20 11:56:11.304  INFO 1 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-05-20 11:56:11.466  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-05-20 11:56:12.677  INFO 1 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: f21883f7-05ff-4a46-aa56-23d5aecd1185
-2025-05-20 11:56:12.691  INFO 1 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-05-20 11:56:13.197  WARN 1 --- [main] org.hibernate.orm.deprecation            : HHH90000025: SQLServerDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-05-20 11:56:13.358  INFO 1 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 16.0
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-05-20 11:56:17.587  INFO 1 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-05-20 11:56:19.421  INFO 1 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 11:56:23.309  WARN 1 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-05-20 11:56:24.293  INFO 1 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'ProductService' URL not provided. Will try picking an instance via load-balancing.
-2025-05-20 11:56:33.174  INFO 1 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2025-05-20 11:56:33.582  WARN 1 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-05-20 11:56:33.748  INFO 1 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2025-05-20 11:56:34.192  INFO 1 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-05-20 11:56:34.293  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-05-20 11:56:34.313  INFO 1 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 11:56:34.350  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2025-05-20 11:56:34.355  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2025-05-20 11:56:34.358  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2025-05-20 11:56:34.367  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2025-05-20 11:56:34.370  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2025-05-20 11:56:34.372  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2025-05-20 11:56:34.378  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2025-05-20 11:56:35.084  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2025-05-20 11:56:35.094  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2025-05-20 11:56:35.107  INFO 1 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2025-05-20 11:56:35.114  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1747742195113 with initial instances count: 3
-2025-05-20 11:56:35.138  INFO 1 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application INVENTORYSERVICE with eureka with status UP
-2025-05-20 11:56:35.141  INFO 1 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747742195141, current=UP, previous=STARTING]
-2025-05-20 11:56:35.147  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006: registering service...
-2025-05-20 11:56:35.214  INFO 1 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9006 (http) with context path '/'
-2025-05-20 11:56:35.221  INFO 1 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9006
-2025-05-20 11:56:35.254  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
-2025-05-20 11:56:35.293  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006 - registration status: 204
-2025-05-20 11:56:35.547  INFO 1 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#6df06d21:0/SimpleConnection@6a3630d2 [delegate=amqp://guest@172.19.0.5:5672/, localPort=59628]
-2025-05-20 11:56:35.964  INFO 1 --- [main] i.f.s.i.InventoryServiceApplication      : Started InventoryServiceApplication in 81.866 seconds (process running for 87.706)
-2025-05-20 11:56:36.103  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
-2025-05-20 11:56:36.106  WARN 1 --- [AsyncReporter{ZipkinRestTemplateSender{http://localhost:9411/api/v2/spans}}] z.r.i.AsyncReporter$BoundedAsyncReporter : Dropped 2 spans due to ResourceAccessException(I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused)
-
-org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:925)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:905)
-	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:840)
-	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:701)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinRestTemplateSender.postSpans(ZipkinRestTemplateSender.java:50)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:69)
-	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.HttpSender.postSpans(HttpSender.java:41)
-	at zipkin2.reporter.BaseHttpSender.send(BaseHttpSender.java:123)
-	at zipkin2.reporter.internal.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:266)
-	at zipkin2.reporter.internal.AsyncReporter$Flusher.run(AsyncReporter.java:352)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:9411 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
-	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
-	at java.base/java.net.Socket.connect(Socket.java:633)
-	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:216)
-	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:490)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:164)
-	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:174)
-	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:144)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:150)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:110)
-	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
-	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:174)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
-	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
-	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
-	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:71)
-	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:81)
-	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:899)
-	... 9 common frames omitted
-
-2025-05-20 11:56:38.996  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-05-20 11:56:39.000  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-05-20 11:56:39.013  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2025-05-20 12:01:34.400  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 12:06:34.388  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 12:11:34.376  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 12:16:34.364  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 12:21:34.351  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 12:26:34.341  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2025-05-20 12:30:17.686  INFO 1 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application INVENTORYSERVICE with eureka with status DOWN
-2025-05-20 12:30:17.691  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1747744217691, current=DOWN, previous=UP]
-2025-05-20 12:30:17.698  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006: registering service...
-2025-05-20 12:30:17.779  INFO 1 --- [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006 - registration status: 204
-2025-05-20 12:30:18.273  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 12:30:18.276  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 12:30:18.277  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 12:30:18.278  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 12:30:18.279  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2025-05-20 12:30:19.273  INFO 1 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2025-05-20 12:30:19.289  INFO 1 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-05-20 12:30:19.303  INFO 1 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-05-20 12:30:19.400  INFO 1 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-05-20 12:30:19.447  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-05-20 12:30:19.459  INFO 1 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-05-20 12:30:19.741  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2025-05-20 12:30:22.743  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2025-05-20 12:30:22.756  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_INVENTORYSERVICE/2a573da26035:InventoryService:9006 - deregister  status: 200
-2025-05-20 12:30:22.758  INFO 1 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-05-23 09:48:00.003  INFO 1 --- [http-nio-9006-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-23 09:48:00.007  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-23 09:48:00.014  INFO 1 --- [http-nio-9006-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-05-23 09:52:39.319  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 09:57:39.320  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:02:39.308  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:07:39.295  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:13:21.899  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:18:21.887  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:23:21.873  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:28:21.861  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:33:21.849  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:38:21.836  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:43:21.822  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:48:21.810  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:53:21.795  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 10:58:21.779  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 11:03:21.768  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 11:08:21.754  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 11:13:21.738  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 11:18:21.722  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-05-23 11:23:22.580  INFO 1 --- [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
